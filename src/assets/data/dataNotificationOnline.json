@@ -1,0 +1,94 @@
+[
+  {
+    "Item1": {
+      "groupName": "You're now connected with",
+      "list": [
+        {
+          "imgUrl": "./assets/i/hospital-one.jpg",
+          "title": "Musk Hospital",
+          "location": "Fort Worth",
+          "direction": "2.1mi",
+          "bottonType": "clock"
+        }
+      ]
+    },
+    "Item2": {
+      "groupName": "Someone viewed your profile",
+      "list": [
+        {
+          "imgUrl": "./assets/i/hospital-one.jpg",
+          "title": "Texas General Hospital",
+          "location": "Fort Worth",
+          "direction": "2.1mi",
+          "bottonType": "close"
+        }
+      ]
+    },
+    "Item3": {
+      "groupName": "You've got a request to match",
+      "list": [
+        {
+          "imgUrl": "./assets/i/hospital-one.jpg",
+          "title": "Texas General Hospital",
+          "location": "Fort Worth",
+          "direction": "2.1mi",
+          "bottonType": "close"
+        }
+      ]
+    },
+    "Item4": {
+      "groupName": "Someone viewed your profile",
+      "list": [
+        {
+          "imgUrl": "./assets/i/icon-logo.png",
+          "title": "To see who upgrade to",
+          "subTitle": "One Dental Match Plus"
+        }
+      ]
+    },
+    "Item5": {
+      "groupName": "You've received a request to match",
+      "list": [
+        {
+          "imgUrl": "./assets/i/icon-logo.png",
+          "title": "To see who upgrade to",
+          "subTitle": "One Dental Match Plus"
+        }
+      ]
+    },
+    "Item6": {
+      "groupName": "You've got a request to match",
+      "list": [
+        {
+          "imgUrl": "./assets/i/hospital-one.jpg",
+          "title": "Musk Hospital",
+          "location": "Fort Worth",
+          "direction": "2.1mi",
+          "bottonType": "close"
+        },
+        {
+          "imgUrl": "./assets/i/hospital-one.jpg",
+          "title": "Texas General Hospital",
+          "location": "Fort Worth",
+          "direction": "2.1mi",
+          "bottonType": "close"
+        }
+      ]
+    },
+    "Item7": {
+      "groupName": "New Interview Request",
+      "list": [
+        {
+          "imgUrl": "./assets/i/hospital-one.jpg",
+          "title": "Musk Hospital",
+          "location": "Fort Worth",
+          "direction": "2.1mi",
+          "bottonType": "close"
+        }
+      ],
+      "messageText": "Hey Lyanna, I am from Musk LLC Group, I'd like to offer you the position of senior assistant at our Fort Worth facility. It entails lorem ipsum responsibilities . Let's discuss this over coffee.",
+      "address": "Starbucks, Sundance Square",
+      "timeText": "8:30 AM"
+    }
+  }
+]

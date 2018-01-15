@@ -1,0 +1,31 @@
+<div class="contents">
+  <div class="flex-boxs">
+    <aside class="left-slide">
+      <app-sd-left-carousel [interval]="carousel_interval"></app-sd-left-carousel>
+      <div class="bottom-gray"></div>
+    </aside>
+    <!-- left-slide -->
+    
+    <div class="right-content">
+      <div class="gray-cover"></div>
+      <div class="video-boxs">
+        <video autoplay loop>
+          <source src="../../../assets/video/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div class="content-inner"> 
+        <app-sd-register *ngIf="!isShowCreateBusinessAccount" 
+        (stopCarousel)="stopCarousel($event)"
+        (resumeCarousel)="resumeCarousel($event)"
+        (changedContent)="changedContent($event)"></app-sd-register>
+        
+        <app-sd-create-business-account *ngIf="isShowCreateBusinessAccount"></app-sd-create-business-account>
+      </div>
+      <!-- end .content-inner -->
+    </div>
+    <!-- end .right-content -->
+  </div>
+</div>
+<!-- end .contents -->

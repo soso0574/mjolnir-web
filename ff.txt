@@ -1,0 +1,51 @@
+The below issues are confirmed as acceptable or can leave to Approve phase:
+
+  #1.Register - Step 9 - Tree not match with storyboard.
+  https://i.gyazo.com/b7a3cac9b540a38447d95868badac776.png
+
+  #2.Profiles - Arrow right not showing effect after first click.
+  https://gyazo.com/04a410f37d75fefda717fdf0740d02ef
+
+  #3.Login/Register:
+  Animations of left carousel should be slide in/out.
+  Now on your prototype,the automatical animations do not follow the spec.
+  When click on slide dots,the previous/next item slide in but the current item do not slide out.
+
+  #4.Login/Register:
+  When register successfully,page will redirect to 3c How did you hear.jpg without modal.
+  PM only confirm the style of error messages on forum.
+
+  #5.Login/Register:
+  User could select multiple options on "How did you hear about us" section.
+
+  #6.Create Business Account:
+  Tree function do not implement correctly on the 9th step.
+  People could add siblings nodes through clicking on left/right "+" icons and could add children nodes through clicking on bottom "+" icons.
+  Now on your prototype,people could add children nodes only.
+
+  #7.Avoiding use of "!important".
+  Please see line 738 - line 741 on styles.scss.
+
+  #8.Login/Register:
+  When horizontal scrollbar appear,right section overlap left carousel.
+  Please see this screenshot:
+  https://photos.app.goo.gl/pYBpXafVJKYSq6WE3
+  This issue appear on Create Business Account page.
+
+  #9.2.Edge/IE11:
+  On Create Business Account,when scroll up/down the scrollbar of page,the page flash.
+
+
+#8.Dashboard
+"Share Profile"/"Request Endorsement" should move right.
+Please see this screenshot:
+https://photos.app.goo.gl/3qCvLHjP80HwQbLD3
+--I think there is no issue,please leave to Approve.
+
+#9.Dashboard:
+   1)
+   Animation of card do not follow the requirement.
+   Please see thie requirment:
+   "It requires a animation that fades-in incoming cards (from bottom), and fades-out outgoing cards (on top)."
+   It mean incoming cards fades-in and slide from bottom and outgoing cards fades-out and to top.
+--I have tried my best to add the animation,please leave to Approve if there is no big issue.

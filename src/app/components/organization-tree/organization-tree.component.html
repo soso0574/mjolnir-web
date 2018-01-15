@@ -1,0 +1,111 @@
+<div class="hv-container">
+  <div class="hv-wrapper">
+    <div class="hv-item">
+      <div class="hv-item-parent">
+        <p class="simple-card ">
+          <span class="txt">
+            Click to add Title
+          </span>
+          <span class="inputs">
+            <input type="text">
+          </span>
+          <span class="btn-add">
+            <a href="javascript:;" class="btn-plus" (click)="addNode(treeData['subList'])">
+              <i class="icons icon-plus"></i>
+            </a>
+          </span>
+          <!-- end .btn-add -->
+        </p>
+      </div>
+      <div class="hv-item-children">
+        <div class="hv-item-child" [ngClass]="{'single-child': treeData.subList.length <= 1}" 
+          *ngFor="let level1Item of treeData['subList']">
+          <div [ngClass]="{'hv-item-parent': level1Item.subList.length > 0}">
+            <p class="simple-card" [ngClass]="{'edit': level1Item.isEdit}">
+              <a href="javascript:;" class="txt" (click)="level1Item.isEdit = true">Add Title</a>
+              <span class="inputs">
+                <input type="text">
+              </span>
+              <span class="btn-add">
+                <a href="javascript:;" class="btn-plus" (click)="addNode(level1Item.subList)">
+                  <i class="icons icon-plus"></i>
+                </a>
+              </span>
+              <!-- end .btn-add -->
+            </p>
+          </div>
+          <div class="hv-item-children">
+            <div class="hv-item-child" [ngClass]="{'single-child': level1Item.subList.length <= 1}" 
+              *ngFor="let level2Item of level1Item.subList">
+              <div [ngClass]="{'hv-item-parent': level2Item.subList.length > 0}">
+                <p class="simple-card" [ngClass]="{'edit': level2Item.isEdit}">
+                  <a href="javascript:;" class="txt" (click)="level2Item.isEdit = true">Add Title</a>
+                  <span class="inputs">
+                    <input type="text">
+                  </span>
+                  <span class="btn-add">
+                    <a href="javascript:;" class="btn-plus" (click)="addNode(level2Item.subList)">
+                      <i class="icons icon-plus"></i>
+                    </a>
+                  </span>
+                  <!-- end .btn-add -->
+                </p>
+              </div>
+              <div class="hv-item-children">
+                <div class="hv-item-child" [ngClass]="{'single-child': level2Item.subList.length <= 1}" 
+                  *ngFor="let level3Item of level2Item.subList">
+                  <div [ngClass]="{'hv-item-parent': level3Item.subList.length > 0}">
+                    <p class="simple-card" [ngClass]="{'edit': level3Item.isEdit}">
+                      <a href="javascript:;" class="txt" (click)="level3Item.isEdit = true">Add Title</a>
+                      <span class="inputs">
+                        <input type="text">
+                      </span>
+                      <span class="btn-add">
+                        <a href="javascript:;" class="btn-plus" (click)="addNode(level3Item.subList)">
+                          <i class="icons icon-plus"></i>
+                        </a>
+                      </span>
+                      <!-- end .btn-add -->
+                    </p>
+                  </div>
+                  <div class="hv-item-children">
+                    <div class="hv-item-child" [ngClass]="{'single-child': level3Item.subList.length <= 1}" 
+                      *ngFor="let level4Item of level3Item.subList">
+                      <div [ngClass]="{'hv-item-parent': level4Item.subList.length > 0}">
+                        <p class="simple-card" [ngClass]="{'edit': level4Item.isEdit}">
+                          <a href="javascript:;" class="txt" (click)="level4Item.isEdit = true">Add Title</a>
+                          <span class="inputs">
+                            <input type="text">
+                          </span>
+                          <span class="btn-add">
+                            <a href="javascript:;" class="btn-plus" (click)="addNode(level4Item.subList)">
+                              <i class="icons icon-plus"></i>
+                            </a>
+                          </span>
+                          <!-- end .btn-add -->
+                        </p>
+                      </div>
+                      <div class="hv-item-children">
+                        <div class="hv-item-child" [ngClass]="{'single-child': level4Item.subList.length <= 1}" 
+                          *ngFor="let level5Item of level4Item.subList">
+                          <p class="simple-card" [ngClass]="{'edit': level5Item.isEdit}">
+                            <a href="javascript:;" class="txt" (click)="level5Item.isEdit = true">Add Title</a>
+                            <span class="inputs">
+                              <input type="text">
+                            </span>
+                            <!-- end .btn-add -->
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- end .hv-container -->

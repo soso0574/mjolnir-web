@@ -1,0 +1,63 @@
+<div class="top-right-ring">
+  <a href="javascript:;" class="btn-message"
+     (click)="showRightPanel['isShown'] = true;$event.stopPropagation();">
+    <i class="icons icon-message"></i>
+    <span class="red-point">{{notificationValue.totalNumber}}</span>
+  </a>
+</div>
+
+<aside class="right-aside" [ngClass]="{'hide': !showRightPanel['isShown']}"
+  (click)="$event.stopPropagation();">
+  <div class="titles">
+  	Notifications
+  	<span class="num">{{notificationValue.totalNumber}}</span>
+  </div>
+  <!-- end .titles -->
+  <div class="row-list" malihu-scrollbar>
+  	<div class="module-item" *ngFor="let groupItem of dataList">
+  	  <div class="label-txt">
+        {{groupItem.groupName}}
+      </div>
+	    <div class="list-item" *ngFor="let item of groupItem.list">
+	      <div class="left-card">
+	  	    <div class="img-boxs">
+	  	      <img src="{{item.imgUrl}}" alt="photo">
+	  	    </div>
+	  	    <div class="txt-area">
+	  	      <div class="names">
+	  		    {{item.title}}
+	  	      </div>
+	  	      <div class="address">
+	  	  	    <span class="light">{{item.location}}</span>
+	  	  	    <span class="italic">{{item.direction}}</span>
+	  	      </div>
+	  	      <!-- end .address -->
+	  	    </div>
+	      </div>
+	      <!-- end .left-card -->
+	      <div class="right-point" *ngIf="item.bottonType === 'clock'">
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-talk"></i>
+	  	    </a>
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-clock"></i>
+	  	    </a>
+	      </div>
+	      <div class="right-point" *ngIf="item.bottonType === 'close'">
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-right"></i>
+	  	    </a>
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-close"></i>
+	  	    </a>
+	      </div>
+	      <!-- end .right-point -->
+	    </div>
+	    <!-- end .list-item -->
+  	</div>
+  	<!-- end .module-item -->
+  </div>
+</aside>
+<!-- end .right-aside -->
+
+<app-sd-notification-online [notificationValue]="notificationValue"></app-sd-notification-online>

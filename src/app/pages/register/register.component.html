@@ -1,0 +1,252 @@
+<div class="welcome-contents hide" *ngIf="pageStep === 0" [ngClass]="{'fadeIn': showForm}">
+  <div class="logo-boxs bigger-logo">
+    <span class="white txt">One Dental</span>
+    <span class="blue txt">Match</span>
+  </div>
+  <!-- end .logo-boxs -->
+  <div class="title-area">
+    <p class="sub-txt">
+      Look for your perfect Employee or perfect
+      Office in a fun and engaging way
+    </p>
+  </div>
+  <!-- end .title-area -->
+  <div class="form">
+    <div class="row-line">
+      <div class="inputs gray-inputs" [ngClass]="{'input-error': showFullNameEmptyError}">
+        <i class="icons icon-user"></i>
+        <input type="text" placeholder="Your Full Name" [(ngModel)]="fullNameText">
+      </div>
+    </div>
+    <!-- end .row-line -->
+    <div class="row-line">
+      <div class="inputs gray-inputs" [ngClass]="{'input-error': showEmailEmptyError}">
+        <i class="icons icon-email"></i>
+        <input type="email" placeholder="E-mail" [(ngModel)]="emailText">
+      </div>
+    </div>
+    <!-- end .row-line -->
+    <div class="row-line">
+      <div class="inputs gray-inputs" [ngClass]="{'input-error': showPasswordEmptyError}">
+        <i class="icons icon-locked"></i>
+        <input type="{{!showPasswordText ? 'password' : 'text'}}" placeholder="Password" [(ngModel)]="passwordText">
+        <a href="javascript:;" class="icons icon-eye" (click)="clickEye()"></a>
+      </div>
+    </div>
+    <!-- end .row-line -->
+    <div class="btn-boxs">
+      <a href="javascript:;" class="btn btn-light-blue" (click)="clickCreateYourAccount()">
+        Create your account
+      </a>
+    </div>
+    <!-- btn-boxs -->
+    <div class="line-between">Register using:</div>
+    <!-- end .line-between -->
+    <div class="using">
+      <a href="javascript:;" class="icon-link linkedin">Linkedin</a>
+      <a href="javascript:;" class="icon-link facebook">Facebook</a>
+    </div>
+    <!-- end .using -->
+    <div class="sign-here">
+      Already registered,<a [routerLink]="['/login']" class="blue-links">SIGN IN</a>here
+    </div>
+    <!-- end .sign-here -->
+  </div>
+  <!-- end .form -->
+</div>
+<!-- end .welcome-contents -->
+
+<div class="easy-fun-search" *ngIf="pageStep === 1">
+  <div class="easy-search-list">
+    <div class="logo-boxs bigger-logo">
+      <span class="white txt">One Dental</span>
+      <span class="blue txt">Match</span>
+    </div>
+    <!-- end .logo-boxs -->
+    <div class="title-area">
+    <p class="sub-txt">
+      Almost there. Just curious. How did you hear about 
+      us ?
+    </p>
+  </div>
+  <!-- end .title-area -->
+    <div class="row">
+      <div class="col-4">
+        <a href="javascript:;" class="white-border" 
+        [ngClass]="{'selected': selectedSocialIndex === 1}"
+        (click)="selectedSocialIndex = 1">
+          <div class="btn-friendly">
+            <i class="icons icon-friend icon-word"></i>
+            <span class="name">Word of Mouth</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="javascript:;" class="white-border" 
+        [ngClass]="{'selected': selectedSocialIndex === 2}"
+        (click)="selectedSocialIndex = 2">
+          <div class="btn-friendly">
+            <i class="icons icon-friend icon-google"></i>
+            <span class="name">Google</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="javascript:;" class="white-border" 
+        [ngClass]="{'selected': selectedSocialIndex === 3}"
+        (click)="selectedSocialIndex = 3">
+          <div class="btn-friendly">
+            <i class="icons icon-friend icon-inst"></i>
+            <span class="name">Instagram</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <a href="javascript:;" class="white-border" 
+        [ngClass]="{'selected': selectedSocialIndex === 4}"
+        (click)="selectedSocialIndex = 4">
+          <div class="btn-friendly">
+            <i class="icons icon-friend icon-facebook"></i>
+            <span class="name">Facebook</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="javascript:;" class="white-border" 
+        [ngClass]="{'selected': selectedSocialIndex === 5}"
+        (click)="selectedSocialIndex = 5">
+          <div class="btn-friendly">
+            <i class="icons icon-friend icon-twitter"></i>
+            <span class="name">Twitter</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="javascript:;" class="white-border" 
+        [ngClass]="{'selected': selectedSocialIndex === 6}"
+        (click)="selectedSocialIndex = 6">
+          <div class="btn-friendly">
+            <i class="icons icon-friend icon-google-plus"></i>
+            <span class="name">Google Plus</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <a href="javascript:;" class="white-border" 
+        [ngClass]="{'selected': selectedSocialIndex === 7}"
+        (click)="selectedSocialIndex = 7">
+          <div class="btn-friendly">
+            <i class="icons icon-friend icon-in"></i>
+            <span class="name">LinkedIn</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="javascript:;" class="white-border" 
+        [ngClass]="{'selected': selectedSocialIndex === 8}"
+        (click)="selectedSocialIndex = 8">
+          <div class="btn-friendly">
+            <i class="icons icon-friend icon-other"></i>
+            <span class="name">Other</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 btn-boxs">
+        <a href="javascript:;" class="btn btn-light-blue" 
+           [ngClass]="{'disabled': selectedSocialIndex === 0}"
+           (click)="clickNowTheFunBegins()">Now the fun begins</a>
+      </div>
+    </div>
+  </div>
+  <!-- end .easy-search-list -->
+</div>
+<!-- end .easy-fun-search -->
+
+<div class="how-help" *ngIf="pageStep === 2">
+  <div class="logo-boxs bigger-logo">
+    <span class="white txt">One Dental</span>
+    <span class="blue txt">Match</span>
+  </div>
+  <!-- end .logo-boxs -->
+  <div class="title-area">
+    <p class="sub-txt">
+      How can we help you ?
+    </p>
+  </div>
+  <!-- end .title-area -->
+  <div class="choose-box">
+    <div class="gray-bar">
+      <div class="radiobox-wrap">
+        <input type="radio" value="business" name="choose" id="business" 
+        [(ngModel)]="selectedProfile"> 
+        <label for="business"><i class="icons icon-business"></i>Create a business profile</label>
+      </div>
+      <!-- end .radiobox-wrap -->
+    </div>
+    <!-- end ..gray-bar -->
+    <div class="gray-bar">
+      <div class="radiobox-wrap">
+        <input type="radio" value="employee" name="choose" id="employee"
+        [(ngModel)]="selectedProfile"> 
+        <label for="employee"><i class="icons icon-employee"></i>Create an employee profile</label>
+      </div>
+      <!-- end .radiobox-wrap -->
+    </div>
+    <!-- end .gray-bar -->
+  </div>
+  <!-- end .choose-box -->
+  <div class="row">
+    <div class="col-12 btn-boxs">
+      <a href="javascript:;" class="btn btn-light-blue w100"
+         [ngClass]="{'disabled': selectedProfile === ''}"
+         (click)="clickLetsStart()">Let's Start</a>
+    </div>
+  </div>
+</div>
+<!-- end .how-help -->
+
+<ng-template #waringModal let-c="close">
+  <div class="modal-boxs waring-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-i"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <p>
+          We've sent an email to luismillan@facebook.com. Please
+          click the link in that message to 
+          activate your account.
+        </p>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');">OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .waring-modal -->
+
+<ng-template #errorModal let-c="close">
+  <div class="modal-boxs error-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">Error</h4>
+        <p class="vaild-info" *ngFor="let item of modalErrorMessage">
+          {{item.message}}
+        </p>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');">OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .waring-modal -->

@@ -1,0 +1,37 @@
+<ngb-carousel #carouselOverview [wrap]="true" [interval]="interval" (slide)="slideCarousel($event)">
+  <ng-template ngbSlide id="Overview_{{i}}" *ngFor="let item of dataList;let i = index">
+    <div class="slide-content color-{{i}}">
+      <p class="title-txt pb20">
+        <span class="titles">{{item.title}}</span>
+        {{item.description}}
+      </p>
+      <div class="img-boxs" [ngClass]="{'first': i===0}">
+        <img src="{{item.imgUrl}}" alt="photo">
+      </div>
+      <!-- end .img-boxs -->
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="carousel-dots">
+  <a href="javascript:;" *ngFor="let item of dataList;let i = index"
+    [ngClass]="{'active': currentIndex === i}"
+    (click)="clickDot('Overview_' + i)">
+  </a>
+</div>
+<span class="bottom-txt">GET STARTED</span>
+<div class="slide-item">
+  <div *ngFor="let item of dataList;let i = index"
+    [ngClass]="{'show': shownIndex === i}" class="slide-box">
+    <div class="slide-content">
+      <p class="title-txt pb20">
+        <span class="titles">{{item.title}}</span>
+        {{item.description}}
+      </p>
+      <div class="img-boxs" [ngClass]="{'first': i===0}">
+        <img src="{{item.imgUrl}}" alt="photo">
+      </div>
+      <!-- end .img-boxs -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+/* .header */
+.header {
+    height: 80px;
+    padding: 0 23px;
+    display: flex;
+    display: -ms-flexbox;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    .txt {
+        font-size: 20px;
+        color: #fff;
+        display: block;
+    }
+    .lefts {
+        margin-top: 5px;
+        .txt {
+            text-align: center;
+            text-transform: uppercase;
+            &.blue {
+                color: #5fc5c5;
+                padding-left: 0;
+            }
+        }
+    }
+    /* .center  */
+    .center {
+        .btn-two {
+            width: 54px;
+            height: 36px;
+            border-radius: 18px;
+            text-align: center;
+            display: inline-block;
+            &.current {
+                background-color: rgba(255,255,255,0.3);
+            }
+        }
+        .icon-two {
+            background-position: -216px -36px;
+            width: 36px;
+            height: 36px;
+            vertical-align: middle;
+            padding: 0 10px;
+            border-radius: 18px;
+        }
+        .btn-link {
+            color: #fff;
+            font-size: 16px;
+            height: 36px;
+            padding: 0 16px;
+            line-height: 36px;
+            display: inline-block;
+            margin-left: 15px;
+            border-radius: 18px;
+            font-family: 'HelveticaNeueRoman';
+            text-transform: uppercase;
+            &.current {
+                background-color: #29aae3;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: none;
+            }
+        }
+        .btn-search {
+            display: inline-block;
+            vertical-align: middle;
+            width: 36px;
+            height: 36px;
+            .icon-search {
+                background-position: -252px -36px;
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+    .rights {
+        position: relative;
+        padding-right: 50px;
+        .txt-area {
+            .txt {
+                font-size: 16px;
+                text-align: right;
+                &.op77 {
+                    font-size: 15px;
+                    opacity: 0.77;
+                }
+            }
+        }
+        .btn-img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 38px;
+            height: 38px;
+            border-radius: 3px;
+            background-color: rgba(255,255,255,0.34);
+            padding: 0 5px;
+            display: block;
+            img {
+                width: 33px;
+                height: 33px;
+                border-radius: 5px;
+                overflow: hidden;
+                position: absolute;
+                z-index: 15;
+                margin: 3px 2px 0 0;
+                left: 50%;
+                top: 50%;
+                margin-left: -16px;
+                margin-top: -16px;
+            }
+            .blue-block {
+                position: absolute;
+                background-color: #02a7f0;
+                border-radius: 3px;
+                display: block;
+                z-index: 1;
+                &.right {
+                    height: 38px;
+                    width: 19px;
+                    right: 0;
+                    top: 0;
+                }
+                &.bottom {
+                    height: 19px;
+                    width: 38px;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

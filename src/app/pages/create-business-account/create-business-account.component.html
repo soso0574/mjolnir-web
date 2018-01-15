@@ -1,0 +1,1031 @@
+<div class="change-contents office-named create-wrapper"
+  *ngFor="let formItem of formData">
+  <div class="logo-boxs mb20 w525">
+    <span class="white txt">One Dental</span>
+    <span class="blue txt">Match</span>
+  </div>
+  <!-- end .logo-boxs -->
+  <div class="create-modules"
+    [ngClass]="{'current': currentStep === 0, 'complete': (completedStep >= 0 && currentStep !== 0)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(0)">
+          <i class="icons icons-complete"></i>
+          <span class="num">1</span>
+        </a>
+        <span class="txt">
+          What's your office named and where is
+          it located ?
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="form pl78">
+          <div class="row-line">
+            <div class="inputs gray-inputs">
+              <i class="icons icon-business-card"></i>
+              <input type="text" placeholder="{{placeholderList['Business Name']}}"
+                (focus)="emptyPlaceholder('Business Name')" (focusout)="fillPlaceholder('Business Name')"
+                (change)="changeInputStep(0)"
+                [(ngModel)]="formItem['Business Name']">
+            </div>
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <div class="inputs gray-inputs">
+              <i class="icons icon-address"></i>
+              <input type="text" placeholder="{{placeholderList['Business Address']}}"
+                (focus)="emptyPlaceholder('Business Address')" (focusout)="fillPlaceholder('Business Address')"
+                (change)="changeInputStep(0)"
+                [(ngModel)]="formItem['Business Address']">
+            </div>
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <div class="inputs gray-inputs">
+              <i class="icons icon-city"></i>
+              <input type="text" placeholder="{{placeholderList['City']}}"
+                (focus)="emptyPlaceholder('City')" (focusout)="fillPlaceholder('City')"
+                (change)="changeInputStep(0)"
+                [(ngModel)]="formItem['City']">
+            </div>
+          </div>
+          <!-- end .row-line -->
+         <div class="row-line">
+            <div class="inputs gray-inputs">
+              <i class="icons icon-code"></i>
+              <input type="text" placeholder="{{placeholderList['Zip Code']}}"
+                (focus)="emptyPlaceholder('Zip Code')" (focusout)="fillPlaceholder('Zip Code')"
+                (change)="changeInputStep(0)"
+                [(ngModel)]="formItem['Zip Code']">
+            </div>
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <div class="inputs gray-inputs">
+              <i class="icons icon-phone"></i>
+              <input type="tel" placeholder="{{placeholderList['Phone Number']}}"
+                (focus)="emptyPlaceholder('Phone Number')" (focusout)="fillPlaceholder('Phone Number')"
+                (change)="changeInputStep(0)"
+                [(ngModel)]="formItem['Phone Number']">
+            </div>
+          </div>
+          <!-- end .row-line -->
+        </div>
+        <!-- end .form -->
+      </div>
+    </div>
+  </div>
+  <!-- end .office-named -->
+
+  <div class="create-modules office-specializes"
+    [ngClass]="{'current': currentStep === 1, 'complete': (completedStep >= 1 && currentStep !== 1)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(1)">
+          <i class="icons icons-complete"></i>
+          <span class="num">2</span>
+        </a>
+        <span class="txt">
+          Your office specializes in ?
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="pl78 check-list">
+          <div class="row-line" *ngFor="let item of formItem['step2CheckList']">
+            <div class="checkbox-wrap gray-checkbox">
+              <input type="checkbox" name="choose" id="{{item.label + 'step2'}}" [(ngModel)]="item.checked"> 
+              <label for="{{item.label + 'step2'}}">{{item.label}}</label>
+            </div>
+            <!-- end .checkbox-wrap -->
+          </div>
+          <!-- end .row-line -->
+
+          <div class="row-line">
+            <div class="inputs no-border">
+              <input type="text" placeholder="{{placeholderList['Other1']}}"
+                (focus)="emptyPlaceholder('Other1')" (focusout)="fillPlaceholder('Other1')"
+                [(ngModel)]="formItem['Other1']">
+            </div>
+          </div>
+          <!-- end .row-line -->
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .main-show -->
+    </div>
+  </div>
+  <!-- end .office-specializes -->
+  <div class="create-modules office-staff"
+    [ngClass]="{'current': currentStep === 2, 'complete': (completedStep >= 2 && currentStep !== 2)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(2)">
+          <i class="icons icons-complete"></i>
+          <span class="num">3</span>
+        </a>
+        <span class="txt">
+          My office staffs these areas
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="pl78 check-list">
+          <div class="row-line" *ngFor="let item of formItem['step3CheckList']">
+            <div class="checkbox-wrap gray-checkbox">
+              <input type="checkbox" name="choose" id="{{item.label + 'step3'}}" [(ngModel)]="item.checked"> 
+              <label for="{{item.label + 'step3'}}">{{item.label}}</label>
+            </div>
+            <!-- end .checkbox-wrap -->
+          </div>
+          <!-- end .row-line -->
+
+          <div class="row-line">
+            <div class="inputs no-border">
+              <input type="text" placeholder="{{placeholderList['Other2']}}"
+                (focus)="emptyPlaceholder('Other2')" (focusout)="fillPlaceholder('Other2')"
+                [(ngModel)]="formItem['Other2']">
+            </div>
+          </div>
+          <!-- end .row-line -->
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .main-show -->
+    </div>
+  </div>
+  <!-- end .office-staff -->
+
+  <div class="create-modules add-photos"
+    [ngClass]="{'current': currentStep === 3, 'complete': (completedStep >= 3 && currentStep !== 3)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(3)">
+          <i class="icons icons-complete"></i>
+          <span class="num">4</span>
+        </a>
+        <span class="txt">
+          Let's add some photos
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="pl78 photo-wrapper">
+          <p class="sub-txt">
+            Pick the perfect profile pic and others that 
+            tell your offices story
+          </p>
+          <div class="photo-profile">
+            <div class="row-line">
+              <div class="biger-phtoto">
+                <div class="border-boxs" [ngClass]="{'hide': formItem['step4BigPic'].src !== ''}">
+                  <i class="icons icon-user"></i>
+                  <div class="txt">
+                    Profile Picture
+                  </div>
+                  <input type="file" (change)="onChangePic($event, formItem['step4BigPic'])"/>
+                </div>
+                <img src="{{formItem['step4BigPic'].src}}" alt="pic"
+                 [ngClass]="{'hide': formItem['step4BigPic'].src === ''}"/>
+              </div>
+              <!-- end .biger-phtoto -->
+              <div class="little-boxs">
+                <div class="border-boxs" 
+                   *ngFor="let item of formItem['step4RightPicList']"
+                   [ngClass]="{'hasPic': item.src !== ''}">
+                  <i class="icons icon-plus" [ngClass]="{'hide': item.src !== ''}"></i>
+                  <img src="{{item.src}}" alt="pic"
+                   [ngClass]="{'hide': item.src === ''}"/>
+                   <input type="file" (change)="onChangePic($event, item)" [ngClass]="{'hide': item.src !== ''}"/>
+                </div> 
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <div class="under little-boxs">
+                <div class="border-boxs"
+                   *ngFor="let item of formItem['step4BottomPicList']"
+                   [ngClass]="{'hasPic': item.src !== ''}">
+                  <i class="icons icon-plus" [ngClass]="{'hide': item.src !== ''}"></i>
+                  <img src="{{item.src}}" alt="pic"
+                   [ngClass]="{'hide': item.src === ''}"/>
+                  <input type="file" (change)="onChangePic($event, item)" [ngClass]="{'hide': item.src !== ''}"/>
+                </div>
+              </div>
+            </div>
+            <!-- end .row-line -->
+          </div>
+          <!-- end .photo-profile -->
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .main-show -->
+    </div>
+  </div>
+  <!-- end .add-photos -->
+
+  <div class="create-modules contact-info"
+    [ngClass]="{'current': currentStep === 4, 'complete': (completedStep >= 4 && currentStep !== 4)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(4)">
+          <i class="icons icons-complete"></i>
+          <span class="num">5</span>
+        </a>
+        <span class="txt">
+          Let's get some contact info
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="pl78 ">
+          <div class="form">
+            <div class="row-line">
+              <div class="inputs gray-inputs">
+                <i class="icons icon-office-website"></i>
+                <input type="text" placeholder="{{placeholderList['Office Website']}}"
+                (focus)="emptyPlaceholder('Office Website')" (focusout)="fillPlaceholder('Office Website')"
+                (change)="changeInputStep(4)"
+                [(ngModel)]="formItem['Office Website']">
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <div class="inputs gray-inputs">
+                <i class="icons icon-email"></i>
+                <input type="email" placeholder="{{placeholderList['Office Email Address']}}"
+                (focus)="emptyPlaceholder('Office Email Address')" (focusout)="fillPlaceholder('Office Email Address')"
+                (change)="changeInputStep(4)"
+                [(ngModel)]="formItem['Office Email Address']">
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <div class="inputs gray-inputs">
+                <i class="icons icon-phone"></i>
+                <input type="email" placeholder="{{placeholderList['Office Phone Number']}}"
+                (focus)="emptyPlaceholder('Office Phone Number')" (focusout)="fillPlaceholder('Office Phone Number')"
+                (change)="changeInputStep(4)"
+                [(ngModel)]="formItem['Office Phone Number']">
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  <span class="num">1</span>
+                  {{formItem['Preferred OptionModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['Preferred OptionModelDropdown'].optionList"
+                    (click)="formItem['Preferred OptionModelDropdown'].defaultText = item.optionName;changeInputStep(4)"
+                    [ngClass]="{'selected': formItem['Preferred OptionModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .drop-down -->
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  <span class="num">2</span>
+                  {{formItem['Alternate OptionModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['Alternate OptionModelDropdown'].optionList"
+                    (click)="formItem['Alternate OptionModelDropdown'].defaultText = item.optionName;changeInputStep(4)"
+                    [ngClass]="{'selected': formItem['Alternate OptionModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .drop-down -->
+            </div>
+            <!-- end .row-line -->
+          </div>
+          <!-- end .form -->
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .main-show -->
+    </div>
+  </div>
+  <!-- end .contact-info -->
+
+  <div class="create-modules when-open"
+    [ngClass]="{'current': currentStep === 5, 'complete': (completedStep >= 5 && currentStep !== 5)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(5)">
+          <i class="icons icons-complete"></i>
+          <span class="num">6</span>
+        </a>
+        <span class="txt">
+          When are you open for business ?
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="pl78 ">
+          <div class="form">
+            <div class="row-line">
+              <span class="label-txt">Monday</span>
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['MondayStartModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['MondayStartModelDropdown'].optionList"
+                    (click)="formItem['MondayStartModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'Start' 
+                                         && formItem['MondayEndModelDropdown'].defaultText !== 'End' 
+                                         && item.optionName > formItem['MondayEndModelDropdown'].defaultText), 
+                                 'selected': formItem['MondayStartModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['MondayEndModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['MondayEndModelDropdown'].optionList"
+                    (click)="formItem['MondayEndModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'End' 
+                                         && formItem['MondayStartModelDropdown'].defaultText !== 'Start' 
+                                         && item.optionName < formItem['MondayStartModelDropdown'].defaultText), 
+                                'selected': formItem['MondayEndModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <span class="label-txt">Tuesday</span>
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['TuesdayStartModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['TuesdayStartModelDropdown'].optionList"
+                    (click)="formItem['TuesdayStartModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'Start' 
+                                         && formItem['TuesdayEndModelDropdown'].defaultText !== 'End' 
+                                         && item.optionName > formItem['TuesdayEndModelDropdown'].defaultText), 
+                                'selected': formItem['TuesdayStartModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['TuesdayEndModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['TuesdayEndModelDropdown'].optionList"
+                    (click)="formItem['TuesdayEndModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'End' 
+                                         && formItem['TuesdayStartModelDropdown'].defaultText !== 'Start' 
+                                         && item.optionName < formItem['TuesdayStartModelDropdown'].defaultText), 
+                                'selected': formItem['TuesdayEndModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <span class="label-txt">Wednesday</span>
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['WednesdayStartModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['WednesdayStartModelDropdown'].optionList"
+                    (click)="formItem['WednesdayStartModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'Start' 
+                                         && formItem['WednesdayEndModelDropdown'].defaultText !== 'End' 
+                                         && item.optionName > formItem['WednesdayEndModelDropdown'].defaultText), 
+                                'selected': formItem['WednesdayStartModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['WednesdayEndModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['WednesdayEndModelDropdown'].optionList"
+                    (click)="formItem['WednesdayEndModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'End' 
+                                         && formItem['WednesdayStartModelDropdown'].defaultText !== 'Start' 
+                                         && item.optionName < formItem['WednesdayStartModelDropdown'].defaultText), 
+                                'selected': formItem['WednesdayEndModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <span class="label-txt">Thursday</span>
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['ThursdayStartModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['ThursdayStartModelDropdown'].optionList"
+                    (click)="formItem['ThursdayStartModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'Start' 
+                                         && formItem['ThursdayEndModelDropdown'].defaultText !== 'End' 
+                                         && item.optionName > formItem['ThursdayEndModelDropdown'].defaultText), 
+                                'selected': formItem['ThursdayStartModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['ThursdayEndModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['ThursdayEndModelDropdown'].optionList"
+                    (click)="formItem['ThursdayEndModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'End' 
+                                         && formItem['ThursdayStartModelDropdown'].defaultText !== 'Start' 
+                                         && item.optionName < formItem['ThursdayStartModelDropdown'].defaultText), 
+                                'selected': formItem['ThursdayEndModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <span class="label-txt">Friday</span>
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['FridayStartModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['FridayStartModelDropdown'].optionList"
+                    (click)="formItem['FridayStartModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'Start' 
+                                         && formItem['FridayEndModelDropdown'].defaultText !== 'End' 
+                                         && item.optionName > formItem['FridayEndModelDropdown'].defaultText), 
+                                'selected': formItem['FridayStartModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['FridayEndModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['FridayEndModelDropdown'].optionList"
+                    (click)="formItem['FridayEndModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'End' 
+                                         && formItem['FridayStartModelDropdown'].defaultText !== 'Start' 
+                                         && item.optionName < formItem['FridayStartModelDropdown'].defaultText), 
+                                'selected': formItem['FridayEndModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <span class="label-txt">Saturday</span>
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['SaturdayStartModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['SaturdayStartModelDropdown'].optionList"
+                    (click)="formItem['SaturdayStartModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'Start' 
+                                         && formItem['SaturdayEndModelDropdown'].defaultText !== 'End' 
+                                         && item.optionName > formItem['SaturdayEndModelDropdown'].defaultText), 
+                                'selected': formItem['SaturdayStartModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['SaturdayEndModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['SaturdayEndModelDropdown'].optionList"
+                    (click)="formItem['SaturdayEndModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'End' 
+                                         && formItem['SaturdayStartModelDropdown'].defaultText !== 'Start' 
+                                         && item.optionName < formItem['SaturdayStartModelDropdown'].defaultText), 
+                                'selected': formItem['SaturdayEndModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <span class="label-txt">Sunday</span>
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['SundayStartModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['SundayStartModelDropdown'].optionList"
+                    (click)="formItem['SundayStartModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'Start' 
+                                         && formItem['SundayEndModelDropdown'].defaultText !== 'End' 
+                                         && item.optionName > formItem['SundayEndModelDropdown'].defaultText), 
+                                'selected': formItem['SundayStartModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+              <div ngbDropdown class="d-inline-block little">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{formItem['SundayEndModelDropdown'].defaultText}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item"
+                    *ngFor="let item of formItem['SundayEndModelDropdown'].optionList"
+                    (click)="formItem['SundayEndModelDropdown'].defaultText = item.optionName" 
+                    [ngClass]="{'hide': (item.optionName !== 'End' 
+                                         && formItem['SundayStartModelDropdown'].defaultText !== 'Start' 
+                                         && item.optionName < formItem['SundayStartModelDropdown'].defaultText), 
+                                'selected': formItem['SundayEndModelDropdown'].defaultText === item.optionName}">
+                    {{item.optionName}}
+                  </button>
+                </div>
+              </div>
+              <!-- end .dropdown -->
+            </div>
+            <!-- end .row-line -->
+          </div>
+          <!-- end .form -->
+
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .main-show -->
+    </div>
+  </div>
+  <!-- end .when-open -->
+
+  <div class="create-modules add-another"
+    [ngClass]="{'current': currentStep === 6, 'complete': (completedStep >= 6 && currentStep !== 6)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(6)">
+          <i class="icons icons-complete"></i>
+          <span class="num">7</span>
+        </a>
+        <span class="txt">
+          Assign Office Profile Administrators
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="right-top row-align">
+          <a href="javascript:;" class="white-tips" (click)="goToStep(7)">SKIP</a>
+          <a href="javascript:;" class="white-tips" (click)="skipStep(11)">SKIP TO END</a>
+        </div>
+        <div class="pl78 ">
+          <div class="txt">
+            Here you can add someone to help you manage
+            this Office Profile . Set their administrator
+            permissions below
+          </div>
+          <div class="form normal-form">
+            <div class="row-line">
+              <div class="two-inputs row">
+                <div class="item col-6">
+                  <div class="inputs gray-border">
+                    <input type="text" placeholder="{{placeholderList['First Name1']}}"
+                     (focus)="emptyPlaceholder('First Name1')" (focusout)="fillPlaceholder('First Name1')"
+                     [(ngModel)]="formItem['First Name1']">
+                  </div>
+                </div>
+                <div class="item col-6">
+                  <div class="inputs gray-border">
+                    <input type="text" placeholder="{{placeholderList['Last Name1']}}"
+                     (focus)="emptyPlaceholder('Last Name1')" (focusout)="fillPlaceholder('Last Name1')"
+                     [(ngModel)]="formItem['Last Name1']">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <div class="two-inputs row">
+                <div class="item col-12">
+                  <div class="inputs gray-border">
+                    <input type="text" placeholder="{{placeholderList['Add Email Mobile Number1']}}"
+                     (focus)="emptyPlaceholder('Add Email Mobile Number1')" (focusout)="fillPlaceholder('Add Email Mobile Number1')"
+                     [(ngModel)]="formItem['Add Email Mobile Number1']">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <div class="two-check clearfix">
+                <div class="checkbox-wrap squre-checkbox" 
+                  *ngFor="let item of formItem['step7TopCheckList']">
+                  <input type="checkbox" name="choose" id="{{item.label}}" [(ngModel)]="item.checked"> 
+                  <label for="{{item.label}}">{{item.label}}</label>
+                </div>
+                <!-- end .checkbox-wrap -->
+              </div>
+              <div class="two-check clearfix">
+                <div class="checkbox-wrap squre-checkbox" 
+                  *ngFor="let item of formItem['step7BottomCheckList']">
+                  <input type="checkbox" name="choose" id="{{item.label}}" [(ngModel)]="item.checked"> 
+                  <label for="{{item.label}}">{{item.label}}</label>
+                </div>
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="btn-boxs">
+              <a href="javascript:;" class="btn btn-dark-blue">ADD ANOTHER OFFICE MANAGER</a>
+            </div>
+          </div>
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .main-show -->
+    </div>
+  </div>
+  <!-- end .add-another -->
+
+  <div class="create-modules peer-endorsements"
+    [ngClass]="{'current': currentStep === 7, 'complete': (completedStep >= 7 && currentStep !== 7)}">
+    <div class="item">
+      <div class="titles mb0">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(7)">
+          <i class="icons icons-complete"></i>
+          <span class="num">8</span>
+        </a>
+        <span class="txt ">
+          Peer to Peer Endorsements
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="right-top row-align">
+          <a href="javascript:;" class="white-tips" (click)="goToStep(8)">SKIP</a>
+          <a href="javascript:;" class="white-tips" (click)="skipStep(11)">SKIP TO END</a>
+        </div>
+        <div class="pl78">
+          <div class="general-endorsement">
+            <div class="txt gen-txt">
+              General Endorsement
+            </div>
+            <div class="txt">
+              Lets invite your employees, ex-employees, and
+              customers to endorse you.
+            </div>
+            <div class="form normal-form">
+              <div class="row-line">
+                <div class="two-inputs row">
+                  <div class="item col-6">
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="{{placeholderList['First Name2']}}"
+                       (focus)="emptyPlaceholder('First Name2')" (focusout)="fillPlaceholder('First Name2')"
+                       [(ngModel)]="formItem['First Name2']">
+                    </div>
+                  </div>
+                  <div class="item col-6">
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="{{placeholderList['Last Name2']}}"
+                       (focus)="emptyPlaceholder('Last Name2')" (focusout)="fillPlaceholder('Last Name2')"
+                       [(ngModel)]="formItem['Last Name2']">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end .row-line -->
+              <div class="row-line">
+                <div class="two-inputs row">
+                  <div class="item col-12">
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="{{placeholderList['Add Email Mobile Number2']}}"
+                       (focus)="emptyPlaceholder('Add Email Mobile Number2')" (focusout)="fillPlaceholder('Add Email Mobile Number2')"
+                       [(ngModel)]="formItem['Add Email Mobile Number2']">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end .row-line -->
+              <div class="btn-boxs">
+                <a href="javascript:;" class="btn btn-dark-blue">ADD ANOTHER PEER</a>
+              </div>
+            </div>
+          </div>
+          <!-- end .general-endorsement -->
+          <div class="professional-endorsement">
+            <div class="txt gen-txt">
+              Professional Endorsement
+            </div>
+            <div class="txt">
+              It's important for the other dentists/practices that
+              you refer to and from to endorse your office as well
+            </div>
+            <div class="form normal-form">
+              <div class="row-line">
+                <div class="two-inputs row">
+                  <div class="item col-6">
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="{{placeholderList['First Name3']}}"
+                       (focus)="emptyPlaceholder('First Name3')" (focusout)="fillPlaceholder('First Name3')"
+                       [(ngModel)]="formItem['First Name3']">
+                    </div>
+                  </div>
+                  <div class="item col-6">
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="{{placeholderList['Last Name3']}}"
+                       (focus)="emptyPlaceholder('Last Name3')" (focusout)="fillPlaceholder('Last Name3')"
+                       [(ngModel)]="formItem['Last Name3']">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end .row-line -->
+              <div class="row-line">
+                <div class="two-inputs row">
+                  <div class="item col-12">
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="{{placeholderList['Add Email Mobile Number3']}}"
+                       (focus)="emptyPlaceholder('Add Email Mobile Number3')" (focusout)="fillPlaceholder('Add Email Mobile Number3')"
+                       [(ngModel)]="formItem['Add Email Mobile Number3']">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end .row-line -->
+              <div class="btn-boxs">
+                <a href="javascript:;" class="btn btn-dark-blue">ADD ANOTHER PEER</a>
+              </div>
+            </div>
+          </div>
+          <!-- end .general-endorsement -->
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .main-show -->
+    </div>
+  </div>
+  <!-- end .add-another -->
+
+  <div class="create-modules build-organization"
+    [ngClass]="{'current': currentStep === 8, 'complete': (completedStep >= 8 && currentStep !== 8)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(8)">
+          <i class="icons icons-complete"></i>
+          <span class="num">9</span>
+        </a>
+        <span class="txt">
+          Build your Employee Organization
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="right-top row-align">
+          <a href="javascript:;" class="white-tips" (click)="goToStep(9)">SKIP</a>
+          <a href="javascript:;" class="white-tips" (click)="skipStep(11)">SKIP TO END</a>
+        </div>
+        <app-sd-organization-tree [treeData]="formItem['step9TreeList']"></app-sd-organization-tree>
+      </div>
+      <!-- end .main-show -->
+    </div>
+  </div>
+  <!-- end .build-organization -->
+
+  <div class="create-modules how-wonderful"
+    [ngClass]="{'current': currentStep === 9, 'complete': (completedStep >= 9 && currentStep !== 9)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(9)">
+          <i class="icons icons-complete"></i>
+          <span class="num">10</span>
+        </a>
+        <span class="txt">
+          Let's tell everyone how wonderful your
+          office culture is
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="right-top ten-right-top">
+          <a href="javascript:;" class="white-tips" (click)="goToStep(10)">SKIP</a>
+          <a href="javascript:;" class="white-tips" (click)="skipStep(11)">SKIP TO END</a>
+        </div>
+        <div class="pl78">
+           <div class="textareas">
+            <textarea [(ngModel)]="formItem['textarea']" 
+               placeholder="{{placeholderList['textarea']}}"
+               (focus)="emptyPlaceholder('textarea')" (focusout)="fillPlaceholder('textarea')">
+            </textarea>
+          </div>
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .how-wonderful -->
+    </div>
+  </div>
+  <!-- end .how-wonderful -->
+  
+  <div class="create-modules online-reviews"
+    [ngClass]="{'current': currentStep === 10, 'complete': (completedStep >= 10 && currentStep !== 10)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(10)">
+          <i class="icons icons-complete"></i>
+          <span class="num">11</span>
+        </a>
+        <span class="txt">
+          Link your online reviews
+        </span>
+      </div>
+      <!-- end .titles -->
+      <div class="main-show">
+        <div class="right-top">
+          <a href="javascript:;" class="white-tips" (click)="goToStep(11)">SKIP</a>
+        </div>
+        <div class="pl78">
+          <div class="icon-btn-group">
+            <a href="javascript:;" class="btn btn-white-border">
+              <i class="icons icon-google-plus"></i>
+              Click here to link
+            </a>
+            <a href="javascript:;" class="btn btn-white-border">
+              <i class="icons icon-yelp"></i>
+              Click here to link
+            </a>
+            <a href="javascript:;" class="btn btn-white-border">
+              <i class="icons icon-facebook"></i>
+              Click here to link
+            </a>
+          </div>
+        </div>
+        <!-- end .form -->
+      </div>
+      <!-- end .online-reviews -->
+    </div>
+  </div>
+  <!-- end .how-wonderful -->
+  <div class="create-modules"
+    [ngClass]="{'current': currentStep === 11, 'complete': (completedStep >= 11 && currentStep !== 11)}">
+    <div class="item">
+      <div class="titles">
+        <a href="javascript:;" class="block"
+          (click)="goToStep(11)">
+          <i class="icons icons-complete"></i>
+          <span class="num">12</span>
+        </a>
+        <span class="txt">
+          Add Another Office Profile
+        </span>
+      </div>
+      <!-- end .titles -->
+    </div>
+  </div>
+  <!-- end .how-wonderful -->
+</div>
+<!-- end .how-help -->
+<div class="bottom-wrap">
+  <div class="bottom-bar">
+    <div class="blue-bar" [ngStyle]="{'width': (currentStep + 1)/12 * 100 + '%'}"></div>
+  </div>
+</div>
+
+<ng-template #waringModal let-c="close">
+  <div class="modal-boxs waring-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-i"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <p>
+          Each Office profile must have an 
+          owner, so it's important to create 
+          a basic User profile first. Skip the 
+          sections you want to as you can 
+          always complete your user profile 
+          at a later date
+        </p>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');clickOkInFirstModal()">OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .waring-modal -->
+
+<ng-template #importProfileModal let-c="close">
+  <div class="modal-boxs import-profile-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-user"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <h4 class="titles">Import your Profile</h4>
+        <div class="icon-bar">
+          <i class="icons icon-facebook"></i>
+          <span class="txt">Facebook</span>
+        </div>
+
+        <div class="icon-bar">
+          <i class="icons icon-google-plus"></i>
+          <span class="txt">Google Plus</span>
+        </div>
+
+        <div class="icon-bar">
+          <i class="icons icon-in"></i>
+          <span class="txt">LinkedIn</span>
+        </div>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click')">OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .import-profile-modal -->
+
+<ng-template #createOfficeModal let-c="close">
+  <div class="modal-boxs create-office-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">Create another office ?</h4>
+        <a href="javascript:;" class="btn btn-white" 
+          (click)="c('Close click');resetForm();">
+          Start from scratch
+        </a>
+        <a href="javascript:;" class="btn btn-white">Copy this Office</a>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green" 
+          (click)="c('Close click');goToProfile();">
+          No, I'll do it later
+        </a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .create-office-modal -->

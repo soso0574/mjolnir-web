@@ -1,0 +1,58 @@
+[
+  {
+    "imgUrl": "../../../assets/i/girl-photo.jpg",
+    "title": "Lyanna Stark",
+    "smallTitle": "Hygienist",
+    "number": 65,
+    "selected": true
+  },
+  {
+    "imgUrl": "../../../assets/i/hospital-item1.jpg",
+    "title": "York Hospital",
+    "smallTitle": "TX",
+    "number": 70,
+    "selected": false
+  },
+  {
+    "imgUrl": "../../../assets/i/hospital-item2.jpg",
+    "title": "ET Hospital",
+    "smallTitle": "GA",
+    "number": 50,
+    "selected": false
+  },
+  {
+    "imgUrl": "../../../assets/i/hospital-item3.jpg",
+    "title": "Wanda Hospital",
+    "smallTitle": "CA",
+    "number": 65,
+    "selected": false
+  },
+  {
+    "imgUrl": "../../../assets/i/hospital-item4.jpg",
+    "title": "ET Hospital",
+    "smallTitle": "FL",
+    "number": 85,
+    "selected": false
+  },
+  {
+    "imgUrl": "../../../assets/i/hospital-item4.jpg",
+    "title": "ET Hospital 1",
+    "smallTitle": "FL",
+    "number": 85,
+    "selected": false
+  },
+  {
+    "imgUrl": "../../../assets/i/hospital-item4.jpg",
+    "title": "ET Hospital 2",
+    "smallTitle": "FL",
+    "number": 85,
+    "selected": false
+  },
+  {
+    "imgUrl": "../../../assets/i/hospital-item4.jpg",
+    "title": "ET Hospital 3",
+    "smallTitle": "FL",
+    "number": 80,
+    "selected": false
+  }
+]

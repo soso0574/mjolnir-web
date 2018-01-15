@@ -1,0 +1,85 @@
+<div class="contents">
+  <div class="flex-boxs">
+    <aside class="left-slide">
+      <app-sd-left-carousel [interval]="5000"></app-sd-left-carousel>
+      <div class="bottom-gray"></div>
+    </aside>
+    <!-- left-slide -->
+    
+    <div class="right-content">
+      <div class="gray-cover"></div>
+      <div class="video-boxs">
+        <video autoplay>
+          <source src="../../../assets/video/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div class="content-inner">
+        <div class="welcome-contents hide" [ngClass]="{'fadeIn': showForm}">
+          <div class="logo-boxs bigger-logo">
+            <span class="white txt">One Dental</span>
+            <span class="blue txt">Match</span>
+          </div>
+          <!-- end .logo-boxs -->
+          <div class="title-area">
+            <p class="sub-txt">
+              Look for your perfect Employee or perfect
+              Office in a fun and engaging way
+            </p>
+          </div>
+          <!-- end .title-area -->
+          <div class="form">
+            <div class="row-line">
+              <div class="inputs gray-inputs" [ngClass]="{'input-error': showEmailEmptyError}">
+                <i class="icons icon-email"></i>
+                <input type="email" placeholder="E-mail" [(ngModel)]="emailText">
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="row-line">
+              <div class="inputs gray-inputs" [ngClass]="{'input-error': showPasswordEmptyError}">
+                <i class="icons icon-locked"></i>
+                <input type="{{!showPasswordText ? 'password' : 'text'}}" placeholder="Password" [(ngModel)]="passwordText">
+                <a href="javascript:;" class="icons icon-eye" (click)="clickEye()"></a>
+              </div>
+            </div>
+            <!-- end .row-line -->
+            <div class="btn-boxs">
+              <a href="javascript:;" class="btn btn-light-blue" (click)="clickSignIn()">Sign in</a>
+            </div>
+            <!-- btn-boxs -->
+            <div class="line-between">Register using:</div>
+            <!-- end .line-between -->
+            <div class="using">
+              <a href="javascript:;" class="icon-link linkedin">Linkedin</a>
+              <a href="javascript:;" class="icon-link facebook">Facebook</a>
+            </div>
+            <!-- end .using -->
+          </div>
+          <!-- end .form -->
+        </div>
+        <!-- end .welcome-contents -->
+      </div>
+      <!-- end .content-inner -->
+      <ng-template #errorModal let-c="close">
+        <div class="modal-boxs error-modal">
+          <div class="modal-inner">
+            <div class="modal-info">
+              <h4 class="titles">Error</h4>
+              <p class="vaild-info" *ngFor="let item of modalErrorMessage">
+                {{item.message}}
+              </p>
+            </div>
+            <div class="footer-btn">
+              <a href="javascript:;" class="btn btn-green" (click)="c('Close click');">OK</a>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <!-- end .waring-modal -->
+    </div>
+    <!-- end .right-content -->
+  </div>
+</div>
+<!-- end .contents -->

@@ -1,0 +1,104 @@
+[
+  {
+    "groupName": "You're now connected with",
+    "list": [
+      {
+        "imgUrl": "./assets/i/hospital-one.jpg",
+        "title": "Musk Hospital",
+        "location": "Fort Worth",
+        "direction": "2.1mi",
+        "bottonType": "clock"
+      }
+    ]
+  },
+  {
+    "groupName": "Friend Requests",
+    "list": [
+      {
+        "imgUrl": "./assets/i/hospital-two.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      },
+      {
+        "imgUrl": "./assets/i/hospital-three.jpg",
+        "title": "Watford Hospital",
+        "location": "Dallas",
+        "direction": "7.8mi",
+        "bottonType": "close"
+      }
+    ]
+  },
+  {
+    "groupName": "New Requests to Match",
+    "list": [
+      {
+        "imgUrl": "./assets/i/hospital-two.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      },
+      {
+        "imgUrl": "./assets/i/hospital-three.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      }
+    ]
+  },
+  {
+    "groupName": "Profile Views",
+    "list": [
+      {
+        "imgUrl": "./assets/i/hospital-two.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      },
+      {
+        "imgUrl": "./assets/i/hospital-three.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      }
+    ]
+  },
+  {
+    "groupName": "Request for a Phone Interview",
+    "list": [
+      {
+        "imgUrl": "./assets/i/hospital-two.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      },
+      {
+        "imgUrl": "./assets/i/hospital-two.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      },
+      {
+        "imgUrl": "./assets/i/hospital-two.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      },
+      {
+        "imgUrl": "./assets/i/hospital-two.jpg",
+        "title": "Texas General Hospital",
+        "location": "San Antonio",
+        "direction": "3.4mi",
+        "bottonType": "close"
+      }
+    ]
+  }
+]

@@ -1,0 +1,301 @@
+<div class="right-tips-wrapper"  
+  *ngFor="let listItem of dataList">
+  <div class="right-tip-item one" 
+    [ngClass]="{'show': stepIndex === 0}">
+  	<div class="module-item">
+  		<a href="javascript:;" class="btn-close"
+  		   (click)="clickClose()">
+  		  <i class="icons icon-close"></i>
+  		</a>
+  		<!-- end .btn-close -->
+  	  <div class="label-txt">
+        {{listItem['Item1'].groupName}}
+      </div>
+	    <div class="list-item clearfix" *ngFor="let item of listItem['Item1']['list']">
+	      <div class="left-card">
+	  	    <div class="img-boxs">
+	  	      <img src="{{item.imgUrl}}" alt="photo">
+	  	    </div>
+	  	    <div class="txt-area">
+	  	      <div class="names">
+	  		    {{item.title}}
+	  	      </div>
+	  	      <div class="address">
+	  	  	    <span class="light">{{item.location}}</span>
+	  	  	    <span class="italic">{{item.direction}}</span>
+	  	      </div>
+	  	      <!-- end .address -->
+	  	    </div>
+	      </div>
+	      <!-- end .left-card -->
+	      <div class="right-point">
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-clock"></i>
+	  	    </a>
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-talk"></i>
+	  	    </a>
+	      </div>
+	      <!-- end .right-point -->
+	    </div>
+	    <!-- end .list-item -->
+  	</div>
+  	<!-- end .module-item -->
+  </div>	
+  <!-- end .right-tip-item -->
+  
+  <div class="right-tip-item two" 
+    [ngClass]="{'show': stepIndex === 1}">
+  	<div class="module-item">
+  		<a href="javascript:;" class="btn-close"
+  		   (click)="clickClose()">
+  		  <i class="icons icon-close"></i>
+  		</a>
+  		<!-- end .btn-close -->
+  	  <div class="label-txt">
+        {{listItem['Item2'].groupName}}
+      </div>
+	    <div class="list-item clearfix" *ngFor="let item of listItem['Item2']['list']">
+	      <div class="left-card">
+	  	    <div class="img-boxs">
+	  	      <img src="{{item.imgUrl}}" alt="photo">
+	  	    </div>
+	  	    <div class="txt-area">
+	  	      <div class="names">
+	  		    {{item.title}}
+	  	      </div>
+	  	      <div class="address">
+	  	  	    <span class="light">{{item.location}}</span>
+	  	  	    <span class="italic">{{item.direction}}</span>
+	  	      </div>
+	  	      <!-- end .address -->
+	  	    </div>
+	      </div>
+	      <!-- end .left-card -->
+	      <div class="right-point">
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-right"></i>
+	  	    </a>
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-close"></i>
+	  	    </a>
+	      </div>
+	      <!-- end .right-point -->
+	    </div>
+	    <!-- end .list-item -->
+  	</div>
+  	<!-- end .module-item -->
+  </div>	
+  <!-- end .right-tip-item -->
+  
+  <div class="right-tip-item three" 
+    [ngClass]="{'show': stepIndex === 2}">
+  	<div class="module-item">
+  		<a href="javascript:;" class="btn-close"
+  		   (click)="clickClose()">
+  		  <i class="icons icon-close"></i>
+  		</a>
+  		<!-- end .btn-close -->
+  	  <div class="label-txt">
+        {{listItem['Item3'].groupName}}
+      </div>
+	    <div class="list-item clearfix" *ngFor="let item of listItem['Item3']['list']">
+	      <div class="left-card">
+	  	    <div class="img-boxs">
+	  	      <img src="{{item.imgUrl}}" alt="photo">
+	  	    </div>
+	  	    <div class="txt-area">
+	  	      <div class="names">
+	  		    {{item.title}}
+	  	      </div>
+	  	      <div class="address">
+	  	  	    <span class="light">{{item.location}}</span>
+	  	  	    <span class="italic">{{item.direction}}</span>
+	  	      </div>
+	  	      <!-- end .address -->
+	  	    </div>
+	      </div>
+	      <!-- end .left-card -->
+	      <div class="right-point">
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-right"></i>
+	  	    </a>
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-close"></i>
+	  	    </a>
+	      </div>
+	      <!-- end .right-point -->
+	    </div>
+	    <!-- end .list-item -->
+  	</div>
+  	<!-- end .module-item -->
+  </div>	
+  <!-- end .right-tip-item -->
+  
+  <div class="right-tip-item four" 
+    [ngClass]="{'show': stepIndex === 3}">
+  	<div class="module-item">
+  		<a href="javascript:;" class="btn-close"
+  		   (click)="clickClose()">
+  		  <i class="icons icon-close"></i>
+  		</a>
+  		<!-- end .btn-close -->
+  	  <div class="label-txt">
+        {{listItem['Item4'].groupName}}
+      </div>
+	    <div class="list-item clearfix" *ngFor="let item of listItem['Item4']['list']">
+	      <div class="left-card w100 bg-no">
+	  	    <div class="img-boxs">
+	  	      <img src="{{item.imgUrl}}" alt="photo">
+	  	    </div>
+	  	    <div class="txt-area">
+	  	      <div class="names">
+	  		      {{item.title}}
+	  	      </div>
+	  	      <div class="address">
+	  	  	    {{item.subTitle}}
+	  	      </div>
+	  	      <!-- end .address -->
+	  	    </div>
+	      </div>
+	      <!-- end .left-card -->
+	    </div>
+	    <!-- end .list-item -->
+  	</div>
+  	<!-- end .module-item -->
+  </div>	
+  <!-- end .right-tip-item -->
+  
+  <div class="right-tip-item five" 
+    [ngClass]="{'show': stepIndex === 4}">
+  	<div class="module-item">
+  		<a href="javascript:;" class="btn-close"
+  		   (click)="clickClose()">
+  		  <i class="icons icon-close"></i>
+  		</a>
+  		<!-- end .btn-close -->
+  	  <div class="label-txt">
+        {{listItem['Item5'].groupName}}
+      </div>
+	    <div class="list-item clearfix" *ngFor="let item of listItem['Item5']['list']">
+	      <div class="left-card w100 bg-no">
+	  	    <div class="img-boxs">
+	  	      <img src="{{item.imgUrl}}" alt="photo">
+	  	    </div>
+	  	    <div class="txt-area">
+	  	      <div class="names">
+	  		      {{item.title}}
+	  	      </div>
+	  	      <div class="address">
+	  	  	    {{item.subTitle}}
+	  	      </div>
+	  	      <!-- end .address -->
+	  	    </div>
+	      </div>
+	      <!-- end .left-card -->
+	    </div>
+	    <!-- end .list-item -->
+  	</div>
+  	<!-- end .module-item -->
+  </div>	
+  <!-- end .right-tip-item -->
+
+  <div class="right-tip-item six" 
+    [ngClass]="{'show': stepIndex === 5}">
+  	<div class="module-item">
+  		<a href="javascript:;" class="btn-close"
+  		   (click)="clickClose()">
+  		  <i class="icons icon-close"></i>
+  		</a>
+  		<!-- end .btn-close -->
+  	  <div class="label-txt">
+        {{listItem['Item6'].groupName}}
+      </div>
+	    <div class="list-item clearfix" *ngFor="let item of listItem['Item6']['list']">
+	      <div class="left-card">
+	  	    <div class="img-boxs">
+	  	      <img src="{{item.imgUrl}}" alt="photo">
+	  	    </div>
+	  	    <div class="txt-area">
+	  	      <div class="names">
+	  		    {{item.title}}
+	  	      </div>
+	  	      <div class="address">
+	  	  	    <span class="light">{{item.location}}</span>
+	  	  	    <span class="italic">{{item.direction}}</span>
+	  	      </div>
+	  	      <!-- end .address -->
+	  	    </div>
+	      </div>
+	      <!-- end .left-card -->
+	      <div class="right-point">
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-right"></i>
+	  	    </a>
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-close"></i>
+	  	    </a>
+	      </div>
+	      <!-- end .right-point -->
+	    </div>
+	    <!-- end .list-item -->
+  	</div>
+  	<!-- end .module-item -->
+  </div>	
+  <!-- end .right-tip-item -->
+
+  <div class="right-tip-item seven" 
+    [ngClass]="{'show': stepIndex === 6}">
+  	<div class="module-item">
+  		<a href="javascript:;" class="btn-close"
+  		   (click)="clickClose()">
+  		  <i class="icons icon-close"></i>
+  		</a>
+  		<!-- end .btn-close -->
+  	  <div class="label-txt">
+        {{listItem['Item7'].groupName}}
+      </div>
+	    <div class="list-item clearfix" *ngFor="let item of listItem['Item7']['list']">
+	      <div class="left-card">
+	  	    <div class="img-boxs">
+	  	      <img src="{{item.imgUrl}}" alt="photo">
+	  	    </div>
+	  	    <div class="txt-area">
+	  	      <div class="names">
+	  		      {{item.title}}
+	  	      </div>
+	  	      <div class="address">
+	  	  	    <span class="light">{{item.location}}</span>
+	  	  	    <span class="italic">{{item.direction}}</span>
+	  	      </div>
+	  	      <!-- end .address -->
+	  	    </div>
+	      </div>
+	      <!-- end .left-card -->
+	      <div class="right-point">
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-right"></i>
+	  	    </a>
+	  	    <a href="javascript:;" class="btn-circle">
+	  	      <i class="icons icon-close"></i>
+	  	    </a>
+	      </div>
+	      <!-- end .right-point -->
+	    </div>
+	    <!-- end .list-item -->
+	    <div class="light-txt">
+	      Message:
+	    </div>
+	    <p class="txt">
+	      {{listItem['Item7'].messageText}}
+	    </p>
+	    <div class="light-txt">
+	      {{listItem['Item7'].address}}
+	      <div class="time">{{listItem['Item7'].timeText}}</div>
+	    </div>
+  	</div>
+  	<!-- end .module-item -->
+  </div>	
+  <!-- end .right-tip-item -->
+</div>
+<!-- end .right-tips-wrapper -->

@@ -1,0 +1,104 @@
+<div class="contents">
+  <div class="top-banner">
+    <div class="video-box">
+      <div class="gray-cover"></div>
+      <video autoplay loop>
+        <source src="../../../assets/video/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <app-sd-header-landing [scrolled]="scrolled"></app-sd-header-landing>
+    <div class="banner-content">
+      <h4 class="title uppercase">One Dental</h4>
+      <h4 class="blue title uppercase">Match</h4>
+      <p class="txt">
+        {{dataList['bannerText']}}
+      </p>
+      <div class="btn-boxs">
+        <a [routerLink]="['/register']" class="btn btn-blue">Get Started!</a>
+        <a href="javascript:;" class="btn btn-border-blue icon-btn apple">
+          <span class="little">Get the app on</span>
+          <span>iTunes Store</span>
+        </a>
+        <a href="javascript:;" class="btn btn-border-blue icon-btn google">
+          <span class="little">Get the app on</span>
+          <span>Google Play</span>
+        </a>
+      </div>
+    </div>
+    <!-- banner-content -->
+  </div>
+
+  <div class="contents-wrap" *ngFor="let item of dataList['contentData']">
+    <div class="section clearfix">
+      <div class="right-show">
+        <div class="iphone-box">
+          <img src="{{item.firstSection.firstimgUrl}}" alt="pic">
+        </div>
+        <div class="show-box">
+          <img src="{{item.firstSection.secondimgUrl}}" alt="pic">
+        </div>
+        <!-- end .show-box -->
+      </div>
+      <div class="txt-area lefts">
+        <h4 class="title">{{item.firstSection.title}}</h4>
+        <p class="txt ">
+          {{item.firstSection.description}}
+        </p>
+      </div>
+    </div>
+    <!-- end setion  -->
+    <div class="section clearfix">
+      <div class="left-show blue-bg">
+        <div class="center-img">
+          <img src="{{item.secondSection.imgUrl}}" alt="pic">
+        </div>
+        <!-- end .show-box -->
+      </div>
+      <div class="txt-area pr40 rights">
+        <h4 class="title right-align">{{item.secondSection.title}}</h4>
+        <p class="txt right-align">
+          {{item.secondSection.description}}
+        </p>
+      </div>
+    </div>
+    <!-- end setion  -->
+    <div class="section clearfix">
+      <div class="right-show">
+        <div class="iphone-box">
+          <img src="{{item.thirdSection.firstimgUrl}}" alt="pic">
+        </div>
+        <div class="show-box">
+          <img src="{{item.thirdSection.secondimgUrl}}" alt="pic">
+        </div>
+        <!-- end .show-box -->
+      </div>
+      <div class="txt-area lefts">
+        <h4 class="title">{{item.thirdSection.title}}</h4>
+        <p class="txt">
+          {{item.thirdSection.description}}
+        </p>
+      </div>
+    </div>
+    <!-- end setion  -->
+    <div class="section clearfix">
+      <div class="left-show com-img">
+        <img src="{{item.forthSection.imgUrl}}" alt="pic">
+      </div>
+      <div class="txt-area pr40 rights">
+        <h4 class="title right-align">{{item.forthSection.title}}</h4>
+        <p class="txt right-align">
+          {{item.forthSection.description}} 
+        </p>
+      </div>
+    </div>
+    <!-- end setion  -->
+  </div>
+  <!-- end .contents -->
+  <footer class="footer">
+    <p class="footer-detail">
+      All Copyrights Reserved &copy; 2017 
+    </p>
+  </footer>
+</div>
+<!-- end .contents -->

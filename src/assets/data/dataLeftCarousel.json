@@ -1,0 +1,27 @@
+[
+  {
+    "title": "",
+    "description": "Welcome to the most modern ,fun and beautiful digital staffing platform that's connecting the dental world",
+    "imgUrl": "./assets/i/slide-one.png"
+  },
+  {
+    "title": "Easy & Fun Search",
+    "description": "Browse Beautiful offices, potential employees, and connect with friends",
+    "imgUrl": "./assets/i/slide-two.png"
+  },
+  {
+    "title": "The Resume Reimagined",
+    "description": "We include all the traditional content plus much more, like pictures and endorsements from past employers and coworkers.",
+    "imgUrl": "./assets/i/slide-three.png"
+  },
+  {
+    "title": "Customize Your Search",
+    "description": "Search for the perfect job and employee with custom filters to focus in on exactly what you're looking for",
+    "imgUrl": "./assets/i/slide-four.png"
+  },
+  {
+    "title": "Build Your Benches",
+    "description": "We are pioneering dynamic hiring so you are always prepared.",
+    "imgUrl": "./assets/i/slide-five.png"
+  }
+]
