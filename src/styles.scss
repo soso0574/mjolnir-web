@@ -184,7 +184,7 @@ a:hover {
     opacity: 0.8;
 }
 .icons {
-    background: url("./assets/i/icon-sprites.png") no-repeat;
+    background: url("./assets/i/icon-sprites-global.png") no-repeat;
     display: inline-block;
     background-size: 288px auto;
 }
@@ -597,7 +597,8 @@ a:hover {
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 3;
-            overflow: hidden; 
+            overflow: hidden;
+            position: absolute;
             &.pb20 {
                 padding-bottom: 12px;
             }

@@ -127,7 +127,7 @@
 /* .tool-list */
 .tool-list {
 	width: 348px;
-	margin: 30px auto 40px auto;
+	margin: 37px auto 40px auto;
 	.like-boxs {
 		display: inline-block;
 		position: relative;
@@ -292,7 +292,7 @@
 		.gray-txt {
 			font-family: 'HelveticaNeueLt';
 			font-size: 20px;
-			padding-right: 60px;
+			padding-right: 100px;
 			color: rgba(0,0,0,0.37);
 			position: relative;
 			.right-txt {
@@ -307,6 +307,22 @@
 					text-transform: uppercase;
 					color: #828282;
 					font-size: 11px;
+				}
+			}
+			.right-star {
+				position: absolute;
+				right: 0;
+				top: 0;
+				ul {
+					li {
+						float: left;
+						.icons-star {
+							background: url(../../../assets/i/icon-star.jpg) no-repeat;
+							display: inline-block;
+							width: 13px;
+							height: 12px;
+						}
+					}
 				}
 			}
 		}

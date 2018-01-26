@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     setTimeout( () => {
       this.showForm = true;
-    }, 12000);
+    }, 1500);
   }
 
   initData() {

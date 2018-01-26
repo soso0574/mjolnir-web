@@ -51,7 +51,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   ngOnInit() {
     setTimeout( () => {
       this.showForm = true;
-    }, 12000);
+    }, 1500);
   }
 
   /**

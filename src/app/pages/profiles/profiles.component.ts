@@ -43,6 +43,14 @@ export class ProfilesComponent implements OnInit {
   initData() {
     this.carListFriends = this.dataList['carListFriends'];
     this.carListOpportunities = this.dataList['carListOpportunities'];
+
+    const firstCardFriends = this.carListFriends[0];
+    this.carListFriends.splice((0), 1);
+    this.carListFriends.push(firstCardFriends);
+
+    const firstCardOpportunities = this.carListOpportunities[0];
+    this.carListOpportunities.splice((0), 1);
+    this.carListOpportunities.push(firstCardOpportunities);
   }
 
   // click Prev icon

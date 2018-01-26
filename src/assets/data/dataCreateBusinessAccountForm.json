@@ -46,6 +46,44 @@
   "formData" : [
     {
       "Business Name": "",
+      "Business Name Sugguest List": [
+        {
+          "label": "abcdf"
+        },
+        {
+          "label": "abcef"
+        },
+        {
+          "label": "Abc"
+        },
+        {
+          "label": "ace"
+        },
+        {
+          "label": "cFb"
+        },
+        {
+          "label": "cab"
+        },
+        {
+          "label": "qer"
+        },
+        {
+          "label": "eqr"
+        },
+        {
+          "label": "tyi"
+        },
+        {
+          "label": "iop"
+        },
+        {
+          "label": "jgh"
+        },
+        {
+          "label": "klma"
+        }
+      ],
       "Business Address": "",
       "City": "",
       "Zip Code": "",
@@ -136,11 +174,11 @@
       "Office Website": "",
       "Office Email Address": "",
       "Office Phone Number": "",
-      "Preferred OptionModelDropdown": {
-        "defaultText": "Preferred Option",
+      "Preferred Contact OptionModelDropdown": {
+        "defaultText": "Preferred Contact Option",
         "optionList": [
           {
-            "optionName": "Preferred Option"
+            "optionName": "Preferred Contact Option"
           },
           {
             "optionName": "Email"
@@ -150,11 +188,11 @@
           }
         ]
       },
-      "Alternate OptionModelDropdown": {
-        "defaultText": "Alternate Option",
+      "Alternate Contact OptionModelDropdown": {
+        "defaultText": "Alternate Contact Option",
         "optionList": [
           {
-            "optionName": "Alternate Option"
+            "optionName": "Alternate Contact Option"
           },
           {
             "optionName": "Email"
@@ -1285,35 +1323,49 @@
           }
         ]
       },
-      "First Name1": "",
-      "Last Name1": "",
-      "Add Email Mobile Number1": "",
-      "step7TopCheckList": [
+      "step7AdminList": [
         {
-          "label": "Edit Office Profile",
-          "checked": false
-        },
-        {
-          "label": "Manage Interview Requests",
-          "checked": false
+          "First Name1": "",
+          "Last Name1": "",
+          "Add Email Mobile Number1": "",
+          "step7TopCheckList": [
+            {
+              "label": "Edit Office Profile",
+              "checked": false
+            },
+            {
+              "label": "Manage Interview Requests",
+              "checked": false
+            }
+          ],
+          "step7BottomCheckList": [
+            {
+              "label": "Add/Edit Benches",
+              "checked": false
+            },
+            {
+              "label": "Manage Match Requests",
+              "checked": false
+            }
+          ]
         }
       ],
-      "step7BottomCheckList": [
-        {
-          "label": "Add/Edit Benches",
-          "checked": false
-        },
-        {
-          "label": "Manage Match Requests",
-          "checked": false
-        }
-      ],
-      "First Name2": "",
-      "Last Name2": "",
-      "Add Email Mobile Number2": "",
-      "First Name3": "",
-      "Last Name3": "",
-      "Add Email Mobile Number3": "",
+      "step8Content": {
+        "generalEndorsementList": [
+          {
+            "First Name2": "",
+            "Last Name2": "",
+            "Add Email Mobile Number2": ""
+          }
+        ],
+        "professionalEndorsementList": [
+          {
+            "First Name3": "",
+            "Last Name3": "",
+            "Add Email Mobile Number3": ""
+          }
+        ]
+      },
       "step9TreeList": {
         "title": "parent",
         "isEdit": false,

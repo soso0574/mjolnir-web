@@ -30,7 +30,7 @@
       	  </a>
       	  <div class="card-list">
       	  	<div class="card-item {{'order-' + (carListFriends.length - i - 1)}}"
-      	  	  [ngClass]="'fadeIn'+ (carListFriends.length - i - 1)" 
+      	  	  [ngClass]="{'fadeIn': i === (carListFriends.length - 1)}" 
       	  	  *ngFor="let item of carListFriends;let i = index">
 	      	  	<div class="img-boxs">
 	      	  	  <img src="{{item.imgUrl}}" alt="photo">
@@ -43,7 +43,7 @@
 	      	  	  	{{item.smallTitle}} 
 	      	  	  	<span class="right-txt">
 	      	  	  	  {{item.exp}} 
-	      	  	  	  <span class="grey-txt">EXP</span>
+	      	  	  	  <span class="grey-txt">Exp</span>
 	      	  	  	</span>
 	      	  	  </div>
 	      	  	  <!-- end .gray-txt -->
@@ -125,8 +125,17 @@
 	      	  	  	{{item.smallTitle}} 
 	      	  	  	<span class="right-txt">
 	      	  	  	  {{item.exp}} 
-	      	  	  	  <span class="grey-txt">EXP</span>
+	      	  	  	  <span class="grey-txt">Employees</span>
 	      	  	  	</span>
+                  <div class="right-star">
+                    <ul>
+                      <li *ngIf="item.stars > 0"><i class="icons-star"></i></li>
+                      <li *ngIf="item.stars > 1"><i class="icons-star"></i></li>
+                      <li *ngIf="item.stars > 2"><i class="icons-star"></i></li>
+                      <li *ngIf="item.stars > 3"><i class="icons-star"></i></li>
+                      <li *ngIf="item.stars > 4"><i class="icons-star"></i></li>
+                    </ul>
+                  </div>
 	      	  	  </div>
 	      	  	  <!-- end .gray-txt -->
 	      	  	  <div class="line"></div>

@@ -1,5 +1,6 @@
 <div class="change-contents office-named create-wrapper"
-  *ngFor="let formItem of formData">
+  *ngFor="let formItem of formData"
+  (click)="sugguestList = []">
   <div class="logo-boxs mb20 w525">
     <span class="white txt">One Dental</span>
     <span class="blue txt">Match</span>
@@ -22,13 +23,25 @@
       <!-- end .titles -->
       <div class="main-show">
         <div class="form pl78">
-          <div class="row-line">
+          <div class="row-line" (click)="$event.stopPropagation();">
             <div class="inputs gray-inputs">
               <i class="icons icon-business-card"></i>
               <input type="text" placeholder="{{placeholderList['Business Name']}}"
-                (focus)="emptyPlaceholder('Business Name')" (focusout)="fillPlaceholder('Business Name')"
+                (focus)="emptyPlaceholder('Business Name');changeBusinessName();" 
+                (focusout)="fillPlaceholder('Business Name')"
                 (change)="changeInputStep(0)"
+                (keyup)="changeBusinessName()"
                 [(ngModel)]="formItem['Business Name']">
+              <div class="auto-tips">
+                <ul>
+                  <li *ngFor="let item of sugguestList">
+                    <a href="javascript:;" class="items"
+                      (click)="formItem['Business Name'] = item.label;sugguestList = [];">
+                      {{item.label}}
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <!-- end .row-line -->
@@ -195,7 +208,7 @@
               </div>
               <!-- end .biger-phtoto -->
               <div class="little-boxs">
-                <div class="border-boxs" 
+                <div class="border-boxs"
                    *ngFor="let item of formItem['step4RightPicList']"
                    [ngClass]="{'hasPic': item.src !== ''}">
                   <i class="icons icon-plus" [ngClass]="{'hide': item.src !== ''}"></i>
@@ -280,13 +293,13 @@
               <div ngbDropdown class="d-inline-block">
                 <button class="btn btn-outline-primary" ngbDropdownToggle>
                   <span class="num">1</span>
-                  {{formItem['Preferred OptionModelDropdown'].defaultText}}
+                  {{formItem['Preferred Contact OptionModelDropdown'].defaultText}}
                 </button>
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
-                    *ngFor="let item of formItem['Preferred OptionModelDropdown'].optionList"
-                    (click)="formItem['Preferred OptionModelDropdown'].defaultText = item.optionName;changeInputStep(4)"
-                    [ngClass]="{'selected': formItem['Preferred OptionModelDropdown'].defaultText === item.optionName}">
+                    *ngFor="let item of formItem['Preferred Contact OptionModelDropdown'].optionList"
+                    (click)="formItem['Preferred Contact OptionModelDropdown'].defaultText = item.optionName;changeInputStep(4)"
+                    [ngClass]="{'selected': formItem['Preferred Contact OptionModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
                 </div>
@@ -298,13 +311,13 @@
               <div ngbDropdown class="d-inline-block">
                 <button class="btn btn-outline-primary" ngbDropdownToggle>
                   <span class="num">2</span>
-                  {{formItem['Alternate OptionModelDropdown'].defaultText}}
+                  {{formItem['Alternate Contact OptionModelDropdown'].defaultText}}
                 </button>
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
-                    *ngFor="let item of formItem['Alternate OptionModelDropdown'].optionList"
-                    (click)="formItem['Alternate OptionModelDropdown'].defaultText = item.optionName;changeInputStep(4)"
-                    [ngClass]="{'selected': formItem['Alternate OptionModelDropdown'].defaultText === item.optionName}">
+                    *ngFor="let item of formItem['Alternate Contact OptionModelDropdown'].optionList"
+                    (click)="formItem['Alternate Contact OptionModelDropdown'].defaultText = item.optionName;changeInputStep(4)"
+                    [ngClass]="{'selected': formItem['Alternate Contact OptionModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
                 </div>
@@ -348,7 +361,7 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['MondayStartModelDropdown'].optionList"
-                    (click)="formItem['MondayStartModelDropdown'].defaultText = item.optionName" 
+                    (click)="formItem['MondayStartModelDropdown'].defaultText = item.optionName;selectMondayDropdown();" 
                     [ngClass]="{'hide': (item.optionName !== 'Start' 
                                          && formItem['MondayEndModelDropdown'].defaultText !== 'End' 
                                          && item.optionName > formItem['MondayEndModelDropdown'].defaultText), 
@@ -365,7 +378,7 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['MondayEndModelDropdown'].optionList"
-                    (click)="formItem['MondayEndModelDropdown'].defaultText = item.optionName" 
+                    (click)="formItem['MondayEndModelDropdown'].defaultText = item.optionName;selectMondayDropdown();" 
                     [ngClass]="{'hide': (item.optionName !== 'End' 
                                          && formItem['MondayStartModelDropdown'].defaultText !== 'Start' 
                                          && item.optionName < formItem['MondayStartModelDropdown'].defaultText), 
@@ -641,21 +654,21 @@
             this Office Profile . Set their administrator
             permissions below
           </div>
-          <div class="form normal-form">
+          <div class="form normal-form" *ngFor="let adminItem of formItem['step7AdminList'];let i = index">
             <div class="row-line">
               <div class="two-inputs row">
                 <div class="item col-6">
                   <div class="inputs gray-border">
                     <input type="text" placeholder="{{placeholderList['First Name1']}}"
                      (focus)="emptyPlaceholder('First Name1')" (focusout)="fillPlaceholder('First Name1')"
-                     [(ngModel)]="formItem['First Name1']">
+                     [(ngModel)]="adminItem['First Name1']">
                   </div>
                 </div>
                 <div class="item col-6">
                   <div class="inputs gray-border">
                     <input type="text" placeholder="{{placeholderList['Last Name1']}}"
                      (focus)="emptyPlaceholder('Last Name1')" (focusout)="fillPlaceholder('Last Name1')"
-                     [(ngModel)]="formItem['Last Name1']">
+                     [(ngModel)]="adminItem['Last Name1']">
                   </div>
                 </div>
               </div>
@@ -667,7 +680,7 @@
                   <div class="inputs gray-border">
                     <input type="text" placeholder="{{placeholderList['Add Email Mobile Number1']}}"
                      (focus)="emptyPlaceholder('Add Email Mobile Number1')" (focusout)="fillPlaceholder('Add Email Mobile Number1')"
-                     [(ngModel)]="formItem['Add Email Mobile Number1']">
+                     [(ngModel)]="adminItem['Add Email Mobile Number1']">
                   </div>
                 </div>
               </div>
@@ -676,24 +689,24 @@
             <div class="row-line">
               <div class="two-check clearfix">
                 <div class="checkbox-wrap squre-checkbox" 
-                  *ngFor="let item of formItem['step7TopCheckList']">
-                  <input type="checkbox" name="choose" id="{{item.label}}" [(ngModel)]="item.checked"> 
-                  <label for="{{item.label}}">{{item.label}}</label>
+                  *ngFor="let item of adminItem['step7TopCheckList']">
+                  <input type="checkbox" name="choose" id="{{item.label + i}}" [(ngModel)]="item.checked"> 
+                  <label for="{{item.label + i}}">{{item.label}}</label>
                 </div>
                 <!-- end .checkbox-wrap -->
               </div>
               <div class="two-check clearfix">
                 <div class="checkbox-wrap squre-checkbox" 
-                  *ngFor="let item of formItem['step7BottomCheckList']">
-                  <input type="checkbox" name="choose" id="{{item.label}}" [(ngModel)]="item.checked"> 
-                  <label for="{{item.label}}">{{item.label}}</label>
+                  *ngFor="let item of adminItem['step7BottomCheckList']">
+                  <input type="checkbox" name="choose" id="{{item.label + i}}" [(ngModel)]="item.checked"> 
+                  <label for="{{item.label + i}}">{{item.label}}</label>
                 </div>
               </div>
             </div>
             <!-- end .row-line -->
-            <div class="btn-boxs">
-              <a href="javascript:;" class="btn btn-dark-blue">ADD ANOTHER OFFICE MANAGER</a>
-            </div>
+          </div>
+          <div class="btn-boxs">
+            <a href="javascript:;" class="btn btn-dark-blue" (click)="addAnotherAdmin()">Add Another Administrator</a>
           </div>
         </div>
         <!-- end .form -->
@@ -731,21 +744,21 @@
               Lets invite your employees, ex-employees, and
               customers to endorse you.
             </div>
-            <div class="form normal-form">
+            <div class="form normal-form" *ngFor="let endorsementItem of formItem['step8Content']['generalEndorsementList']">
               <div class="row-line">
                 <div class="two-inputs row">
                   <div class="item col-6">
                     <div class="inputs gray-border">
                       <input type="text" placeholder="{{placeholderList['First Name2']}}"
                        (focus)="emptyPlaceholder('First Name2')" (focusout)="fillPlaceholder('First Name2')"
-                       [(ngModel)]="formItem['First Name2']">
+                       [(ngModel)]="endorsementItem['First Name2']">
                     </div>
                   </div>
                   <div class="item col-6">
                     <div class="inputs gray-border">
                       <input type="text" placeholder="{{placeholderList['Last Name2']}}"
                        (focus)="emptyPlaceholder('Last Name2')" (focusout)="fillPlaceholder('Last Name2')"
-                       [(ngModel)]="formItem['Last Name2']">
+                       [(ngModel)]="endorsementItem['Last Name2']">
                     </div>
                   </div>
                 </div>
@@ -757,15 +770,15 @@
                     <div class="inputs gray-border">
                       <input type="text" placeholder="{{placeholderList['Add Email Mobile Number2']}}"
                        (focus)="emptyPlaceholder('Add Email Mobile Number2')" (focusout)="fillPlaceholder('Add Email Mobile Number2')"
-                       [(ngModel)]="formItem['Add Email Mobile Number2']">
+                       [(ngModel)]="endorsementItem['Add Email Mobile Number2']">
                     </div>
                   </div>
                 </div>
               </div>
               <!-- end .row-line -->
-              <div class="btn-boxs">
-                <a href="javascript:;" class="btn btn-dark-blue">ADD ANOTHER PEER</a>
-              </div>
+            </div>
+            <div class="btn-boxs">
+              <a href="javascript:;" class="btn btn-dark-blue" (click)="addAnotherGeneralEndorsement()">Add Another Peer</a>
             </div>
           </div>
           <!-- end .general-endorsement -->
@@ -777,21 +790,21 @@
               It's important for the other dentists/practices that
               you refer to and from to endorse your office as well
             </div>
-            <div class="form normal-form">
+            <div class="form normal-form" *ngFor="let endorsementItem of formItem['step8Content']['professionalEndorsementList']">
               <div class="row-line">
                 <div class="two-inputs row">
                   <div class="item col-6">
                     <div class="inputs gray-border">
                       <input type="text" placeholder="{{placeholderList['First Name3']}}"
                        (focus)="emptyPlaceholder('First Name3')" (focusout)="fillPlaceholder('First Name3')"
-                       [(ngModel)]="formItem['First Name3']">
+                       [(ngModel)]="endorsementItem['First Name3']">
                     </div>
                   </div>
                   <div class="item col-6">
                     <div class="inputs gray-border">
                       <input type="text" placeholder="{{placeholderList['Last Name3']}}"
                        (focus)="emptyPlaceholder('Last Name3')" (focusout)="fillPlaceholder('Last Name3')"
-                       [(ngModel)]="formItem['Last Name3']">
+                       [(ngModel)]="endorsementItem['Last Name3']">
                     </div>
                   </div>
                 </div>
@@ -803,15 +816,15 @@
                     <div class="inputs gray-border">
                       <input type="text" placeholder="{{placeholderList['Add Email Mobile Number3']}}"
                        (focus)="emptyPlaceholder('Add Email Mobile Number3')" (focusout)="fillPlaceholder('Add Email Mobile Number3')"
-                       [(ngModel)]="formItem['Add Email Mobile Number3']">
+                       [(ngModel)]="endorsementItem['Add Email Mobile Number3']">
                     </div>
                   </div>
                 </div>
               </div>
               <!-- end .row-line -->
-              <div class="btn-boxs">
-                <a href="javascript:;" class="btn btn-dark-blue">ADD ANOTHER PEER</a>
-              </div>
+            </div>
+            <div class="btn-boxs">
+              <a href="javascript:;" class="btn btn-dark-blue" (click)="addAnotherProfessionalEndorsement()">Add Another Peer</a>
             </div>
           </div>
           <!-- end .general-endorsement -->
@@ -985,20 +998,58 @@
       </div>
       <div class="modal-info">
         <h4 class="titles">Import your Profile</h4>
-        <div class="icon-bar">
+        <a href="javascript:;" class="icon-bar">
           <i class="icons icon-facebook"></i>
           <span class="txt">Facebook</span>
-        </div>
+        </a>
 
-        <div class="icon-bar">
+        <a href="javascript:;" class="icon-bar">
           <i class="icons icon-google-plus"></i>
           <span class="txt">Google Plus</span>
-        </div>
+        </a>
 
-        <div class="icon-bar">
+        <a href="javascript:;" class="icon-bar">
           <i class="icons icon-in"></i>
           <span class="txt">LinkedIn</span>
-        </div>
+        </a>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click')">OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .import-profile-modal -->
+
+<ng-template #importPhotosModal let-c="close">
+  <div class="modal-boxs import-photos-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-user"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <h4 class="titles">Import Profiles</h4>
+        <a href="javascript:;" class="icon-bar">
+          <i class="icons icon-google-plus"></i>
+          <span class="txt">Google Plus</span>
+        </a>
+        
+        <a href="javascript:;" class="icon-bar">
+          <i class="icons icon-insta"></i>
+          <span class="txt">Instagram</span>
+        </a>
+
+        <a href="javascript:;" class="icon-bar">
+          <i class="icons icon-photos"></i>
+          <span class="txt">Photos</span>
+        </a>
+        
+        <a href="javascript:;" class="icon-bar">
+          <i class="icons icon-facebook"></i>
+          <span class="txt">Facebook</span>
+        </a>
       </div>
       <div class="footer-btn">
         <a href="javascript:;" class="btn btn-green" (click)="c('Close click')">OK</a>
