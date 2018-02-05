@@ -8,8 +8,15 @@
 	background-image: -o-linear-gradient(left top, #4476b6, #57b3c2);
 	background-image: -webkit-linear-gradient(left top, #4476b6, #57b3c2);
 	background: -ms-linear-gradient(left top,#4476b6 0%,#57b3c2 100%);
+	z-index: -1;
 }
-
+.blue-bg.endorse-bg {
+	background-image: -webkit-gradient(linear, 0 0, 960 850.125, from(#196f90), color-stop(0.001, #14648f), color-stop(0.003, #136b8b), color-stop(0.005, #116b8a), color-stop(0.007, #146a8b), color-stop(0.241, #237990), color-stop(0.241, #247b8f), color-stop(0.301, #287d91), color-stop(0.301, #297f90), color-stop(0.691, #489a9a), color-stop(0.694, #479c99), color-stop(0.726, #499e9b), color-stop(0.726, #4b9d9b), color-stop(0.993, #5fb0a1), color-stop(0.993, #5fb2a0), to(#5fb2a0));
+	background-image: -webkit-linear-gradient(318.47360487073234deg, #196f90, #14648f 0.1%, #136b8b, #116b8a, #146a8b 0.7%, #237990 24.1%, #247b8f 24.1%, #287d91 30.1%, #297f90 30.1%, #489a9a 69.1%, #479c99 69.4%, #499e9b 72.6%, #4b9d9b 72.6%, #5fb0a1 99.3%, #5fb2a0 99.3%, #5fb2a0);
+	background-image: -moz-linear-gradient(318.47360487073234deg, #196f90, #14648f 0.1%, #136b8b, #116b8a, #146a8b 0.7%, #237990 24.1%, #247b8f 24.1%, #287d91 30.1%, #297f90 30.1%, #489a9a 69.1%, #479c99 69.4%, #499e9b 72.6%, #4b9d9b 72.6%, #5fb0a1 99.3%, #5fb2a0 99.3%, #5fb2a0);
+	background-image: -o-linear-gradient(318.47360487073234deg, #196f90, #14648f 0.1%, #136b8b, #116b8a, #146a8b 0.7%, #237990 24.1%, #247b8f 24.1%, #287d91 30.1%, #297f90 30.1%, #489a9a 69.1%, #479c99 69.4%, #499e9b 72.6%, #4b9d9b 72.6%, #5fb0a1 99.3%, #5fb2a0 99.3%, #5fb2a0);
+	background-image: linear-gradient(131.52639512926766deg, #196f90, #14648f 0.1%, #136b8b, #116b8a, #146a8b 0.7%, #237990 24.1%, #247b8f 24.1%, #287d91 30.1%, #297f90 30.1%, #489a9a 69.1%, #479c99 69.4%, #499e9b 72.6%, #4b9d9b 72.6%, #5fb0a1 99.3%, #5fb2a0 99.3%, #5fb2a0);
+}
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -116,13 +123,13 @@
 			}
 			.icon-prev {
 				background-position: -197px -78px;
-			}	
+			}
 			.icon-next {
 				background-position: -245px -78px;
-			}	
+			}
 		}
 	}
-	
+
 }
 /* .tool-list */
 .tool-list {
@@ -223,10 +230,10 @@
 	background-color: #fff;
 	border-radius: 19px;
 	overflow: hidden;
-	transition:All 1s ease-in-out;    
-	-webkit-transition:All 1s ease-in-out;    
+	transition:All 1s ease-in-out;
+	-webkit-transition:All 1s ease-in-out;
 	-moz-transition:All 1s ease-in-out;
-	
+
 	-webkit-animation: fadeout 1s; /* Safari, Chrome and Opera > 12.1 */
 	-ms-animation: fadeout 1s; /* Internet Explorer */
 	animation: fadeout 1s;
@@ -235,7 +242,7 @@
 	  -ms-animation: fadein 1s; /* Internet Explorer */
 	  animation: fadein 1s;
 	}
-	
+
 	&.order-0 {
 	  	transform: scale(0.95) translateY(530px);
 	  	opacity: 0;
@@ -383,3 +390,76 @@
 	}
 }
 
+.profile-edit-modal {
+  .modal-inner {
+      padding-bottom: 0;
+      width: 622px;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+/* info-sticky-icons */
+.info-sticky-icons {
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  justify-content: center;
+  width: 100%;
+	z-index: 1051;
+	.icons-wrapper {
+		display: flex;
+		justify-content: flex-end;
+		width: 560px;
+	}
+  .btn-circle {
+		width: 66px;
+		height: 66px;
+		border-radius: 100%;
+		background-color: #fff;
+		margin: 0 30px 0 0;
+		box-shadow: 0 0 20px rgba(0,0,0,0.3);
+		text-align: center;
+		padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-child {
+      margin: 0;
+    }
+		&.pink {
+			background-image: -moz-linear-gradient(top, #ca6462, #ed71a5);
+			background-image: -o-linear-gradient(top, #ca6462, #ed71a5);
+			background-image: -webkit-linear-gradient(top, #ca6462, #ed71a5);
+			background: -ms-linear-gradient(top,#ca6462 0%,#ed71a5 100%);
+			width: 66px;
+			height: 66px;
+		}
+		&.blue {
+			background-image: -moz-linear-gradient(top, #827bc9, #67baca);
+			background-image: -o-linear-gradient(top, #827bc9, #67baca);
+			background-image: -webkit-linear-gradient(top, #827bc9, #67baca);
+			background: -ms-linear-gradient(top,#827bc9 0%,#67baca 100%);
+			width: 66px;
+			height: 66px;
+		}
+		.icons {
+			&.icon-three {
+				background-position: -250px -134px;
+				width: 29px;
+				height: 20px;
+			}
+			&.icon-clock {
+				background-position: -6px -176px;
+				width: 34px;
+				height: 33px;
+			}
+			&.icon-like {
+				background-position: -56px -177px;
+				width: 32px;
+				height: 33px;
+			}
+		}
+	}
+}

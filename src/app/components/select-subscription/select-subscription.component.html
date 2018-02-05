@@ -1,0 +1,63 @@
+<div class="subscription-content">
+  <div class="header-subscription">
+    <a href="javascript:;" class="back-icon icons3" (click)="backto()"></a>
+    <div class="subscription-title">
+      <span class="head-subscription-title">SELECT SUBSCRIPTION</span>
+    </div>
+  </div>
+  <!-- .header setting -->
+  <div class="subscription-list">
+    <div class="subscription-list-detail">
+      <div class="subscription-list-content" *ngFor="let item of data.lists">
+        <a href="javascript:;" class="subscription-link" [ngClass]="item.color">
+          <div class="dollar-value">
+            <span class="dollar-txt">{{item.currency}}<span>{{item.price}}</span></span>
+            <span class="month-txt">per {{item.validity}}</span>
+          </div>
+          <div class="month-subscription" *ngIf="!item.cancel">
+            <span class="month-sub-txt">{{item.duration}} <span>Month subscription</span></span>
+            <span class="per-value">{{item.offer}} <span>OFF</span></span>
+          </div>
+          <div class="month-subscription" *ngIf="item.cancel">
+             <span class="full-month-txt">MONTH TO MONTH  SUBSCRIPTION</span>
+             <span class="cancel-value">Feel free to cancel any time</span>
+           </div>
+        </a>
+      </div>
+    </div>
+    <!-- .subscription-list-detail  -->
+    <div class="subscription-btn">
+      <a href="javascript:;" class="go-btn" (click)="openModal(boostModal)">Great, let’s go!</a>
+    </div>
+    <!-- .subscription-btn -->
+  </div>
+
+  <ng-template  #boostModal let-c="close" let-d="dismiss">
+    <div class="modal-window-boost">
+      <div class="boost-wrapper">
+        <div class="green-orage-bg">
+          <h3 class="boost-title">Bypass the Crowd</h3>
+          <p class="boost-para">Be the top profile in your area for 12 Hours and get more matches</p>
+          <div class="boost-value-list">
+            <div class="boost-value-detail" *ngFor="let item of data.boosts">
+              <a href="javascript:;" class="boost-link" [ngClass]="item.color">
+                <div class="dollar-boost-value">
+                  <span class="dollar-txt">{{item.currency}}<span>{{item.price}}</span></span>
+                  <span class="boost-txt">per boost</span>
+                </div>
+                <div class="boost-value">
+                  <span class="boost-value-txt">{{item.count}} <span>Boost</span></span>
+                  <span class="save-value" *ngIf="item.save">SAVE {{item.save}}</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="javascript:;" class="boost-btn" (click)="c('Close click')">BOOST ME</a>
+          <a href="javascript:;" class="thanks-link" (click)="c('Close click')">NO THANKS</a>
+        </div>
+      </div>
+      <!-- end .modal-window-boost -->
+    </div>
+  </ng-template>
+</div>
+<!-- end .subscription-content  -->

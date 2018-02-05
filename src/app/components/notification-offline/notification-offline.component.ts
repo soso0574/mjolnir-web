@@ -12,6 +12,7 @@ import { DataListService } from '../../shared/data-list/data-list.service';
 })
 export class NotificationOfflineComponent implements OnInit {
   @Input() showRightPanel: any[];
+  @Input() onlinePanel: boolean;
 
   errorMessage: string;
   dataList: any[] = [];

@@ -5,7 +5,7 @@
       <div class="bottom-gray"></div>
     </aside>
     <!-- left-slide -->
-    
+
     <div class="right-content">
       <div class="gray-cover"></div>
       <div class="video-boxs">
@@ -14,14 +14,14 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      
-      <div class="content-inner"> 
-        <app-sd-register *ngIf="!isShowCreateBusinessAccount" 
+
+      <div class="content-inner">
+        <app-sd-register *ngIf="contents.length < 1"
         (stopCarousel)="stopCarousel($event)"
         (resumeCarousel)="resumeCarousel($event)"
         (changedContent)="changedContent($event)"></app-sd-register>
-        
-        <app-sd-create-business-account *ngIf="isShowCreateBusinessAccount"></app-sd-create-business-account>
+        <app-sd-create-business-account *ngIf="createProfile==='business'"></app-sd-create-business-account>
+        <app-create-employee-account *ngIf="createProfile==='employee'"></app-create-employee-account>
       </div>
       <!-- end .content-inner -->
     </div>
@@ -29,3 +29,64 @@
   </div>
 </div>
 <!-- end .contents -->
+
+<ng-template #waringModal let-c="close">
+  <div class="modal-boxs waring-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-i"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <p>
+          Each Office profile must have an
+          owner, so it's important to create
+          a basic User profile first. Skip the
+          sections you want to as you can
+          always complete your user profile
+          at a later date
+        </p>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');openModal(importProfileModal, 'static')">OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .waring-modal -->
+
+<ng-template #importProfileModal let-c="close">
+  <div class="modal-boxs import-profile-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-user"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <h4 class="titles">Import your Profile</h4>
+        <a href="javascript:;" class="icon-bar">
+          <i class="icons icon-facebook"></i>
+          <span class="txt">Facebook</span>
+        </a>
+
+        <a href="javascript:;" class="icon-bar">
+          <i class="icons icon-google-plus"></i>
+          <span class="txt">Google Plus</span>
+        </a>
+
+        <a href="javascript:;" class="icon-bar">
+          <i class="icons icon-in"></i>
+          <span class="txt">LinkedIn</span>
+        </a>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;"
+        class="btn btn-green"
+        (click)="c('Close click'); createProfile=contents">OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .import-profile-modal -->

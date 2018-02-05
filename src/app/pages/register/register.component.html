@@ -65,14 +65,14 @@
     <!-- end .logo-boxs -->
     <div class="title-area">
     <p class="sub-txt">
-      Almost there. Just curious. How did you hear about 
+      Almost there. Just curious. How did you hear about
       us ?
     </p>
   </div>
   <!-- end .title-area -->
     <div class="row">
       <div class="col-4">
-        <a href="javascript:;" class="white-border" 
+        <a href="javascript:;" class="white-border"
         [ngClass]="{'selected': selectedSocialIndex === 1}"
         (click)="selectedSocialIndex = 1">
           <div class="btn-friendly">
@@ -82,7 +82,7 @@
         </a>
       </div>
       <div class="col-4">
-        <a href="javascript:;" class="white-border" 
+        <a href="javascript:;" class="white-border"
         [ngClass]="{'selected': selectedSocialIndex === 2}"
         (click)="selectedSocialIndex = 2">
           <div class="btn-friendly">
@@ -92,7 +92,7 @@
         </a>
       </div>
       <div class="col-4">
-        <a href="javascript:;" class="white-border" 
+        <a href="javascript:;" class="white-border"
         [ngClass]="{'selected': selectedSocialIndex === 3}"
         (click)="selectedSocialIndex = 3">
           <div class="btn-friendly">
@@ -104,7 +104,7 @@
     </div>
     <div class="row">
       <div class="col-4">
-        <a href="javascript:;" class="white-border" 
+        <a href="javascript:;" class="white-border"
         [ngClass]="{'selected': selectedSocialIndex === 4}"
         (click)="selectedSocialIndex = 4">
           <div class="btn-friendly">
@@ -114,7 +114,7 @@
         </a>
       </div>
       <div class="col-4">
-        <a href="javascript:;" class="white-border" 
+        <a href="javascript:;" class="white-border"
         [ngClass]="{'selected': selectedSocialIndex === 5}"
         (click)="selectedSocialIndex = 5">
           <div class="btn-friendly">
@@ -124,7 +124,7 @@
         </a>
       </div>
       <div class="col-4">
-        <a href="javascript:;" class="white-border" 
+        <a href="javascript:;" class="white-border"
         [ngClass]="{'selected': selectedSocialIndex === 6}"
         (click)="selectedSocialIndex = 6">
           <div class="btn-friendly">
@@ -136,7 +136,7 @@
     </div>
     <div class="row">
       <div class="col-4">
-        <a href="javascript:;" class="white-border" 
+        <a href="javascript:;" class="white-border"
         [ngClass]="{'selected': selectedSocialIndex === 7}"
         (click)="selectedSocialIndex = 7">
           <div class="btn-friendly">
@@ -146,7 +146,7 @@
         </a>
       </div>
       <div class="col-4">
-        <a href="javascript:;" class="white-border" 
+        <a href="javascript:;" class="white-border"
         [ngClass]="{'selected': selectedSocialIndex === 8}"
         (click)="selectedSocialIndex = 8">
           <div class="btn-friendly">
@@ -165,7 +165,7 @@
     </div>
     <div class="row">
       <div class="col-12 btn-boxs">
-        <a href="javascript:;" class="btn btn-light-blue" 
+        <a href="javascript:;" class="btn btn-light-blue"
            [ngClass]="{'disabled': selectedSocialIndex === 0}"
            (click)="clickNowTheFunBegins()">Now the fun begins</a>
       </div>
@@ -190,8 +190,8 @@
   <div class="choose-box">
     <div class="gray-bar">
       <div class="radiobox-wrap">
-        <input type="radio" value="business" name="choose" id="business" 
-        [(ngModel)]="selectedProfile"> 
+        <input type="radio" value="business" name="choose" id="business"
+        [(ngModel)]="selectedProfile">
         <label for="business"><i class="icons icon-business"></i>Create a business profile</label>
       </div>
       <!-- end .radiobox-wrap -->
@@ -200,7 +200,7 @@
     <div class="gray-bar">
       <div class="radiobox-wrap">
         <input type="radio" value="employee" name="choose" id="employee"
-        [(ngModel)]="selectedProfile"> 
+        [(ngModel)]="selectedProfile">
         <label for="employee"><i class="icons icon-employee"></i>Create an employee profile</label>
       </div>
       <!-- end .radiobox-wrap -->
@@ -212,7 +212,7 @@
     <div class="col-12 btn-boxs">
       <a href="javascript:;" class="btn btn-light-blue w100"
          [ngClass]="{'disabled': selectedProfile === ''}"
-         (click)="clickLetsStart()">Let's Start</a>
+         (click)="clickLetsStart(selectedProfile)">Let's Start</a>
     </div>
   </div>
 </div>
@@ -229,7 +229,7 @@
       <div class="modal-info">
         <p>
           We've sent an email to luismillan@facebook.com. Please
-          click the link in that message to 
+          click the link in that message to
           activate your account.
         </p>
       </div>

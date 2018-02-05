@@ -1,0 +1,133 @@
+<div class="bench-edit-content">
+  <div class="bench-edit-header">
+    <a href="javascript:;" (click)="back()" class="back-icon"></a>
+    <span class="title">{{data.name}} <span>({{data.lists.length}})</span></span>
+    <a href="javascript:;" class="edit-icon icons3"></a>
+  </div>
+  <div class="bench-edit-main">
+    <div class="bench-list-content" [dragula]='"bag-one"'>
+      <div class="users-cards-square" *ngFor="let d of data.lists">
+        <span class="dashed-border"></span>
+        <div class="square-box-main">
+          <img [src]="d.imageUrl" alt="">
+          <div class="square-cards-info">
+            <div class="user-info-txt">
+              <a href="javascript:;" class="username-txt">{{d.role}}</a>
+              <span class="icons3 badge-icon"></span>
+            </div>
+            <div class="user-role-info">
+              <span class="user-role-txt">{{d.name}}</span>
+              <span class="user-exp-year"><i>{{d.experience}}</i> yrs <span>EXP</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="bench-actions-btns">
+          <a href="javascript:;" class="datetime-btn" (click)="openModal(scheduleModal)">
+            <span class="icons3"></span>
+          </a>
+          <a href="javascript:;" class="msg-btn" (click)="openModal(messageModal);">
+            <span class="icons3"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Modal -->
+  <ng-template #scheduleModal let-c="close" let-d="dismiss">
+    <div class="modal-boxs schedule-modal">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <h4 class="titles">Schedule an Interview ?</h4>
+          <div class="txt-box" (click)="openModal(dateModal);">
+            <input type="text" placeholder="Select Date" readonly [value]="dates | date: 'dd-MM-y'">
+          </div>
+          <div class="txt-box" (click)="openModal(timeModal);">
+            <input type="text" placeholder="Select Time" readonly [value]="times | date: 'HH : mm a'">
+          </div>
+          <div class="description">
+            <textarea placeholder="Please provide a brief message for your prospective employee."></textarea>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Back</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Schedule modal -->
+  <ng-template  #messageModal let-c="close" let-d="dismiss">
+    <div class="modal-boxs message-modal">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <h4 class="titles">New Message</h4>
+          <div class="message-box">
+            <textarea placeholder="Type message here... "></textarea>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Cancel</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .New Message modal -->
+
+  <ng-template  #dateModal let-c="close" let-d="dismiss">
+    <div class="modal-boxs date-modal">
+      <div class="modal-inner">
+        <div class="modal-title" *ngIf="!dates">
+          <span class="years">{{today | date: 'y'}}</span>
+          <span class="dates">{{today | date: 'EEE, d MMMM'}}</span>
+        </div>
+        <div class="modal-title" *ngIf="dates">
+          <span class="years">{{dates | date: 'y'}}</span>
+          <span class="dates">{{dates | date: 'EEE, d MMMM'}}</span>
+        </div>
+        <div class="modal-info">
+          <owl-date-time-inline
+            [(ngModel)]="dates"
+            [pickerType]="'calendar'"
+          >
+          </owl-date-time-inline>
+        </div>
+        <div class="footer">
+          <a href="javascript:;" class="action" (click)="c('Close click')">Cancel</a>
+          <a href="javascript:;" class="action" (click)="c('Close click')">Ok</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Plus modal -->
+
+  <ng-template  #timeModal let-c="close" let-d="dismiss">
+    <div class="modal-boxs time-modal">
+      <div class="modal-inner">
+        <div class="modal-title" *ngIf="!dates">
+          <span class="years">{{today | date: 'y'}}</span>
+          <span class="dates">{{today | date: 'EEE, d MMMM'}}</span>
+        </div>
+        <div class="modal-title" *ngIf="dates">
+          <span class="years">{{dates | date: 'y'}}</span>
+          <span class="dates">{{dates | date: 'EEE, d MMMM'}}</span>
+        </div>
+        <div class="modal-info">
+          <owl-date-time-inline
+            [(ngModel)]="times"
+            hour12Timer="true"
+            [pickerType]="'timer'"
+          >
+          </owl-date-time-inline>
+        </div>
+        <div class="footer">
+          <a href="javascript:;" class="action" (click)="c('Close click')">Cancel</a>
+          <a href="javascript:;" class="action" (click)="c('Close click')">Ok</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Plus modal -->
+
+</div>
+<!--end .Benches Edit-->

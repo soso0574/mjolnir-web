@@ -1,0 +1,123 @@
+<div class="search-potential-main">
+  <div class="search-potential-text">
+    <div class="search-select-main">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['roleDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item"
+            *ngFor="let option of dropdown['roleDropdown'].options"
+            (click)="dropdown['roleDropdown'].selected = option"
+            [ngClass]="{'selected': dropdown['roleDropdown'].selected === option}"
+          >
+            {{option}}</button>
+        </div>
+      </div>
+    </div>
+    having experience of
+    <div class="search-select-main">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['yearsDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item"
+            *ngFor="let option of dropdown['yearsDropdown'].options"
+            (click)="dropdown['yearsDropdown'].selected = option"
+            [ngClass]="{'selected': dropdown['yearsDropdown'].selected === option}"
+          >
+            {{option}}</button>
+        </div>
+      </div>
+    </div>
+    within
+    <div class="search-select-main">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['milesDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item"
+            *ngFor="let option of dropdown['milesDropdown'].options"
+            (click)="dropdown['milesDropdown'].selected = option"
+            [ngClass]="{'selected': dropdown['milesDropdown'].selected === option}"
+          >
+            {{option}}</button>
+        </div>
+      </div>
+    </div>
+    of
+    <div class="search-select-main">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['roleBadgesDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item"
+            *ngFor="let option of dropdown['roleBadgesDropdown'].options"
+            (click)="dropdown['roleBadgesDropdown'].selected = option"
+            [ngClass]="{'selected': dropdown['roleBadgesDropdown'].selected === option}"
+          >
+            {{option}}</button>
+        </div>
+      </div>
+    </div>
+    online within the
+    <div class="search-select-main">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['monthDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item"
+            *ngFor="let option of dropdown['monthDropdown'].options"
+            (click)="dropdown['monthDropdown'].selected = option"
+            [ngClass]="{'selected': dropdown['monthDropdown'].selected === option}"
+          >
+            {{option}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end .search-potential-text-->
+  <div class="search-info-list">
+    <div class="search-actions-btn">
+      <div class="search-information-main">
+        <a href="javascript:;" class="filter-blue-box" (click)="selectFilter('customFilter')">
+          <span class="icon-box">
+            <i class="icons3 save-icon"></i>
+          </span>
+          <span class="title-txt">Saved Custom Filters</span>
+        </a>
+        <a href="javascript:;" class="filter-blue-box" (click)="selectFilter('general')">
+          <span class="icon-box">
+            <i class="icons3 general-icon"></i>
+          </span>
+          <span class="title-txt">General Information</span>
+        </a>
+        <a href="javascript:;" class="filter-blue-box" (click)="selectFilter('techsoft')">
+          <span class="icon-box">
+            <i class="icons3 settings-icon"></i>
+          </span>
+          <span class="title-txt">Dental Tech/Software</span>
+        </a>
+        <a href="javascript:;" class="filter-blue-box" (click)="selectFilter('pt')">
+          <span class="icon-box">
+            <i class="icons3 doc-icon"></i>
+          </span>
+          <span class="title-txt">Dental Philosophy/Training</span>
+        </a>
+        <a href="javascript:;" class="filter-blue-box" (click)="selectFilter('og')">
+          <span class="icon-box">
+            <i class="icons3 save-icon"></i>
+          </span>
+          <span class="title-txt">Dental Office/General Skills</span>
+        </a>
+      </div>
+      <a href="javascript:;" class="save-filter-btn">SAVE FILTER</a>
+      <a href="javascript:;" class="search-btn">SEARCH</a>
+    </div>
+  </div>
+</div>
+<!--end .search-potential-content-->

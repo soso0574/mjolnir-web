@@ -9,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['header-profile.component.scss'],
 })
 export class HeaderProfileComponent {
-  @Input() activeMenu: string;
+  @Input() menus: Array<any>;
+  @Input() className: string;
   @Input() imgUrl = '../assets/i/build-img.jpg';
 }

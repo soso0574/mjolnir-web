@@ -1,0 +1,14 @@
+<div class="office-grid-view-main">
+  <a href="javascript:;" class="office-grid-list"
+    *ngFor="let list of data"
+  >
+    <div class="clg-img-box">
+      <img [src]="list.imageUrl" alt="">
+    </div>
+    <div class="clg-lbl-detail">
+      <span class="title">{{list.name}}</span>
+      <span class="location">{{list.location}}</span>
+    </div>
+  </a>
+</div>
+<!-- end .office-grid-view -->

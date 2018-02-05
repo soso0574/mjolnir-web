@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import {NgbModal, NgbModalRef, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { DataListService } from '../../shared/data-list/data-list.service';
 
 /**
@@ -12,7 +11,12 @@ import { DataListService } from '../../shared/data-list/data-list.service';
   templateUrl: 'profiles.component.html',
   styleUrls: ['profiles.component.scss']
 })
-export class ProfilesComponent implements OnInit {
+export class ProfilesComponent implements OnInit, OnDestroy {
+  private headerMenus = [
+    {'name': 'friends', 'url': '/friends'},
+    {'name': 'profiles', 'url': '/profiles'},
+    {'name': 'benches', 'url': '/benches'}
+  ];
   errorMessage: string;
   dataList: any[] = [];
   carListFriends: any[] = [];
@@ -24,6 +28,13 @@ export class ProfilesComponent implements OnInit {
   showRightPanel = {
     isShown: false
   };
+  private editable: string;
+  @ViewChild('profileEditModal') editModal;
+  private modalRef: NgbModalRef;
+  private subscribeData: any;
+  private endorseData: any;
+  private activeSubscribe: any;
+  private activeView: string;
 
   /**
    * Creates an instance of the ProfilesComponent with the injected
@@ -31,13 +42,38 @@ export class ProfilesComponent implements OnInit {
    *
    * @param {DataListService} dataListService - The injected DataListService.
    */
-  constructor(public dataListService: DataListService) {}
+  constructor(
+    public dataListService: DataListService,
+    private route: ActivatedRoute,
+    private modalService: NgbModal
+  ) {}
 
   /**
    * Get the dataList OnInit
    */
   ngOnInit() {
     this.getDataList('../../assets/data/dataProfile.json');
+    this.route.params
+      .subscribe(params => {
+        this.editable = params['edit'];
+        if (typeof this.editable !== 'undefined') {
+          setTimeout(() => {
+            this.openModal(this.editModal);
+          }, 100);
+        }
+    });
+    window.scrollTo(0, 0);
+  }
+
+  ngOnDestroy() {
+    if (this.modalRef !== undefined) {
+      this.modalRef.close();
+    }
+  }
+
+  // Modal open function
+  openModal(content) {
+    this.modalRef = this.modalService.open(content, { windowClass: 'profiles-modal' });
   }
 
   initData() {
@@ -83,5 +119,25 @@ export class ProfilesComponent implements OnInit {
         error => this.errorMessage = <any>error,
         () => this.initData()
       );
+  }
+
+  // Get subscription even emitter
+  onSubscribe(data: any) {
+    if (this.modalRef !== undefined) {
+      this.modalRef.close();
+    }
+    this.subscribeData = data;
+    this.activeView = 'subscribe';
+    window.scrollTo(0, 0);
+  }
+
+  // Get subscription even emitter
+  onEndorsement(data: any) {
+    if (this.modalRef !== undefined) {
+      this.modalRef.close();
+    }
+    this.endorseData = data;
+    this.activeView = 'endorse';
+    window.scrollTo(0, 0);
   }
 }

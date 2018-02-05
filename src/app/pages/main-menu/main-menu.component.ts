@@ -27,6 +27,12 @@ export class MainMenuComponent implements OnInit, OnDestroy {
     isShown: false
   };
 
+  private headerMenus = [
+    {'name': 'friends', 'url': '/friends'},
+    {'name': 'profiles', 'url': '/profiles'},
+    {'name': 'benches', 'url': '/benches'}
+  ];
+
   scrollbarOptions = {
     axis: 'yx',
     theme: 'minimal-dark'

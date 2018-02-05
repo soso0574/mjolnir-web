@@ -6,16 +6,15 @@
     </a>
   </div>
   <!-- end .lefts -->
-  <nav class="center">
-    <a [routerLink]="['/main-menu']" class="btn-two" [ngClass]="{'current': activeMenu === 'main-menu'}">
+  <nav class="center" [ngClass]="className">
+    <a [routerLink]="['/main-menu']" class="btn-two" routerLinkActive="current">
       <i class="icons icon-two"></i>
     </a>
-    <a href="javascript:;" class="btn btn-link">friends</a>
-    <a [routerLink]="['/profiles']" class="btn btn-link" [ngClass]="{'current': activeMenu === 'profile'}">
-      profiles
-    </a>
-    <a href="javascript:;" class="btn btn-link ">benches</a>
-    <a href="javascript:;" class="btn-search">
+    <ng-container *ngFor="let menu of menus">
+      <a *ngIf="!menu.url" href="javascript:;" routerLinkActive="current" class="btn btn-link">{{menu.name}}</a>
+      <a *ngIf="menu.url" routerLink="{{menu.url}}" routerLinkActive="current" class="btn btn-link">{{menu.name}}</a>
+    </ng-container>
+    <a [routerLink]="['/search']" class="btn-two btn-search" routerLinkActive="current">
       <i class="icons icon-search"></i>
     </a>
   </nav>

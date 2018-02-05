@@ -1,0 +1,66 @@
+{
+  "notifications": [
+    {
+      "label": "New Messages",
+      "value": false
+    },
+    {
+      "label": "Friend Request",
+      "value": true
+    },
+    {
+      "label": "Match Requests",
+      "value": false
+    },
+    {
+      "label": "A Match views me",
+      "value": true
+    },
+    {
+      "label": "Someone likes me back",
+      "value": true
+    },
+    {
+      "label": "Phone interview request",
+      "value": true
+    },
+    {
+      "label": "New app features",
+      "value": true
+    }
+  ],
+  "email": {
+    "current": "Enter Current Email",
+    "new": "Enter New Email"
+  },
+  "password": {
+    "current": "Enter Current Password",
+    "new": "Enter New Password"
+  },
+  "purchase": [
+    {
+      "label": "Username",
+      "value": "RV4309"
+    },
+    {
+      "label": "Payment Type",
+      "value": "Apple App Store"
+    },
+    {
+      "label": "Subscription",
+      "value": "$24.99 every month"
+    },
+    {
+      "label": "Purchase Date",
+      "value": "5/21/2017"
+    },
+    {
+      "label": "Next Billing Date",
+      "value": "7/21/2017"
+    },
+    {
+      "label": "Active Boosts Validity",
+      "value": "7/21/2017"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+<div class="contents" (click)="showRightPanel.isShown = false">
+  <div class="bg-violet-gradient"></div>
+  <div class="content-inner">
+    <app-sd-header-profile
+      [menus]="headerMenus"
+      data-imgUrl="../assets/i/build-img.jpg"></app-sd-header-profile>
+      <ng-container *ngIf="friendsData">
+        <div class="main-content">
+          <div class="friends-main-content">
+            <div class="friends-section-list">
+              <div class="heading-lable-count">
+                <label>Friends</label>
+                <span class="count-txt">{{friendsData['friends'].length}}</span>
+              </div>
+              <div class="friends-wrap-box">
+                <div class="user-cards-widget new-match-lists" *ngFor="let fr of friendsData['friends']">
+                  <img [src]="fr.imageUrl" alt="">
+                  <div class="user-cards-inner">
+                    <div class="user-role-badge">
+                      <span class="role-txt">{{fr.role}}</span>
+                      <span class="icons3 badge-icon"></span>
+                    </div>
+                    <div class="user-role-details">
+                      <a href="javascript:;" class="username-txt">{{fr.name}}</a>
+                      <span class="user-exp-year"><i>{{fr.experience}}</i> yrs <span>EXP</span></span>
+                    </div>
+                    <div class="user-contact-btns">
+                      <a href="javascript:;" class="call-icon icons3"></a>
+                      <a href="javascript:;" class="msg-icon icons3" (click)="openModal(messageModal);"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end .friends-wrap-box-->
+              <div class="endoresment-section-list">
+                <div class="heading-lable-count">
+                  <label>Endorsement Requests</label>
+                  <span class="count-txt">{{friendsData['endordeRequest'].length}}</span>
+                </div>
+                <div class="endoresment-wrap-box">
+                  <div class="users-cards-square" *ngFor="let er of friendsData['endordeRequest']">
+                    <div class="square-box-main">
+                      <img [src]="er.imageUrl" alt="">
+                      <div class="square-cards-info">
+                        <div class="user-info-txt">
+                          <a href="javascript:;" class="username-txt">{{er.name}}</a>
+                          <span class="icons3 badge-icon"></span>
+                        </div>
+                        <span class="user-role-txt">{{er.role}}</span>
+                      </div>
+                    </div>
+                    <div class="request-actions-btns">
+                      <a href="javascript:;" class="accept-btn icons3" (click)="openModal(friendsModal);"><span class="icons3"></span></a>
+                      <a href="javascript:;" class="reject-btn icons3"
+                      (click)="openModal(deleteModal);selected('endordeRequest',i)"><span class="icons3"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end .request-endroesment-box-->
+              <div class="endoresment-section-list">
+                <div class="heading-lable-count">
+                  <label>Friend Requests</label>
+                  <span class="count-txt">{{friendsData['friendRequests'].length}}</span>
+                </div>
+                <div class="endoresment-wrap-box">
+                  <div class="users-cards-square" *ngFor="let fr of friendsData['friendRequests']; let i = index">
+                    <div class="square-box-main">
+                      <img [src]="fr.imageUrl" alt="">
+                      <div class="square-cards-info">
+                        <div class="user-info-txt">
+                          <a href="javascript:;" class="username-txt">{{fr.name}}</a>
+                          <span class="icons3 badge-icon"></span>
+                        </div>
+                        <span class="user-role-txt">{{fr.role}}</span>
+                      </div>
+                    </div>
+                    <div class="request-actions-btns">
+                      <a href="javascript:;" class="accept-btn icons3" (click)="openModal(friendsModal);"><span class="icons3"></span></a>
+                      <a href="javascript:;"
+                        class="reject-btn icons3"
+                        (click)="openModal(deleteModal);selected('friendRequests',i)">
+                        <span class="icons3"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end .Friend Requests-box-->
+              <div class="message-section-list">
+                <div class="heading-lable-count">
+                  <label>Messages</label>
+                  <span class="count-txt">{{friendsData['messages'].length}}</span>
+                </div>
+                <div class="messgae-list-main">
+                  <div class="message-list-container">
+                    <div class="message-box" *ngFor="let msg of friendsData['messages']">
+                      <img [src]="msg.imageUrl" alt="">
+                      <div class="message-details">
+                        <p>{{msg.messages}}</p>
+                        <span>{{msg.time}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end .friends-main-content-->
+        </div>
+      </ng-container>
+      <!--end .main-content-->
+
+    <app-sd-notification-offline [showRightPanel]="showRightPanel"></app-sd-notification-offline>
+  </div>
+  <!--end .bg-violet-gradient-->
+
+  <ng-template  #messageModal let-c="close" let-d="dismiss">
+    <div class="modal-boxs message-modal">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <h4 class="titles">New Message</h4>
+          <div class="message-box">
+            <textarea placeholder="Type message here... "></textarea>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Cancel</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .New Message modal -->
+
+  <ng-template #friendsModal let-c="close">
+    <div class="modal-boxs fr-modal">
+      <div class="modal-inner">
+        <div class="modal-title">
+          <span class="circle">
+            <i class="icons icon-i"></i>
+          </span>
+        </div>
+        <div class="modal-info">
+          <p>
+            Friendship accepted
+          </p>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="btn btn-green"
+          (click)="c('Close click')"
+        >OK</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Friends success modal -->
+
+  <ng-template  #deleteModal let-c="close" let-d="dismiss">
+    <div class="modal-boxs delete-modal">
+      <div class="modal-inner">
+        <div class="modal-title">
+          <span class="circle">
+            <i class="icons icon-i"></i>
+          </span>
+        </div>
+        <div class="modal-info">
+          <p>
+            Are you sure you want to reject this user ?
+          </p>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click'); cancel()">Cancel</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click'); trashed()">Confirm</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Delete modal -->
+
+</div>
+<!-- end .contents -->

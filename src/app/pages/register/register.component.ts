@@ -138,8 +138,8 @@ export class RegisterComponent implements OnInit, OnDestroy {
   }
 
   // click 'Let's Start' button
-  clickLetsStart() {
-    this.changedContent.emit('Show Create Business Account');
+  clickLetsStart(value: string) {
+    this.changedContent.emit(value);
   }
 
   // check email format

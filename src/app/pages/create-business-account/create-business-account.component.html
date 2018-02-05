@@ -27,7 +27,7 @@
             <div class="inputs gray-inputs">
               <i class="icons icon-business-card"></i>
               <input type="text" placeholder="{{placeholderList['Business Name']}}"
-                (focus)="emptyPlaceholder('Business Name');changeBusinessName();" 
+                (focus)="emptyPlaceholder('Business Name');changeBusinessName();"
                 (focusout)="fillPlaceholder('Business Name')"
                 (change)="changeInputStep(0)"
                 (keyup)="changeBusinessName()"
@@ -110,7 +110,7 @@
         <div class="pl78 check-list">
           <div class="row-line" *ngFor="let item of formItem['step2CheckList']">
             <div class="checkbox-wrap gray-checkbox">
-              <input type="checkbox" name="choose" id="{{item.label + 'step2'}}" [(ngModel)]="item.checked"> 
+              <input type="checkbox" name="choose" id="{{item.label + 'step2'}}" [(ngModel)]="item.checked">
               <label for="{{item.label + 'step2'}}">{{item.label}}</label>
             </div>
             <!-- end .checkbox-wrap -->
@@ -150,7 +150,7 @@
         <div class="pl78 check-list">
           <div class="row-line" *ngFor="let item of formItem['step3CheckList']">
             <div class="checkbox-wrap gray-checkbox">
-              <input type="checkbox" name="choose" id="{{item.label + 'step3'}}" [(ngModel)]="item.checked"> 
+              <input type="checkbox" name="choose" id="{{item.label + 'step3'}}" [(ngModel)]="item.checked">
               <label for="{{item.label + 'step3'}}">{{item.label}}</label>
             </div>
             <!-- end .checkbox-wrap -->
@@ -190,7 +190,7 @@
       <div class="main-show">
         <div class="pl78 photo-wrapper">
           <p class="sub-txt">
-            Pick the perfect profile pic and others that 
+            Pick the perfect profile pic and others that
             tell your offices story
           </p>
           <div class="photo-profile">
@@ -215,7 +215,7 @@
                   <img src="{{item.src}}" alt="pic"
                    [ngClass]="{'hide': item.src === ''}"/>
                    <input type="file" (change)="onChangePic($event, item)" [ngClass]="{'hide': item.src !== ''}"/>
-                </div> 
+                </div>
               </div>
             </div>
             <!-- end .row-line -->
@@ -361,10 +361,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['MondayStartModelDropdown'].optionList"
-                    (click)="formItem['MondayStartModelDropdown'].defaultText = item.optionName;selectMondayDropdown();" 
-                    [ngClass]="{'hide': (item.optionName !== 'Start' 
-                                         && formItem['MondayEndModelDropdown'].defaultText !== 'End' 
-                                         && item.optionName > formItem['MondayEndModelDropdown'].defaultText), 
+                    (click)="formItem['MondayStartModelDropdown'].defaultText = item.optionName;selectMondayDropdown();"
+                    [ngClass]="{'hide': (item.optionName !== 'Start'
+                                         && formItem['MondayEndModelDropdown'].defaultText !== 'End'
+                                         && item.optionName > formItem['MondayEndModelDropdown'].defaultText),
                                  'selected': formItem['MondayStartModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -378,10 +378,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['MondayEndModelDropdown'].optionList"
-                    (click)="formItem['MondayEndModelDropdown'].defaultText = item.optionName;selectMondayDropdown();" 
-                    [ngClass]="{'hide': (item.optionName !== 'End' 
-                                         && formItem['MondayStartModelDropdown'].defaultText !== 'Start' 
-                                         && item.optionName < formItem['MondayStartModelDropdown'].defaultText), 
+                    (click)="formItem['MondayEndModelDropdown'].defaultText = item.optionName;selectMondayDropdown();"
+                    [ngClass]="{'hide': (item.optionName !== 'End'
+                                         && formItem['MondayStartModelDropdown'].defaultText !== 'Start'
+                                         && item.optionName < formItem['MondayStartModelDropdown'].defaultText),
                                 'selected': formItem['MondayEndModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -399,10 +399,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['TuesdayStartModelDropdown'].optionList"
-                    (click)="formItem['TuesdayStartModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'Start' 
-                                         && formItem['TuesdayEndModelDropdown'].defaultText !== 'End' 
-                                         && item.optionName > formItem['TuesdayEndModelDropdown'].defaultText), 
+                    (click)="formItem['TuesdayStartModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'Start'
+                                         && formItem['TuesdayEndModelDropdown'].defaultText !== 'End'
+                                         && item.optionName > formItem['TuesdayEndModelDropdown'].defaultText),
                                 'selected': formItem['TuesdayStartModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -416,10 +416,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['TuesdayEndModelDropdown'].optionList"
-                    (click)="formItem['TuesdayEndModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'End' 
-                                         && formItem['TuesdayStartModelDropdown'].defaultText !== 'Start' 
-                                         && item.optionName < formItem['TuesdayStartModelDropdown'].defaultText), 
+                    (click)="formItem['TuesdayEndModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'End'
+                                         && formItem['TuesdayStartModelDropdown'].defaultText !== 'Start'
+                                         && item.optionName < formItem['TuesdayStartModelDropdown'].defaultText),
                                 'selected': formItem['TuesdayEndModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -437,10 +437,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['WednesdayStartModelDropdown'].optionList"
-                    (click)="formItem['WednesdayStartModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'Start' 
-                                         && formItem['WednesdayEndModelDropdown'].defaultText !== 'End' 
-                                         && item.optionName > formItem['WednesdayEndModelDropdown'].defaultText), 
+                    (click)="formItem['WednesdayStartModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'Start'
+                                         && formItem['WednesdayEndModelDropdown'].defaultText !== 'End'
+                                         && item.optionName > formItem['WednesdayEndModelDropdown'].defaultText),
                                 'selected': formItem['WednesdayStartModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -454,10 +454,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['WednesdayEndModelDropdown'].optionList"
-                    (click)="formItem['WednesdayEndModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'End' 
-                                         && formItem['WednesdayStartModelDropdown'].defaultText !== 'Start' 
-                                         && item.optionName < formItem['WednesdayStartModelDropdown'].defaultText), 
+                    (click)="formItem['WednesdayEndModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'End'
+                                         && formItem['WednesdayStartModelDropdown'].defaultText !== 'Start'
+                                         && item.optionName < formItem['WednesdayStartModelDropdown'].defaultText),
                                 'selected': formItem['WednesdayEndModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -475,10 +475,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['ThursdayStartModelDropdown'].optionList"
-                    (click)="formItem['ThursdayStartModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'Start' 
-                                         && formItem['ThursdayEndModelDropdown'].defaultText !== 'End' 
-                                         && item.optionName > formItem['ThursdayEndModelDropdown'].defaultText), 
+                    (click)="formItem['ThursdayStartModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'Start'
+                                         && formItem['ThursdayEndModelDropdown'].defaultText !== 'End'
+                                         && item.optionName > formItem['ThursdayEndModelDropdown'].defaultText),
                                 'selected': formItem['ThursdayStartModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -492,10 +492,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['ThursdayEndModelDropdown'].optionList"
-                    (click)="formItem['ThursdayEndModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'End' 
-                                         && formItem['ThursdayStartModelDropdown'].defaultText !== 'Start' 
-                                         && item.optionName < formItem['ThursdayStartModelDropdown'].defaultText), 
+                    (click)="formItem['ThursdayEndModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'End'
+                                         && formItem['ThursdayStartModelDropdown'].defaultText !== 'Start'
+                                         && item.optionName < formItem['ThursdayStartModelDropdown'].defaultText),
                                 'selected': formItem['ThursdayEndModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -513,10 +513,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['FridayStartModelDropdown'].optionList"
-                    (click)="formItem['FridayStartModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'Start' 
-                                         && formItem['FridayEndModelDropdown'].defaultText !== 'End' 
-                                         && item.optionName > formItem['FridayEndModelDropdown'].defaultText), 
+                    (click)="formItem['FridayStartModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'Start'
+                                         && formItem['FridayEndModelDropdown'].defaultText !== 'End'
+                                         && item.optionName > formItem['FridayEndModelDropdown'].defaultText),
                                 'selected': formItem['FridayStartModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -530,10 +530,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['FridayEndModelDropdown'].optionList"
-                    (click)="formItem['FridayEndModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'End' 
-                                         && formItem['FridayStartModelDropdown'].defaultText !== 'Start' 
-                                         && item.optionName < formItem['FridayStartModelDropdown'].defaultText), 
+                    (click)="formItem['FridayEndModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'End'
+                                         && formItem['FridayStartModelDropdown'].defaultText !== 'Start'
+                                         && item.optionName < formItem['FridayStartModelDropdown'].defaultText),
                                 'selected': formItem['FridayEndModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -551,10 +551,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['SaturdayStartModelDropdown'].optionList"
-                    (click)="formItem['SaturdayStartModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'Start' 
-                                         && formItem['SaturdayEndModelDropdown'].defaultText !== 'End' 
-                                         && item.optionName > formItem['SaturdayEndModelDropdown'].defaultText), 
+                    (click)="formItem['SaturdayStartModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'Start'
+                                         && formItem['SaturdayEndModelDropdown'].defaultText !== 'End'
+                                         && item.optionName > formItem['SaturdayEndModelDropdown'].defaultText),
                                 'selected': formItem['SaturdayStartModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -568,10 +568,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['SaturdayEndModelDropdown'].optionList"
-                    (click)="formItem['SaturdayEndModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'End' 
-                                         && formItem['SaturdayStartModelDropdown'].defaultText !== 'Start' 
-                                         && item.optionName < formItem['SaturdayStartModelDropdown'].defaultText), 
+                    (click)="formItem['SaturdayEndModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'End'
+                                         && formItem['SaturdayStartModelDropdown'].defaultText !== 'Start'
+                                         && item.optionName < formItem['SaturdayStartModelDropdown'].defaultText),
                                 'selected': formItem['SaturdayEndModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -589,10 +589,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['SundayStartModelDropdown'].optionList"
-                    (click)="formItem['SundayStartModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'Start' 
-                                         && formItem['SundayEndModelDropdown'].defaultText !== 'End' 
-                                         && item.optionName > formItem['SundayEndModelDropdown'].defaultText), 
+                    (click)="formItem['SundayStartModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'Start'
+                                         && formItem['SundayEndModelDropdown'].defaultText !== 'End'
+                                         && item.optionName > formItem['SundayEndModelDropdown'].defaultText),
                                 'selected': formItem['SundayStartModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -606,10 +606,10 @@
                 <div ngbDropdownMenu>
                   <button class="dropdown-item"
                     *ngFor="let item of formItem['SundayEndModelDropdown'].optionList"
-                    (click)="formItem['SundayEndModelDropdown'].defaultText = item.optionName" 
-                    [ngClass]="{'hide': (item.optionName !== 'End' 
-                                         && formItem['SundayStartModelDropdown'].defaultText !== 'Start' 
-                                         && item.optionName < formItem['SundayStartModelDropdown'].defaultText), 
+                    (click)="formItem['SundayEndModelDropdown'].defaultText = item.optionName"
+                    [ngClass]="{'hide': (item.optionName !== 'End'
+                                         && formItem['SundayStartModelDropdown'].defaultText !== 'Start'
+                                         && item.optionName < formItem['SundayStartModelDropdown'].defaultText),
                                 'selected': formItem['SundayEndModelDropdown'].defaultText === item.optionName}">
                     {{item.optionName}}
                   </button>
@@ -688,17 +688,17 @@
             <!-- end .row-line -->
             <div class="row-line">
               <div class="two-check clearfix">
-                <div class="checkbox-wrap squre-checkbox" 
+                <div class="checkbox-wrap squre-checkbox"
                   *ngFor="let item of adminItem['step7TopCheckList']">
-                  <input type="checkbox" name="choose" id="{{item.label + i}}" [(ngModel)]="item.checked"> 
+                  <input type="checkbox" name="choose" id="{{item.label + i}}" [(ngModel)]="item.checked">
                   <label for="{{item.label + i}}">{{item.label}}</label>
                 </div>
                 <!-- end .checkbox-wrap -->
               </div>
               <div class="two-check clearfix">
-                <div class="checkbox-wrap squre-checkbox" 
+                <div class="checkbox-wrap squre-checkbox"
                   *ngFor="let item of adminItem['step7BottomCheckList']">
-                  <input type="checkbox" name="choose" id="{{item.label + i}}" [(ngModel)]="item.checked"> 
+                  <input type="checkbox" name="choose" id="{{item.label + i}}" [(ngModel)]="item.checked">
                   <label for="{{item.label + i}}">{{item.label}}</label>
                 </div>
               </div>
@@ -884,7 +884,7 @@
         </div>
         <div class="pl78">
            <div class="textareas">
-            <textarea [(ngModel)]="formItem['textarea']" 
+            <textarea [(ngModel)]="formItem['textarea']"
                placeholder="{{placeholderList['textarea']}}"
                (focus)="emptyPlaceholder('textarea')" (focusout)="fillPlaceholder('textarea')">
             </textarea>
@@ -896,7 +896,7 @@
     </div>
   </div>
   <!-- end .how-wonderful -->
-  
+
   <div class="create-modules online-reviews"
     [ngClass]="{'current': currentStep === 10, 'complete': (completedStep >= 10 && currentStep !== 10)}">
     <div class="item">
@@ -972,11 +972,11 @@
       </div>
       <div class="modal-info">
         <p>
-          Each Office profile must have an 
-          owner, so it's important to create 
-          a basic User profile first. Skip the 
-          sections you want to as you can 
-          always complete your user profile 
+          Each Office profile must have an
+          owner, so it's important to create
+          a basic User profile first. Skip the
+          sections you want to as you can
+          always complete your user profile
           at a later date
         </p>
       </div>
@@ -1035,7 +1035,7 @@
           <i class="icons icon-google-plus"></i>
           <span class="txt">Google Plus</span>
         </a>
-        
+
         <a href="javascript:;" class="icon-bar">
           <i class="icons icon-insta"></i>
           <span class="txt">Instagram</span>
@@ -1045,7 +1045,7 @@
           <i class="icons icon-photos"></i>
           <span class="txt">Photos</span>
         </a>
-        
+
         <a href="javascript:;" class="icon-bar">
           <i class="icons icon-facebook"></i>
           <span class="txt">Facebook</span>
@@ -1064,14 +1064,14 @@
     <div class="modal-inner">
       <div class="modal-info">
         <h4 class="titles">Create another office ?</h4>
-        <a href="javascript:;" class="btn btn-white" 
+        <a href="javascript:;" class="btn btn-white"
           (click)="c('Close click');resetForm();">
           Start from scratch
         </a>
         <a href="javascript:;" class="btn btn-white">Copy this Office</a>
       </div>
       <div class="footer-btn">
-        <a href="javascript:;" class="btn btn-green" 
+        <a href="javascript:;" class="btn btn-green"
           (click)="c('Close click');goToProfile();">
           No, I'll do it later
         </a>

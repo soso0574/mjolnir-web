@@ -1,0 +1,57 @@
+<div class="endoresment-wrapper">
+  <div class="header-endoresment">
+    <div class="endoresment-title">
+      <a href="javascript:;" class="back-icon" (click)="backto()"></a>
+      <div class="heading-lable-count">
+        <label>Endorsements</label>
+        <span class="count-txt">{{data.length}}</span>
+      </div>
+    </div>
+    <a href="javascript:;" class="edit-icon icons3" (click)="editView=!editView"></a>
+  </div>
+  <!-- end .header-endoresment -->
+  <div class="endoresment-detail">
+    <div class="endoresment-layer" *ngFor="let item of data; let i = index" [ngClass]="{'active': editView}">
+      <span class="close-icon icons3" (click)="delete(i)"></span>
+      <div class="endoresment-box">
+        <div class="endoresment-box-user">
+          <img [src]="item.imageUrl" alt="">
+          <span class="online-icon"></span>
+          <div class="user-detail">
+            <a href="javascript:;" class="user-name">{{item.name}}</a>
+            <span class="user-work">{{item.designation}}</span>
+          </div>
+        </div>
+        <div class="endoresment-msg">
+          <span class="icons3 arrow-msg"></span>
+          <p>{{item.message}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end .endoresment-detail -->
+  <div class="add-btn" (click)="openModal(addModal)">
+    <a href="javascript:;" class="add-plus-btn icons3"></a>
+  </div>
+
+  <ng-template #addModal let-c="close" let-d="dismiss">
+    <div class="modal-boxs add-modal">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <h4 class="titles">Ask for Endorsement ?</h4>
+          <div class="txt-box" (click)="openModal(dateModal);">
+            <input type="email" placeholder="Email or Mobile Number">
+          </div>
+          <div class="description">
+            <textarea placeholder="Please provide a brief summary of your endorsement request."></textarea>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Cancel</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Schedule modal -->
+</div>

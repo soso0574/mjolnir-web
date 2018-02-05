@@ -1,12 +1,13 @@
 <div class="contents" (click)="showRightPanel.isShown = false;showProfilePopup = false;">
   <div class="section section-app-status clearfix">
-  	<div class="blue-bg"></div>
-  	
-    <app-sd-header-profile 
-      data-activeMenu="profile" 
+  	<div class="blue-bg" [ngClass]="{'endorse-bg': endorseData, 'subsc-bg': subscribeData}"></div>
+
+    <app-sd-header-profile
+      [menus]="headerMenus"
+      [className]="'blue-active-bg'"
       data-imgUrl="../assets/i/build-img.jpg"></app-sd-header-profile>
-      
-    <div class="profile-contents">
+
+    <div class="profile-contents" *ngIf="!subscribeData && !endorseData">
       <div class="left-nav">
       	<ul>
       	  <li [ngClass]="{'current': tabIndex === 0}">
@@ -30,7 +31,7 @@
       	  </a>
       	  <div class="card-list">
       	  	<div class="card-item {{'order-' + (carListFriends.length - i - 1)}}"
-      	  	  [ngClass]="{'fadeIn': i === (carListFriends.length - 1)}" 
+      	  	  [ngClass]="{'fadeIn': i === (carListFriends.length - 1)}"
       	  	  *ngFor="let item of carListFriends;let i = index">
 	      	  	<div class="img-boxs">
 	      	  	  <img src="{{item.imgUrl}}" alt="photo">
@@ -40,9 +41,9 @@
 	      	  	  	{{item.title}}<i class="icons icon-blue"></i>
 	      	  	  </div>
 	      	  	  <div class="gray-txt">
-	      	  	  	{{item.smallTitle}} 
+	      	  	  	{{item.smallTitle}}
 	      	  	  	<span class="right-txt">
-	      	  	  	  {{item.exp}} 
+	      	  	  	  {{item.exp}}
 	      	  	  	  <span class="grey-txt">Exp</span>
 	      	  	  	</span>
 	      	  	  </div>
@@ -76,16 +77,16 @@
       	    <i class="icons icon-next"></i>
       	  </a>
       	</div>
-      	
+
       	<div class="tool-list">
       		<a href="javascript:;" class="btn btn-circle white"
       		  (click) ="showProfilePopup = !showProfilePopup;$event.stopPropagation();">
       		  <i class="icons icon-three"></i>
       		</a>
       		<a href="javascript:;" class="btn btn-circle pink">
-      		  <i class="icons icon-clock"></i>	
+      		  <i class="icons icon-clock"></i>
       		</a>
-      		<div class="like-boxs" 
+      		<div class="like-boxs"
       		  [ngClass]="{'current': showProfilePopup}">
       			<a href="javascript:;" class="btn btn-circle blue">
 	      		  <i class="icons icon-like"></i>
@@ -97,7 +98,7 @@
 		      	     (click) ="showProfilePopup = false">Request Endorsement</a>
 		      	</div>
       		</div>
-      		
+
       		<a href="javascript:;" class="btn btn-circle white">
       		  <i class="icons icon-close"></i>
       		</a>
@@ -112,7 +113,7 @@
       	  </a>
       	  <div class="card-list">
       	  	<div class="card-item {{'order-' + (carListOpportunities.length - i - 1)}}"
-      	  	  [ngClass]="{'fadeIn': i === (carListOpportunities.length - 1)}" 
+      	  	  [ngClass]="{'fadeIn': i === (carListOpportunities.length - 1)}"
       	  	  *ngFor="let item of carListOpportunities;let i = index">
 	      	  	<div class="img-boxs">
 	      	  	  <img src="{{item.imgUrl}}" alt="photo">
@@ -122,9 +123,9 @@
 	      	  	  	{{item.title}}<i class="icons icon-blue"></i>
 	      	  	  </div>
 	      	  	  <div class="gray-txt">
-	      	  	  	{{item.smallTitle}} 
+	      	  	  	{{item.smallTitle}}
 	      	  	  	<span class="right-txt">
-	      	  	  	  {{item.exp}} 
+	      	  	  	  {{item.exp}}
 	      	  	  	  <span class="grey-txt">Employees</span>
 	      	  	  	</span>
                   <div class="right-star">
@@ -167,16 +168,16 @@
       	    <i class="icons icon-next"></i>
       	  </a>
       	</div>
-      	
+
       	<div class="tool-list">
       		<a href="javascript:;" class="btn btn-circle white"
       		  (click) ="showProfilePopup = !showProfilePopup;$event.stopPropagation();">
       		  <i class="icons icon-three"></i>
       		</a>
       		<a href="javascript:;" class="btn btn-circle pink">
-      		  <i class="icons icon-clock"></i>	
+      		  <i class="icons icon-clock"></i>
       		</a>
-      		<div class="like-boxs" 
+      		<div class="like-boxs"
       		  [ngClass]="{'current': showProfilePopup}">
       			<a href="javascript:;" class="btn btn-circle blue">
 	      		  <i class="icons icon-like"></i>
@@ -188,7 +189,7 @@
 		      	     (click) ="showProfilePopup = false">Request Endorsement</a>
 		      	</div>
       		</div>
-      		
+
       		<a href="javascript:;" class="btn btn-circle white">
       		  <i class="icons icon-close"></i>
       		</a>
@@ -197,8 +198,42 @@
       <!-- end .center-banner -->
     </div>
     <!-- end .profile-contents -->
-    
-    <app-sd-notification-offline [showRightPanel]="showRightPanel"></app-sd-notification-offline>
+    <app-select-subscription
+      *ngIf="activeView==='subscribe'" [data]="subscribeData"
+      (backToEdit)="openModal(profileEditModal)"
+    ></app-select-subscription>
+    <app-endoresments
+      *ngIf="activeView==='endorse'" [data]="endorseData"
+      (backToEdit)="openModal(profileEditModal)"
+    >
+    </app-endoresments>
+    <app-sd-notification-offline [showRightPanel]="showRightPanel" [onlinePanel]="!subscribeData && !endorseData"></app-sd-notification-offline>
   </div>
+
+  <div class="info-sticky-icons" *ngIf="editable && !subscribeData && !endorseData">
+    <div class="icons-wrapper">
+      <a href="javascript:;" class="btn btn-circle blue">
+        <i class="icons icon-like"></i>
+      </a>
+      <a href="javascript:;" class="btn btn-circle pink">
+        <i class="icons icon-clock"></i>
+      </a>
+      <a href="javascript:;" class="btn btn-circle white">
+        <i class="icons icon-three"></i>
+      </a>
+    </div>
+  </div>
+  <!-- Sticky icon -->
+  <ng-template #profileEditModal let-c="close">
+    <div class="modal-boxs profile-edit-modal">
+      <div class="modal-inner">
+        <app-edit-profile
+          (onSubscribe)="onSubscribe($event)"
+          (onEndorsement)="onEndorsement($event)"
+        ></app-edit-profile>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Email success modal -->
 </div>
 <!-- end .contents -->

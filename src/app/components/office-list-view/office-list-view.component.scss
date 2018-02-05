@@ -1,0 +1,45 @@
+/* .office-list-view-main */
+.office-list-view-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.office-list-boxs {
+  background-color: rgba(255, 255,255, .1);
+  display: flex;
+  min-height: 75px;
+  border-radius: 5px;
+  padding: 0 13px 0 20px;
+  align-items: center;
+  width: 367px;
+  margin-right: 24px;
+  margin-bottom: 13px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
+
+.arrow-go {
+  min-width: 10px;
+  height: 18px;
+  background-position: -195px -42px;
+}
+
+.office-list-details {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 22px;
+  flex-grow: 1;
+  .title {
+    padding-right: 10px;
+    padding: 5px 10px 0 0;
+    line-height: initial;
+  }
+  .location {
+    font-weight: 300;
+    margin-top: -1px;
+  }
+}

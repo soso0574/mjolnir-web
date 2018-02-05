@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 /**
  * This class represents the lazy loaded RegisterFramePageComponent.
@@ -9,21 +10,44 @@ import { Router } from '@angular/router';
   templateUrl: 'register-frame-page.component.html',
   styleUrls: ['register-frame-page.component.scss']
 })
-export class RegisterFramePageComponent implements OnInit {
-  isShowCreateBusinessAccount = false;
+export class RegisterFramePageComponent implements OnInit, OnDestroy {
+  private createProfile = '';
+  private contents = '';
   carousel_interval = 5000;
-
+  @ViewChild('waringModal') waringModal;
+  private modalRef: NgbModalRef;
   /**
    * Creates an instance of the RegisterFramePageComponent
    *
    */
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private modalService: NgbModal
+  ) {}
 
   /**
    * OnInit
    */
   ngOnInit() {
   }
+
+  /**
+   * OnDestroy
+   */
+  ngOnDestroy() {
+    if (this.modalRef !== undefined) {
+      this.modalRef.close();
+    }
+  }
+
+  // Modal open function
+  openModal(content, value) {
+    this.modalRef = this.modalService.open(content, {
+      windowClass: 'steps-modal',
+      backdrop: value || true
+    });
+  }
+
 
   // stop carousel
   stopCarousel(event) {
@@ -37,8 +61,7 @@ export class RegisterFramePageComponent implements OnInit {
 
   // changed Content
   changedContent(event) {
-    if (event === 'Show Create Business Account') {
-      this.isShowCreateBusinessAccount = true;
-    }
+    this.openModal(this.waringModal, 'static');
+    this.contents = event;
   }
 }

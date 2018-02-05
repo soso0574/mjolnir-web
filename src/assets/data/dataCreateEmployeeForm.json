@@ -1,0 +1,2169 @@
+{
+  "somePersonalDetails": {
+    "title": "Personal Details",
+    "date": {
+      "defaultText": "Day",
+      "optionList": [
+        {
+          "optionName": "Day"
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        },
+        {
+          "optionName": 24
+        },
+        {
+          "optionName": 25
+        },
+        {
+          "optionName": 26
+        },
+        {
+          "optionName": 27
+        },
+        {
+          "optionName": 28
+        },
+        {
+          "optionName": 29
+        },
+        {
+          "optionName": 30
+        },
+        {
+          "optionName": 31
+        }
+      ]
+    },
+    "month": {
+      "defaultText": "Month",
+      "optionList": [
+        {
+          "optionName": "Month"
+        },
+        {
+          "optionName": "Jan"
+        },
+        {
+          "optionName": "Feb"
+        },
+        {
+          "optionName": "Mar"
+        },
+        {
+          "optionName": "Apr"
+        },
+        {
+          "optionName": "May"
+        },
+        {
+          "optionName": "Jun"
+        },
+        {
+          "optionName": "Jul"
+        },
+        {
+          "optionName": "Aug"
+        },
+        {
+          "optionName": "Sep"
+        },
+        {
+          "optionName": "Oct"
+        },
+        {
+          "optionName": "Nov"
+        },
+        {
+          "optionName": "Dec"
+        }
+      ]
+    },
+    "year": {
+      "defaultText": "Year",
+      "optionList": [
+        {
+          "optionName": "Year"
+        },
+        {
+          "optionName": 2000
+        },
+        {
+          "optionName": 2001
+        },
+        {
+          "optionName": 2002
+        },
+        {
+          "optionName": 2003
+        },
+        {
+          "optionName": 2004
+        },
+        {
+          "optionName": 2005
+        },
+        {
+          "optionName": 2006
+        },
+        {
+          "optionName": 2007
+        },
+        {
+          "optionName": 2008
+        },
+        {
+          "optionName": 20009
+        },
+        {
+          "optionName": 2010
+        },
+        {
+          "optionName": 2011
+        }
+      ]
+    },
+    "location": {
+      "defaultText": "City",
+      "optionList": [
+        {
+          "optionName": "City 1"
+        },
+        {
+          "optionName": "City 2"
+        },
+        {
+          "optionName": "City 3"
+        }
+      ]
+    },
+    "zip": {
+      "defaultText": "Zip Code",
+      "optionList": [
+        {
+          "optionName": "0001"
+        },
+        {
+          "optionName": "0002"
+        },
+        {
+          "optionName": "0003"
+        }
+      ]
+    },
+    "language": [
+      {
+        "label": "American Sign Language",
+        "checked": true
+      },
+      {
+        "label": "Arabic",
+        "checked": true
+      },
+      {
+        "label": "English",
+        "checked": true
+      },
+      {
+        "label": "Chinese (Cantonese)",
+        "checked": false
+      },
+      {
+        "label": "Chinese (Mandarin)",
+        "checked": false
+      },
+      {
+        "label": "French",
+        "checked": false
+      },
+      {
+        "label": "French (Creole)",
+        "checked": false
+      },
+      {
+        "label": "German",
+        "checked": true
+      },
+      {
+        "label": "Italian",
+        "checked": true
+      },
+      {
+        "label": "Russian",
+        "checked": true
+      },
+      {
+        "label": "Spanish",
+        "checked": false
+      },
+      {
+        "label": "Tagalog",
+        "checked": false
+      },
+      {
+        "label": "Vietnamese",
+        "checked": false
+      }
+    ]
+  },
+  "dentalWorld": {
+    "title": "What do you do in the Dental World ?",
+    "dentalList": [
+      {
+        "label": "Endodontist",
+        "checked": true
+      },
+      {
+        "label": "Dental Assistant (DA, EFDA, RDA)",
+        "checked": true
+      },
+      {
+        "label": "Dental Front Office",
+        "checked": true
+      },
+      {
+        "label": "Dental Office Manager",
+        "checked": true
+      },
+      {
+        "label": "Dental Hygienist (RDH)",
+        "checked": false
+      },
+      {
+        "label": "Dental Lab Tech",
+        "checked": false
+      },
+      {
+        "label": "Dentist (DDS, DMD)",
+        "checked": false
+      },
+      {
+        "label": "Dental Specific Services",
+        "subTxt": "Sales, Accounting, Consulting etc.",
+        "checked": false
+      },
+      {
+        "label": "Oral and Maxillofacial Surgeon",
+        "checked": false
+      },
+      {
+        "label": "Orthodonist",
+        "checked": false
+      },
+      {
+        "label": "Pediatric Dentist",
+        "checked": false
+      },
+      {
+        "label": "Periodontist",
+        "checked": false
+      },
+      {
+        "label": "Prosthodontist",
+        "checked": false
+      }
+    ],
+    "other": ""
+  },
+  "availability": {
+    "title": "What is your Work Availability ?",
+    "MondayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "MondayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "TuesdayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "TuesdayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "WednesdayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "WednesdayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "ThursdayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "ThursdayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "FridayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "FridayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "SaturdayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "SaturdayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "SundayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "SundayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    }
+  },
+  "upload": {
+    "title": "Image Upload Centre ?",
+    "step4BigPic": {
+      "src": ""
+    },
+    "step4RightPicList": [
+      {
+        "src": ""
+      },
+      {
+        "src": ""
+      }
+    ],
+    "step4BottomPicList": [
+      {
+        "src": ""
+      },
+      {
+        "src": ""
+      },
+      {
+        "src": ""
+      }
+    ]
+  },
+  "softwares": {
+    "title": "Which Dental Practice Management Softwares are you proficient at ?",
+    "list": [
+      {
+        "label": "Ace Dental",
+        "checked": true
+      },
+      {
+        "label": "ADSTRA",
+        "checked": true
+      },
+      {
+        "label": "Alex Dental",
+        "checked": true
+      },
+      {
+        "label": "Carestream Dental",
+        "checked": false
+      },
+      {
+        "label": "Curve Dental",
+        "checked": false
+      },
+      {
+        "label": "Datacon",
+        "checked": false
+      },
+      {
+        "label": "Dental Plus+",
+        "checked": false
+      },
+      {
+        "label": "Denton",
+        "checked": true
+      },
+      {
+        "label": "Dentimax",
+        "checked": true
+      },
+      {
+        "label": "Dentrix",
+        "checked": true
+      },
+      {
+        "label": "Dentrix Ascend",
+        "checked": false
+      },
+      {
+        "label": "Dentsoft",
+        "checked": false
+      },
+      {
+        "label": "Dovetail",
+        "checked": false
+      },
+      {
+        "label": "EasyDental",
+        "checked": false
+      },
+      {
+        "label": "iDentalSoft",
+        "checked": false
+      },
+      {
+        "label": "MacPractice",
+        "checked": false
+      },
+      {
+        "label": "MaxiDent",
+        "checked": true
+      },
+      {
+        "label": "MOGO",
+        "checked": true
+      },
+      {
+        "label": "OpenDental",
+        "checked": true
+      },
+      {
+        "label": "PracticeWeb",
+        "checked": false
+      },
+      {
+        "label": "Tab32",
+        "checked": false
+      },
+      {
+        "label": "Umber DentalCare",
+        "checked": false
+      }
+    ]
+  },
+  "skills": {
+    "title": "Dental Technology Skills",
+    "list": [
+      {
+        "label": "CADCAM Restorations",
+        "checked": true
+      },
+      {
+        "label": "CBCT (Cone Beam)",
+        "checked": true
+      },
+      {
+        "label": "Cerec Restorations",
+        "checked": true
+      },
+      {
+        "label": "Digital Radiography/X-Rays (Sensor)",
+        "checked": false
+      },
+      {
+        "label": "Intraoral Camera",
+        "checked": false
+      },
+      {
+        "label": "Manual Radiography/X-Rays (Film)",
+        "checked": false
+      },
+      {
+        "label": "ScanX (Phosphor Plates)",
+        "checked": false
+      }
+    ],
+    "other": ""
+  },
+  "familiar": {
+    "title": "What other Technolgies/Software are you familiar with ?",
+    "list": [
+      {
+        "label": "Aptery Imaging",
+        "checked": true
+      },
+      {
+        "label": "Blue Sky Plan",
+        "checked": true
+      },
+      {
+        "label": "CAD/CAM",
+        "checked": true
+      },
+      {
+        "label": "Cerec",
+        "checked": false
+      },
+      {
+        "label": "CAESY",
+        "checked": false
+      },
+      {
+        "label": "Dental Vision",
+        "checked": false
+      },
+      {
+        "label": "Dolphin Imaging Plus",
+        "checked": false
+      },
+      {
+        "label": "Edge Imaging",
+        "checked": true
+      },
+      {
+        "label": "E4D",
+        "checked": true
+      },
+      {
+        "label": "Gendex",
+        "checked": true
+      },
+      {
+        "label": "ImageXL",
+        "checked": false
+      },
+      {
+        "label": "Invivo",
+        "checked": false
+      },
+      {
+        "label": "Kodak",
+        "checked": false
+      },
+      {
+        "label": "MediaSuite Digital Imaging",
+        "checked": false
+      },
+      {
+        "label": "Microsoft Office",
+        "checked": false
+      },
+      {
+        "label": "Open Dental",
+        "checked": false
+      },
+      {
+        "label": "Orthotrac",
+        "checked": true
+      },
+      {
+        "label": "Planmeca Romexis",
+        "checked": true
+      },
+      {
+        "label": "Practice Works",
+        "checked": true
+      },
+      {
+        "label": "Prof Suni",
+        "checked": false
+      },
+      {
+        "label": "QSI Dental",
+        "checked": false
+      },
+      {
+        "label": "Total Dental",
+        "checked": false
+      },
+      {
+        "label": "Vixwin",
+        "checked": false
+      },
+      {
+        "label": "Windent Software",
+        "checked": false
+      }
+    ],
+    "other": ""
+  },
+  "gs": {
+    "title": "General Skills",
+    "other": "",
+    "list": [
+      {
+        "label": "Alveoloplasty",
+        "checked": true
+      },
+      {
+        "label": "Amalgam Restorations",
+        "checked": true
+      },
+      {
+        "label": "Arestin Therapy",
+        "checked": true
+      },
+      {
+        "label": "Blingual",
+        "checked": false
+      },
+      {
+        "label": "Bleaching",
+        "checked": false
+      },
+      {
+        "label": "Bone Grafting",
+        "checked": false
+      },
+      {
+        "label": "Bridges",
+        "checked": false
+      },
+      {
+        "label": "Calculus Removal",
+        "checked": false
+      },
+      {
+        "label": "Composite Restorations",
+        "checked": false
+      },
+      {
+        "label": "Cosmetic Denstistry",
+        "checked": false
+      },
+      {
+        "label": "CPR Certified",
+        "checked": false
+      },
+      {
+        "label": "Crowns",
+        "checked": false
+      },
+      {
+        "label": "Dental Charting",
+        "checked": false
+      },
+      {
+        "label": "Dentrix",
+        "checked": false
+      },
+      {
+        "label": "Endodontics",
+        "checked": false
+      },
+      {
+        "label": "Extractions",
+        "checked": false
+      },
+      {
+        "label": "File Maintenance",
+        "checked": false
+      },
+      {
+        "label": "Four-Handed DDentistry",
+        "checked": false
+      },
+      {
+        "label": "General Dentistry",
+        "checked": false
+      },
+      {
+        "label": "Implant Restoration",
+        "checked": false
+      },
+      {
+        "label": "IV Sedation",
+        "checked": false
+      },
+      {
+        "label": "Local Anesthesia",
+        "checked": false
+      },
+      {
+        "label": "Operative Dentistry",
+        "checked": false
+      },
+      {
+        "label": "Oral Cancer Screening",
+        "checked": false
+      },
+      {
+        "label": "Oral Hygiene Instruction",
+        "checked": false
+      },
+      {
+        "label": "Oral Pathology Screening",
+        "checked": false
+      },
+      {
+        "label": "Oral Surgery",
+        "checked": false
+      },
+      {
+        "label": "Osseodensification (Versah Densah Burs)",
+        "checked": false
+      },
+      {
+        "label": "Pediatric Dentistry",
+        "checked": false
+      },
+      {
+        "label": "Pediatric Dental Assisting",
+        "checked": false
+      },
+      {
+        "label": "Periodontal Treatment",
+        "checked": false
+      },
+      {
+        "label": "Phlebotomy",
+        "checked": false
+      },
+      {
+        "label": "Pit and Fissure sealants",
+        "checked": false
+      },
+      {
+        "label": "PRF - Strick Bone",
+        "checked": false
+      },
+      {
+        "label": "Prophylaxis",
+        "checked": false
+      },
+      {
+        "label": "Restorative Dentistry",
+        "checked": false
+      },
+      {
+        "label": "Restorating Implants",
+        "checked": false
+      },
+      {
+        "label": "Root Canal Therapy",
+        "checked": false
+      },
+      {
+        "label": "Rotary Endodontics",
+        "checked": false
+      },
+      {
+        "label": "Scarling and Root Planning",
+        "checked": false
+      },
+      {
+        "label": "Sleep Apnea",
+        "checked": false
+      },
+      {
+        "label": "Smart Dentin Grinder",
+        "checked": false
+      },
+      {
+        "label": "Sterile Procedures",
+        "checked": false
+      },
+      {
+        "label": "Sterilization",
+        "checked": false
+      },
+      {
+        "label": "Surgical Extractions",
+        "checked": false
+      },
+      {
+        "label": "TMJ Disorders",
+        "checked": false
+      },
+      {
+        "label": "Treatment Planning",
+        "checked": false
+      },
+      {
+        "label": "Vital Signs Monitoring",
+        "checked": false
+      },
+      {
+        "label": "Zoom Whitening",
+        "checked": false
+      },
+      {
+        "label": "Other",
+        "checked": false
+      }
+    ]
+  },
+  "as": {
+    "title": "Administrative Skills",
+    "other": "",
+    "list": [
+      {
+        "label": "AnsweringPhones",
+        "checked": true
+      },
+      {
+        "label": "Billing",
+        "checked": true
+      },
+      {
+        "label": "Care Credit(Add)",
+        "checked": true
+      },
+      {
+        "label": "Collections/Accounts Receivable",
+        "checked": false
+      },
+      {
+        "label": "Communication Skills",
+        "checked": false
+      },
+      {
+        "label": "Customer Service",
+        "checked": true
+      },
+      {
+        "label": "Dental Charting",
+        "checked": true
+      },
+      {
+        "label": "Digital Marketing (Facebook,Instagram etc.)",
+        "checked": false
+      },
+      {
+        "label": "File Maintenance",
+        "checked": false
+      },{
+        "label": "Insurance Billing",
+        "checked": true
+      },
+      {
+        "label": "Insurance Verification",
+        "checked": true
+      },
+      {
+        "label": "Marketing Online",
+        "checked": false
+      },
+      {
+        "label": "Office Management",
+        "checked": false
+      },
+      {
+        "label": "Ordering Supplies",
+        "checked": true
+      },
+      {
+        "label": "Patient Education",
+        "checked": true
+      },
+      {
+        "label": "Patient Recall",
+        "checked": true
+      },
+      {
+        "label": "Patient Reactivation",
+        "checked": false
+      },
+      {
+        "label": "Patient Records",
+        "checked": false
+      },
+      {
+        "label": "Payroll",
+        "checked": true
+      },
+      {
+        "label": "Reception",
+        "checked": true
+      },
+      {
+        "label": "Sales",
+        "checked": false
+      },
+      {
+        "label": "Scheduling",
+        "checked": false
+      },
+      {
+        "label": "Treatment Planning",
+        "checked": true
+      },
+      {
+        "label": "Typing",
+        "checked": true
+      }
+    ]
+  },
+  "dentalPT": {
+    "title": "What Dental Philosophy/Training do you have ?",
+    "other": "",
+    "list": [
+      {
+        "label": "AACD",
+        "checked": true
+      },
+      {
+        "label": "AADSM",
+        "checked": true
+      },
+      {
+        "label": "ACE",
+        "checked": true
+      },
+      {
+        "label": "AIE",
+        "checked": false
+      },
+      {
+        "label": "AOS",
+        "checked": false
+      },
+      {
+        "label": "Cerec Doctors",
+        "checked": false
+      },
+      {
+        "label": "Dawson Academy",
+        "checked": false
+      },
+      {
+        "label": "Fixed Prosthodontics",
+        "checked": false
+      },
+      {
+        "label": "ICOI",
+        "checked": false
+      },
+      {
+        "label": "Implants",
+        "checked": false
+      },
+      {
+        "label": "invisalign",
+        "checked": false
+      },
+      {
+        "label": "Kois",
+        "checked": false
+      },
+      {
+        "label": "Misch",
+        "checked": false
+      },
+      {
+        "label": "Lasers",
+        "checked": false
+      },
+      {
+        "label": "LVI",
+        "checked": false
+      },
+      {
+        "label": "Orthodontics",
+        "checked": false
+      },
+      {
+        "label": "Pankey",
+        "checked": false
+      },
+      {
+        "label": "Spear",
+        "checked": false
+      },
+      {
+        "label": "Six Month Smiles",
+        "checked": false
+      }
+    ]
+  },
+  "emHistory": {
+    "title": "Employment History",
+    "business": [
+      {
+        "businessName": "",
+        "jobTitle": "",
+        "sDate": "",
+        "eDate": ""
+      }
+    ]
+  },
+  "peer": {
+    "title": "Peer to Peer Endorsements",
+    "fName": "",
+    "lName": "",
+    "emilPhone": ""
+  },
+  "eduHistory": {
+    "title": "Education History",
+    "schools": [
+      {
+        "school": "",
+        "degree": "",
+        "sDate": "",
+        "eDate": "",
+        "activitiesSociety": "",
+        "description": ""
+      }
+    ],
+    "schoolList": [
+      {
+        "label": "ABC School"
+      },
+      {
+        "label": "Sd School"
+      },
+      {
+        "label": "John School"
+      },
+      {
+        "label": "Auto School"
+      },
+      {
+        "label": "Joseph School"
+      },
+      {
+        "label": "Iop School "
+      },
+      {
+        "label": "jgh School"
+      },
+      {
+        "label": "kima School"
+      }
+    ]
+  },
+  "workLocation": {
+    "title": "Where would you like to work ?",
+    "locations": [
+      {
+        "place": "HELL’S KITCHEN, NEW YORK"
+      }
+    ]
+  },
+  "intro": {
+    "title": "Introduction/About me",
+    "comment": ""
+  }
+}

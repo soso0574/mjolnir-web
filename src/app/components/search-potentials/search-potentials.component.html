@@ -1,0 +1,17 @@
+<div class="search-friends-main">
+  <div class="users-cards-square">
+    <div class="square-box-main" *ngFor="let list of galleries">
+      <img [src]="list.imageUrl" alt="">
+      <div class="square-cards-info">
+        <div class="user-info-txt">
+          <a href="javascript:;" class="username-txt">{{list.name}}</a>
+          <span class="icons3 badge-icon"></span>
+        </div>
+        <div class="user-role-info">
+          <span class="user-role-txt">{{list.role}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end .search-friends-content-->

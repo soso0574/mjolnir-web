@@ -49,10 +49,6 @@ export class CreateBusinessAccountComponent implements OnInit, OnDestroy {
    */
   ngOnInit() {
     this.getDataList('../../assets/data/dataCreateBusinessAccountForm.json');
-
-    setTimeout( () => {
-      this.waringModalRef = this.openModalWindow(this.waringModal);
-    }, 1000);
   }
 
   initData() {

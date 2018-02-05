@@ -1,0 +1,1461 @@
+{
+  "banners": [
+    "/assets/i/profile-slider-1.png", "/assets/i/profile-slider-1.png", "/assets/i/profile-slider-1.png"
+  ],
+  "hospital": {
+    "name": "Texas General Hospital",
+    "category": "PEDODONTICS & DENTISTRY",
+    "location": "Dallas, TX",
+    "working": "Monday - Friday 8:00AM - 5:00PM"
+  },
+  "admin": [
+    {
+      "name": "Jake Warren"
+    },
+    {
+      "name": "Joseph Stalin"
+    },
+    {
+      "name": "Ray Parkour"
+    },
+    {
+      "name": "Jake Warren"
+    },
+    {
+      "name": "Ray Parkour"
+    }
+  ],
+  "subscription": {
+    "lists": [
+      {
+        "currency": "$",
+        "price": "34.99",
+        "validity": "month",
+        "duration": "12",
+        "offer": "30%",
+        "active": true,
+        "color": "blue-bg"
+      },
+      {
+        "currency": "$",
+        "price": "42.99",
+        "validity": "month",
+        "duration": "12",
+        "offer": "14%",
+        "active": false,
+        "color": "green-bg"
+      },
+      {
+        "currency": "$",
+        "price": "49.99",
+        "validity": "month",
+        "duration": "MONTH TO",
+        "msg": "Feel free to cancel any time",
+        "active": false,
+        "color": "orange-bg",
+        "cancel": true
+      }
+    ],
+    "boosts": [
+      {
+        "currency": "$",
+        "price": "2.99",
+        "count": 1,
+        "save": false,
+        "color": "boost-blue-bg"
+      },
+      {
+        "currency": "$",
+        "price": "2.00",
+        "count": 1,
+        "save": "33%",
+        "color": "boost-green-bg"
+      },
+      {
+        "currency": "$",
+        "price": "2.99",
+        "count": 1,
+        "save": "50%",
+        "color": "boost-orange-bg"
+      }
+    ]
+  },
+  "photos": [
+    {
+      "imageUrl": "/assets/i/hospital-item2.jpg"
+    },
+    {
+      "imageUrl": "/assets/i/hospital-item2.jpg"
+    },
+    {
+      "imageUrl": "/assets/i/hospital-item2.jpg"
+    }
+  ],
+  "availability": {
+    "MondayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "MondayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "TuesdayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "TuesdayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "WednesdayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "WednesdayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "ThursdayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "ThursdayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "FridayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "FridayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "SaturdayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "SaturdayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "SundayStartModelDropdown": {
+      "defaultText": "Start",
+      "optionList": [
+        {
+          "optionName": "Start"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    },
+    "SundayEndModelDropdown": {
+      "defaultText": "End",
+      "optionList": [
+        {
+          "optionName": "End"
+        },
+        {
+          "optionName": 0
+        },
+        {
+          "optionName": 1
+        },
+        {
+          "optionName": 2
+        },
+        {
+          "optionName": 3
+        },
+        {
+          "optionName": 4
+        },
+        {
+          "optionName": 5
+        },
+        {
+          "optionName": 6
+        },
+        {
+          "optionName": 7
+        },
+        {
+          "optionName": 8
+        },
+        {
+          "optionName": 9
+        },
+        {
+          "optionName": 10
+        },
+        {
+          "optionName": 11
+        },
+        {
+          "optionName": 12
+        },
+        {
+          "optionName": 13
+        },
+        {
+          "optionName": 14
+        },
+        {
+          "optionName": 15
+        },
+        {
+          "optionName": 16
+        },
+        {
+          "optionName": 17
+        },
+        {
+          "optionName": 18
+        },
+        {
+          "optionName": 19
+        },
+        {
+          "optionName": 20
+        },
+        {
+          "optionName": 21
+        },
+        {
+          "optionName": 22
+        },
+        {
+          "optionName": 23
+        }
+      ]
+    }
+  },
+  "address": "C-19, Mountainview, Apple Valley, CA",
+  "about": "We’re a group of passionate specialists that erai it volute teger mollis nisl dictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tincunt. Sed sit amet irisus eget mauris mollis luctus",
+  "recent": [
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Bourne",
+      "role": "ORTHODONTIST",
+      "description": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Kylie Bourne",
+      "role": "ORTHODONTIST",
+      "description": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    }
+  ],
+  "exEndrose": [
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Bourne",
+      "designation": "ORTHODONTIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Kelly Brown",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Bourne",
+      "designation": "ORTHODONTIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Kelly Brown",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Bourne",
+      "designation": "ORTHODONTIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Kelly Brown",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    }
+  ],
+  "inEndrose": [
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Bourne",
+      "designation": "ORTHODONTIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Kelly Brown",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Bourne",
+      "designation": "ORTHODONTIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Kelly Brown",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Bourne",
+      "designation": "ORTHODONTIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Kelly Brown",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Bourne",
+      "designation": "ORTHODONTIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Kelly Brown",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisldictum lectus pulvinar temp and . Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Simon Mignolet",
+      "designation": "DENTAL HYGIENIST",
+      "message": "It’s rare that you come across a standout talent like Lyanna teger mollis nisl dictum lectus pulvinar temp and. Donecti feugiat bibendum magna vela tinmont"
+    }
+  ],
+  "phone": "123-456-1754",
+  "emails": "email@texasgeneral.com",
+  "website": "www.texasgeneral.com",
+  "technology": [
+    {
+      "label": "CADCAM Restorations",
+      "checked": true
+    },
+    {
+      "label": "DEXIS",
+      "checked": true
+    },
+    {
+      "label": "Gendex",
+      "checked": true
+    },
+    {
+      "label": "Intraoral Camera",
+      "checked": true
+    }
+  ],
+  "dental": [
+    {
+      "label": "AACD",
+      "checked": true
+    },
+    {
+      "label": "AADSM",
+      "checked": true
+    },
+    {
+      "label": "AAID",
+      "checked": true
+    },
+    {
+      "label": "ACE",
+      "checked": true
+    }
+  ],
+  "position": [
+    {
+      "label": "Dentist",
+      "checked": true
+    },
+    {
+      "label": "Office Manager",
+      "checked": true
+    },
+    {
+      "label": "Assistant",
+      "checked": true
+    },
+    {
+      "label": "Hygienist",
+      "checked": true
+    },
+    {
+      "label": "Front Desk",
+      "checked": true
+    }
+  ],
+  "orgStructure": {
+    "title": "parent",
+    "isEdit": false,
+    "subList": [
+      {
+        "title": "parent",
+        "isEdit": false,
+        "subList": [
+          {
+            "title": "parent",
+            "isEdit": false,
+            "subList": [
+
+            ]
+          },
+          {
+            "title": "parent",
+            "isEdit": false,
+            "subList": [
+
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

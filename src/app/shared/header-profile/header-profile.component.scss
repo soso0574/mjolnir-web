@@ -62,7 +62,7 @@
             font-family: 'HelveticaNeueRoman';
             text-transform: uppercase;
             &.current {
-                background-color: #29aae3;
+                background-color: rgba(255, 255, 255, .28);
             }
             &:hover,
             &:focus,
@@ -73,13 +73,18 @@
         .btn-search {
             display: inline-block;
             vertical-align: middle;
-            width: 36px;
-            height: 36px;
             .icon-search {
                 background-position: -252px -36px;
                 width: 36px;
                 height: 36px;
             }
+        }
+        &.blue-active-bg {
+          .btn-link {
+            &.current {
+              background-color: #29aae3;
+            }
+          }
         }
     }
     .rights {

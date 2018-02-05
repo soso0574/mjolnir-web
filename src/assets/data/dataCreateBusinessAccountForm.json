@@ -88,7 +88,7 @@
       "City": "",
       "Zip Code": "",
       "Phone Number": "",
-      
+
       "step2CheckList": [
         {
           "label": "Endodontics",
@@ -120,7 +120,7 @@
         }
       ],
       "Other1": "",
-      
+
       "step3CheckList": [
         {
           "label": "Dental Assistant (DA, EFDA, RDA)",
@@ -148,7 +148,7 @@
         }
       ],
       "Other2": "",
-      
+
       "step4BigPic": {
         "src": ""
       },
@@ -1378,14 +1378,14 @@
                 "title": "parent",
                 "isEdit": false,
                 "subList": [
-                  
+
                 ]
               },
               {
                 "title": "parent",
                 "isEdit": false,
                 "subList": [
-                  
+
                 ]
               }
             ]

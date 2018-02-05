@@ -1,0 +1,866 @@
+<div class="employer-profile-container" *ngIf="editDatas">
+  <a href="javascript:;" class="back-btn">
+    <span class="back-icon"></span>BACK
+  </a>
+  <div class="employer-slider-section">
+    <ngb-carousel #caruosels>
+      <ng-template ngbSlide *ngFor="let img of editDatas['banners']">
+        <div class="employer-slider-main">
+          <div class="slider-items-employer">
+            <img [src]="img" alt="">
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <div class="slider-btns">
+      <a href="javascript:;" class="icons3 prev-icon" (click)="caruosels.prev()"></a>
+      <a href="javascript:;" class="icons3 next-icon" (click)="caruosels.next()"></a>
+    </div>
+  </div>
+  <!-- end .slider section -->
+  <div class="profile-information-main">
+    <div class="employer-profile-overview profile-detail-sections">
+      <div class="industry-detail-name">
+        <span class="txt">{{editDatas['hospital'].name}}</span>
+        <span class="icons3 badge-icon"></span>
+      </div>
+      <div class="industry-category-name">
+        {{editDatas['hospital'].category}}
+      </div>
+      <div class="industry-location">
+        <span class="icons3 location-icon"></span>
+        <span class="txt">{{editDatas['hospital'].location}}</span>
+      </div>
+      <div class="industry-work-time">
+        <span class="icons3 time-icon"></span>
+        <span class="txt">{{editDatas['hospital'].working}}</span>
+      </div>
+    </div>
+    <!-- end .employer-profile-overview -->
+    <div class="adminstration-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 setting-icon"></span>
+        <span class="title-txt">ADMINISTRATORS</span>
+      </div>
+      <div class="adminstration-content">
+        <div class="admin-users-main">
+          <div class="admin-users-list" *ngFor="let item of editDatas['admin']; let i=index">
+            <span class="icons3 list-point-icon"></span>
+            <div class="users-name-list">
+              <span class="label">{{item.name}}</span>
+              <span class="icons3 close-icon" (click)="delete('admin', i)"></span>
+            </div>
+          </div>
+          <a href="javascript:;"
+            class="blue-violet-btn edit-admin-btn"
+            (click)="openModal(editAdminModal,'static')"
+          >Edit Administrators</a>
+        </div>
+      </div>
+    </div>
+    <!-- end .adminstration-section-overview -->
+    <div class="subscription-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 subscribe-icon"></span>
+        <span class="title-txt">SUBSCRIPTION</span>
+      </div>
+      <div class="subscription-content">
+        <ng-container *ngFor="let item of editDatas['subscription'].lists">
+          <div class="subscription-list-content" *ngIf="item.active">
+            <a href="javascript:;" class="subscription-link blue-bg">
+              <div class="dollar-value">
+                <span class="dollar-txt">{{item.currency}}<span>{{item.price}}</span></span>
+                <span class="month-txt">per {{item.validity}}</span>
+              </div>
+              <div class="month-subscription">
+                <span class="month-sub-txt">{{item.offer}} <span>Month subscription</span></span>
+              </div>
+            </a>
+          </div>
+        </ng-container>
+        <a href="javascript:;"
+          class="blue-violet-btn edit-subscribe-btn"
+          (click)="subscribe()"
+        >Edit Subscription</a>
+      </div>
+    </div>
+    <!-- end .subscription-section-overview -->
+    <div class="photos-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 subscribe-icon"></span>
+        <span class="title-txt">PHOTOS</span>
+      </div>
+      <div class="photos-section-content">
+        <a href="javascript:;" class="photo-shape" *ngFor="let item of editDatas['photos']; let i=index">
+          <img [src]="item.imageUrl" alt="">
+          <span class="icons3 close-icon" (click)="delete('photos', i)"></span>
+        </a>
+        <a href="javascript:;" class="add-photo-shape" (click)="addPhotos('photos')">
+          Add
+        </a>
+      </div>
+    </div>
+    <!-- end .photos-section-overview -->
+    <div class="work-availablity-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 work-icon"></span>
+        <span class="title-txt">WORK AVAILABILITY</span>
+      </div>
+      <div class="work-availablity-content">
+        <div class="form">
+          <div class="row-line">
+            <span class="label-txt">Monday</span>
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['MondayStartModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['MondayStartModelDropdown'].optionList"
+                  (click)="editDatas['availability']['MondayStartModelDropdown'].defaultText = item.optionName;selectMondayDropdown();"
+                  [ngClass]="{'hide': (item.optionName !== 'Start'
+                                       && editDatas['availability']['MondayEndModelDropdown'].defaultText !== 'End'
+                                       && item.optionName > editDatas['availability']['MondayEndModelDropdown'].defaultText),
+                               'selected': editDatas['availability']['MondayStartModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['MondayEndModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['MondayEndModelDropdown'].optionList"
+                  (click)="editDatas['availability']['MondayEndModelDropdown'].defaultText = item.optionName;selectMondayDropdown();"
+                  [ngClass]="{'hide': (item.optionName !== 'End'
+                                       && editDatas['availability']['MondayStartModelDropdown'].defaultText !== 'Start'
+                                       && item.optionName < editDatas['availability']['MondayStartModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['MondayEndModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <span class="label-txt">Tuesday</span>
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['TuesdayStartModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['TuesdayStartModelDropdown'].optionList"
+                  (click)="editDatas['availability']['TuesdayStartModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'Start'
+                                       && editDatas['availability']['TuesdayEndModelDropdown'].defaultText !== 'End'
+                                       && item.optionName > editDatas['availability']['TuesdayEndModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['TuesdayStartModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['TuesdayEndModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['TuesdayEndModelDropdown'].optionList"
+                  (click)="editDatas['availability']['TuesdayEndModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'End'
+                                       && editDatas['availability']['TuesdayStartModelDropdown'].defaultText !== 'Start'
+                                       && item.optionName < editDatas['availability']['TuesdayStartModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['TuesdayEndModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <span class="label-txt">Wednesday</span>
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['WednesdayStartModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['WednesdayStartModelDropdown'].optionList"
+                  (click)="editDatas['availability']['WednesdayStartModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'Start'
+                                       && editDatas['availability']['WednesdayEndModelDropdown'].defaultText !== 'End'
+                                       && item.optionName > editDatas['availability']['WednesdayEndModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['WednesdayStartModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['WednesdayEndModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['WednesdayEndModelDropdown'].optionList"
+                  (click)="editDatas['availability']['WednesdayEndModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'End'
+                                       && editDatas['availability']['WednesdayStartModelDropdown'].defaultText !== 'Start'
+                                       && item.optionName < editDatas['availability']['WednesdayStartModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['WednesdayEndModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <span class="label-txt">Thursday</span>
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['ThursdayStartModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['ThursdayStartModelDropdown'].optionList"
+                  (click)="editDatas['availability']['ThursdayStartModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'Start'
+                                       && editDatas['availability']['ThursdayEndModelDropdown'].defaultText !== 'End'
+                                       && item.optionName > editDatas['availability']['ThursdayEndModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['ThursdayStartModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['ThursdayEndModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['ThursdayEndModelDropdown'].optionList"
+                  (click)="editDatas['availability']['ThursdayEndModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'End'
+                                       && editDatas['availability']['ThursdayStartModelDropdown'].defaultText !== 'Start'
+                                       && item.optionName < editDatas['availability']['ThursdayStartModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['ThursdayEndModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <span class="label-txt">Friday</span>
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['FridayStartModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['FridayStartModelDropdown'].optionList"
+                  (click)="editDatas['availability']['FridayStartModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'Start'
+                                       && editDatas['availability']['FridayEndModelDropdown'].defaultText !== 'End'
+                                       && item.optionName > editDatas['availability']['FridayEndModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['FridayStartModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['FridayEndModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['FridayEndModelDropdown'].optionList"
+                  (click)="editDatas['availability']['FridayEndModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'End'
+                                       && editDatas['availability']['FridayStartModelDropdown'].defaultText !== 'Start'
+                                       && item.optionName < editDatas['availability']['FridayStartModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['FridayEndModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <span class="label-txt">Saturday</span>
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['SaturdayStartModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['SaturdayStartModelDropdown'].optionList"
+                  (click)="editDatas['availability']['SaturdayStartModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'Start'
+                                       && editDatas['availability']['SaturdayEndModelDropdown'].defaultText !== 'End'
+                                       && item.optionName > editDatas['availability']['SaturdayEndModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['SaturdayStartModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['SaturdayEndModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['SaturdayEndModelDropdown'].optionList"
+                  (click)="editDatas['availability']['SaturdayEndModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'End'
+                                       && editDatas['availability']['SaturdayStartModelDropdown'].defaultText !== 'Start'
+                                       && item.optionName < editDatas['availability']['SaturdayStartModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['SaturdayEndModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+          </div>
+          <!-- end .row-line -->
+          <div class="row-line">
+            <span class="label-txt">Sunday</span>
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['SundayStartModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['SundayStartModelDropdown'].optionList"
+                  (click)="editDatas['availability']['SundayStartModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'Start'
+                                       && editDatas['availability']['SundayEndModelDropdown'].defaultText !== 'End'
+                                       && item.optionName > editDatas['availability']['SundayEndModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['SundayStartModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+            <div ngbDropdown class="d-inline-block little">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>
+                {{editDatas['availability']['SundayEndModelDropdown'].defaultText}}
+              </button>
+              <div ngbDropdownMenu>
+                <button class="dropdown-item"
+                  *ngFor="let item of editDatas['availability']['SundayEndModelDropdown'].optionList"
+                  (click)="editDatas['availability']['SundayEndModelDropdown'].defaultText = item.optionName"
+                  [ngClass]="{'hide': (item.optionName !== 'End'
+                                       && editDatas['availability']['SundayStartModelDropdown'].defaultText !== 'Start'
+                                       && item.optionName < editDatas['availability']['SundayStartModelDropdown'].defaultText),
+                              'selected': editDatas['availability']['SundayEndModelDropdown'].defaultText === item.optionName}">
+                  {{item.optionName}}
+                </button>
+              </div>
+            </div>
+            <!-- end .dropdown -->
+          </div>
+          <!-- end .row-line -->
+        </div>
+      </div>
+    </div>
+    <!-- end .work-availablity-section -->
+    <div class="map-view-section profile-detail-sections">
+      <a href="javascript:;" class="map-edit"></a>
+      <!-- this creates a google map on the page with the given lat/lng from -->
+      <!-- the component as the initial center of the map: -->
+      <agm-map
+        [latitude]="places.lat" [longitude]="places.lng"
+        [zoom]="6"
+        [zoomControl]="false"
+        [mapTypeControl]="false"
+        [scaleControl]="false"
+        [streetViewControl]="false"
+        [rotateControl]="false"
+        [fullscreenControl]="false"
+      >
+        <agm-marker
+          [latitude]="places.lat" [longitude]="places.lng"
+          [iconUrl]="'/assets/i/location.png'"
+        ></agm-marker>
+      </agm-map>
+    </div>
+    <!-- end .mapview -->
+    <div class="address-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 address-icon"></span>
+        <span class="title-txt">ADDRESS</span>
+      </div>
+      <div class="address-section-content">
+        {{editDatas.address}}
+      </div>
+    </div>
+    <!-- end .address-section -->
+    <div class="aboutus-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 aboutus-icon"></span>
+        <span class="title-txt">ABOUT US</span>
+        <a href="javascript:;" class="edit-icon icons3" (click)="aboutEdit=!aboutEdit"></a>
+      </div>
+      <div class="aboutus-section-content">
+        <textarea [value]="editDatas.about" [disabled]="!aboutEdit"></textarea>
+      </div>
+    </div>
+    <!-- end .about-us-section -->
+    <div class="recent-review-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 review-icon"></span>
+        <span class="title-txt">RECENT REVIEWS</span>
+        <a href="javascript:;" class="edit-icon icons3" (click)="openModal(addEditModal,'static')"></a>
+      </div>
+      <div class="recentreview-section-content">
+        <div class="endoresment-box" *ngFor="let item of editDatas['recent']">
+          <div class="endoresment-box-user">
+            <img [src]="item.imageUrl" alt="">
+            <span class="online-icon"></span>
+            <div class="user-detail">
+              <a href="javascript:;" class="user-name">{{item.name}}</a>
+              <span class="user-work">{{item.role}}</span>
+            </div>
+            <div class="user-ratings">
+              <span class="star icons3"></span>
+              <span class="star icons3"></span>
+              <span class="star icons3"></span>
+              <span class="star icons3"></span>
+              <span class="star icons3"></span>
+            </div>
+          </div>
+          <div class="endoresment-msg">
+            <span class="icons3 arrow-msg"></span>
+            <p>{{item.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end .recent-review-section -->
+    <div class="external-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 review-icon"></span>
+        <span class="title-txt">EXTERNAL ENDORSEMENTS</span>
+        <a href="javascript:;" class="edit-icon icons3" (click)="endorse('exEndrose')"></a>
+      </div>
+      <div class="external-section-content">
+        <a href="javascript:;" class="photo-item" *ngFor="let item of editDatas['exEndrose'] | slice:0:7">
+          <img [src]="item.imageUrl" alt="">
+        </a>
+        <a href="javascript:;" class="photo-item count-remains">+ {{editDatas['exEndrose'].length - 7}}</a>
+      </div>
+    </div>
+    <!-- end .EXTERNAL ENDORSEMENTS-section -->
+    <div class="internal-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 review-icon"></span>
+        <span class="title-txt">INTERNAL ENDORSEMENTS</span>
+        <a href="javascript:;" class="edit-icon icons3" (click)="endorse('inEndrose')"></a>
+      </div>
+      <div class="internal-section-content">
+        <a href="javascript:;" class="photo-item" *ngFor="let item of editDatas['inEndrose'] | slice:0:7">
+          <img [src]="item.imageUrl" alt="">
+        </a>
+        <a href="javascript:;" class="photo-item count-remains">+ {{editDatas['inEndrose'].length - 7}}</a>
+      </div>
+    </div>
+    <!-- end .internal ENDORSEMENTS-section -->
+    <div class="phone-number-section profile-detail-sections">
+      <span class="icons3 phone-icon"></span>
+      <input type="text" [value]="editDatas['phone']"
+        class="edit-input-box" [disabled]="!phoneEdit">
+      <a href="javascript:;" class="icons3 edit-icon" (click)="phoneEdit=!phoneEdit"></a>
+    </div>
+    <!-- end .phone-number-section-section -->
+    <div class="mail-section profile-detail-sections">
+      <span class="icons3 mail-icon"></span>
+      <input type="email" [value]="editDatas['emails']"
+      class="edit-input-box" [disabled]="!emailEdit">
+      <a href="javascript:;" class="icons3 edit-icon" (click)="emailEdit=!emailEdit"></a>
+    </div>
+    <!-- end .mail-section-section-section -->
+    <div class="globe-section profile-detail-sections">
+      <span class="icons3 globe-icon"></span>
+      <input type="text" [value]="editDatas['website']"
+        class="edit-input-box" [disabled]="!webEdit">
+      <a href="javascript:;" class="icons3 edit-icon" (click)="webEdit=!webEdit"></a>
+    </div>
+    <!-- end .globe-section-section-section -->
+    <div class="technology-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 tech-icon"></span>
+        <span class="title-txt">TECHNOLOGIES USED</span>
+        <a href="javascript:;" class="icons3 edit-icon" (click)="openModal(techEditModal,'static')"></a>
+      </div>
+      <div class="technology-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['technology']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    <div class="dental-philo-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 tech-icon"></span>
+        <span class="title-txt">DENTAL PHILOSOPHIES/TRAININGS</span>
+        <a href="javascript:;" class="icons3 edit-icon" (click)="openModal(dentalEditModal,'static')"></a>
+      </div>
+      <div class="dental-philo-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['dental']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- end .dental-philo-section -->
+    <div class="organization-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 flow-icon"></span>
+        <span class="title-txt">ORGANIZATIONAL STRUCTURE</span>
+        <a href="javascript:;" class="icons3 edit-icon"></a>
+      </div>
+      <div class="organization-content">
+        <div class="tree-chart">
+          <app-org-structure [treeData]="editDatas['orgStructure']"></app-org-structure>
+        </div>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    <div class="position-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 aboutus-icon"></span>
+        <span class="title-txt">POSITIONS</span>
+        <a href="javascript:;" class="icons3 edit-icon" (click)="openModal(positionModal,'static')"></a>
+      </div>
+      <div class="position-philo-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['position']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <a href="javascript:;" class="icons3 share-icon" (click)="openModal(shareModal, 'static');"></a>
+    </div>
+    <!-- end .position-section -->
+  </div>
+  <!-- end .profile-information-main section -->
+
+  <!-- Modal -->
+  <ng-template #shareModal let-c="close">
+    <div class="modal-boxs share-model">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <div class="share-one-wrapper">
+            <div class="share-user">
+              <span class="app-txt">Tap to share app</span>
+              <div class="share-user-list">
+                <ul>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="user-view">RP</span>
+                      <span class="user-name">Rob Paul</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="user-view">PG</span>
+                      <span class="user-name">Peter Gould</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="share-app-list">
+                <ul>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="msg-icon icons2"></span>
+                      <span class="share-name">iMessage</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="mail-icon icons2"></span>
+                      <span class="share-name">Mail</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="twitter-icon icons2"></span>
+                      <span class="share-name">Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="fb-icon icons2"></span>
+                      <span class="share-name">Facebook</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="cancel-btn" (click)="c('Close click'); review()">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .share modal -->
+
+  <ng-template  #askEnsordseModal let-c="close" let-d="dismiss">
+    <div class="Endorsement-modal-box modal-box">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <h4 class="titles">Ask for Endorsement</h4>
+          <div class="email-address">
+            <input type="text" placeholder="Email or Mobile Number" >
+          </div>
+          <div class="description">
+            <textarea placeholder="Please provide a brief summary of your endorsement request"></textarea>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Cancel</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!--end .Endorsement-modal-box  -->
+  <ng-template  #editAdminModal let-c="close" let-d="dismiss">
+    <div class="edit-admin-modal">
+      <div class="modal-inner-box">
+        <div class="modal-header-box">
+          <h4 class="titles">EDIT ADMINISTRATORS</h4>
+        </div>
+        <div class="service-content">
+          <div class="modal-inner-content">
+            <div class="modal-content-txt" *ngFor="let item of editDatas['admin']; let i=index">
+              <span class="inner-txt">{{item.name}}</span>
+              <span class="icons3 close-icon" (click)="delete('admin', i)"></span>
+            </div>
+          </div>
+          <div class="admin-email-detail">
+            <div class="modal-inner-title">
+              <h3 class="inner-title">New Administrator</h3>
+              <a href="javascript:;" class="send-btn">SEND</a>
+            </div>
+            <div class="admin-email-box">
+              <input type="email" placeholder="Email Address">
+              <div class="input-name-box">
+                <div class="input-name">
+                  <input type="text" placeholder="First Name" [(ngModel)]="fName">
+                </div>
+                <div class="input-name">
+                  <input type="text" placeholder="Last Name" [(ngModel)]="lName">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="permission-detail">
+            <h3 class="inner-title">Permissions</h3>
+            <div class="permission-inner-content">
+              <div class="modal-content-txt">
+                <span class="inner-txt">Edit Office Profile</span>
+                <label class="round-checkbox" (click)="$event.stopPropagation();">
+                  <input type="checkbox">
+                  <span class="checkbox-icon icons"></span>
+                </label>
+              </div>
+              <div class="modal-content-txt">
+                <span class="inner-txt">Manage Interview Requests</span>
+                <label class="round-checkbox" (click)="$event.stopPropagation();">
+                  <input type="checkbox">
+                  <span class="checkbox-icon icons"></span>
+                </label>
+              </div>
+              <div class="modal-content-txt">
+                <span class="inner-txt">Add/Edit Benches</span>
+                <label class="round-checkbox" (click)="$event.stopPropagation();">
+                  <input type="checkbox">
+                  <span class="checkbox-icon icons"></span>
+                </label>
+              </div>
+              <div class="modal-content-txt">
+                <span class="inner-txt">Manage/ Match Requests</span>
+                <label class="round-checkbox" (click)="$event.stopPropagation();">
+                  <input type="checkbox">
+                  <span class="checkbox-icon icons"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="green-btn">
+            <a href="javascript:;" class="ok-btn"
+              (click)="c('Close click'); add('admin', fName, lName)">OK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- End Edit Admin Modal  -->
+  <ng-template  #addEditModal let-c="close" let-d="dismiss">
+    <div class="add-edit-service">
+      <div class="modal-inner-box">
+        <div class="modal-header-box">
+          <h4 class="titles">ADD / EDIT REVIEW SERVICES</h4>
+        </div>
+        <div class="service-content">
+          <div class="model-service-layer">
+            <div class="model-service-box">
+              <div class="review-service-list">
+                <span class="icons3 google-icon"></span>
+                <span class="review-txt">Google Reviews</span>
+              </div>
+              <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <input type="checkbox">
+                <span class="checkbox-icon icons"></span>
+              </label>
+            </div>
+            <div class="model-service-box">
+              <div class="review-service-list">
+                <span class="icons3 yelp-icon"></span>
+                <span class="review-txt">Yelp Reviews</span>
+              </div>
+              <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <input type="checkbox">
+                <span class="checkbox-icon icons"></span>
+              </label>
+            </div>
+            <div class="model-service-box">
+              <div class="review-service-list">
+                <span class="icons3 fb-icon"></span>
+                <span class="review-txt">Facebook Reviews</span>
+              </div>
+              <label (click)="$event.stopPropagation();">
+                <input type="checkbox">
+                <span class="checkbox-icon icons"></span>
+              </label>
+            </div>
+          </div>
+          <div class="green-btn">
+            <a href="javascript:;" class="ok-btn" (click)="c('Close click'); review()">OK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end.add-edit-service -->  -->
+  </ng-template>
+  <!-- End Modal  -->
+  <ng-template  #techEditModal let-c="close" let-d="dismiss">
+    <div class="tech-edit-service">
+      <div class="modal-inner-box">
+        <div class="modal-header-box">
+          <h4 class="titles">TECHNOLOGIES USED</h4>
+        </div>
+        <div class="service-content">
+          <div class="model-service-layer">
+            <div class="model-service-box" *ngFor="let item of editDatas['technology']">
+              <div class="review-service-list">
+                <span class="review-txt">{{item.label}}</span>
+              </div>
+              <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <input type="checkbox" [(ngModel)]="item.checked">
+                <span class="checkbox-icon icons"></span>
+              </label>
+            </div>
+            <div class="other-box">
+              <input type="text" placeholder="Other">
+            </div>
+          </div>
+          <div class="green-btn">
+            <a href="javascript:;" class="ok-btn" (click)="c('Close click'); review()">OK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end.tech edit modal -->
+
+  <ng-template  #dentalEditModal let-c="close" let-d="dismiss">
+    <div class="dent-edit-service">
+      <div class="modal-inner-box">
+        <div class="modal-header-box">
+          <h4 class="titles">DENTAL PHILOSOPHIES/TRAININGS</h4>
+        </div>
+        <div class="service-content">
+          <div class="model-service-layer">
+            <div class="model-service-box" *ngFor="let item of editDatas['dental']">
+              <div class="review-service-list">
+                <span class="review-txt">{{item.label}}</span>
+              </div>
+              <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <input type="checkbox" [(ngModel)]="item.checked">
+                <span class="checkbox-icon icons"></span>
+              </label>
+            </div>
+            <div class="other-box">
+              <input type="text" placeholder="Other">
+            </div>
+          </div>
+          <div class="green-btn">
+            <a href="javascript:;" class="ok-btn" (click)="c('Close click'); review()">OK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end.tech edit modal -->
+
+  <ng-template  #positionModal let-c="close" let-d="dismiss">
+    <div class="position-edit-service">
+      <div class="modal-inner-box">
+        <div class="modal-header-box">
+          <h4 class="titles">POSITIONS</h4>
+        </div>
+        <div class="service-content">
+          <div class="model-service-layer">
+            <div class="model-service-box" *ngFor="let item of editDatas['position']">
+              <div class="review-service-list">
+                <span class="review-txt">{{item.label}}</span>
+              </div>
+              <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <input type="checkbox" [(ngModel)]="item.checked">
+                <span class="checkbox-icon icons"></span>
+              </label>
+            </div>
+            <div class="other-box">
+              <input type="text" placeholder="Other">
+            </div>
+          </div>
+          <div class="green-btn">
+            <a href="javascript:;" class="ok-btn" (click)="c('Close click'); review()">OK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end.Position modal -->
+</div>
+<!-- end .Employer Profile -->

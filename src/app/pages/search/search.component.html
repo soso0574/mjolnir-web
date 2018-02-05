@@ -1,0 +1,238 @@
+<div class="contents" (click)="showRightPanel.isShown = false">
+  <div class="bg-green-gradient"></div>
+  <div class="content-inner">
+    <app-sd-header-profile
+      [menus]="headerMenus"
+      data-imgUrl="../assets/i/build-img.jpg"></app-sd-header-profile>
+      <div class="main-content" *ngIf="searchData">
+        <div class="search-content">
+          <div class="search-filter-section" *ngIf="activeFilter==='customFilter'">
+            <div class="search-edit-header">
+              <a href="javascript:;" class="back-icon icons3" (click)="filterClose()"></a>
+              <span class="title">Saved Custom Filters</span>
+              <a href="javascript:;" class="edit-icon icons3"></a>
+            </div>
+            <div class="filter-search-items">
+              <a href="javascript:;" *ngFor="let filter of searchData['savedFilters']">
+                {{filter.name}}
+              </a>
+            </div>
+          </div>
+          <div class="search-tab-section" *ngIf="!filter">
+            <div class="search-header-section">
+              <input type="search" placeholder="Search..." class="office-search-input">
+              <a href="javascript:;" class="filter-icon icons3" (click)="galleryView=!galleryView"></a>
+            </div>
+            <div class="search-tab-main">
+              <ng-container *ngIf="galleryView">
+                <nav class="search-tabl-nav">
+                  <ul class="search-tabl-ul">
+                    <li>
+                      <a href="javascript:;"
+                      [class.active]="tabs==='friends'" (click)="tabs='friends'">Friends</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                       [class.active]="tabs==='potential'" (click)="tabs='potential'">Potential Hires</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="search-tab-contents">
+                  <app-search-friends *ngIf="tabs==='friends'" [galleries]="searchData['frGallery']"></app-search-friends>
+                  <app-search-potentials *ngIf="tabs==='potential'" [galleries]="searchData['potentialGallery']"></app-search-potentials>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="!galleryView">
+                <nav class="search-tabl-nav">
+                  <ul class="search-tabl-ul">
+                    <li>
+                      <a href="javascript:;"
+                      [class.active]="settingsTab==='friends'" (click)="settingsTab='friends'">Friends</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                      [class.active]="settingsTab==='potential'" (click)="settingsTab='potential'">Potential Hires</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="search-tab-contents">
+                  <app-search-friends-settings
+                    *ngIf="settingsTab==='friends'" (filter)="filterOpen($event)"
+                    [dropdown]="searchData['dropdownsFr']"
+                  ></app-search-friends-settings>
+                  <app-search-potential-hires
+                    *ngIf="settingsTab==='potential'" (filter)="filterOpen($event)"
+                    [dropdown]="searchData['dropdownsPotential']"
+                  >
+                  </app-search-potential-hires>
+                </div>
+              </ng-container>
+            </div>
+            <!--end .search-tab-main-->
+          </div>
+          <div class="filter-info-view">
+            <div class="general-information-filter" *ngIf="activeFilter==='general'">
+              <div class="filter-info-header">
+                <span class="back-icon" (click)="filterClose()"></span>
+                <span class="title-txt">General Information</span>
+              </div>
+              <div class="filter-info-body">
+                <div class="filter-info-items">
+                  <div class="filter-child-items">
+                    <h4 class="filter-title-head">Languages Spoken</h4>
+                    <div class="filter-info-labels" *ngFor="let lang of searchData['generalInfo'].language">
+                      <label class="label-txt">{{lang.label}}</label>
+                      <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                        <input type="checkbox" class="filter-check" [checked]="lang.checked">
+                        <span class="chkbox-filter"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-info-items">
+                  <div class="filter-child-items">
+                    <h4 class="filter-title-head">Work Availability</h4>
+                    <div class="filter-info-labels" *ngFor="let avail of searchData['generalInfo'].workAvailbaility">
+                      <label class="label-txt">{{avail.label}}</label>
+                      <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                        <input type="checkbox" class="filter-check" [checked]="avail.checked">
+                        <span class="chkbox-filter"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filter-child-items">
+                    <h4 class="filter-title-head">Days</h4>
+                    <div class="filter-info-labels" *ngFor="let day of searchData['generalInfo'].days">
+                      <label class="label-txt">{{day.label}}</label>
+                      <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                        <input type="checkbox" class="filter-check" [checked]="day.checked">
+                        <span class="chkbox-filter"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end .general-information-filter-->
+            <div class="tech-information-filter" *ngIf="activeFilter==='techsoft'">
+              <div class="filter-info-header">
+                <span class="back-icon" (click)="filterClose()"></span>
+                <span class="title-txt">Dental Technology/Software</span>
+              </div>
+              <div class="filter-info-body">
+                <div class="filter-info-items">
+                  <div class="filter-child-items">
+                    <h4 class="filter-title-head">Practice Management Software</h4>
+                    <div class="filter-info-labels" *ngFor="let practice of searchData['techSoft'].practice">
+                      <label class="label-txt">{{practice.label}}</label>
+                      <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                        <input type="checkbox" class="filter-check" [checked]="practice.checked">
+                        <span class="chkbox-filter"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-info-items">
+                  <div class="filter-child-items">
+                    <h4 class="filter-title-head">Dental Technology Skills</h4>
+                    <div class="filter-info-labels" *ngFor="let skill of searchData['techSoft'].skills">
+                      <label class="label-txt">{{skill.label}}</label>
+                      <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                        <input type="checkbox" class="filter-check" [checked]="skill.checked">
+                        <span class="chkbox-filter"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-info-items">
+                  <div class="filter-child-items">
+                    <h4 class="filter-title-head">Other Technologies / Software</h4>
+                    <div class="filter-info-labels" *ngFor="let other of searchData['techSoft'].other">
+                      <label class="label-txt">{{other.label}}</label>
+                      <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                        <input type="checkbox" class="filter-check" [checked]="other.checked">
+                        <span class="chkbox-filter"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end .tech-information-filter-->
+            <div class="philosophy-information-filter" *ngIf="activeFilter==='pt'">
+              <div class="filter-info-header">
+                <span class="back-icon" (click)="filterClose()"></span>
+                <span class="title-txt">Dental Philosophy/Training</span>
+              </div>
+              <div class="filter-info-body">
+                <div class="filter-info-items">
+                  <div class="filter-child-items">
+                    <h4 class="filter-title-head">Dental Philosophy / Training</h4>
+                    <div class="filter-info-labels" *ngFor="let list of searchData['pt'].lists">
+                      <label class="label-txt">{{list.label}}</label>
+                      <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                        <input type="checkbox" class="filter-check" [checked]="list.checked">
+                        <span class="chkbox-filter"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end .tech-information-filter-->
+            <div class="admin-information-filter" *ngIf="activeFilter==='og'">
+              <div class="filter-info-header">
+                <span class="back-icon" (click)="filterClose()"></span>
+                <span class="title-txt">Administrative / General Dental Skills</span>
+              </div>
+              <div class="filter-info-body">
+                <div class="filter-info-items">
+                  <div class="filter-child-items">
+                    <h4 class="filter-title-head">Administrative Skills</h4>
+                    <div class="filter-info-labels" *ngFor="let skill of searchData['og'].admSkill">
+                      <label class="label-txt">{{skill.label}}</label>
+                      <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                        <input type="checkbox" class="filter-check" [checked]="skill.checked">
+                        <span class="chkbox-filter"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-info-items">
+                  <h4 class="filter-title-head">General Skills</h4>
+                  <div class="col-filter-row">
+                    <div class="filter-child-items">
+                      <div class="filter-info-labels"
+                      *ngFor="let skill of searchData['og'].gs.slice(0, 25)">
+                        <label class="label-txt">{{skill.label}}</label>
+                        <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                          <input type="checkbox" class="filter-check">
+                          <span class="chkbox-filter"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="filter-child-items">
+                      <div class="filter-info-labels"
+                      *ngFor="let skill of searchData['og'].gs.slice(25, searchData['og'].gs.length)">
+                        <label class="label-txt">{{skill.label}}</label>
+                        <label class="filter-checkbox" (click)="$event.stopPropagation();">
+                          <input type="checkbox" class="filter-check" (click)="$event.stopPropagation();">
+                          <span class="chkbox-filter"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end .admin-information-filter-->
+          </div>
+        </div>
+        <!--end .search-content-->
+      </div>
+      <!--end .main-content-->
+    <!--<app-sd-notification-offline [showRightPanel]="showRightPanel"></app-sd-notification-offline>-->
+  </div>
+  <!--end .bg-green-gradient-->
+</div>
+<!-- end .contents -->
