@@ -10,27 +10,27 @@ import { DataListService } from '../../shared/data-list/data-list.service';
   styleUrls: ['./create-employee-account.component.scss']
 })
 export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
-  private errorMessage: string;
-  private dataList: any[] = [];
+   errorMessage: string;
+   dataList: any[] = [];
 
-  private currentStep = 0;
-  private completedStep = -1;
-  private totalStep: number;
-  private sugguestList = [];
-  private activeSchool = 0;
-  private dCol = '';
-  private scrollOffset = 50;
-  private formData: any;
-  private places = {lat: -25.363, lng: 131.044};
-  private mapView = false;
-  private today = new Date();
-  private dates: any;
+   currentStep = 0;
+   completedStep = -1;
+   totalStep: number;
+   sugguestList = [];
+   activeSchool = 0;
+   dCol = '';
+   scrollOffset = 50;
+   formData: any;
+   places = {lat: -25.363, lng: 131.044};
+   mapView = false;
+   today = new Date();
+   dates: any;
 
 
   @ViewChild('waringModal') waringModal;
   @ViewChild('importPhotosModal') importPhotosModal;
   @ViewChild('createOfficeModal') createOfficeModal;
-  private modalRef: NgbModalRef;
+   modalRef: NgbModalRef;
 
   /**
    * Creates an instance of the CreateBusinessAccountComponent with the injected

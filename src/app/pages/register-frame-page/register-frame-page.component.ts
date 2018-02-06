@@ -11,17 +11,17 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['register-frame-page.component.scss']
 })
 export class RegisterFramePageComponent implements OnInit, OnDestroy {
-  private createProfile = '';
-  private contents = '';
+  createProfile = '';
+  contents = '';
   carousel_interval = 5000;
   @ViewChild('waringModal') waringModal;
-  private modalRef: NgbModalRef;
+  modalRef: NgbModalRef;
   /**
    * Creates an instance of the RegisterFramePageComponent
    *
    */
   constructor(
-    private router: Router,
+    router: Router,
     private modalService: NgbModal
   ) {}
 

@@ -8,12 +8,12 @@ import { DataListService } from '../../shared/data-list/data-list.service';
   styleUrls: ['./activity.component.scss']
 })
 export class ActivityComponent implements OnInit {
-  private showRightPanel = {
+  showRightPanel = {
     isShown: false
   };
-  private errorMessage: string;
-  private acivityList: any[];
-  private headerMenus = [
+  errorMessage: string;
+  acivityList: any[];
+  headerMenus = [
     {'name': 'friends', 'url': '/friends'},
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}

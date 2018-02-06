@@ -10,14 +10,14 @@ import { DataListService } from '../../shared/data-list/data-list.service';
   styleUrls: ['./benches.component.scss']
 })
 export class BenchesComponent implements OnInit {
-  private errorMessage: string;
-  private benches: any[];
-  private activeBench: any[];
-  private showRightPanel = {
+   errorMessage: string;
+   benches: any[];
+   activeBench: any[];
+   showRightPanel = {
     isShown: false
   };
-  private dates = new Date();
-  private headerMenus = [
+   dates = new Date();
+   headerMenus = [
     {'name': 'friends', 'url': '/friends'},
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}

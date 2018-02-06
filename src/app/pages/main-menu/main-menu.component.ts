@@ -27,7 +27,7 @@ export class MainMenuComponent implements OnInit, OnDestroy {
     isShown: false
   };
 
-  private headerMenus = [
+  headerMenus = [
     {'name': 'friends', 'url': '/friends'},
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}

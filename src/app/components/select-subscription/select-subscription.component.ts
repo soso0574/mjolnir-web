@@ -9,7 +9,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 export class SelectSubscriptionComponent implements OnInit, OnDestroy {
   @Output() backToEdit = new EventEmitter();
   @Input() data: any;
-  private modalRef: NgbModalRef;
+  modalRef: NgbModalRef;
 
   constructor(
     private modalService: NgbModal

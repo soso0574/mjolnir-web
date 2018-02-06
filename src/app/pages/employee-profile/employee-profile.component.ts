@@ -24,9 +24,9 @@ export class EmployeeProfileComponent implements OnInit, OnDestroy {
   showRightPanel = {
     isShown: false
   };
-  private bottomButtons = false;
-  private modalRef: NgbModalRef;
-  private headerMenus = [
+   bottomButtons = false;
+   modalRef: NgbModalRef;
+   headerMenus = [
     {'name': 'friends'},
     {'name': 'profiles'},
     {'name': 'benches'}

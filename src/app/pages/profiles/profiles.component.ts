@@ -12,7 +12,7 @@ import { DataListService } from '../../shared/data-list/data-list.service';
   styleUrls: ['profiles.component.scss']
 })
 export class ProfilesComponent implements OnInit, OnDestroy {
-  private headerMenus = [
+  headerMenus = [
     {'name': 'friends', 'url': '/friends'},
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}
@@ -28,13 +28,13 @@ export class ProfilesComponent implements OnInit, OnDestroy {
   showRightPanel = {
     isShown: false
   };
-  private editable: string;
+  editable: string;
   @ViewChild('profileEditModal') editModal;
-  private modalRef: NgbModalRef;
-  private subscribeData: any;
-  private endorseData: any;
-  private activeSubscribe: any;
-  private activeView: string;
+  modalRef: NgbModalRef;
+  subscribeData: any;
+  endorseData: any;
+  activeSubscribe: any;
+  activeView: string;
 
   /**
    * Creates an instance of the ProfilesComponent with the injected

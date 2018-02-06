@@ -10,9 +10,9 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class BenchEditComponent implements OnInit, OnDestroy {
   @Input() data: any;
   @Output() onBack = new EventEmitter();
-  private today = new Date();
-  private dates: any;
-  private times: any;
+  today = new Date();
+  dates: any;
+  times: any;
 
   constructor(
     private modalService: NgbModal,

@@ -8,13 +8,13 @@ import { DataListService } from '../../shared/data-list/data-list.service';
 })
 export class OfficesComponent implements OnInit {
 
-  private showRightPanel = {
+  showRightPanel = {
     isShown: false
   };
-  private gridView = true;
-  private errorMessage: string;
-  private officeList: any[];
-  private headerMenus = [
+  gridView = true;
+  errorMessage: string;
+  officeList: any[];
+  headerMenus = [
     {'name': 'friends', 'url': '/friends'},
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}

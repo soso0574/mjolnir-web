@@ -17,20 +17,20 @@ const defaultPanels = {
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-  private panels = {
+  panels = {
     ...defaultPanels
   };
-  private errorMessage: string;
-  private showRightPanel = {
+  errorMessage: string;
+  showRightPanel = {
     isShown: false
   };
-  private headerMenus = [
+  headerMenus = [
     {'name': 'friends', 'url': '/friends'},
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}
   ];
 
-  private settingsList: any[];
+  settingsList: any[];
 
   /**
    * Creates an instance of the NotificationOfflineComponent with the injected

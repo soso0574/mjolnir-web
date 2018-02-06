@@ -7,17 +7,17 @@ import { DataListService } from '../../shared/data-list/data-list.service';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  private errorMessage: string;
-  private searchData: any[];
-  private showRightPanel = {
+  errorMessage: string;
+  searchData: any[];
+  showRightPanel = {
     isShown: false
   };
-  private galleryView = true;
-  private tabs = 'friends';
-  private settingsTab = 'friends';
-  private activeFilter: string;
-  private filter: boolean;
-  private headerMenus = [
+  galleryView = true;
+  tabs = 'friends';
+  settingsTab = 'friends';
+  activeFilter: string;
+  filter: boolean;
+  headerMenus = [
     {'name': 'friends', 'url': '/friends'},
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}

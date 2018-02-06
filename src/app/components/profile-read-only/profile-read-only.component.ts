@@ -9,14 +9,14 @@ import { DataListService } from '../../shared/data-list/data-list.service';
   styleUrls: ['./profile-read-only.component.scss']
 })
 export class ProfileReadOnlyComponent implements OnInit, OnDestroy {
-  private errorMessage: string;
-  private editDatas: any;
-  private modalRef: NgbModalRef;
-  private aboutEdit: false;
-  private phoneEdit: false;
-  private emailEdit: false;
-  private webEdit: false;
-  private places = {lat: -25.363, lng: 131.044};
+  errorMessage: string;
+  editDatas: any;
+  modalRef: NgbModalRef;
+  aboutEdit: false;
+  phoneEdit: false;
+  emailEdit: false;
+  webEdit: false;
+  places = {lat: -25.363, lng: 131.044};
 
   /**
    * Creates an instance of the ProfilesComponent with the injected

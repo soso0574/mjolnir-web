@@ -9,8 +9,8 @@ import {NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 export class EndoresmentsComponent implements OnInit, OnDestroy {
   @Output() backToEdit = new EventEmitter();
   @Input() data: any;
-  private modalRef: NgbModalRef;
-  private editView: boolean;
+  modalRef: NgbModalRef;
+  editView: boolean;
 
   constructor(
     private modalService: NgbModal

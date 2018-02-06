@@ -11,12 +11,12 @@ let selectedElem: any ;
   styleUrls: ['./friends.component.scss']
 })
 export class FriendsComponent implements OnInit {
-  private showRightPanel = {
+  showRightPanel = {
     isShown: false
   };
-  private errorMessage: string;
-  private friendsData: any;
-  private headerMenus = [
+  errorMessage: string;
+  friendsData: any;
+  headerMenus = [
     {'name': 'friends', 'url': '/friends'},
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}
