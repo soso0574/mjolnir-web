@@ -88,8 +88,8 @@ export class ProfileReadOnlyComponent implements OnInit, OnDestroy {
     });
   }
 
-  // Review modal
-  review() {
+  // Close modal
+  closeModal() {
     document.body.classList.add('modal-open');
   }
 
