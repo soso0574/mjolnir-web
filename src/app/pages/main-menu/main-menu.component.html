@@ -30,7 +30,7 @@
         </div>
         <!--end .left-->
         <div class="rights">
-          <div class="menu-list">
+          <div class="menu-list" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
             <ul class="menu-items clearfix">
               <li *ngFor="let item of dataList;let i = index"
                [ngClass]="{'hide': item.selected}">
