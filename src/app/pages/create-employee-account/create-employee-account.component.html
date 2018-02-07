@@ -1099,7 +1099,7 @@
           <!-- end .titles -->
           <div class="main-show">
             <div class="right-top row-align">
-              <a href="javascript:;" class="white-tips" (click)="openModal(createOfficeModal)">SKIP</a>
+              <a [routerLink]="['/employee-profile']" class="white-tips">SKIP</a>
             </div>
             <div class="pl78">
               <div class="textareas">
@@ -1241,28 +1241,6 @@
   </div>
 </ng-template>
 <!-- end .import-profile-modal -->
-
-<ng-template #createOfficeModal let-c="close">
-  <div class="modal-boxs create-office-modal">
-    <div class="modal-inner">
-      <div class="modal-info">
-        <h4 class="titles">Create another office ?</h4>
-        <a href="javascript:;" class="btn btn-white"
-          (click)="c('Close click');resetForm();">
-          Start from scratch
-        </a>
-        <a href="javascript:;" class="btn btn-white">Copy this Office</a>
-      </div>
-      <div class="footer-btn">
-        <a [routerLink]="['/employee-profile']" class="btn btn-green"
-          (click)="c('Close click');">
-          No, I'll do it later
-        </a>
-      </div>
-    </div>
-  </div>
-</ng-template>
-<!-- end .create-office-modal -->
 
 <ng-template  #dateModal let-c="close" let-d="dismiss">
   <div class="modal-boxs date-modal">

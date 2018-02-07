@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   emailText = '';
   passwordText = '';
 
-  pageStep = 0;
+  pageStep = 2;
   selectedSocialIndex = 0;
   selectedProfile = 'business';
 
