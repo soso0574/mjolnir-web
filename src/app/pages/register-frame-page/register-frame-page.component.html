@@ -21,7 +21,15 @@
         (resumeCarousel)="resumeCarousel($event)"
         (changedContent)="changedContent($event)"></app-sd-register>
         <app-sd-create-business-account *ngIf="createProfile==='business'"></app-sd-create-business-account>
-        <app-create-employee-account *ngIf="createProfile==='employee'"></app-create-employee-account>
+        <app-create-employee-account
+          *ngIf="createProfile==='employee' && contents==='business'"
+          [newEmployee]="true"
+          (onEmployee)="onEmployee($event)"
+        ></app-create-employee-account>
+        <app-create-employee-account
+          *ngIf="createProfile==='employee' && contents==='employee'"
+          [newEmployee]="false"
+        ></app-create-employee-account>
       </div>
       <!-- end .content-inner -->
     </div>
@@ -49,7 +57,7 @@
         </p>
       </div>
       <div class="footer-btn">
-        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');openModal(importProfileModal, 'static')">OK</a>
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');createProfile='employee'">OK</a>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, Input, Output, EventEmitter } from '@angular/core';
 import { keys } from 'lodash';
 
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +10,8 @@ import { DataListService } from '../../shared/data-list/data-list.service';
   styleUrls: ['./create-employee-account.component.scss']
 })
 export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
+   @Input() newEmployee: boolean;
+   @Output() onEmployee = new EventEmitter();
    errorMessage: string;
    dataList: any[] = [];
 
@@ -17,6 +19,7 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
    completedStep = -1;
    totalStep: number;
    sugguestList = [];
+   activePersonal = 0;
    activeSchool = 0;
    dCol = '';
    scrollOffset = 50;
@@ -77,15 +80,18 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
   }
 
   // Modal open function
-  openModal(content) {
-    this.modalRef = this.modalService.open(content, { windowClass: 'steps-modal' });
+  openModal(content, value) {
+    this.modalRef = this.modalService.open(content, {
+      windowClass: 'steps-modal',
+      backdrop: value || true
+    });
   }
 
   // reset form
   resetForm() {
     this.currentStep = 0;
     this.completedStep = -1;
-    this.openModal(this.waringModal);
+    this.openModal(this.waringModal, 'static');
     window.scrollTo(0, 0);
   }
 
@@ -103,6 +109,23 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
       }
     });
     this.activeSchool = idx;
+    this.sugguestList = sugguestList_temp;
+  }
+
+  // Auto complete for personal
+  changePersonal(model, field, list) {
+    const searched_text = this.formData['somePersonalDetails'][model][field].trim();
+    if (searched_text === '') {
+      this.sugguestList = [];
+      return;
+    }
+    const sugguestList_temp = [];
+    this.formData['somePersonalDetails'][model][list].forEach(function(item, index){
+      if (item['label'].toLowerCase().indexOf(searched_text.toLowerCase()) > -1) {
+        sugguestList_temp.push(item);
+      }
+    });
+    this.activePersonal = field;
     this.sugguestList = sugguestList_temp;
   }
 
@@ -129,7 +152,7 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
     }
     // show modal window in "Let's add some photos" step
     if (index === 3) {
-      this.openModal(this.importPhotosModal);
+      this.openModal(this.importPhotosModal, true);
     }
 
     if (index === 13) {
@@ -164,9 +187,6 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
   skipStep(index) {
     this.completedStep = index - 1;
     this.currentStep = index;
-    if (index === (this.totalStep - 1)) {
-      this.openModal(this.createOfficeModal);
-    }
   }
 
   // on change pic
@@ -243,5 +263,10 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
     this.formData['workLocation']['locations'].push({
       'place': 'HELL’S KITCHEN, NEW YORK'
     });
+  }
+
+  // go to gotoEmployer
+  gotoEmployer() {
+    this.onEmployee.emit('business');
   }
 }
