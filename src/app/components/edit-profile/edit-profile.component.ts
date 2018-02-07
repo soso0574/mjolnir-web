@@ -19,6 +19,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   emailEdit: false;
   webEdit: false;
   places = {lat: -25.363, lng: 131.044};
+  @Output() onClose = new EventEmitter();
 
   /**
    * Creates an instance of the ProfilesComponent with the injected
@@ -44,6 +45,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
       this.modalRef.close();
     }
     document.body.classList.remove('modal-open');
+    this.onClose.emit(null);
   }
 
   // Modal open function

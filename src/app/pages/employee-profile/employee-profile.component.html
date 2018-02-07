@@ -220,7 +220,7 @@
   <ng-template #profileReadModal let-c="close">
     <div class="modal-boxs profile-edit-modal">
       <div class="modal-inner">
-        <app-profile-read-only></app-profile-read-only>
+        <app-profile-read-only (onClose)="bottomButtons=false"></app-profile-read-only>
       </div>
     </div>
   </ng-template>
