@@ -19,7 +19,8 @@ export class BenchEditComponent implements OnInit, OnDestroy {
     private dragulaService: DragulaService,
   ) {
     dragulaService.setOptions('bag-one', {
-      revertOnSpill: true
+      revertOnSpill: true,
+      direction: 'horizontal',
     });
   }
 

@@ -105,7 +105,7 @@
       	</div>
       </div>
       <!-- end .center-banner -->
-      <div class="center-banner" [ngClass]="{'hide': tabIndex !== 1}">
+      <div class="center-banner oppur-banner" [ngClass]="{'hide': tabIndex !== 1}">
         <div class="sroll-boxs">
       	  <a href="javascript:;" class="btn-choose btn-prev"
       	     (click)="prevCard(carListOpportunities)">
@@ -230,6 +230,7 @@
         <app-edit-profile
           (onSubscribe)="onSubscribe($event)"
           (onEndorsement)="onEndorsement($event)"
+          (onClose)="editable=null"
         ></app-edit-profile>
       </div>
     </div>

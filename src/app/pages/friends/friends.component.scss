@@ -19,7 +19,7 @@
 .friends-wrap-box {
   display: flex;
   padding: 23px 0 32px 0;
-  overflow-x: auto;
+  overflow-x: scroll;
   margin-bottom: 28px;
 }
 
@@ -105,7 +105,7 @@
 .endoresment-wrap-box {
   display: flex;
   padding: 30px 0 33px 0;
-  overflow-x: auto;
+  overflow-x: scroll;
   margin-bottom: 26px;
 }
 
