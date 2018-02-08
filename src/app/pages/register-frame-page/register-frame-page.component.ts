@@ -15,6 +15,7 @@ export class RegisterFramePageComponent implements OnInit, OnDestroy {
   contents = '';
   carousel_interval = 5000;
   @ViewChild('waringModal') waringModal;
+  @ViewChild('importProfileModal') importProfileModal;
   modalRef: NgbModalRef;
   /**
    * Creates an instance of the RegisterFramePageComponent
@@ -61,7 +62,20 @@ export class RegisterFramePageComponent implements OnInit, OnDestroy {
 
   // changed Content
   changedContent(event) {
-    this.openModal(this.waringModal, 'static');
+    if(event === 'business') {
+      this.openModal(this.waringModal, 'static');
+    } else if(event === 'employee') {
+      this.openModal(this.importProfileModal, 'static');
+      this.createProfile = event;
+    }
     this.contents = event;
+  }
+
+  onEmployee(event) {
+    this.createProfile = '';
+    this.openModal(this.importProfileModal, 'static');
+    this.contents = event;
+    this.createProfile = event;
+    window.scrollTo(0, 0);
   }
 }

@@ -885,21 +885,27 @@
     }
   }
   .loc-field {
-    width: 320px;
+    .input-fields {
+      display: flex;
+    }
     .labels {
       display: flex;
       justify-content: space-between;
     }
-    .dropdown {
-      &.little {
-        margin: 0;
-        margin-right: 12px;
-        width: 92px;
-      }
-      &.little:last-child {
-        width: 124px;
-        margin-right: 0;
-      }
+    .inputs {
+      padding: 0 15px;
+      width: 124px;
+      margin-right: 12px;
+    }
+    .auto-tips {
+        width: 200px;
+        ul {
+            li {
+                .items {
+                    padding: 10px 20px 10px 20px;
+                }
+            }
+        }
     }
   }
   .labels {

@@ -771,6 +771,10 @@ a:hover {
 .modal-dialog {
   max-width: initial;
 }
+.steps-modal.modal {
+  width: calc(100% - 439px);
+  left: 439px;
+}
 .modal-dialog,
 .modal-content {
     height: auto;

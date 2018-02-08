@@ -75,32 +75,53 @@
                   <div class="labels">
                     <span>Location</span>
                   </div>
-                  <div class="dob">
-                    <div ngbDropdown class="d-inline-block little">
-                      <button class="btn btn-outline-primary" ngbDropdownToggle>
-                        {{formData['somePersonalDetails']['location'].defaultText}}
-                      </button>
-                      <div ngbDropdownMenu>
-                        <button class="dropdown-item"
-                          *ngFor="let item of formData['somePersonalDetails']['location'].optionList"
-                          (click)="formData['somePersonalDetails']['location'].defaultText = item.optionName;changeInputStep(0)"
-                          [ngClass]="{'selected': formData['somePersonalDetails']['location'].defaultText === item.optionName}">
-                          {{item.optionName}}
-                        </button>
-                      </div>
+                  <div class="input-fields">
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="City"
+                        (keyup)="changePersonal('location', 'city', 'cityList')"
+                       [(ngModel)]="formData['somePersonalDetails']['location'].city">
+                     <div class="auto-tips" *ngIf="activePersonal==='city'">
+                       <ul>
+                         <li *ngFor="let item of sugguestList">
+                           <a href="javascript:;" class="items"
+                             (click)="formData['somePersonalDetails']['location'].city = item.label;sugguestList = [];">
+                             {{item.label}}
+                           </a>
+                         </li>
+                       </ul>
+                     </div>
                     </div>
-                    <div ngbDropdown class="d-inline-block little">
-                      <button class="btn btn-outline-primary" ngbDropdownToggle>
-                        {{formData['somePersonalDetails']['zip'].defaultText}}
-                      </button>
-                      <div ngbDropdownMenu>
-                        <button class="dropdown-item"
-                          *ngFor="let item of formData['somePersonalDetails']['zip'].optionList"
-                          (click)="formData['somePersonalDetails']['zip'].defaultText = item.optionName;changeInputStep(0)"
-                          [ngClass]="{'selected': formData['somePersonalDetails']['zip'].defaultText === item.optionName}">
-                          {{item.optionName}}
-                        </button>
-                      </div>
+                    <!-- State -->
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="Zip Code"
+                        (keyup)="changePersonal('zip', 'zips', 'zipList')"
+                       [(ngModel)]="formData['somePersonalDetails']['zip'].zips">
+                     <div class="auto-tips" *ngIf="activePersonal==='zips'">
+                       <ul>
+                         <li *ngFor="let item of sugguestList">
+                           <a href="javascript:;" class="items"
+                             (click)="formData['somePersonalDetails']['zip'].zips = item.label;sugguestList = [];">
+                             {{item.label}}
+                           </a>
+                         </li>
+                       </ul>
+                     </div>
+                    </div>
+                    <!-- Zip code  -->
+                    <div class="inputs gray-border">
+                      <input type="text" placeholder="State"
+                        (keyup)="changePersonal('state', 'states', 'stateList')"
+                       [(ngModel)]="formData['somePersonalDetails']['state'].states">
+                     <div class="auto-tips" *ngIf="activePersonal==='states'">
+                       <ul>
+                         <li *ngFor="let item of sugguestList">
+                           <a href="javascript:;" class="items"
+                             (click)="formData['somePersonalDetails']['state'].states = item.label;sugguestList = [];">
+                             {{item.label}}
+                           </a>
+                         </li>
+                       </ul>
+                     </div>
                     </div>
                   </div>
                 </div>
@@ -192,7 +213,7 @@
                     <div ngbDropdownMenu>
                       <button class="dropdown-item"
                         *ngFor="let item of formData['availability']['MondayStartModelDropdown'].optionList"
-                        (click)="formData['availability']['MondayStartModelDropdown'].defaultText = item.optionName"
+                        (click)="formData['availability']['MondayStartModelDropdown'].defaultText = item.optionName;selectMondayDropdown();"
                         [ngClass]="{'hide': (item.optionName !== 'Start'
                                              && formData['availability']['MondayEndModelDropdown'].defaultText !== 'End'
                                              && item.optionName > formData['availability']['MondayEndModelDropdown'].defaultText),
@@ -209,7 +230,7 @@
                     <div ngbDropdownMenu>
                       <button class="dropdown-item"
                         *ngFor="let item of formData['availability']['MondayEndModelDropdown'].optionList"
-                        (click)="formData['availability']['MondayEndModelDropdown'].defaultText = item.optionName"
+                        (click)="formData['availability']['MondayEndModelDropdown'].defaultText = item.optionName;selectMondayDropdown();"
                         [ngClass]="{'hide': (item.optionName !== 'Start'
                                              && formData['availability']['MondayEndModelDropdown'].defaultText !== 'End'
                                              && item.optionName > formData['availability']['MondayEndModelDropdown'].defaultText),
@@ -841,14 +862,14 @@
                   <div class="two-inputs row">
                     <div class="item col-6">
                       <div class="inputs gray-border"
-                      (click)="openModal(empDateModal);dCol='sDate'; activeSchool=i">
+                      (click)="openModal(empDateModal, true);dCol='sDate'; activeSchool=i">
                         <input type="text" placeholder="Start Date"
                         readonly [value]="business.sDate | date: 'dd-MM-y'">
                       </div>
                     </div>
                     <div class="item col-6">
                       <div class="inputs gray-border"
-                        (click)="openModal(empDateModal);dCol='eDate'; activeSchool=i">
+                        (click)="openModal(empDateModal, true);dCol='eDate'; activeSchool=i">
                         <input type="text" placeholder="End Date"
                          readonly [value]="business.eDate | date: 'dd-MM-y'">
                       </div>
@@ -987,14 +1008,14 @@
                   <div class="two-inputs row">
                     <div class="item col-6">
                       <div class="inputs gray-border"
-                      (click)="openModal(dateModal);dCol='sDate'; activeSchool=i">
+                      (click)="openModal(dateModal, true);dCol='sDate'; activeSchool=i">
                         <input type="text" placeholder="Start Date"
                           readonly [value]="school.sDate | date: 'dd-MM-y'">
                       </div>
                     </div>
                     <div class="item col-6">
                       <div class="inputs gray-border"
-                        (click)="openModal(dateModal);dCol='eDate'; activeSchool=i">
+                        (click)="openModal(dateModal, true);dCol='eDate'; activeSchool=i">
                         <input type="text" placeholder="End Date"
                         readonly [value]="school.eDate | date: 'dd-MM-y'">
                       </div>
@@ -1099,7 +1120,9 @@
           <!-- end .titles -->
           <div class="main-show">
             <div class="right-top row-align">
-              <a href="javascript:;" class="white-tips" (click)="openModal(createOfficeModal)">SKIP</a>
+              <a *ngIf="newEmployee===false" [routerLink]="['/employee-profile']" class="white-tips">SKIP</a>
+              <a *ngIf="newEmployee===true"
+                  href="javascript:;" (click)="openModal(confirmationModal, 'static')"  class="white-tips">SKIP</a>
             </div>
             <div class="pl78">
               <div class="textareas">
@@ -1164,7 +1187,7 @@
         </p>
       </div>
       <div class="footer-btn">
-        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');openModal(importProfileModal)">OK</a>
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');">OK</a>
       </div>
     </div>
   </div>
@@ -1242,28 +1265,6 @@
 </ng-template>
 <!-- end .import-profile-modal -->
 
-<ng-template #createOfficeModal let-c="close">
-  <div class="modal-boxs create-office-modal">
-    <div class="modal-inner">
-      <div class="modal-info">
-        <h4 class="titles">Create another office ?</h4>
-        <a href="javascript:;" class="btn btn-white"
-          (click)="c('Close click');resetForm();">
-          Start from scratch
-        </a>
-        <a href="javascript:;" class="btn btn-white">Copy this Office</a>
-      </div>
-      <div class="footer-btn">
-        <a [routerLink]="['/employee-profile']" class="btn btn-green"
-          (click)="c('Close click');">
-          No, I'll do it later
-        </a>
-      </div>
-    </div>
-  </div>
-</ng-template>
-<!-- end .create-office-modal -->
-
 <ng-template  #dateModal let-c="close" let-d="dismiss">
   <div class="modal-boxs date-modal">
     <div class="modal-inner">
@@ -1317,3 +1318,26 @@
   </div>
 </ng-template>
 <!-- end .Plus modal -->
+
+
+<ng-template #confirmationModal let-c="close">
+  <div class="modal-boxs waring-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-i"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <p>
+          You have successfully completed the personal profile,
+          now it's time to continue with the Office profile
+        </p>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green" (click)="c('Close click');gotoEmployer()">Continue</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .confirmation modal -->
