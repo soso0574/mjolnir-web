@@ -29,7 +29,7 @@
 
 .bench-edit-main {
   width: 1150px;
-  margin: 47px auto 55px auto;
+  margin: 0 auto 55px auto;
   position: relative;
 }
 
@@ -37,27 +37,8 @@
   display: flex;
   flex-wrap: wrap;
   height: 626px;
+  padding-top: 47px;
   overflow-y: auto;
-  &:before {
-    content: 'MOST IDEAL';
-    font-size: 19px;
-    color: rgba(255, 255, 255, .82);
-    width: 165px;
-    position: absolute;
-    top: -41px;
-    left: 0;
-    text-align: center;
-  }
-  &:after {
-    content: 'LEAST IDEAL';
-    font-size: 19px;
-    color: rgba(255, 255, 255, .82);
-    width: 165px;
-    position: absolute;
-    bottom: -41px;
-    right: 28px;
-    text-align: center;
-  }
 }
 
 .users-cards-square {
@@ -66,6 +47,29 @@
   position: relative;
   margin-bottom: 30px;
   margin-right: 74px;
+  &:first-child:before {
+    content: 'MOST IDEAL';
+    font-size: 19px;
+    color: rgba(255, 255, 255, .82);
+    width: 165px;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    text-align: center;
+  }
+  &:last-child:after {
+    content: 'LEAST IDEAL';
+    font-size: 19px;
+    color: rgba(255, 255, 255, .82);
+    width: 165px;
+    position: absolute;
+    bottom: -41px;
+    text-align: center;
+  }
+  &.gu-mirror:first-child:before,
+  &.gu-mirror:last-child:after {
+    display: none;
+  }
   &:nth-last-child(-n+5) {
     margin-bottom: 0;
   }
@@ -73,8 +77,18 @@
     margin-right: 0;
   }
   &.gu-transit {
+    opacity: 1;
+    .square-box-main {
+      opacity: 0;
+    }
     .dashed-border {
       display: block;
+    }
+  }
+  &.gu-mirror {
+    opacity: 1;
+    .square-box-main {
+      transform: rotate(10deg);
     }
   }
   .dashed-border {
@@ -82,7 +96,7 @@
     min-height: 230px;
     width: 165px;
     border-radius: 15px;
-    border: 2px dashed #fff;
+    border: 2px dashed rgba(255,255,255,0.6);
     position: absolute;
     top: 0;
     left: 0;

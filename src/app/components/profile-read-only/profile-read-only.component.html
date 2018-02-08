@@ -164,6 +164,7 @@
               <div class="tech-name">{{item.label}}</div>
             </div>
           </ng-container>
+        </div>
       </div>
     </div>
     <!-- end .technology-section -->
@@ -216,17 +217,7 @@
     <!-- end .position-section -->
   </div>
   <!-- end .profile-information-main section -->
-  <div class="info-sticky-icons">
-    <a href="javascript:;" class="btn btn-circle blue">
-      <i class="icons icon-like"></i>
-    </a>
-    <a href="javascript:;" class="btn btn-circle pink">
-      <i class="icons icon-clock"></i>
-    </a>
-    <a href="javascript:;" class="btn btn-circle white">
-      <i class="icons icon-three"></i>
-    </a>
-  </div>
+
   <!-- Modal -->
   <ng-template #shareModal let-c="close">
     <div class="modal-boxs share-model">
@@ -234,7 +225,7 @@
         <div class="modal-info">
           <div class="share-one-wrapper">
             <div class="share-user">
-              <span class="app-txt">Tap to share app</span>
+              <span class="app-txt">Click to share app</span>
               <div class="share-user-list">
                 <ul>
                   <li>
@@ -283,7 +274,7 @@
           </div>
         </div>
         <div class="footer-btn">
-          <a href="javascript:;" class="cancel-btn" (click)="c('Close click')">Cancel</a>
+          <a href="javascript:;" class="cancel-btn" (click)="c('Close click'); closeModal();">Cancel</a>
         </div>
       </div>
     </div>
