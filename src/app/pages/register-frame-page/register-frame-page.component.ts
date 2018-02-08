@@ -66,6 +66,7 @@ export class RegisterFramePageComponent implements OnInit, OnDestroy {
       this.openModal(this.waringModal, 'static');
     } else if(event === 'employee') {
       this.openModal(this.importProfileModal, 'static');
+      this.createProfile = event;
     }
     this.contents = event;
   }
@@ -74,6 +75,7 @@ export class RegisterFramePageComponent implements OnInit, OnDestroy {
     this.createProfile = '';
     this.openModal(this.importProfileModal, 'static');
     this.contents = event;
+    this.createProfile = event;
     window.scrollTo(0, 0);
   }
 }
