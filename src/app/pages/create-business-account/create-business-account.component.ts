@@ -76,7 +76,9 @@ export class CreateBusinessAccountComponent implements OnInit, OnDestroy {
 
   // openModalWindow
   openModalWindow(modalId) {
-    const modalRef = this.modalService.open(modalId);
+    const modalRef = this.modalService.open(modalId, {
+      windowClass: 'steps-modal',
+    });
     modalRef.result.then((result) => {
     }, (reason) => {
     });
