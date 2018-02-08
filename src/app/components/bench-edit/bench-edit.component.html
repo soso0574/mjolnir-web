@@ -2,10 +2,10 @@
   <div class="bench-edit-header">
     <a href="javascript:;" (click)="back()" class="back-icon"></a>
     <span class="title">{{data.name}} <span>({{data.lists.length}})</span></span>
-    <a href="javascript:;" class="edit-icon icons3"></a>
+    <a href="javascript:;" class="edit-icon icons3" (click)="editing();"></a>
   </div>
   <div class="bench-edit-main">
-    <div class="bench-list-content" [dragula]='"bag-one"' [dragulaModel]='items'>
+    <div class="bench-list-content" [dragula]='bags' [dragulaModel]='items'>
       <div class="users-cards-square" *ngFor="let d of data.lists">
         <span class="dashed-border"></span>
         <div class="square-box-main">

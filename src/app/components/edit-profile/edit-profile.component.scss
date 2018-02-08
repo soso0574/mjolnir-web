@@ -484,12 +484,32 @@
   }
 }
 
+textarea, textarea:disabled {
+  width: 100%;
+  resize: none;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.65);
+  font-family: 'HelveticaNeueLt';
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  &:disabled {
+    border-color: transparent;
+  }
+}
+
 .address-section-content {
   font-size: 24px;
   color: rgba(0, 0, 0, .65);
   font-family: 'HelveticaNeueLt';
   margin-left: 8px;
   line-height: 24px;
+  textarea, textarea:disabled {
+    height: 60px;
+  }
 }
 
 .aboutus-section-content {
@@ -499,16 +519,7 @@
   font-family: 'HelveticaNeueLt';
   line-height: normal;
   textarea, textarea:disabled {
-    width: 100%;
-    resize: none;
-    font-size: 24px;
-    color: rgba(0, 0, 0, 0.65);
-    font-family: 'HelveticaNeueLt';
-    border: none;
-    outline: none;
-    padding: 5px;
     height: 150px;
-    background: #fff;
   }
 }
 
@@ -663,23 +674,37 @@
     margin: 2px 0 0 12px;
   }
 }
-.edit-input-box, .edit-input-box:disabled {
+
+.edit-input-box, .edit-input-box:disabled,
+.input-link {
   font-size: 22px;
   color: #595959;
-  padding: 0;
+  padding: 0 10px;
   outline: none;
-  border: none;
+  background: none;
+  border: 2px solid #ddd;
+  border-radius: 6px;
   margin-left: 45px;
-  width: 230px;
+  width: 250px;
+  &:disabled {
+    border-color: transparent;
+  }
 }
+
+.input-link {
+  border: none;
+}
+
 .phone-number-section {
-  .edit-input-box {
-    width: 130px;
+  .edit-input-box,
+  .input-link {
+    width: 150px;
+    display: block;
   }
 }
 .globe-number-section {
   .edit-input-box {
-    width: 218px;
+    width: 230px;
   }
 }
 input[type=number]::-webkit-inner-spin-button,
