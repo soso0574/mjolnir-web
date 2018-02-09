@@ -4,13 +4,13 @@
       <div class="hv-item-parent">
         <p class="simple-card ">
           <span class="txt">
-            Click to add Title
+            Dentist
           </span>
           <span class="inputs">
             <input type="text">
           </span>
           <span class="btn-add">
-            <a href="javascript:;" class="btn-plus" (click)="addNode(treeData['subList'])">
+            <a href="javascript:;" class="btn-plus" *ngIf="editTree" (click)="addNode(treeData['subList'])">
               <i class="icons icon-plus"></i>
             </a>
           </span>
@@ -22,12 +22,14 @@
           *ngFor="let level1Item of treeData['subList']">
           <div [ngClass]="{'hv-item-parent': level1Item.subList.length > 0}">
             <p class="simple-card" [ngClass]="{'edit': level1Item.isEdit}">
-              <a href="javascript:;" class="txt" (click)="level1Item.isEdit = true">Add Title</a>
+              <span class="txt" *ngIf="!editTree">{{level1Item.title}}</span>
+              <a href="javascript:;"  *ngIf="editTree" class="txt" (click)="level1Item.isEdit = true">{{level1Item.title}}</a>
               <span class="inputs">
-                <input type="text">
+                <input type="text" (blur)="level1Item.isEdit = false"
+                  *ngIf="editTree && level1Item.isEdit" [(ngModel)]="level1Item.title">
               </span>
               <span class="btn-add">
-                <a href="javascript:;" class="btn-plus" (click)="addNode(level1Item.subList)">
+                <a href="javascript:;" class="btn-plus" *ngIf="editTree" (click)="addNode(level1Item.subList)">
                   <i class="icons icon-plus"></i>
                 </a>
               </span>
@@ -39,12 +41,14 @@
               *ngFor="let level2Item of level1Item.subList">
               <div [ngClass]="{'hv-item-parent': level2Item.subList.length > 0}">
                 <p class="simple-card" [ngClass]="{'edit': level2Item.isEdit}">
-                  <a href="javascript:;" class="txt" (click)="level2Item.isEdit = true">Add Title</a>
+                  <span class="txt" *ngIf="!editTree">{{level2Item.title}}</span>
+                  <a href="javascript:;" *ngIf="editTree" class="txt" (click)="level2Item.isEdit = true">{{level2Item.title}}</a>
                   <span class="inputs">
-                    <input type="text">
+                    <input type="text" (blur)="level2Item.isEdit = false"
+                      *ngIf="editTree && level2Item.isEdit" [(ngModel)]="level2Item.title">
                   </span>
                   <span class="btn-add">
-                    <a href="javascript:;" class="btn-plus" (click)="addNode(level2Item.subList)">
+                    <a href="javascript:;" class="btn-plus" *ngIf="editTree" (click)="addNode(level2Item.subList)">
                       <i class="icons icon-plus"></i>
                     </a>
                   </span>
@@ -56,12 +60,14 @@
                   *ngFor="let level3Item of level2Item.subList">
                   <div [ngClass]="{'hv-item-parent': level3Item.subList.length > 0}">
                     <p class="simple-card" [ngClass]="{'edit': level3Item.isEdit}">
-                      <a href="javascript:;" class="txt" (click)="level3Item.isEdit = true">Add Title</a>
+                      <span class="txt" *ngIf="!editTree">{{level3Item.title}}</span>
+                      <a href="javascript:;" *ngIf="editTree" class="txt" (click)="level3Item.isEdit = true">{{level3Item.title}}</a>
                       <span class="inputs">
-                        <input type="text">
+                        <input type="text" (blur)="level3Item.isEdit = false"
+                          *ngIf="editTree && level3Item.isEdit" [(ngModel)]="level3Item.title">
                       </span>
                       <span class="btn-add">
-                        <a href="javascript:;" class="btn-plus" (click)="addNode(level3Item.subList)">
+                        <a href="javascript:;" class="btn-plus" *ngIf="editTree" (click)="addNode(level3Item.subList)">
                           <i class="icons icon-plus"></i>
                         </a>
                       </span>
@@ -73,12 +79,14 @@
                       *ngFor="let level4Item of level3Item.subList">
                       <div [ngClass]="{'hv-item-parent': level4Item.subList.length > 0}">
                         <p class="simple-card" [ngClass]="{'edit': level4Item.isEdit}">
-                          <a href="javascript:;" class="txt" (click)="level4Item.isEdit = true">Add Title</a>
+                          <span class="txt" *ngIf="!editTree">{{level2Item.title}}</span>
+                          <a href="javascript:;" *ngIf="editTree" class="txt" (click)="level4Item.isEdit = true">{{level4Item.title}}</a>
                           <span class="inputs">
-                            <input type="text">
+                            <input type="text" (blur)="level4Item.isEdit = false"
+                              *ngIf="editTree && level4Item.isEdit" [(ngModel)]="level4Item.title">
                           </span>
                           <span class="btn-add">
-                            <a href="javascript:;" class="btn-plus" (click)="addNode(level4Item.subList)">
+                            <a href="javascript:;" class="btn-plus" *ngIf="editTree" (click)="addNode(level4Item.subList)">
                               <i class="icons icon-plus"></i>
                             </a>
                           </span>
@@ -89,9 +97,11 @@
                         <div class="hv-item-child" [ngClass]="{'single-child': level4Item.subList.length <= 1}"
                           *ngFor="let level5Item of level4Item.subList">
                           <p class="simple-card" [ngClass]="{'edit': level5Item.isEdit}">
-                            <a href="javascript:;" class="txt" (click)="level5Item.isEdit = true">Add Title</a>
+                            <span class="txt" *ngIf="!editTree">{{level2Item.title}}</span>
+                            <a href="javascript:;" *ngIf="editTree" class="txt" (click)="level5Item.isEdit = true">{{level5Item.title}}</a>
                             <span class="inputs">
-                              <input type="text">
+                              <input type="text" (blur)="level5Item.isEdit = false"
+                                *ngIf="editTree && level5Item.isEdit" [(ngModel)]="level5Item.title">
                             </span>
                             <!-- end .btn-add -->
                           </p>

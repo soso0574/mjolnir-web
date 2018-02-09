@@ -18,6 +18,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   phoneEdit: false;
   emailEdit: false;
   webEdit: false;
+  editOrg: false;
   places = {lat: -25.363, lng: 131.044};
   @Output() onClose = new EventEmitter();
 

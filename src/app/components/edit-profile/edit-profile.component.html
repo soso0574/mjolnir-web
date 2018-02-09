@@ -542,15 +542,18 @@
       <div class="profile-section-header">
         <span class="icons3 flow-icon"></span>
         <span class="title-txt">ORGANIZATIONAL STRUCTURE</span>
-        <a href="javascript:;" class="icons3 edit-icon"></a>
+        <a href="javascript:;" (click)="editOrg=!editOrg" class="icons3 edit-icon"></a>
       </div>
       <div class="organization-content">
         <div class="tree-chart">
-          <app-org-structure [treeData]="editDatas['orgStructure']"></app-org-structure>
+          <app-org-structure
+            [treeData]="editDatas['orgStructure']"
+            [editTree]="editOrg"
+          ></app-org-structure>
         </div>
       </div>
     </div>
-    <!-- end .technology-section -->
+    <!-- end .ORG Structure section -->
     <div class="position-section profile-detail-sections">
       <div class="profile-section-header">
         <span class="icons3 aboutus-icon"></span>

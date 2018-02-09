@@ -1,6 +1,7 @@
 <div class="contents" (click)="showRightPanel.isShown = false;showProfilePopup = false;">
   <div class="section section-app-status clearfix">
-  	<div class="blue-bg" [ngClass]="{'endorse-bg': endorseData, 'subsc-bg': subscribeData}"></div>
+  	<div class="blue-bg"
+      [ngClass]="{'endorse-bg': activeView==='endorse', 'subsc-bg': activeView==='subscribe'}"></div>
 
     <app-sd-header-profile
       [menus]="headerMenus"
@@ -200,11 +201,11 @@
     <!-- end .profile-contents -->
     <app-select-subscription
       *ngIf="activeView==='subscribe'" [data]="subscribeData"
-      (backToEdit)="openModal(profileEditModal)"
+      (backToEdit)="openModal(profileEditModal); activeView=''"
     ></app-select-subscription>
     <app-endoresments
       *ngIf="activeView==='endorse'" [data]="endorseData"
-      (backToEdit)="openModal(profileEditModal)"
+      (backToEdit)="openModal(profileEditModal); activeView=''"
     >
     </app-endoresments>
     <app-sd-notification-offline [showRightPanel]="showRightPanel" [onlinePanel]="!subscribeData && !endorseData"></app-sd-notification-offline>

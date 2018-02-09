@@ -123,6 +123,7 @@ export class ProfilesComponent implements OnInit, OnDestroy {
 
   // Get subscription even emitter
   onSubscribe(data: any) {
+    // console.log("subscribe");
     if (this.modalRef !== undefined) {
       this.modalRef.close();
     }
@@ -133,6 +134,7 @@ export class ProfilesComponent implements OnInit, OnDestroy {
 
   // Get subscription even emitter
   onEndorsement(data: any) {
+    // console.log("endorese");
     if (this.modalRef !== undefined) {
       this.modalRef.close();
     }

@@ -39,7 +39,9 @@ export class EndoresmentsComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.modalRef !== undefined) {
       this.modalRef.close();
     }
-    this.dragulaService.destroy('bag-one'); // destroy dragula bag
+    if (this.dragulaService.bags.length > 0) {
+      this.dragulaService.destroy('bag-one'); // destroy dragula bag
+    }
   }
 
   // Modal open function
