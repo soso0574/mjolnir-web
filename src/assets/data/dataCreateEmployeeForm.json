@@ -191,30 +191,74 @@
       ]
     },
     "location": {
-      "defaultText": "City",
-      "optionList": [
+      "city": "",
+      "cityList": [
         {
-          "optionName": "City 1"
+          "label": "Angelas City"
         },
         {
-          "optionName": "City 2"
+          "label": "New York"
         },
         {
-          "optionName": "City 3"
+          "label": "Chennai"
+        },
+        {
+          "label": "Colombia"
+        },
+        {
+          "label": "Virginia"
+        },
+        {
+          "label": "Texas"
+        },
+        {
+          "label": "Florida"
+        },
+        {
+          "label": "Ohio"
         }
       ]
     },
     "zip": {
-      "defaultText": "Zip Code",
-      "optionList": [
+      "zips": "",
+      "zipList": [
         {
-          "optionName": "0001"
+          "label": "0001"
         },
         {
-          "optionName": "0002"
+          "label": "1000"
         },
         {
-          "optionName": "0003"
+          "label": "1024"
+        }
+      ]
+    },
+    "state": {
+      "states": "",
+      "stateList": [
+        {
+          "label": "Angelas City"
+        },
+        {
+          "label": "New York"
+        },
+        {
+          "label": "Chennai"
+        },
+        {
+          "label": "Colombia"
+        },
+        {
+          "label": "Virginia"
+        },
+        {
+          "label": "Texas"
+        },
+        {
+          "label": "Florida"
+        },
+        {
+          "label": "Ohio"
         }
       ]
     },
