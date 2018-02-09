@@ -48,7 +48,6 @@
             <span class="icons3 list-point-icon"></span>
             <div class="users-name-list">
               <span class="label">{{item.name}}</span>
-              <span class="icons3 close-icon" (click)="delete('admin', i)"></span>
             </div>
           </div>
           <a href="javascript:;"
@@ -104,7 +103,7 @@
     <div class="work-availablity-section profile-detail-sections">
       <div class="profile-section-header">
         <span class="icons3 work-icon"></span>
-        <span class="title-txt">WORK AVAILABILITY</span>
+        <span class="title-txt">Hours of Operation</span>
       </div>
       <div class="work-availablity-content">
         <div class="form">
@@ -403,9 +402,10 @@
       <div class="profile-section-header">
         <span class="icons3 address-icon"></span>
         <span class="title-txt">ADDRESS</span>
+        <a href="javascript:;" class="edit-icon icons3" (click)="address=!address"></a>
       </div>
       <div class="address-section-content">
-        {{editDatas.address}}
+        <textarea [value]="editDatas.address" [disabled]="!address"></textarea>
       </div>
     </div>
     <!-- end .address-section -->
@@ -416,7 +416,7 @@
         <a href="javascript:;" class="edit-icon icons3" (click)="aboutEdit=!aboutEdit"></a>
       </div>
       <div class="aboutus-section-content">
-        <textarea [value]="editDatas.about" [disabled]="!aboutEdit"></textarea>
+        <textarea spellcheck="false" [value]="editDatas.about" [disabled]="!aboutEdit"></textarea>
       </div>
     </div>
     <!-- end .about-us-section -->
@@ -489,14 +489,16 @@
     <div class="mail-section profile-detail-sections">
       <span class="icons3 mail-icon"></span>
       <input type="email" [value]="editDatas['emails']"
-      class="edit-input-box" [disabled]="!emailEdit">
+      class="edit-input-box" *ngIf="emailEdit">
+      <a href="mailto:{{editDatas['emails']}}?Subject=Hello%20again" class="input-link" *ngIf="!emailEdit">{{editDatas['emails']}}</a>
       <a href="javascript:;" class="icons3 edit-icon" (click)="emailEdit=!emailEdit"></a>
     </div>
     <!-- end .mail-section-section-section -->
     <div class="globe-section profile-detail-sections">
       <span class="icons3 globe-icon"></span>
       <input type="text" [value]="editDatas['website']"
-        class="edit-input-box" [disabled]="!webEdit">
+        class="edit-input-box" *ngIf="webEdit">
+      <a href="http://{{editDatas['website']}}" target="_blank" class="input-link" *ngIf="!webEdit">{{editDatas['website']}}</a>
       <a href="javascript:;" class="icons3 edit-icon" (click)="webEdit=!webEdit"></a>
     </div>
     <!-- end .globe-section-section-section -->

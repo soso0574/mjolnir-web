@@ -7,10 +7,10 @@
         <span class="count-txt">{{data.length}}</span>
       </div>
     </div>
-    <a href="javascript:;" class="edit-icon icons3" (click)="editView=!editView"></a>
+    <a href="javascript:;" class="edit-icon icons3" (click)="editing()"></a>
   </div>
   <!-- end .header-endoresment -->
-  <div class="endoresment-detail">
+  <div class="endoresment-detail" [dragula]='bags' [dragulaModel]='data'>
     <div class="endoresment-layer" *ngFor="let item of data; let i = index" [ngClass]="{'active': editView}">
       <span class="close-icon icons3" (click)="delete(i)"></span>
       <div class="endoresment-box">
