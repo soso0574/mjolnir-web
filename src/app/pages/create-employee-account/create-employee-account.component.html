@@ -577,6 +577,13 @@
                   </div>
                 </div>
                 <!-- end .row-line -->
+                <div class="row-line">
+                  <div class="inputs no-border">
+                    <input type="text" placeholder="Other"
+                      [(ngModel)]="formData['softwares'].other">
+                  </div>
+                </div>
+                <!-- end .row-line -->
               </div>
               <!-- end .checkbox-wrap -->
             </div>
@@ -914,34 +921,40 @@
                 Its important to have great endorsements. Invite people in your dental circles to endorse you and your work.
               </div>
               <!-- end .row-line -->
-              <div class="row-line">
-                <div class="two-inputs row">
-                  <div class="item col-6">
-                    <div class="inputs gray-border">
-                      <input type="text" placeholder="First Name"
-                       [(ngModel)]="formData['peer'].fName">
-                    </div>
-                  </div>
-                  <div class="item col-6">
-                    <div class="inputs gray-border">
-                      <input type="text" placeholder="Last Name"
-                       [(ngModel)]="formData['peer'].lName">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end .row-line -->
+              <ng-container *ngFor="let peer of formData['peer']['peersList']">
                 <div class="row-line">
                   <div class="two-inputs row">
-                    <div class="item col-12">
+                    <div class="item col-6">
                       <div class="inputs gray-border">
-                        <input type="text" placeholder="Add Email/Mobile Number"
-                         [(ngModel)]="formData['peer'].emilPhone">
+                        <input type="text" placeholder="First Name"
+                         [(ngModel)]="peer.fName">
+                      </div>
+                    </div>
+                    <div class="item col-6">
+                      <div class="inputs gray-border">
+                        <input type="text" placeholder="Last Name"
+                         [(ngModel)]="peer.lName">
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- end .row-line -->
+                <div class="row-line">
+                  <div class="two-inputs row">
+                    <div class="item col-12">
+                      <div class="inputs gray-border">
+                        <input type="text" placeholder="Add Email/Mobile Number"
+                         [(ngModel)]="peer.emilPhone">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+              <!-- end .row-line -->
+              <div class="btn-boxs">
+                <a href="javascript:;" class="btn btn-dark-blue"
+                (click)="addAnotherPeer()">Add Another Peer</a>
+              </div>
             </div>
             <!-- end .form -->
           </div>
@@ -1119,16 +1132,18 @@
           </div>
           <!-- end .titles -->
           <div class="main-show">
-            <div class="right-top row-align">
-              <a *ngIf="newEmployee===false" [routerLink]="['/employee-profile']" class="white-tips">SKIP</a>
-              <a *ngIf="newEmployee===true"
-                  href="javascript:;" (click)="openModal(confirmationModal, 'static')"  class="white-tips">SKIP</a>
-            </div>
             <div class="pl78">
               <div class="textareas">
                 <textarea [(ngModel)]="formData['intro'].comment"
                   placeholder="Please provide a brief description of who you are and what drives you in dentistry">
                 </textarea>
+              </div>
+              <div class="btn-boxs">
+                <a *ngIf="newEmployee===false"
+                    [routerLink]="['/employee-profile']" class="btn btn-dark-blue"
+                >Complete Profile, Finally</a>
+                <a *ngIf="newEmployee===true" href="javascript:;" class="btn btn-dark-blue"
+                (click)="openModal(confirmationModal, 'static')">Complete Profile, Finally</a>
               </div>
             </div>
             <!-- end .form -->
