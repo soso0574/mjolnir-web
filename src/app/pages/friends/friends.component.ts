@@ -22,6 +22,11 @@ export class FriendsComponent implements OnInit {
     {'name': 'benches', 'url': '/benches'}
   ];
 
+  scrollbarOptions = {
+    axis: 'yx',
+    theme: 'minimal-dark'
+  };
+
   /**
    * Creates an instance of the NotificationOfflineComponent with the injected
    * NameListService.

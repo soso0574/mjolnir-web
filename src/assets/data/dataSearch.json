@@ -608,7 +608,8 @@
         "checked": false
       },
       {
-        "label": "Digital Marketing (Facebook,Instagram etc.)",
+        "label": "Digital Marketing",
+        "labelSub": "(Facebook,Instagram etc.)",
         "checked": false
       },
       {
@@ -701,6 +702,10 @@
         "checked": false
       },
       {
+        "label": "Dental Charting",
+        "checked": false
+      },
+      {
         "label": "Bridges",
         "checked": false
       },
@@ -733,6 +738,10 @@
         "checked": false
       },
       {
+        "label": "Dentures",
+        "checked": false
+      },
+      {
         "label": "Endodontics",
         "checked": false
       },
@@ -745,7 +754,7 @@
         "checked": false
       },
       {
-        "label": "Four-Handed DDentistry",
+        "label": "Four Handed DDentistry",
         "checked": false
       },
       {
@@ -785,7 +794,8 @@
         "checked": false
       },
       {
-        "label": "Osseodensification (Versah Densah Burs)",
+        "label": "Osseodensification",
+        "labelSub": "(Versah Densah Burs)",
         "checked": false
       },
       {
@@ -896,9 +906,9 @@
   ],
   "dropdownsFr": {
     "yearsDropdown": {
-      "selected": "4-5 Years",
+      "selected": "4 to 5 Years",
       "options": [
-        "2-3 Years", "3-4 Years", "4-5 Years", "5-10 Years", "10 Years +"
+        "2 to 3 Years", "3 to 4 Years", "4 to 5 Years", "5 to 10 Years", "10 Years +"
       ]
     },
     "roleDropdown": {
@@ -928,9 +938,9 @@
   },
   "dropdownsPotential": {
     "yearsDropdown": {
-      "selected": "4-5 Years",
+      "selected": "4 to 5 Years",
       "options": [
-        "2-3 Years", "3-4 Years", "4-5 Years", "5-10 Years", "10 Years +"
+        "2 to 3 Years", "3 to 4 Years", "4 to 5 Years", "5 to 10 Years", "10 Years +"
       ]
     },
     "roleDropdown": {

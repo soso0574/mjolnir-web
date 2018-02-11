@@ -585,14 +585,14 @@ a:hover {
             overflow: hidden;
         }
         .title-txt {
-            padding: 0 40px 34px;
+            padding: 0 52px 34px;
             text-align: center;
             color: #fff;
             font-weight: 300;
             font-size: 20px;
             line-height: 26px;
             width: 100%;
-            word-break: normal;
+            word-break: break-all;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -820,6 +820,25 @@ a:hover {
   }
 }
 
+.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  margin: 0;
+}
+
+.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+  margin: 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  height: 6px;
+  margin: 6px 0;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+}
+
 /* new css */
 .icons3 {
   display: block;
@@ -999,19 +1018,17 @@ a:hover {
     color: rgba(0, 0, 0, .71);
   }
   .owl-dt-calendar-table .owl-dt-calendar-cell-active:focus>.owl-dt-calendar-cell-content:not(.owl-dt-calendar-cell-selected), .owl-dt-calendar-table :not(.owl-dt-calendar-cell-disabled):hover>.owl-dt-calendar-cell-content:not(.owl-dt-calendar-cell-selected) {
-    background-image: -webkit-gradient(linear, 0 0, 53 81, from(#156c8b), to(#8edcae));
-    background-image: -webkit-linear-gradient(303.19756579221644deg, #156c8b, #8edcae);
-    background-image: -moz-linear-gradient(303.19756579221644deg, #156c8b, #8edcae);
-    background-image: -o-linear-gradient(303.19756579221644deg, #156c8b, #8edcae);
-    background-image: linear-gradient(146.80243420778356deg, #156c8b, #8edcae);
+    background: #1a718c; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #1a718c 0%, #8ad7ad 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #1a718c 0%,#8ad7ad 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #1a718c 0%,#8ad7ad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     color: #fff;
   }
   .owl-dt-control-period-button:hover>.owl-dt-control-button-content {
-    background-image: -webkit-gradient(linear, 0 0, 53 81, from(#156c8b), to(#8edcae));
-    background-image: -webkit-linear-gradient(303.19756579221644deg, #156c8b, #8edcae);
-    background-image: -moz-linear-gradient(303.19756579221644deg, #156c8b, #8edcae);
-    background-image: -o-linear-gradient(303.19756579221644deg, #156c8b, #8edcae);
-    background-image: linear-gradient(146.80243420778356deg, #156c8b, #8edcae);
+    background: #1a718c; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #1a718c 0%, #8ad7ad 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #1a718c 0%,#8ad7ad 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #1a718c 0%,#8ad7ad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     color: #fff;
   }
 }
@@ -1037,6 +1054,14 @@ a:hover {
   margin-left: -5px;
 }
 
+.owl-dt-control-button:focus {
+  outline: none;
+}
+
+.owl-dt-control-button:focus > .owl-dt-control-button-content {
+  background-color: transparent;
+}
+
 .owl-dt-timer-hour12 .owl-dt-timer-hour12-box:focus .owl-dt-control-button-content,
 .owl-dt-timer-hour12 .owl-dt-timer-hour12-box:hover .owl-dt-control-button-content {
   background-image: -webkit-gradient(linear, 0 0, 53 81, from(#156c8b), to(#8edcae));
@@ -1050,6 +1075,7 @@ a:hover {
   font-size: 66px;
   font-weight: 600;
   color: rgba(0, 0, 0, .71);
+  margin: 15px 0;
 }
 .owl-dt-timer-hour12 .owl-dt-timer-hour12-box .owl-dt-control-button-content {
   font-size: 17px;
@@ -1085,6 +1111,81 @@ a:hover {
 .carousel {
   outline: none;
 }
-.agm-map-container-inner {
-  border-radius: 18px;
+
+.modal.show {
+  &.share-model {
+    .modal-dialog {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &.profiles-modal {
+    .modal-dialog {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
+
+/* IE11 Fixes */
+@media all and (-ms-high-contrast:none) {
+  .fade.modal.profiles-modal {
+    .modal-dialog {
+      max-width: inherit;      
+      transition: inherit;
+      -webkit-transition: inherit;
+      -ms-transition: inherit;
+    }
+  }
+  .owl-dt-timer-content {
+    margin: -40px 0 -20px 0;
+  }
+  .owl-dt-calendar-cell {
+    padding: 0 !important;
+  }
+  .owl-dt-calendar-table .owl-dt-calendar-cell-content {
+    position: inherit;
+    line-height: 51px;
+  }
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=search] {
+  &::-ms-clear {
+      display: none;
+  }
+}
+
+:invalid {
+  box-shadow: none;
+}
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/* firefox */
+@-moz-document url-prefix() {
+  .owl-dt-timer-content {
+    margin: -15px 0 -15px 0;  
+  }
+  .time-modal .modal-info {
+    padding: 0 0 15px 0;
+  }
+  .owl-dt-timer-box .owl-dt-control-arrow-button .owl-dt-control-button-content {
+    top: 3px;
+    margin: -11px 0;
+  }
+  .owl-dt-timer-hour12 .owl-dt-timer-hour12-box {
+    margin-top: 23px;
+  }
+}
+

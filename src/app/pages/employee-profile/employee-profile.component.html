@@ -4,6 +4,7 @@
 
     <app-sd-header-profile
       [menus]="headerMenus"
+      [className]="'blue-active-bg'"
       data-imgUrl="../assets/i/build-img.jpg"></app-sd-header-profile>
 
     <div class="profile-contents">
@@ -219,6 +220,9 @@
 
   <ng-template #profileReadModal let-c="close">
     <div class="modal-boxs profile-edit-modal">
+      <a href="javascript:;" (click)="c('Close click')" class="back-btn">
+        <span class="back-icon"></span>BACK
+      </a>
       <div class="modal-inner">
         <app-profile-read-only (onClose)="bottomButtons=false"></app-profile-read-only>
       </div>

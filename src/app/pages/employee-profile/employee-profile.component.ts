@@ -28,7 +28,7 @@ export class EmployeeProfileComponent implements OnInit, OnDestroy {
    modalRef: NgbModalRef;
    headerMenus = [
     {'name': 'friends'},
-    {'name': 'profiles'},
+    {'name': 'profiles', 'url': '/employee-profile'},
     {'name': 'benches'}
   ];
 

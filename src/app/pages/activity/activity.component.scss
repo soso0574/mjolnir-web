@@ -32,13 +32,13 @@
   }
   .head-act-title {
     color: #fff;
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'HelveticaNeueRoman';
     padding: 0 0 0 14px;
   }
   .active-path-icon {
-    width: 39px;
-    height: 40px;
+    width: 40px;
+    height: 41px;
     background-position: -19px -43px;
   }
 }
@@ -48,22 +48,20 @@
   padding: 0 64px 25px;
   .user-activity-detail {
     padding: 0 87px;
-    height: 700px;
-    overflow-y: auto;
   }
   .user-activity-box {
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 13px;
-    min-height: 68px;
-    margin: 32px 0 0 0;
+    min-height: 64px;
+    margin: 31px 0 0 0;
     &:first-child {
       margin: 0;
     }
     img {
-      width: 67px;
-      height: 67px;
+      width: 64px;
+      height: 64px;
       display: block;
       border-radius: 13px;
     }

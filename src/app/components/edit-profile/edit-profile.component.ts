@@ -18,6 +18,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   phoneEdit: false;
   emailEdit: false;
   webEdit: false;
+  editOrg: false;
   places = {lat: -25.363, lng: 131.044};
   @Output() onClose = new EventEmitter();
 
@@ -49,9 +50,9 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   }
 
   // Modal open function
-  openModal(content, value) {
+  openModal(content, value, className) {
     this.modalRef = this.modalService.open(content, {
-      windowClass: 'edit-profiles-modal',
+      windowClass: 'edit-profiles-modal'+' '+className,
       backdrop: value || true
     });
   }

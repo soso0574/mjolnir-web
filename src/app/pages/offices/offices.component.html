@@ -16,12 +16,22 @@
                   <span></span>
                   <span></span>
                 </a>
-                <a href="javascript:;" class="grid-icon icons3"  *ngIf="gridView" (click)="gridView=false" ></a>
+                <a href="javascript:;" class="grid-icon icons3"  *ngIf="gridView" (click)="gridView=false" >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
               </div>
             </div>
             <input type="search" placeholder="Search..." class="office-search-input">
           </div>
-          <div class="list-grid-box">
+          <div class="list-grid-box" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
             <app-office-grid-view *ngIf="gridView" [data]="officeList"></app-office-grid-view>
             <app-office-list-view *ngIf="!gridView" [data]="officeList"></app-office-list-view>
           </div>

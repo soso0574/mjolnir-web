@@ -452,3 +452,28 @@
 		}
 	}
 }
+
+.profile-edit-modal {
+	width: 910px;
+	display: flex;
+	justify-content: center;
+	.back-btn {
+		position: absolute;
+		color: #fff;
+		font-size: 28px;
+		line-height: 28px;
+		top: 27px;
+		left: 0;
+		padding-left: 34px;
+		.back-icon {
+			width: 0;
+			height: 0;
+			border-top: 7px solid transparent;
+			border-bottom: 8px solid transparent;
+			border-right: 17px solid #fff;
+			position: absolute;
+			top: 4px;
+			left: 0;
+		}
+	}
+}

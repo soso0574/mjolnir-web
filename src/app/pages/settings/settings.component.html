@@ -36,7 +36,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="setting-list-detail input-box" [class.active]="panels.emailPanel">
+                <div class="setting-list-detail input-box email-setting-box" [class.active]="panels.emailPanel">
                   <a href="javascript:;" class="notification-heading" (click)="expandCollapse('emailPanel',!panels.emailPanel)">
                     <span class="email-icon icons3"></span>
                     <span class="setting-list-txt">Email Address</span>
@@ -135,7 +135,7 @@
             </div>
             <!-- end .setting-list -->
             <div class="share-one-dental">
-              <a href="javascript:;" (click)="openModal(shareModal);">
+              <a href="javascript:;" (click)="openModal(shareModal, 'share-model');">
                 <span class="share-icon icons3"></span>
                 <span class="share-txt">Share One Dental Match</span>
               </a>

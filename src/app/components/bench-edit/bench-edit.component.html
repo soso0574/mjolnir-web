@@ -5,29 +5,31 @@
     <a href="javascript:;" class="edit-icon icons3" (click)="editing();"></a>
   </div>
   <div class="bench-edit-main">
-    <div class="bench-list-content" [dragula]='"bag-one"' [dragulaModel]='data.lists'>
-      <div class="users-cards-square" *ngFor="let d of data.lists">
-        <span class="dashed-border"></span>
-        <div class="square-box-main">
-          <img [src]="d.imageUrl" alt="">
-          <div class="square-cards-info">
-            <div class="user-info-txt">
-              <a href="javascript:;" class="username-txt">{{d.role}}</a>
-              <span class="icons3 badge-icon"></span>
-            </div>
-            <div class="user-role-info">
-              <span class="user-role-txt">{{d.name}}</span>
-              <span class="user-exp-year"><i>{{d.experience}}</i> yrs <span>EXP</span></span>
+    <div class="bench-list-content" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+      <div class="bench-list-scroll" [dragula]='bags' [dragulaModel]='data.lists'>
+        <div class="users-cards-square" *ngFor="let d of data.lists">
+          <span class="dashed-border"></span>
+          <div class="square-box-main">
+            <img [src]="d.imageUrl" alt="">
+            <div class="square-cards-info">
+              <div class="user-info-txt">
+                <a href="javascript:;" class="username-txt">{{d.role}}</a>
+                <span class="icons3 badge-icon"></span>
+              </div>
+              <div class="user-role-info">
+                <span class="user-role-txt">{{d.name}}</span>
+                <span class="user-exp-year"><i>{{d.experience}}</i> yrs <span>EXP</span></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="bench-actions-btns">
-          <a href="javascript:;" class="datetime-btn" (click)="openModal(scheduleModal)">
-            <span class="icons3"></span>
-          </a>
-          <a href="javascript:;" class="msg-btn" (click)="openModal(messageModal);">
-            <span class="icons3"></span>
-          </a>
+          <div class="bench-actions-btns">
+            <a href="javascript:;" class="datetime-btn" (click)="openModal(scheduleModal)">
+              <span class="icons3"></span>
+            </a>
+            <a href="javascript:;" class="msg-btn" (click)="openModal(messageModal);">
+              <span class="icons3"></span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
