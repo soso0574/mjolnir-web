@@ -19,6 +19,10 @@ export class OfficesComponent implements OnInit {
     {'name': 'profiles', 'url': '/profiles'},
     {'name': 'benches', 'url': '/benches'}
   ];
+  scrollbarOptions = {
+    axis: 'yx',
+    theme: 'minimal-dark'
+  };
 
   /**
    * Creates an instance of the NotificationOfflineComponent with the injected
