@@ -25,6 +25,9 @@
     height: 23px;
     background-position: 0 0;
     margin-right: 17px;
+    &.active {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -83,19 +86,23 @@
     margin-right: 0;
   }
   &.gu-transit {
-    opacity: 1;
-    .square-box-main {
-      opacity: 0;
-    }
-    .dashed-border {
-      display: block;
-    }
+   opacity: 1;
+   transform: rotate(0deg);
+   .square-box-main {
+     opacity: 0;
+     transform: rotate(10deg);
+     transition: all .5s ease;
+   }
+   .dashed-border {
+     display: block;
+   }
   }
   &.gu-mirror {
-    opacity: 1;
-    .square-box-main {
-      transform: rotate(10deg);
-    }
+   opacity: 1;
+   .square-box-main {
+     transform: rotate(10deg);
+     transition: all .5s ease;
+   }
   }
   .dashed-border {
     z-index: 1;
@@ -120,6 +127,8 @@
   border-radius: 18px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  transition-property: transform;
+  transition-duration: .5s;
   img {
     width: 165px;
     height: 170px;
