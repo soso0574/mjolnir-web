@@ -46,7 +46,9 @@
                   <span class="boost-txt">per boost</span>
                 </div>
                 <div class="boost-value">
-                  <span class="boost-value-txt">{{item.count}} <span>Boost</span></span>
+                  <span class="boost-value-txt">{{item.count}}
+                    <span>Boost{{(item.count > 1) ? 's' : ''}}</span>
+                  </span>
                   <span class="save-value" *ngIf="item.save">SAVE {{item.save}}</span>
                 </div>
               </a>

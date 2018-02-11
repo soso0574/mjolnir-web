@@ -1,3 +1,7 @@
+.search-tab-section {
+  padding: 0 0 40px 0;
+}
+
 .bg-green-gradient {
   background-image: -webkit-gradient(linear, 0 0, 960 850.125, from(#196f90), color-stop(0.001, #14648f), color-stop(0.003, #136b8b), color-stop(0.005, #116b8a), color-stop(0.007, #146a8b), color-stop(0.241, #237990), color-stop(0.241, #247b8f), color-stop(0.301, #287d91), color-stop(0.301, #297f90), color-stop(0.691, #489a9a), color-stop(0.694, #479c99), color-stop(0.726, #499e9b), color-stop(0.726, #4b9d9b), color-stop(0.993, #5fb0a1), color-stop(0.993, #5fb2a0), to(#5fb2a0));
   background-image: -webkit-linear-gradient(318.47360487073234deg, #196f90, #14648f 0.1%, #136b8b, #116b8a, #146a8b 0.7%, #237990 24.1%, #247b8f 24.1%, #287d91 30.1%, #297f90 30.1%, #489a9a 69.1%, #479c99 69.4%, #499e9b 72.6%, #4b9d9b 72.6%, #5fb0a1 99.3%, #5fb2a0 99.3%, #5fb2a0);
@@ -29,7 +33,7 @@
 
 /* .search-input */
 .office-search-input {
-  background-color: rgba(0, 0, 0, .10);
+  background-color: rgba(56, 255, 255, 0.25);
   padding: 0;
   margin: 0;
   height: 34px;
@@ -63,19 +67,19 @@
     display: flex;
     width: 190px;
     margin: 30px auto;
-    background-color: rgba(255, 255, 255, .25);
+    background-color: rgba(56, 255, 255, .25);
     border-radius: 5px;
+    cursor: pointer;
     li {
       display: flex;
       min-height: 37px;
       align-items: center;
       a {
-        padding: 0 11px;
+        padding: 7px 11px;
         font-size: 16px;
         color: rgba(255, 255, 255, .56);
-        line-height: 38px;
         &.active {
-          background-color: rgba(255, 255, 255, .25);
+          background-color: rgba(56, 255, 255, .25);
           color: #fff;
         }
       }
@@ -162,7 +166,7 @@
     line-height: 21px;
     font-family: 'HelveticaNeueRoman';
     font-size: 21px;
-    color: #fff;
+    color: rgba(255, 255, 255, .73);
   }
 }
 
@@ -207,14 +211,19 @@
     color: #fff;
     line-height: 25px;
     padding-right: 10px;
+    span {
+      font-size: 14px;
+      margin-left: 5px;
+    }
   }
 }
 
 .filter-checkbox {
   position: relative;
-  height: 24px;
-  width: 24px;
+  height: auto;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   cursor: pointer;
 }
 .filter-checkbox input[type=checkbox] {
@@ -268,3 +277,16 @@
     }
   }
 }
+
+/* IE11 Fixes */
+@media all and (-ms-high-contrast:none) {
+  .search-tab-main {
+    .search-tabl-ul {
+      width: 191px;
+    }
+  }
+
+}
+
+
+

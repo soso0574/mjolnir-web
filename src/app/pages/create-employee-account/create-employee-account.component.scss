@@ -10,6 +10,7 @@
   left: 0;
   right: 0;
   background: rgba(0,0,0,0.6);
+  z-index: 1;
   .map-wrapper {
     background: #fff;
     height: 60px;
@@ -981,7 +982,7 @@
             li {
                 .items {
                     display: block;
-                    padding: 10px 20px 10px 60px;
+                    padding: 10px 20px 10px 15px;
                     font-size: 18px;
                     color: #282828;
                     min-height: 30px;
@@ -1034,5 +1035,15 @@
     width: 100%;
     height: 87px;
     padding: 14px 18px;
+  }
+}
+
+/* IE11 Fixes */
+@media all and (-ms-high-contrast:none) {
+  .map-search-box {
+    input {
+      height: 28px; 
+      padding: 2px 10px 1px 10px;
+    }
   }
 }

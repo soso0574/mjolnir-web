@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class OrgStructureComponent implements OnInit {
   @Input() treeData: any[];
+  @Input() editTree: boolean;
+  @Input() readOnly: boolean;
 
   constructor() { }
 

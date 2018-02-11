@@ -12,21 +12,23 @@
                 <label>Friends</label>
                 <span class="count-txt">{{friendsData['friends'].length}}</span>
               </div>
-              <div class="friends-wrap-box">
-                <div class="user-cards-widget new-match-lists" *ngFor="let fr of friendsData['friends']">
-                  <img [src]="fr.imageUrl" alt="">
-                  <div class="user-cards-inner">
-                    <div class="user-role-badge">
-                      <span class="role-txt">{{fr.role}}</span>
-                      <span class="icons3 badge-icon"></span>
-                    </div>
-                    <div class="user-role-details">
-                      <a href="javascript:;" class="username-txt">{{fr.name}}</a>
-                      <span class="user-exp-year"><i>{{fr.experience}}</i> yrs <span>EXP</span></span>
-                    </div>
-                    <div class="user-contact-btns">
-                      <a href="javascript:;" class="call-icon icons3"></a>
-                      <a href="javascript:;" class="msg-icon icons3" (click)="openModal(messageModal);"></a>
+              <div class="friends-wrap-box" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+                <div class="displayf-box">
+                  <div class="user-cards-widget new-match-lists" *ngFor="let fr of friendsData['friends']">
+                    <img [src]="fr.imageUrl" alt="">
+                    <div class="user-cards-inner">
+                      <div class="user-role-badge">
+                        <span class="role-txt">{{fr.role}}</span>
+                        <span class="icons3 badge-icon"></span>
+                      </div>
+                      <div class="user-role-details">
+                        <a href="javascript:;" class="username-txt">{{fr.name}}</a>
+                        <span class="user-exp-year"><i>{{fr.experience}}</i> yrs <span>EXP</span></span>
+                      </div>
+                      <div class="user-contact-btns">
+                        <a href="javascript:;" class="call-icon icons3"></a>
+                        <a href="javascript:;" class="msg-icon icons3" (click)="openModal(messageModal);"></a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -37,22 +39,24 @@
                   <label>Endorsement Requests</label>
                   <span class="count-txt">{{friendsData['endordeRequest'].length}}</span>
                 </div>
-                <div class="endoresment-wrap-box">
-                  <div class="users-cards-square" *ngFor="let er of friendsData['endordeRequest']">
-                    <div class="square-box-main">
-                      <img [src]="er.imageUrl" alt="">
-                      <div class="square-cards-info">
-                        <div class="user-info-txt">
-                          <a href="javascript:;" class="username-txt">{{er.name}}</a>
-                          <span class="icons3 badge-icon"></span>
+                <div class="endoresment-wrap-box" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+                  <div class="displayf-box">
+                    <div class="users-cards-square" *ngFor="let er of friendsData['endordeRequest']">
+                      <div class="square-box-main">
+                        <img [src]="er.imageUrl" alt="">
+                        <div class="square-cards-info">
+                          <div class="user-info-txt">
+                            <a href="javascript:;" class="username-txt">{{er.name}}</a>
+                            <span class="icons3 badge-icon"></span>
+                          </div>
+                          <span class="user-role-txt">{{er.role}}</span>
                         </div>
-                        <span class="user-role-txt">{{er.role}}</span>
                       </div>
-                    </div>
-                    <div class="request-actions-btns">
-                      <a href="javascript:;" class="accept-btn icons3" (click)="openModal(friendsModal);"><span class="icons3"></span></a>
-                      <a href="javascript:;" class="reject-btn icons3"
-                      (click)="openModal(deleteModal);selected('endordeRequest',i)"><span class="icons3"></span></a>
+                      <div class="request-actions-btns">
+                        <a href="javascript:;" class="accept-btn icons3" (click)="openModal(friendsModal);"><span class="icons3"></span></a>
+                        <a href="javascript:;" class="reject-btn icons3"
+                        (click)="openModal(deleteModal);selected('endordeRequest',i)"><span class="icons3"></span></a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -63,25 +67,27 @@
                   <label>Friend Requests</label>
                   <span class="count-txt">{{friendsData['friendRequests'].length}}</span>
                 </div>
-                <div class="endoresment-wrap-box">
-                  <div class="users-cards-square" *ngFor="let fr of friendsData['friendRequests']; let i = index">
-                    <div class="square-box-main">
-                      <img [src]="fr.imageUrl" alt="">
-                      <div class="square-cards-info">
-                        <div class="user-info-txt">
-                          <a href="javascript:;" class="username-txt">{{fr.name}}</a>
-                          <span class="icons3 badge-icon"></span>
+                <div class="endoresment-wrap-box" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+                  <div class="displayf-box">
+                    <div class="users-cards-square" *ngFor="let fr of friendsData['friendRequests']; let i = index">
+                      <div class="square-box-main">
+                        <img [src]="fr.imageUrl" alt="">
+                        <div class="square-cards-info">
+                          <div class="user-info-txt">
+                            <a href="javascript:;" class="username-txt">{{fr.name}}</a>
+                            <span class="icons3 badge-icon"></span>
+                          </div>
+                          <span class="user-role-txt">{{fr.role}}</span>
                         </div>
-                        <span class="user-role-txt">{{fr.role}}</span>
                       </div>
-                    </div>
-                    <div class="request-actions-btns">
-                      <a href="javascript:;" class="accept-btn icons3" (click)="openModal(friendsModal);"><span class="icons3"></span></a>
-                      <a href="javascript:;"
-                        class="reject-btn icons3"
-                        (click)="openModal(deleteModal);selected('friendRequests',i)">
-                        <span class="icons3"></span>
-                      </a>
+                      <div class="request-actions-btns">
+                        <a href="javascript:;" class="accept-btn icons3" (click)="openModal(friendsModal);"><span class="icons3"></span></a>
+                        <a href="javascript:;"
+                          class="reject-btn icons3"
+                          (click)="openModal(deleteModal);selected('friendRequests',i)">
+                          <span class="icons3"></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -92,7 +98,7 @@
                   <label>Messages</label>
                   <span class="count-txt">{{friendsData['messages'].length}}</span>
                 </div>
-                <div class="messgae-list-main">
+                <div class="messgae-list-main" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
                   <div class="message-list-container">
                     <div class="message-box" *ngFor="let msg of friendsData['messages']">
                       <img [src]="msg.imageUrl" alt="">

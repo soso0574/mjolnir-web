@@ -19,6 +19,11 @@ export class BenchEditComponent implements OnInit, AfterViewInit, OnDestroy {
     direction: 'horizontal',
   };
 
+  scrollbarOptions = {
+    axis: 'yx',
+    theme: 'minimal-dark'
+  };
+
   constructor(
     private modalService: NgbModal,
     private dragulaService: DragulaService,
@@ -34,7 +39,9 @@ export class BenchEditComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.dragulaService.destroy('bag-one'); // destroy dragula bag
+    if (this.bags.length === 0) {
+      this.dragulaService.destroy('bag-one'); // destroy dragula bag
+    }
   }
 
   // Enable Dragg and Drop

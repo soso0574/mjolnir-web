@@ -27,13 +27,35 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-#1.In Login page:
+#1. In Login page:
 use follow value to login:
 "email": "sss@sss.sss",
 "password": "sss"
 
-#2.Notifications Online mode:
+#2. Notifications Online mode:
 in "Dashboard - Profiles" and "Main Menu" pages,
 user can see the first popup of online notification after 1 second the page load,
 click "X" icon on the top right of this popup,the next popup will show.
 The "X" icon is used to navigate to all popups of online notification.
+
+#3. Steps to access the "Employee Dashboard - Profiles" and "Employer Dashboard - Profiles" pages
+
+  1) Employer Dashboard - Profiles
+
+     Route:
+     -----------
+      - /profiles
+
+     Flow Route:
+     -----------
+      - In Route '/register-frame-page' selecting 'Create a business profile' and after filling all Steps it will re-direct to 'Employer Dashboard - Profiles' https://gyazo.com/49ca6cb72486f3f2761f8a56da51d579
+
+  2) Employee Dashboard - Profiles
+
+     Route:
+     -----------
+      - /employee-profile
+
+     Flow Route:
+     -----------
+      - In Route '/register-frame-page' selecting 'Create an employee profile' and after filling all Steps it will re-direct to 'Employee Dashboard - Profiles https://gyazo.com/b17ead975923c765203de40f56eed2e5

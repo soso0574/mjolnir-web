@@ -54,7 +54,6 @@ $bg-color: #EFE6E2;
 					margin-top: 5px;
 					background-size: 200px auto;
 				}
-
 			}
   			&.edit {
   				line-height: 1;
@@ -70,10 +69,12 @@ $bg-color: #EFE6E2;
 	  				height: 35px;
 	  				line-height: 35px;
 	  				padding: 0 10px;
+            color: rgba(0,0,0,0.65);
 	  				input {
 	  					height: 35px;
 	  					line-height: 18px;
 	  					font-size: 14px;
+              color: rgba(0,0,0,0.65);
 	  				}
 	  			}
   			}

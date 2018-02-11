@@ -55,6 +55,11 @@
       margin-left: 119px;
       min-width: 0;
     }
+    .email-setting-box {
+      .notification-heading {
+        margin-bottom: -4px;
+      }
+    }
     .input-box {
       width: 430px;
     }
@@ -173,6 +178,9 @@
           -moz-transition-timing-function: cubic-bezier(.54,1.85,.5,1);
           -moz-transition-duration: 0.4s;
           -moz-transition-property: transform, background-color;
+          -ms-transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+          -ms-transition-duration: 0.4s;
+          -ms-transition-property: transform, background-color;
           pointer-events: none;
           margin-top: 4px;
           margin-left: 4px;
@@ -183,6 +191,7 @@
           margin-right: 24px;
           -webkit-transform: translate3d(20px, 0, 0);
           -moz-transform: translate3d(20px, 0, 0);
+          -ms-transform: translate3d(20px, 0, 0);
           background-color: #ffffff;
         }
       }
@@ -503,9 +512,9 @@ input:-ms-input-placeholder {
         background-color: #fff;
         flex-grow: 1;
         .titles {
-            margin-bottom: 12px;
-            font-size: 17px;
-            color: #606060;
+          margin-bottom: 12px;
+          font-size: 17px;
+          color: #606060;
         }
         .suggest-txt {
           color: #828282;
@@ -535,16 +544,24 @@ input:-ms-input-placeholder {
             outline: none;
             resize: none;
             &::-webkit-input-placeholder {
-                color: #828282;
+              color: #828282;
+              font-weight: 400;
+              opacity: 1;
             }
             &:-moz-placeholder {
-                color: #828282;
+              color: #828282;
+              font-weight: 400;
+              opacity: 1;
             }
             &::-moz-placeholder {
-                color: #828282;
+              color: #828282;
+              font-weight: 400;
+              opacity: 1;
             }
             &:-ms-input-placeholder {
-                color: #828282;
+              color: #828282;
+              font-weight: 400;
+              opacity: 1;
             }
           }
         }
@@ -571,7 +588,6 @@ input:-ms-input-placeholder {
         }
     }
 }
-
 
 /* .share-model-window */
 .share-model {

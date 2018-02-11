@@ -47,9 +47,9 @@ export class ProfileReadOnlyComponent implements OnInit, OnDestroy {
   }
 
   // Modal open function
-  openModal(content, value) {
+  openModal(content, value, className) {
     this.modalRef = this.modalService.open(content, {
-      windowClass: 'edit-profiles-modal',
+      windowClass: 'edit-profiles-modal'+' '+className,
       backdrop: value || true
     });
   }

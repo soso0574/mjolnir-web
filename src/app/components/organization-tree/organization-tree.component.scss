@@ -83,7 +83,7 @@ $bg-color: #EFE6E2;
       		margin-bottom: $bottom-margin;
       		position: relative;
       		display: flex;
-      		justify-content: center;      
+      		justify-content: center;
       		&:after{
 		        position: absolute;
 		        content: '';
@@ -94,7 +94,7 @@ $bg-color: #EFE6E2;
 		        background-color: $line-color;
 		        transform: translateY(100%);
       		}
-      		
+
     	}
     	.hv-item-children{
       		display: flex;
@@ -108,7 +108,7 @@ $bg-color: #EFE6E2;
           			background-color: $line-color;
           			left: 0;
     			  }
-        
+
 		        &:before{
 		          	left: 50%;
 		          	top: 0;
@@ -116,7 +116,7 @@ $bg-color: #EFE6E2;
 		          	width: $line-width;
 		          	height: $bottom-margin / 2;
 		        }
-        
+
         		&:after {
           			top: -$bottom-margin / 2;
           			transform: translateY(-100%);

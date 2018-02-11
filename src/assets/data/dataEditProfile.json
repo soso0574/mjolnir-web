@@ -1,6 +1,6 @@
 {
   "banners": [
-    "/assets/i/profile-slider-1.png", "/assets/i/profile-slider-1.png", "/assets/i/profile-slider-1.png"
+    "/assets/i/profile-slider-1.jpg", "/assets/i/profile-slider-2.jpg", "/assets/i/profile-slider-3.jpg"
   ],
   "hospital": {
     "name": "Texas General Hospital",
@@ -67,14 +67,14 @@
       {
         "currency": "$",
         "price": "2.00",
-        "count": 1,
+        "count": 5,
         "save": "33%",
         "color": "boost-green-bg"
       },
       {
         "currency": "$",
-        "price": "2.99",
-        "count": 1,
+        "price": "1.49",
+        "count": 10,
         "save": "50%",
         "color": "boost-orange-bg"
       }
@@ -1437,18 +1437,32 @@
     "isEdit": false,
     "subList": [
       {
-        "title": "parent",
+        "title": "Office Manager",
         "isEdit": false,
         "subList": [
           {
-            "title": "parent",
+            "title": "Assistant",
             "isEdit": false,
             "subList": [
 
             ]
           },
           {
-            "title": "parent",
+            "title": "Assistant",
+            "isEdit": false,
+            "subList": [
+
+            ]
+          },
+          {
+            "title": "Hygienist",
+            "isEdit": false,
+            "subList": [
+
+            ]
+          },
+          {
+            "title": "Front Desk",
             "isEdit": false,
             "subList": [
 

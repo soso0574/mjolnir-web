@@ -14,21 +14,23 @@
                     <label>New Matches</label>
                     <span class="count-txt">{{benches['newMatches'].length}}</span>
                   </div>
-                  <div class="new-mathces-contents">
-                    <div class="user-cards-widget new-match-lists" *ngFor="let match of benches['newMatches']">
-                      <img [src]="match.imageUrl" alt="">
-                      <div class="user-cards-inner">
-                        <div class="user-role-badge">
-                          <span class="role-txt">{{match.role}}</span>
-                          <span class="icons3 badge-icon"></span>
-                        </div>
-                        <div class="user-role-details">
-                          <a href="javascript:;" class="username-txt">{{match.name}}</a>
-                          <span class="user-exp-year"><i>{{match.experience}}</i> yrs <span>EXP</span></span>
-                        </div>
-                        <div class="user-contact-btns">
-                          <a href="javascript:;" class="call-icon icons3"></a>
-                          <a href="javascript:;" class="msg-icon icons3" (click)="openModal(messageModal);"></a>
+                  <div class="new-mathces-contents" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+                    <div class="new-mathces-contents-main">
+                      <div class="user-cards-widget new-match-lists" *ngFor="let match of benches['newMatches']">
+                        <img [src]="match.imageUrl" alt="">
+                        <div class="user-cards-inner">
+                          <div class="user-role-badge">
+                            <span class="role-txt">{{match.role}}</span>
+                            <span class="icons3 badge-icon"></span>
+                          </div>
+                          <div class="user-role-details">
+                            <a href="javascript:;" class="username-txt">{{match.name}}</a>
+                            <span class="user-exp-year"><i>{{match.experience}}</i> yrs <span>EXP</span></span>
+                          </div>
+                          <div class="user-contact-btns">
+                            <a href="javascript:;" class="call-icon icons3"></a>
+                            <a href="javascript:;" class="msg-icon icons3" (click)="openModal(messageModal);"></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -40,7 +42,7 @@
                     <label>Benches</label>
                     <span class="count-txt">{{benches['benchList'].length}}</span>
                   </div>
-                  <div class="bench-lists-row">
+                  <div class="bench-lists-row" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
                     <ng-container *ngFor="let bench of benches['benchList']">
                       <a href="javascript:;" class="bench-items-row"
                        (click)="benchSelect(bench)">
@@ -138,13 +140,13 @@
         <div class="modal-info">
           <h4 class="titles">Add a Bench ?</h4>
           <div class="txt-box">
-            <input type="text" placeholder="Enter Bench Name" >
+            <input type="text" placeholder="Enter Bench Name" [(ngModel)]="benchName" >
           </div>
           <!-- <p>Press </p> -->
         </div>
         <div class="footer-btn">
-          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Cancel</a>
-          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Add</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click'); benchName=''">Cancel</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click'); addBench();">Add</a>
         </div>
       </div>
     </div>

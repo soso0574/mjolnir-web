@@ -7,6 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchFriendsComponent implements OnInit {
   @Input() galleries: any;
+
+  scrollbarOptions = {
+    axis: 'yx',
+    theme: 'minimal-dark'
+  };
+  
   constructor() { }
 
   ngOnInit() {

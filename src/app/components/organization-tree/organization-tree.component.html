@@ -18,7 +18,7 @@
         </p>
       </div>
       <div class="hv-item-children">
-        <div class="hv-item-child" [ngClass]="{'single-child': treeData.subList.length <= 1}" 
+        <div class="hv-item-child" [ngClass]="{'single-child': treeData.subList.length <= 1}"
           *ngFor="let level1Item of treeData['subList']">
           <div [ngClass]="{'hv-item-parent': level1Item.subList.length > 0}">
             <p class="simple-card" [ngClass]="{'edit': level1Item.isEdit}">
@@ -35,7 +35,7 @@
             </p>
           </div>
           <div class="hv-item-children">
-            <div class="hv-item-child" [ngClass]="{'single-child': level1Item.subList.length <= 1}" 
+            <div class="hv-item-child" [ngClass]="{'single-child': level1Item.subList.length <= 1}"
               *ngFor="let level2Item of level1Item.subList">
               <div [ngClass]="{'hv-item-parent': level2Item.subList.length > 0}">
                 <p class="simple-card" [ngClass]="{'edit': level2Item.isEdit}">
@@ -52,7 +52,7 @@
                 </p>
               </div>
               <div class="hv-item-children">
-                <div class="hv-item-child" [ngClass]="{'single-child': level2Item.subList.length <= 1}" 
+                <div class="hv-item-child" [ngClass]="{'single-child': level2Item.subList.length <= 1}"
                   *ngFor="let level3Item of level2Item.subList">
                   <div [ngClass]="{'hv-item-parent': level3Item.subList.length > 0}">
                     <p class="simple-card" [ngClass]="{'edit': level3Item.isEdit}">
@@ -69,7 +69,7 @@
                     </p>
                   </div>
                   <div class="hv-item-children">
-                    <div class="hv-item-child" [ngClass]="{'single-child': level3Item.subList.length <= 1}" 
+                    <div class="hv-item-child" [ngClass]="{'single-child': level3Item.subList.length <= 1}"
                       *ngFor="let level4Item of level3Item.subList">
                       <div [ngClass]="{'hv-item-parent': level4Item.subList.length > 0}">
                         <p class="simple-card" [ngClass]="{'edit': level4Item.isEdit}">
@@ -86,7 +86,7 @@
                         </p>
                       </div>
                       <div class="hv-item-children">
-                        <div class="hv-item-child" [ngClass]="{'single-child': level4Item.subList.length <= 1}" 
+                        <div class="hv-item-child" [ngClass]="{'single-child': level4Item.subList.length <= 1}"
                           *ngFor="let level5Item of level4Item.subList">
                           <p class="simple-card" [ngClass]="{'edit': level5Item.isEdit}">
                             <a href="javascript:;" class="txt" (click)="level5Item.isEdit = true">Add Title</a>
@@ -107,5 +107,5 @@
       </div>
     </div>
   </div>
-</div>  
+</div>
 <!-- end .hv-container -->

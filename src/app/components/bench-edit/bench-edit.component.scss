@@ -11,6 +11,7 @@
   height: 23px;
   .title {
     margin-top: 3px;
+    text-transform: uppercase;
   }
   .back-icon {
     width: 0;
@@ -34,11 +35,16 @@
 }
 
 .bench-list-content {
+  height: 626px;
+  overflow-y: auto;
+}
+
+.bench-list-scroll {
   display: flex;
   flex-wrap: wrap;
-  height: 626px;
   padding-top: 47px;
-  overflow-y: auto;
+  padding-bottom: 47px;
+  position: relative;
 }
 
 .users-cards-square {
@@ -138,8 +144,8 @@
         font-style: normal;
       }
       span {
-        font-size: 10px;
-        color: rgba(0, 0, 0, .73);
+        font-size: 9px;
+        color: #929292;
         text-transform: uppercase;
         font-family: 'HelveticaNeueMedium_1';
       }
@@ -265,6 +271,9 @@
          &:-ms-input-placeholder {
              color: #828282;
          }
+       }
+       textarea {
+         padding-top: 10px;
        }
   }
   .footer-btn {

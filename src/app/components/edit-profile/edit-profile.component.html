@@ -1,7 +1,4 @@
 <div class="employer-profile-container" *ngIf="editDatas">
-  <a href="javascript:;" class="back-btn">
-    <span class="back-icon"></span>BACK
-  </a>
   <div class="employer-slider-section">
     <ngb-carousel #caruosels>
       <ng-template ngbSlide *ngFor="let img of editDatas['banners']">
@@ -72,7 +69,7 @@
                 <span class="month-txt">per {{item.validity}}</span>
               </div>
               <div class="month-subscription">
-                <span class="month-sub-txt">{{item.offer}} <span>Month subscription</span></span>
+                <span class="month-sub-txt">{{item.duration}} <span>Month subscription</span></span>
               </div>
             </a>
           </div>
@@ -86,7 +83,7 @@
     <!-- end .subscription-section-overview -->
     <div class="photos-section profile-detail-sections">
       <div class="profile-section-header">
-        <span class="icons3 subscribe-icon"></span>
+        <span class="icons3 photoss-icon"></span>
         <span class="title-txt">PHOTOS</span>
       </div>
       <div class="photos-section-content">
@@ -481,14 +478,14 @@
     <!-- end .internal ENDORSEMENTS-section -->
     <div class="phone-number-section profile-detail-sections">
       <span class="icons3 phone-icon"></span>
-      <input type="text" [value]="editDatas['phone']"
+      <input type="tel" [(ngModel)]="editDatas['phone']"
         class="edit-input-box" [disabled]="!phoneEdit">
       <a href="javascript:;" class="icons3 edit-icon" (click)="phoneEdit=!phoneEdit"></a>
     </div>
     <!-- end .phone-number-section-section -->
     <div class="mail-section profile-detail-sections">
       <span class="icons3 mail-icon"></span>
-      <input type="email" [value]="editDatas['emails']"
+      <input type="email" [(ngModel)]="editDatas['emails']"
       class="edit-input-box" *ngIf="emailEdit">
       <a href="mailto:{{editDatas['emails']}}?Subject=Hello%20again" class="input-link" *ngIf="!emailEdit">{{editDatas['emails']}}</a>
       <a href="javascript:;" class="icons3 edit-icon" (click)="emailEdit=!emailEdit"></a>
@@ -496,7 +493,7 @@
     <!-- end .mail-section-section-section -->
     <div class="globe-section profile-detail-sections">
       <span class="icons3 globe-icon"></span>
-      <input type="text" [value]="editDatas['website']"
+      <input type="text" [(ngModel)]="editDatas['website']"
         class="edit-input-box" *ngIf="webEdit">
       <a href="http://{{editDatas['website']}}" target="_blank" class="input-link" *ngIf="!webEdit">{{editDatas['website']}}</a>
       <a href="javascript:;" class="icons3 edit-icon" (click)="webEdit=!webEdit"></a>
@@ -542,15 +539,15 @@
       <div class="profile-section-header">
         <span class="icons3 flow-icon"></span>
         <span class="title-txt">ORGANIZATIONAL STRUCTURE</span>
-        <a href="javascript:;" class="icons3 edit-icon"></a>
+        <a href="javascript:;" class="icons3 edit-icon" (click)="editOrg=!editOrg"></a>
       </div>
       <div class="organization-content">
         <div class="tree-chart">
-          <app-org-structure [treeData]="editDatas['orgStructure']"></app-org-structure>
+          <app-org-structure [treeData]="editDatas['orgStructure']" [editTree]="editOrg"></app-org-structure>
         </div>
       </div>
     </div>
-    <!-- end .technology-section -->
+    <!-- end .ORG Structure -->
     <div class="position-section profile-detail-sections">
       <div class="profile-section-header">
         <span class="icons3 aboutus-icon"></span>
@@ -567,7 +564,7 @@
           </ng-container>
         </div>
       </div>
-      <a href="javascript:;" class="icons3 share-icon" (click)="openModal(shareModal, 'static');"></a>
+      <a href="javascript:;" class="icons3 share-icon" (click)="openModal(shareModal, 'static', 'share-model');"></a>
     </div>
     <!-- end .position-section -->
   </div>
@@ -689,34 +686,34 @@
           <div class="permission-detail">
             <h3 class="inner-title">Permissions</h3>
             <div class="permission-inner-content">
-              <div class="modal-content-txt">
+              <label class="modal-content-txt">
                 <span class="inner-txt">Edit Office Profile</span>
-                <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <div class="round-checkbox" (click)="$event.stopPropagation();">
                   <input type="checkbox">
                   <span class="checkbox-icon icons"></span>
-                </label>
-              </div>
-              <div class="modal-content-txt">
+                </div>
+              </label>
+              <label class="modal-content-txt">
                 <span class="inner-txt">Manage Interview Requests</span>
-                <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <div class="round-checkbox" (click)="$event.stopPropagation();">
                   <input type="checkbox">
                   <span class="checkbox-icon icons"></span>
-                </label>
-              </div>
-              <div class="modal-content-txt">
+                </div>
+              </label>
+              <label class="modal-content-txt">
                 <span class="inner-txt">Add/Edit Benches</span>
-                <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <div class="round-checkbox" (click)="$event.stopPropagation();">
                   <input type="checkbox">
                   <span class="checkbox-icon icons"></span>
-                </label>
-              </div>
-              <div class="modal-content-txt">
+                </div>
+              </label>
+              <label class="modal-content-txt">
                 <span class="inner-txt">Manage/ Match Requests</span>
-                <label class="round-checkbox" (click)="$event.stopPropagation();">
+                <div class="round-checkbox" (click)="$event.stopPropagation();">
                   <input type="checkbox">
                   <span class="checkbox-icon icons"></span>
-                </label>
-              </div>
+                </div>
+              </label>
             </div>
           </div>
           <div class="green-btn">
@@ -736,36 +733,36 @@
         </div>
         <div class="service-content">
           <div class="model-service-layer">
-            <div class="model-service-box">
+            <label class="model-service-box">
               <div class="review-service-list">
                 <span class="icons3 google-icon"></span>
                 <span class="review-txt">Google Reviews</span>
               </div>
-              <label class="round-checkbox" (click)="$event.stopPropagation();">
+              <div class="round-checkbox" (click)="$event.stopPropagation();">
                 <input type="checkbox">
                 <span class="checkbox-icon icons"></span>
-              </label>
-            </div>
-            <div class="model-service-box">
+              </div>
+            </label>
+            <label class="model-service-box">
               <div class="review-service-list">
                 <span class="icons3 yelp-icon"></span>
                 <span class="review-txt">Yelp Reviews</span>
               </div>
-              <label class="round-checkbox" (click)="$event.stopPropagation();">
+              <div class="round-checkbox" (click)="$event.stopPropagation();">
                 <input type="checkbox">
                 <span class="checkbox-icon icons"></span>
-              </label>
-            </div>
-            <div class="model-service-box">
+              </div>
+            </label>
+            <label class="model-service-box">
               <div class="review-service-list">
                 <span class="icons3 fb-icon"></span>
                 <span class="review-txt">Facebook Reviews</span>
               </div>
-              <label (click)="$event.stopPropagation();">
+              <div (click)="$event.stopPropagation();">
                 <input type="checkbox">
                 <span class="checkbox-icon icons"></span>
-              </label>
-            </div>
+              </div>
+            </label>
           </div>
           <div class="green-btn">
             <a href="javascript:;" class="ok-btn" (click)="c('Close click'); review()">OK</a>
@@ -784,15 +781,15 @@
         </div>
         <div class="service-content">
           <div class="model-service-layer">
-            <div class="model-service-box" *ngFor="let item of editDatas['technology']">
+            <label class="model-service-box" *ngFor="let item of editDatas['technology']">
               <div class="review-service-list">
                 <span class="review-txt">{{item.label}}</span>
               </div>
-              <label class="round-checkbox" (click)="$event.stopPropagation();">
+              <div class="round-checkbox" (click)="$event.stopPropagation();">
                 <input type="checkbox" [(ngModel)]="item.checked">
                 <span class="checkbox-icon icons"></span>
-              </label>
-            </div>
+              </div>
+            </label>
             <div class="other-box">
               <input type="text" placeholder="Other">
             </div>
@@ -814,15 +811,15 @@
         </div>
         <div class="service-content">
           <div class="model-service-layer">
-            <div class="model-service-box" *ngFor="let item of editDatas['dental']">
+            <label class="model-service-box" *ngFor="let item of editDatas['dental']">
               <div class="review-service-list">
                 <span class="review-txt">{{item.label}}</span>
               </div>
-              <label class="round-checkbox" (click)="$event.stopPropagation();">
+              <div class="round-checkbox" (click)="$event.stopPropagation();">
                 <input type="checkbox" [(ngModel)]="item.checked">
                 <span class="checkbox-icon icons"></span>
-              </label>
-            </div>
+              </div>
+            </label>
             <div class="other-box">
               <input type="text" placeholder="Other">
             </div>
@@ -844,15 +841,15 @@
         </div>
         <div class="service-content">
           <div class="model-service-layer">
-            <div class="model-service-box" *ngFor="let item of editDatas['position']">
+            <label class="model-service-box" *ngFor="let item of editDatas['position']">
               <div class="review-service-list">
                 <span class="review-txt">{{item.label}}</span>
               </div>
-              <label class="round-checkbox" (click)="$event.stopPropagation();">
+              <div class="round-checkbox" (click)="$event.stopPropagation();">
                 <input type="checkbox" [(ngModel)]="item.checked">
                 <span class="checkbox-icon icons"></span>
-              </label>
-            </div>
+              </div>
+            </label>
             <div class="other-box">
               <input type="text" placeholder="Other">
             </div>

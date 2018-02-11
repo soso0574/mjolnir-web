@@ -13,7 +13,7 @@
   	<span class="num">{{notificationValue.totalNumber}}</span>
   </div>
   <!-- end .titles -->
-  <div class="row-list">
+  <div class="row-list" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
   	<div class="module-item" *ngFor="let groupItem of dataList">
   	  <div class="label-txt">
         {{groupItem.groupName}}

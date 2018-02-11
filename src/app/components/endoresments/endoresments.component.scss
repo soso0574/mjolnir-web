@@ -38,21 +38,44 @@
   border-radius: 10px;
   margin: 0 0 8px 0;
   position: relative;
+  cursor: pointer;
   &.active {
     border-color: #fff;
   }
   .close-icon {
     width: 20px;
     height: 20px;
-    background-position: -231px -379px;
+    background: transparent;
+    background-color: #fe0000;
     position: absolute;
     top: -7px;
     right: -7px;
     display: none;
     cursor: pointer;
+    border-radius: 5px;
+    &::after {
+      content: "";
+      width: 2px;
+      height: 12px;
+      background-color: #fff;
+      position: absolute;
+      transform: rotate(-45deg);
+      top: 4px;
+      left: 9px;
+    }
+    &::before {
+      content: "";
+      width: 2px;
+      height: 12px;
+      background-color: #fff;
+      position: absolute;
+      transform: rotate(45deg);
+      top: 4px;
+      left: 9px;
+    }
   }
   &.active .close-icon {
-    display: block;
+    display: flex;
   }
   &:last-child {
     margin-bottom: 0;
