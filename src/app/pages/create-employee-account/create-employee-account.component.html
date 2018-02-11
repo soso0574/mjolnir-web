@@ -31,19 +31,6 @@
                   <div class="dob">
                     <div ngbDropdown class="d-inline-block little">
                       <button class="btn btn-outline-primary" ngbDropdownToggle>
-                        {{formData['somePersonalDetails']['date'].defaultText}}
-                      </button>
-                      <div ngbDropdownMenu>
-                        <button class="dropdown-item"
-                          *ngFor="let item of formData['somePersonalDetails']['date'].optionList"
-                          (click)="formData['somePersonalDetails']['date'].defaultText = item.optionName"
-                          [ngClass]="{'selected': formData['somePersonalDetails']['date'].defaultText === item.optionName}">
-                          {{item.optionName}}
-                        </button>
-                      </div>
-                    </div>
-                    <div ngbDropdown class="d-inline-block little">
-                      <button class="btn btn-outline-primary" ngbDropdownToggle>
                         {{formData['somePersonalDetails']['month'].defaultText}}
                       </button>
                       <div ngbDropdownMenu>
@@ -51,6 +38,19 @@
                           *ngFor="let item of formData['somePersonalDetails']['month'].optionList"
                           (click)="formData['somePersonalDetails']['month'].defaultText = item.optionName"
                           [ngClass]="{'selected': formData['somePersonalDetails']['month'].defaultText === item.optionName}">
+                          {{item.optionName}}
+                        </button>
+                      </div>
+                    </div>
+                    <div ngbDropdown class="d-inline-block little">
+                      <button class="btn btn-outline-primary" ngbDropdownToggle>
+                        {{formData['somePersonalDetails']['date'].defaultText}}
+                      </button>
+                      <div ngbDropdownMenu>
+                        <button class="dropdown-item"
+                          *ngFor="let item of formData['somePersonalDetails']['date'].optionList"
+                          (click)="formData['somePersonalDetails']['date'].defaultText = item.optionName"
+                          [ngClass]="{'selected': formData['somePersonalDetails']['date'].defaultText === item.optionName}">
                           {{item.optionName}}
                         </button>
                       </div>
