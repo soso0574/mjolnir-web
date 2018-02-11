@@ -2155,9 +2155,13 @@
   },
   "peer": {
     "title": "Peer to Peer Endorsements",
-    "fName": "",
-    "lName": "",
-    "emilPhone": ""
+    "peersList": [
+      {
+        "fName": "",
+        "lName": "",
+        "emilPhone": ""
+      }
+    ]
   },
   "eduHistory": {
     "title": "Education History",

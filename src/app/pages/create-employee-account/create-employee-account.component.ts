@@ -132,8 +132,9 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
   goToStep(index) {
     switch (this.currentStep) {
       case 0:
-        if (this.formData['somePersonalDetails']['location'].defaultText === 'City'
-        || this.formData['somePersonalDetails']['zip'].defaultText === 'Zip Code') {
+        if (this.formData['somePersonalDetails']['location'].city === ''
+        || this.formData['somePersonalDetails']['zip'].zips === ''
+        || this.formData['somePersonalDetails']['state'].states === '') {
           return;
         }
         break;
@@ -243,6 +244,15 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
       'sDate': '',
       'eDate': ''
     });
+  }
+
+  // Add another peer
+  addAnotherPeer() {
+  this.formData['peer']['peersList'].push({
+    'fName': '',
+    'lName': '',
+    'emilPhone': ''
+  });
   }
 
   // Add another school
