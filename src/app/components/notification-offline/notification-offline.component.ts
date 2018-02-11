@@ -21,6 +21,9 @@ export class NotificationOfflineComponent implements OnInit {
     totalNumber: 0
   };
 
+  scrollbarOptions = {
+  };
+
   /**
    * Creates an instance of the NotificationOfflineComponent with the injected
    * NameListService.
