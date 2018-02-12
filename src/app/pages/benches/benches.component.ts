@@ -80,73 +80,73 @@ export class BenchesComponent implements OnInit {
       return;
     }
     this.benches['benchList'].push({
-      "name": this.benchName,
-      "lists": [
+      'name': this.benchName,
+      'lists': [
         {
-          "imageUrl": "/assets/i/friends-users/friends-user9.jpg",
-          "role": "Hygienist",
-          "name": "Kyle Bourne",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user9.jpg',
+          'role': 'Hygienist',
+          'name': 'Kyle Bourne',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user1.jpg",
-          "role": "Hygienist",
-          "name": "Kyle Bourne",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user1.jpg',
+          'role': 'Hygienist',
+          'name': 'Kyle Bourne',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user7.jpg",
-          "role": "Orthodontist",
-          "name": "Lyanna Stark",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user7.jpg',
+          'role': 'Orthodontist',
+          'name': 'Lyanna Stark',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user8.jpg",
-          "role": "Periodontist",
-          "name": "Jack Riley",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user8.jpg',
+          'role': 'Periodontist',
+          'name': 'Jack Riley',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user1.jpg",
-          "role": "Hygienist",
-          "name": "Kyle Bourne",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user1.jpg',
+          'role': 'Hygienist',
+          'name': 'Kyle Bourne',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user7.jpg",
-          "role": "Orthodontist",
-          "name": "Lyanna Stark",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user7.jpg',
+          'role': 'Orthodontist',
+          'name': 'Lyanna Stark',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user1.jpg",
-          "role": "Hygienist",
-          "name": "Kyle Bourne",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user1.jpg',
+          'role': 'Hygienist',
+          'name': 'Kyle Bourne',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user7.jpg",
-          "role": "Orthodontist",
-          "name": "Lyanna Stark",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user7.jpg',
+          'role': 'Orthodontist',
+          'name': 'Lyanna Stark',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user8.jpg",
-          "role": "Periodontist",
-          "name": "Jack Riley",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user8.jpg',
+          'role': 'Periodontist',
+          'name': 'Jack Riley',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user9.jpg",
-          "role": "Hygienist",
-          "name": "Kyle Bourne",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user9.jpg',
+          'role': 'Hygienist',
+          'name': 'Kyle Bourne',
+          'experience': 7
         },
         {
-          "imageUrl": "/assets/i/friends-users/friends-user8.jpg",
-          "role": "Periodontist",
-          "name": "Jack Riley",
-          "experience": 7
+          'imageUrl': '/assets/i/friends-users/friends-user8.jpg',
+          'role': 'Periodontist',
+          'name': 'Jack Riley',
+          'experience': 7
         }
       ]
     });

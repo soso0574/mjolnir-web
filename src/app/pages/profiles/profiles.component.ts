@@ -72,8 +72,10 @@ export class ProfilesComponent implements OnInit, OnDestroy {
   }
 
   // Modal open function
-  openModal(content) {
-    this.modalRef = this.modalService.open(content, { windowClass: 'profiles-modal' });
+  openModal(content, className) {
+    this.modalRef = this.modalService.open(content, {
+      windowClass: className,
+    });
   }
 
   initData() {

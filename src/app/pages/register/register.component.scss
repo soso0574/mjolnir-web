@@ -198,6 +198,10 @@
 		  border-width: 2px;
 			  .btn-friendly {
 				.icon-friend {
+          &.icon-word {
+            background: url('../../../assets/i/wordofmouth.png') no-repeat;
+            background-size: 64px 64px;
+          }
 					&.icon-google {
 						background-position: -64px -520px;
 					}

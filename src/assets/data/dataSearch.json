@@ -906,9 +906,10 @@
   ],
   "dropdownsFr": {
     "yearsDropdown": {
-      "selected": "4 to 5 Years",
+      "selected": "4 Years",
       "options": [
-        "2 to 3 Years", "3 to 4 Years", "4 to 5 Years", "5 to 10 Years", "10 Years +"
+        "1 Year", "2 Years", "3 Years", "4 Years", "5 Years", "6 Years", "7 Years",
+        "8 Years", "9 Years", "10 Years", "10 Years +"
       ]
     },
     "roleDropdown": {
@@ -917,30 +918,54 @@
         "Periodontist", "Hygienist", "Orthodontist"
       ]
     },
-    "roleBadgesDropdown": {
+    "locationDropdown": {
       "selected": "Dallas, TX",
-      "options": [
-        "Dallas, TX", "Dental Hygienist, CA", "Clinician, NJ"
+      "locations": [
+        {
+          "place": "Dallas, TX",
+          "zip": "001"
+        },
+        {
+          "place": "Dental Hygienist, CA",
+          "zip": "002"
+        },
+        {
+          "place": "Clinician, NJ",
+          "zip": "003"
+        },
+        {
+          "place": "Angelas, City",
+          "zip": "604"
+        },
+        {
+          "place": "NewYork, CA",
+          "zip": "750"
+        },
+        {
+          "place": "Chennai",
+          "zip": "626"
+        }
       ]
     },
     "milesDropdown": {
       "selected": "25 miles",
       "options": [
-        "25 miles", "50 miles", "100 miles"
+        "5 miles", "10 miles", "25 miles", "50 miles", "100 miles", "200 miles"
       ]
     },
     "monthDropdown": {
       "selected": "last month",
       "options": [
-        "last month", "this month", "next month"
+        "1 day", "1 week", "1 month", "1 year"
       ]
     }
   },
   "dropdownsPotential": {
     "yearsDropdown": {
-      "selected": "4 to 5 Years",
+      "selected": "4 Years",
       "options": [
-        "2 to 3 Years", "3 to 4 Years", "4 to 5 Years", "5 to 10 Years", "10 Years +"
+        "1 Year", "2 Years", "3 Years", "4 Years", "5 Years", "6 Years", "7 Years",
+        "8 Years", "9 Years", "10 Years", "10 Years +"
       ]
     },
     "roleDropdown": {
@@ -949,22 +974,45 @@
         "Periodontist", "Hygienist", "Orthodontist"
       ]
     },
-    "roleBadgesDropdown": {
+    "locationDropdown": {
       "selected": "Dallas, TX",
-      "options": [
-        "Dallas, TX", "Dental Hygienist, CA", "Clinician, NJ"
+      "locations": [
+        {
+          "place": "Dallas, TX",
+          "zip": "001"
+        },
+        {
+          "place": "Dental Hygienist, CA",
+          "zip": "002"
+        },
+        {
+          "place": "Clinician, NJ",
+          "zip": "003"
+        },
+        {
+          "place": "Angelas, City",
+          "zip": "604"
+        },
+        {
+          "place": "NewYork, CA",
+          "zip": "750"
+        },
+        {
+          "place": "Chennai",
+          "zip": "626"
+        }
       ]
     },
     "milesDropdown": {
       "selected": "25 miles",
       "options": [
-        "25 miles", "50 miles", "100 miles"
+        "5 miles", "10 miles", "25 miles", "50 miles", "100 miles", "200 miles"
       ]
     },
     "monthDropdown": {
       "selected": "last month",
       "options": [
-        "last month", "this month", "next month"
+        "1 day", "1 week", "1 month", "1 year"
       ]
     }
   }

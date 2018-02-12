@@ -65,6 +65,7 @@ export class MainMenuComponent implements OnInit, OnDestroy {
         temp_selectedRoleItem.title = item.title;
         temp_selectedRoleItem.smallTitle = item.smallTitle;
         temp_selectedRoleItem.number = item.number;
+        temp_selectedRoleItem.employee = item.employee;
       }
     });
 
@@ -100,6 +101,7 @@ export class MainMenuComponent implements OnInit, OnDestroy {
     this.selectedRoleItem.title = clickedItem.title;
     this.selectedRoleItem.smallTitle = clickedItem.smallTitle;
     this.selectedRoleItem.number = clickedItem.number;
+    this.selectedRoleItem.employee = clickedItem.employee;
 
     this.dataList.forEach(function(item, index) {
       item.selected = false;

@@ -12,7 +12,6 @@ export class SearchFriendsComponent implements OnInit {
     axis: 'yx',
     theme: 'minimal-dark'
   };
-  
   constructor() { }
 
   ngOnInit() {

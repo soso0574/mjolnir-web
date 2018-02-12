@@ -91,11 +91,11 @@
       			<a href="javascript:;" class="btn btn-circle blue">
 	      		  <i class="icons icon-like"></i>
 	      		</a>
-	      		<div class="two-btn">
+	      		<div class="two-btn">                 
 		      	  <a href="javascript:;" class="btn btn-share-blue"
-		      	     (click) ="showProfilePopup = false">Share Profile</a>
+		      	     (click) ="showProfilePopup = false;openModal(shareModal, 'share-model');">Share Profile</a>
 		      	  <a href="javascript:;" class="btn btn-request-pink"
-		      	     (click) ="showProfilePopup = false">Request Endorsement</a>
+		      	     (click) ="showProfilePopup = false;openModal(addModal);">Request Endorsement</a>
 		      	</div>
       		</div>
 
@@ -184,9 +184,9 @@
 	      		</a>
 	      		<div class="two-btn">
 		      	  <a href="javascript:;" class="btn btn-share-blue"
-		      	     (click) ="showProfilePopup = false">Share Profile</a>
+		      	     (click) ="showProfilePopup = false;openModal(shareModal, 'share-model');">Share Profile</a>
 		      	  <a href="javascript:;" class="btn btn-request-pink"
-		      	     (click) ="showProfilePopup = false">Request Endorsement</a>
+		      	     (click) ="showProfilePopup = false;openModal(addModal);">Request Endorsement</a>
 		      	</div>
       		</div>
 
@@ -228,7 +228,7 @@
     <div class="modal-boxs profile-edit-modal">
       <a [routerLink]="['/main-menu']" class="back-btn">
         <span class="back-icon"></span>BACK
-      </a>  
+      </a>
       <div class="modal-inner">
         <app-edit-profile
           (onSubscribe)="onSubscribe($event)"
@@ -240,5 +240,94 @@
     </div>
   </ng-template>
   <!-- end .Email success modal -->
+
+  <ng-template #shareModal let-c="close">
+    <div class="modal-boxs share-model">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <div class="share-one-wrapper">
+            <div class="share-user">
+              <span class="app-txt">Click to share app</span>
+              <div class="share-user-list">
+                <ul>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="user-view">RP</span>
+                      <span class="user-name">Rob Paul</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="user-view">PG</span>
+                      <span class="user-name">Peter Gould</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="share-app-list">
+                <ul>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="msg-icon icons2"></span>
+                      <span class="share-name">iMessage</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="mail-icon icons2"></span>
+                      <span class="share-name">Mail</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="twitter-icon icons2"></span>
+                      <span class="share-name">Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="fb-icon icons2"></span>
+                      <span class="share-name">Facebook</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="cancel-btn" (click)="c('Close click')">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Share modal -->
+
+  <ng-template #addModal let-c="close" let-d="dismiss">
+    <div class="modal-boxs add-modal">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <h4 class="titles">Ask for Endorsement ?</h4>
+          <div class="txt-box">
+            <input type="text" placeholder="First name">
+          </div>
+          <div class="txt-box">
+            <input type="text" placeholder="Last name">
+          </div>
+          <div class="txt-box">
+            <input type="email" placeholder="Email or Mobile Number">
+          </div>
+          <div class="description">
+            <textarea placeholder="Please provide a brief summary of your endorsement request."></textarea>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Cancel</a>
+          <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .Schedule modal -->
 </div>
 <!-- end .contents -->
