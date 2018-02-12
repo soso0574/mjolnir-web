@@ -68,6 +68,19 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
   initData() {
     this.formData = this.dataList;
     this.totalStep = keys(this.dataList).length;
+    // SET YEAR OPTIONS
+    for (let i = 1900; i <= 2009; i++) {
+      this.formData['somePersonalDetails']['year'].optionList.push({
+        "optionName": i
+      })
+    }
+    // SET DATE OPTIONS
+    for (let i = 1; i <= 31; i++) {
+      this.formData['somePersonalDetails']['date'].optionList.push({
+        "optionName": i
+      })
+    }
+
   }
 
   /**
@@ -132,8 +145,9 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
   goToStep(index) {
     switch (this.currentStep) {
       case 0:
-        if (this.formData['somePersonalDetails']['location'].defaultText === 'City'
-        || this.formData['somePersonalDetails']['zip'].defaultText === 'Zip Code') {
+        if (this.formData['somePersonalDetails']['location'].city === ''
+        || this.formData['somePersonalDetails']['zip'].zips === ''
+        || this.formData['somePersonalDetails']['state'].states === '') {
           return;
         }
         break;
@@ -243,6 +257,15 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
       'sDate': '',
       'eDate': ''
     });
+  }
+
+  // Add another peer
+  addAnotherPeer() {
+  this.formData['peer']['peersList'].push({
+    'fName': '',
+    'lName': '',
+    'emilPhone': ''
+  });
   }
 
   // Add another school

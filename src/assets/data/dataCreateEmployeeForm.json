@@ -6,99 +6,6 @@
       "optionList": [
         {
           "optionName": "Day"
-        },
-        {
-          "optionName": 1
-        },
-        {
-          "optionName": 2
-        },
-        {
-          "optionName": 3
-        },
-        {
-          "optionName": 4
-        },
-        {
-          "optionName": 5
-        },
-        {
-          "optionName": 6
-        },
-        {
-          "optionName": 7
-        },
-        {
-          "optionName": 8
-        },
-        {
-          "optionName": 9
-        },
-        {
-          "optionName": 10
-        },
-        {
-          "optionName": 11
-        },
-        {
-          "optionName": 12
-        },
-        {
-          "optionName": 13
-        },
-        {
-          "optionName": 14
-        },
-        {
-          "optionName": 15
-        },
-        {
-          "optionName": 16
-        },
-        {
-          "optionName": 17
-        },
-        {
-          "optionName": 18
-        },
-        {
-          "optionName": 19
-        },
-        {
-          "optionName": 20
-        },
-        {
-          "optionName": 21
-        },
-        {
-          "optionName": 22
-        },
-        {
-          "optionName": 23
-        },
-        {
-          "optionName": 24
-        },
-        {
-          "optionName": 25
-        },
-        {
-          "optionName": 26
-        },
-        {
-          "optionName": 27
-        },
-        {
-          "optionName": 28
-        },
-        {
-          "optionName": 29
-        },
-        {
-          "optionName": 30
-        },
-        {
-          "optionName": 31
         }
       ]
     },
@@ -151,42 +58,6 @@
       "optionList": [
         {
           "optionName": "Year"
-        },
-        {
-          "optionName": 2000
-        },
-        {
-          "optionName": 2001
-        },
-        {
-          "optionName": 2002
-        },
-        {
-          "optionName": 2003
-        },
-        {
-          "optionName": 2004
-        },
-        {
-          "optionName": 2005
-        },
-        {
-          "optionName": 2006
-        },
-        {
-          "optionName": 2007
-        },
-        {
-          "optionName": 2008
-        },
-        {
-          "optionName": 20009
-        },
-        {
-          "optionName": 2010
-        },
-        {
-          "optionName": 2011
         }
       ]
     },
@@ -2155,9 +2026,13 @@
   },
   "peer": {
     "title": "Peer to Peer Endorsements",
-    "fName": "",
-    "lName": "",
-    "emilPhone": ""
+    "peersList": [
+      {
+        "fName": "",
+        "lName": "",
+        "emilPhone": ""
+      }
+    ]
   },
   "eduHistory": {
     "title": "Education History",
