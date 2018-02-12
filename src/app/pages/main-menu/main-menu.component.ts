@@ -20,7 +20,8 @@ export class MainMenuComponent implements OnInit, OnDestroy {
     imgUrl: '../../../assets/i/girl-photo.jpg',
     title: '',
     number: 0,
-    smallTitle: ''
+    smallTitle: '',
+    employee: false
   };
 
   showRightPanel = {

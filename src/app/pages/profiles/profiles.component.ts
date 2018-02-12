@@ -58,7 +58,7 @@ export class ProfilesComponent implements OnInit, OnDestroy {
         this.editable = params['edit'];
         if (typeof this.editable !== 'undefined') {
           setTimeout(() => {
-            this.openModal(this.editModal);
+            this.openModal(this.editModal, '');
           }, 100);
         }
     });
