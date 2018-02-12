@@ -18,7 +18,7 @@
             <span class="radius top-right">{{selectedRoleItem.number}}%</span>
             <a href="javascript:;"
             class="radius bottom-right" [routerLink]="['/profiles', 'edit']"><i class="icons icon-edit"></i></a>
-            <a href="javascript:;" class="radius bottom-left"
+            <a href="javascript:;" *ngIf="!selectedRoleItem.employee" class="radius bottom-left"
               (click)="clickPlusIcon()">
               <i class="icons icon-plus"></i>
             </a>

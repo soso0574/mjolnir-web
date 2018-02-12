@@ -585,14 +585,14 @@ a:hover {
             overflow: hidden;
         }
         .title-txt {
-            padding: 0 52px 34px;
+            padding: 0 40px 34px;
             text-align: center;
             color: #fff;
             font-weight: 300;
             font-size: 20px;
             line-height: 26px;
             width: 100%;
-            word-break: break-all;
+            word-break: normal;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -1135,7 +1135,7 @@ a:hover {
 @media all and (-ms-high-contrast:none) {
   .fade.modal.profiles-modal {
     .modal-dialog {
-      max-width: inherit;      
+      max-width: inherit;
       transition: inherit;
       -webkit-transition: inherit;
       -ms-transition: inherit;
@@ -1175,7 +1175,7 @@ input[type=search] {
 /* firefox */
 @-moz-document url-prefix() {
   .owl-dt-timer-content {
-    margin: -15px 0 -15px 0;  
+    margin: -15px 0 -15px 0;
   }
   .time-modal .modal-info {
     padding: 0 0 15px 0;
@@ -1188,4 +1188,3 @@ input[type=search] {
     margin-top: 23px;
   }
 }
-

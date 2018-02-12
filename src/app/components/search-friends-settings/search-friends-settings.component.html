@@ -1,4 +1,4 @@
-<div class="search-potential-main">
+<div class="search-potential-main" (click)="sugguestList = []">
   <div class="search-potential-text">
     <div class="search-select-main">
       <div ngbDropdown class="d-inline-block">
@@ -48,18 +48,33 @@
       </div>
     </div>
     of
-    <div class="search-select-main">
-      <div ngbDropdown class="d-inline-block">
+    <div class="search-select-main loc-dropdown">
+      <div ngbDropdown class="d-inline-block" #locDrop="ngbDropdown">
         <button class="btn btn-outline-primary" ngbDropdownToggle>
-          {{dropdown['roleBadgesDropdown'].selected}}
+          {{dropdown['locationDropdown'].selected}}
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button class="dropdown-item"
-            *ngFor="let option of dropdown['roleBadgesDropdown'].options"
-            (click)="dropdown['roleBadgesDropdown'].selected = option"
-            [ngClass]="{'selected': dropdown['roleBadgesDropdown'].selected === option}"
+          <input type="text" class="txt-box" placeholder="City or Zipcode"
+            (click)="$event.stopPropagation(); locDrop.open();"
+            (keyup)="selectLocation(locationDrop)"
+            [(ngModel)]="locationDrop"
           >
-            {{option}}</button>
+          <ng-container *ngIf="sugguestList.length > 0">
+            <button class="dropdown-item"
+              *ngFor="let item of sugguestList"
+              (click)="dropdown['locationDropdown'].selected = item.place"
+              [ngClass]="{'selected': dropdown['locationDropdown'].selected === item.place}"
+            >
+              {{item.place}}</button>
+          </ng-container>
+          <ng-container *ngIf="sugguestList.length < 1">
+            <button class="dropdown-item"
+              *ngFor="let item of dropdown['locationDropdown'].locations"
+              (click)="dropdown['locationDropdown'].selected = item.place"
+              [ngClass]="{'selected': dropdown['locationDropdown'].selected === item.place}"
+            >
+              {{item.place}}</button>
+          </ng-container>
         </div>
       </div>
     </div>

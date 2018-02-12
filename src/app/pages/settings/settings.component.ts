@@ -70,7 +70,7 @@ export class SettingsComponent implements OnInit {
   // Modal open function
   openModal(content, className) {
     this.modalService.open(content, {
-      windowClass: 'settings-modal'+' '+className
+      windowClass: 'settings-modal' + ' ' + className
     });
   }
 

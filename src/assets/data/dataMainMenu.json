@@ -4,7 +4,8 @@
     "title": "Lyanna Stark",
     "smallTitle": "Hygienist",
     "number": 65,
-    "selected": true
+    "selected": true,
+    "employee": true
   },
   {
     "imgUrl": "../../../assets/i/hospital-item1.jpg",

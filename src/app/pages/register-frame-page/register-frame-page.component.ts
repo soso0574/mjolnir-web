@@ -62,9 +62,9 @@ export class RegisterFramePageComponent implements OnInit, OnDestroy {
 
   // changed Content
   changedContent(event) {
-    if(event === 'business') {
+    if (event === 'business') {
       this.openModal(this.waringModal, 'static');
-    } else if(event === 'employee') {
+    } else if (event === 'employee') {
       this.openModal(this.importProfileModal, 'static');
       this.createProfile = event;
     }
