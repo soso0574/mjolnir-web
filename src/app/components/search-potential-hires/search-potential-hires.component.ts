@@ -9,6 +9,7 @@ export class SearchPotentialHiresComponent implements OnInit {
   @Input() dropdown: any;
   @Output() filter = new EventEmitter();
   sugguestList = [];
+  locationDrop = '';
   constructor() { }
 
   ngOnInit() {
