@@ -1,0 +1,19 @@
+<div class="contents" (click)="pageParam.showRightPanel.isShown = false;pageParam.showProfilePopup = false;">
+  <div class="section section-app-status clearfix">
+  	<div class="blue-bg" [ngClass]="{'endorse-bg': pageParam.activeView==='endorse', 'subsc-bg': pageParam.activeView==='subscribe'}"></div>
+
+    <app-sd-employee-header-profile
+      [className]="'blue-active-bg'"
+      data-imgUrl="../assets/i/bench-users4.jpg"></app-sd-employee-header-profile>
+    <app-sd-notification-offline [showRightPanel]="pageParam.showRightPanel" 
+      [onlinePanel]="!(pageParam.activeView==='endorse') && !(pageParam.activeView==='subscribe')">
+    </app-sd-notification-offline>
+
+    <app-sd-content-profiles 
+      data-userRole="employee" 
+      [jsonFile]="jsonFile"
+      [pageParam]="pageParam">
+    </app-sd-content-profiles>
+  </div>
+</div>
+<!-- end .contents -->

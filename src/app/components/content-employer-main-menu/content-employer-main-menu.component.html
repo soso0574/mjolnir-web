@@ -1,0 +1,97 @@
+<div class="main-content clearfix">
+  <div class="left">
+    <div class="pic">
+      <div class="photo-bg">
+        <div class="blue-block right"></div>
+        <div class="blue-block left"></div>
+        <div class="pic-boxs">
+          <img src="{{selectedRoleItem['imgUrl']}}" alt="jpg">
+        </div>
+      </div>
+      <!-- end .photo-bg -->
+      <span class="radius top-right">{{selectedRoleItem['number']}}%</span>
+      <a href="javascript:;"
+      class="radius bottom-right" [routerLink]="['/' + userRole + '-profiles', 'edit']"><i class="icons icon-edit"></i></a>
+      <a href="javascript:;" *ngIf="!selectedRoleItem['employee']" class="radius bottom-left"
+        (click)="clickPlusIcon()">
+        <i class="icons icon-plus"></i>
+      </a>
+    </div>
+    <div class="pic-txt">
+      <span class="name">{{selectedRoleItem['title']}}</span>
+      <span class="bold-txt">{{selectedRoleItem['smallTitle']}}</span>
+    </div>
+  </div>
+  <!--end .left-->
+  <div class="rights">
+    <div class="menu-list" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+      <ul class="menu-items clearfix">
+        <li *ngFor="let item of dataList;let i = index"
+         [ngClass]="{'hide': item.selected}">
+          <a href="javascript:;" (click)="clickItem(item, i)">
+            <span class="pic">
+              <span class="photo-bg">
+                <span class="blue-block right" [ngStyle]="{'height': item.number + '%'}"></span>
+                <span class="pic-boxs">
+                  <img src="{{item.imgUrl}}" alt="jpg">
+                </span>
+              </span>
+              <!-- end .photo-bg -->
+            </span>
+            <span class="txt">
+              {{item.title}}
+             <strong>{{item.smallTitle}}</strong>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <!--end .menu-items-->
+    </div>
+    <!-- end .menu-list -->
+  </div>
+  <!--end .rights-->
+  <div class="three-item">
+    <div class="row-one">
+      <div class="item">
+        <div class="title-txt">Settings</div>
+        <a [routerLink]="['/' + userRole + '-settings']" class="blue-point">
+          <i class="icons icon-setting"></i>
+        </a>
+      </div>
+      <div class="item">
+        <div class="title-txt">activity</div>
+        <a [routerLink]="['/' + userRole + '-activity']" class="blue-point">
+          <span class="circle">
+            <i class="icons icon-activity"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="row-two">
+      <div class="item">
+        <a [routerLink]="['/' + userRole + '-offices']" class="blue-point">
+          <i class="icons icon-offices"></i>
+        </a>
+        <div class="title-txt">offices</div>
+      </div>
+    </div>
+  </div>
+  <!-- end .three-item -->
+</div>
+<!--end .main-content-->
+<ng-template #createNewModal let-c="close">
+  <div class="modal-boxs create-new-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">Create New Office</h4>
+        <a href="javascript:;" class="btn btn-white">Start from scratch</a>
+        <a href="javascript:;" class="btn btn-white">Copy this Office</a>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Back</a>
+        <a [routerLink]="['/register-frame-page', 'createBusinessProfile']" class="btn btn-no" (click)="c('Close click')">Start</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .import-profile-modal -->

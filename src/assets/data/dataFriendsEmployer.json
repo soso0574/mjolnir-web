@@ -1,0 +1,239 @@
+{
+  "friends": [
+    {
+      "imageUrl": "/assets/i/bench-users1.jpg",
+      "role": "Dental assistant",
+      "name": "Barry Newman",
+      "experience": 3
+    },
+    {
+      "imageUrl": "/assets/i/bench-users2.jpg",
+      "role": "Dental assistant",
+      "name": "Gabriel Hermanos",
+      "experience": 3
+    },
+    {
+      "imageUrl": "/assets/i/bench-users3.jpg",
+      "role": "Dental assistant",
+      "name": "Joe Hewitt",
+      "experience": 3
+    },
+    {
+      "imageUrl": "/assets/i/bench-users1.jpg",
+      "role": "Dental assistant",
+      "name": "Barry Newman",
+      "experience": 3
+    },
+    {
+      "imageUrl": "/assets/i/bench-users2.jpg",
+      "role": "Dental assistant",
+      "name": "Gabriel Hermanos",
+      "experience": 3
+    },
+    {
+      "imageUrl": "/assets/i/bench-users3.jpg",
+      "role": "Dental assistant",
+      "name": "Joe Hewitt",
+      "experience": 3
+    },
+    {
+      "imageUrl": "/assets/i/bench-users1.jpg",
+      "role": "Dental assistant",
+      "name": "Barry Newman",
+      "experience": 3
+    },
+    {
+      "imageUrl": "/assets/i/bench-users2.jpg",
+      "role": "Dental assistant",
+      "name": "Gabriel Hermanos",
+      "experience": 3
+    },
+    {
+      "imageUrl": "/assets/i/bench-users3.jpg",
+      "role": "Dental assistant",
+      "name": "Joe Hewitt",
+      "experience": 3
+    }
+  ],
+  "endordeRequest": [
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user1.jpg",
+      "name": "Jacob Moore",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Brooke",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user3.jpg",
+      "name": "Levi Pe",
+      "role": "Orthodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user4.jpg",
+      "name": "Karen Cooper",
+      "role": "Pedodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Rick Dreyfus",
+      "role": "Hygienist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Katy Miller",
+      "role": "Hygienist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user1.jpg",
+      "name": "Jacob Moore",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Brooke",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user3.jpg",
+      "name": "Levi Pe",
+      "role": "Orthodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user4.jpg",
+      "name": "Karen Cooper",
+      "role": "Pedodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Rick Dreyfus",
+      "role": "Hygienist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user6.jpg",
+      "name": "Katy Miller",
+      "role": "Hygienist"
+    }
+  ],
+  "friendRequests": [
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user1.jpg",
+      "name": "Jacob Moore",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Brooke",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user3.jpg",
+      "name": "Levi Pe",
+      "role": "Orthodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user4.jpg",
+      "name": "Karen Cooper",
+      "role": "Pedodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Rick Dreyfus",
+      "role": "Hygienist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user1.jpg",
+      "name": "Jacob Moore",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Brooke",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user3.jpg",
+      "name": "Levi Pe",
+      "role": "Orthodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user4.jpg",
+      "name": "Karen Cooper",
+      "role": "Pedodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Rick Dreyfus",
+      "role": "Hygienist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user1.jpg",
+      "name": "Jacob Moore",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user2.jpg",
+      "name": "Kylie Brooke",
+      "role": "Dentist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user3.jpg",
+      "name": "Levi Pe",
+      "role": "Orthodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user4.jpg",
+      "name": "Karen Cooper",
+      "role": "Pedodontist"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/friends-user5.jpg",
+      "name": "Rick Dreyfus",
+      "role": "Hygienist"
+    }
+  ],
+  "messages": [
+    {
+      "imageUrl": "/assets/i/activity-users/activity-user1.jpg",
+      "messages": "Hey did you read that book I recommended ?",
+      "time": "2:45 PM"
+    },
+    {
+      "imageUrl": "/assets/i/activity-users/activity-user2.jpg",
+      "messages": "How did the interview go Sir ?",
+      "time": "2:45 PM"
+    },
+    {
+      "imageUrl": "/assets/i/activity-users/activity-user3.jpg",
+      "messages": "Yes I am in the process of hiring him. Let’s see.",
+      "time": "2:45 PM"
+    },
+    {
+      "imageUrl": "/assets/i/activity-users/activity-user4.jpg",
+      "messages": "Hope all goes well . Good luck",
+      "time": "2:45 PM"
+    },
+    {
+      "imageUrl": "/assets/i/activity-users/activity-user1.jpg",
+      "messages": "Hey did you read that book I recommended ?",
+      "time": "2:45 PM"
+    },
+    {
+      "imageUrl": "/assets/i/activity-users/activity-user2.jpg",
+      "messages": "How did the interview go Sir ?",
+      "time": "2:45 PM"
+    },
+    {
+      "imageUrl": "/assets/i/activity-users/activity-user3.jpg",
+      "messages": "Yes I am in the process of hiring him. Let’s see.",
+      "time": "2:45 PM"
+    },
+    {
+      "imageUrl": "/assets/i/activity-users/activity-user4.jpg",
+      "messages": "Hope all goes well . Good luck",
+      "time": "2:45 PM"
+    }
+  ]
+}

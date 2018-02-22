@@ -168,6 +168,8 @@ body {
     background: #fff;
     height: 100%;
     min-height: 100%;
+}
+.contents {
     min-width: 1259px;
 }
 input,
@@ -843,7 +845,7 @@ a:hover {
 .icons3 {
   display: block;
   background: url("./assets/i/icon@3.png") no-repeat;
-  background-size: 375px 500px;
+  background-size: 375px auto;
 }
 
 /* heading-lable-count */

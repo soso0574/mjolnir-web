@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HeaderLandingComponent } from './header-landing/header-landing.component';
-import { HeaderProfileComponent } from './header-profile/header-profile.component';
+import { EmployerHeaderProfileComponent } from './employer-header-profile/employer-header-profile.component';
+import { EmployeeHeaderProfileComponent } from './employee-header-profile/employee-header-profile.component';
 import { DataListService } from './data-list/data-list.service';
 
 /**
@@ -14,8 +15,15 @@ import { DataListService } from './data-list/data-list.service';
 
 @NgModule({
   imports: [CommonModule, FormsModule, RouterModule, NgbModule.forRoot()],
-  declarations: [HeaderLandingComponent, HeaderProfileComponent],
-  exports: [HeaderLandingComponent, HeaderProfileComponent,
+  declarations: [
+                 HeaderLandingComponent,
+                 EmployerHeaderProfileComponent,
+                 EmployeeHeaderProfileComponent
+                ],
+  exports: [
+            HeaderLandingComponent,
+            EmployerHeaderProfileComponent,
+            EmployeeHeaderProfileComponent,
             CommonModule, FormsModule, RouterModule]
 })
 export class SharedModule {

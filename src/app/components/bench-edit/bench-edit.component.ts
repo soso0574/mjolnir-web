@@ -8,6 +8,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./bench-edit.component.scss']
 })
 export class BenchEditComponent implements OnInit, AfterViewInit, OnDestroy {
+  @Input() userRole: string;
   @Input() data: any;
   @Output() onBack = new EventEmitter();
   today = new Date();

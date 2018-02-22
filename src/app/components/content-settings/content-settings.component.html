@@ -1,0 +1,320 @@
+<div class="main-content">
+  <ng-container *ngIf="settingsList">
+    <div class="setting-content">
+      <div class="header-setting">
+        <a [routerLink]="['/' + userRole + '-main-menu']" class="back-icon"></a>
+        <div class="setting-title">
+          <span class="setting-icon icons3"></span>
+          <span class="head-setting-title">SETTINGS</span>
+        </div>
+      </div>
+      <!-- .header setting -->
+      <div class="setting-list">
+        <div class="setting-list-content">
+          <div class="setting-list-detail" [class.active]="panels.notifyPanel">
+            <a href="javascript:;" class="notification-heading" (click)="expandCollapse('notifyPanel',!panels.notifyPanel)">
+              <span class="notification-icon icons3"></span>
+              <span class="setting-list-txt">Notifications</span>
+            </a>
+            <div class="notifiy-inner-content setting-inner-content">
+              <ul>
+                <li *ngFor="let notify of settingsList['notifications']">
+                  <span class="notifiy-inner-txt">{{notify.label}}</span>
+                  <label class="custom-checkbox" (click)="$event.stopPropagation();">
+                    <input type="checkbox" class="ios-switch" [checked]="notify.value">
+                    <div class="checkbox-round">
+                      <div class="check-ball"></div>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="setting-list-detail input-box email-setting-box" [class.active]="panels.emailPanel">
+            <a href="javascript:;" class="notification-heading" (click)="expandCollapse('emailPanel',!panels.emailPanel)">
+              <span class="email-icon icons3"></span>
+              <span class="setting-list-txt">Email Address</span>
+            </a>
+            <div class="setting-inner-content email-inner-content">
+              <a href="javascript:;" class="save-btn" (click)="openModal(emailModal);">SAVE</a>
+              <div class="email-form">
+                <span>Current Email Address</span>
+                <input type="email" [placeholder]="settingsList['email'].current">
+              </div>
+              <div class="email-form">
+                <span>New Email Address</span>
+                <input type="email" [placeholder]="settingsList['email'].new">
+              </div>
+            </div>
+          </div>
+          <div class="setting-list-detail input-box" [class.active]="panels.passwordPanel">
+            <a href="javascript:;" class="notification-heading" (click)="expandCollapse('passwordPanel',!panels.passwordPanel)">
+              <span class="psd-icon icons3"></span>
+              <span class="setting-list-txt">Password</span>
+            </a>
+            <div class="setting-inner-content password-inner-content">
+              <a href="javascript:;" class="save-btn" (click)="openModal(passwordModal);">SAVE</a>
+              <div class="psd-form">
+                <span>Current Password</span>
+                <input type="password" [placeholder]="settingsList['password'].current">
+              </div>
+              <div class="psd-form">
+                <span>New Password</span>
+                <input type="password" [placeholder]="settingsList['password'].new">
+              </div>
+            </div>
+          </div>
+          <div class="setting-list-detail" [class.active]="panels.purchasePanel">
+            <a href="javascript:;" class="notification-heading" (click)="expandCollapse('purchasePanel',!panels.purchasePanel)">
+              <span class="purchase-icon icons3"></span>
+              <span class="setting-list-txt">Purchases</span>
+            </a>
+            <div class="setting-inner-content purchase-inner-content">
+              <ul>
+                <li>
+                  <span class="left-txt">Subscription ID</span>
+                </li>
+                <li *ngFor="let purchase of settingsList['purchase']">
+                  <span class="left-txt">{{purchase.label}}</span>
+                  <span class="right-txt">{{purchase.value}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="setting-list-content">
+          <div class="setting-list-detail">
+            <a href="javascript:;" class="notification-heading" (click)="openModal(helpModal)">
+              <span class="help-icon icons3"></span>
+              <span class="setting-list-txt">Help</span>
+            </a>
+          </div>
+          <div class="setting-list-detail">
+            <a href="javascript:;" class="notification-heading" (click)="openModal(contactModal)">
+              <span class="contact-icon icons3"></span>
+              <span class="setting-list-txt">Contact Us</span>
+            </a>
+          </div>
+          <div class="setting-list-detail" [class.active]="panels.legalPanel">
+            <a href="javascript:;" class="notification-heading" (click)="expandCollapse('legalPanel',!panels.legalPanel)">
+              <span class="legal-icon icons3"></span>
+              <span class="setting-list-txt">Legal</span>
+            </a>
+            <div class="legal-inner-content setting-inner-content">
+              <a href="javascript:;" class="legal-content">
+                <span class="legal-txt">Privacy Policy</span>
+                <span class="next-icon icons3"></span>
+              </a>
+            </div>
+            <div class="legal-inner-content setting-inner-content">
+              <a href="javascript:;" class="legal-content">
+                <span class="legal-txt">Terms of Use</span>
+                <span class="next-icon icons3"></span>
+              </a>
+            </div>
+            <div class="legal-inner-content setting-inner-content">
+              <a href="javascript:;" class="legal-content">
+                <span class="legal-txt">Licenses</span>
+                <span class="next-icon icons3"></span>
+              </a>
+            </div>
+          </div>
+          <div class="setting-list-detail">
+            <a href="javascript:;" class="notification-heading" (click)="openModal(suggestionModal)">
+              <span class="suggestion-icon icons3"></span>
+              <span class="setting-list-txt">Make a Suggestion</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- end .setting-list -->
+      <div class="share-one-dental">
+        <a href="javascript:;" (click)="openModal(shareModal, 'share-model');">
+          <span class="share-icon icons3"></span>
+          <span class="share-txt">Share One Dental Match</span>
+        </a>
+        <span class="share-logo-icon icons3"></span>
+      </div>
+      <!-- end .share-one-dental -->
+    </div>
+  </ng-container>
+</div>
+<!--end .main-content-->
+
+<ng-template #shareModal let-c="close">
+  <div class="modal-boxs share-model">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <div class="share-one-wrapper">
+          <div class="share-user">
+            <span class="app-txt">Click to share app</span>
+            <div class="share-user-list">
+              <ul>
+                <li>
+                  <a href="javascript:;">
+                    <span class="user-view">RP</span>
+                    <span class="user-name">Rob Paul</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="user-view">PG</span>
+                    <span class="user-name">Peter Gould</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="share-app-list">
+              <ul>
+                <li>
+                  <a href="javascript:;">
+                    <span class="msg-icon icons2"></span>
+                    <span class="share-name">iMessage</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="mail-icon icons2"></span>
+                    <span class="share-name">Mail</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="twitter-icon icons2"></span>
+                    <span class="share-name">Twitter</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="fb-icon icons2"></span>
+                    <span class="share-name">Facebook</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="cancel-btn" (click)="c('Close click')">Cancel</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .Share modal -->
+
+<ng-template #emailModal let-c="close">
+  <div class="modal-boxs email-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-i"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <p>
+          Email Saved Successfully
+        </p>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green"
+        (click)="c('Close click');expandCollapse('emailPanel',!panels.emailPanel);"
+      >OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .Email success modal -->
+
+<ng-template #passwordModal let-c="close">
+  <div class="modal-boxs password-modal">
+    <div class="modal-inner">
+      <div class="modal-title">
+        <span class="circle">
+          <i class="icons icon-i"></i>
+        </span>
+      </div>
+      <div class="modal-info">
+        <p>
+          Password Saved Successfully
+        </p>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-green"
+        (click)="c('Close click');expandCollapse('passwordPanel',!panels.passwordPanel);"
+      >OK</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .waring-modal -->
+
+<ng-template  #helpModal let-c="close" let-d="dismiss">
+  <div class="modal-boxs help-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">How can we help you ?</h4>
+        <div class="email-address">
+          <input type="email" placeholder="Your Email Address" >
+        </div>
+        <div class="description">
+          <textarea placeholder="Please provide a description of your query."></textarea>
+        </div>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Back</a>
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .HeLp modal -->
+
+<ng-template #contactModal let-c="close" let-d="dismiss">
+  <div class="modal-boxs contact-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">Contact Us ?</h4>
+        <div class="email-address">
+          <input type="text" placeholder="What is this regarding ?" >
+        </div>
+        <div class="email-address">
+          <input type="email" placeholder="Your Email Address" >
+        </div>
+        <div class="description">
+          <textarea placeholder="Please provide a description of your query."></textarea>
+        </div>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Back</a>
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .Contact modal -->
+
+<ng-template #suggestionModal let-c="close" let-d="dismiss">
+  <div class="modal-boxs suggestion-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">Make a suggestion ?</h4>
+        <p class="suggest-txt">We are always looking for ways to make your experience better. Please let us know how to best do that</p>
+        <div class="email-address">
+          <input type="text" placeholder="What is this regarding ?" >
+        </div>
+        <div class="email-address">
+          <input type="email" placeholder="Your Email Address" >
+        </div>
+        <div class="description">
+          <textarea placeholder="Please provide a description of your query."></textarea>
+        </div>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Back</a>
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .Suggestion modal -->

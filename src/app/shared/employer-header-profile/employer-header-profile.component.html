@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="lefts">
+    <a href="javascript:;" class="logo-boxs">
+      <span class="white txt">One Dental</span>
+      <span class="blue txt">Match</span>
+    </a>
+  </div>
+  <!-- end .lefts -->
+  <nav class="center" [ngClass]="className">
+    <a [routerLink]="['/employer-main-menu']" class="btn-two" routerLinkActive="current">
+      <i class="icons icon-two"></i>
+    </a>
+    <a routerLink="/employer-friends" routerLinkActive="current" class="btn btn-link">friends</a>
+    <a routerLink="/employer-profiles" routerLinkActive="current" class="btn btn-link">profiles</a>
+    <a routerLink="/employer-benches" routerLinkActive="current" class="btn btn-link">benches</a>
+    <a [routerLink]="['/employer-search']" class="btn-two btn-search" routerLinkActive="current">
+      <i class="icons icon-search"></i>
+    </a>
+  </nav>
+  <!-- end .center -->
+  <div class="rights">
+	  <div class="txt-area">
+      <span class="txt op77">Office Administrator</span>
+      <span class="txt">Musk Hospital</span>
+	  </div>
+	  <a href="javascript:;" class="btn-img">
+	    <span class="blue-block right"></span>
+	    <span class="blue-block bottom"></span>
+	    <img src="{{imgUrl}}" alt="photo">
+	  </a>
+  </div>
+</header>

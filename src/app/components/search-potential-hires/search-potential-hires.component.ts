@@ -1,18 +1,48 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy, ViewChild } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-search-potential-hires',
   templateUrl: './search-potential-hires.component.html',
   styleUrls: ['./search-potential-hires.component.scss']
 })
-export class SearchPotentialHiresComponent implements OnInit {
+export class SearchPotentialHiresComponent implements OnInit, OnDestroy {
+  @Input() userRole: string;
   @Input() dropdown: any;
   @Output() filter = new EventEmitter();
   sugguestList = [];
   locationDrop = '';
-  constructor() { }
+  filterName = '';
+
+  @ViewChild('saveFilterModal') saveFilterModal: any;
+  saveFilterModalRef: NgbModalRef;
+
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+  }
+
+  /**
+   * OnDestroy
+   */
+  ngOnDestroy() {
+    if (this.saveFilterModalRef !== undefined) {
+      this.saveFilterModalRef.close();
+    }
+  }
+
+  // openModalWindow
+  openModalWindow(modalId) {
+    const modalRef = this.modalService.open(modalId);
+    modalRef.result.then((result) => {
+    }, (reason) => {
+    });
+    return modalRef;
+  }
+
+  // click Save Filter button
+  clickSaveFilter() {
+    this.saveFilterModalRef = this.openModalWindow(this.saveFilterModal);
   }
 
   selectFilter(filter: string) {

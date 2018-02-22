@@ -1,0 +1,293 @@
+<div class="employer-profile-container" *ngIf="editDatas">
+  <div class="employer-slider-section">
+    <ngb-carousel #caruosels>
+      <ng-template ngbSlide *ngFor="let img of editDatas['banners']">
+        <div class="employer-slider-main">
+          <div class="slider-items-employer">
+            <img [src]="img" alt="">
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <div class="slider-btns">
+      <a href="javascript:;" class="icons3 prev-icon" (click)="caruosels.prev()"></a>
+      <a href="javascript:;" class="icons3 next-icon" (click)="caruosels.next()"></a>
+    </div>
+  </div>
+  <!-- end .slider section -->
+  <div class="profile-information-main">
+    <div class="employer-profile-overview profile-detail-sections">
+      <div class="industry-detail-name">
+        <span class="txt">{{editDatas['hospital'].name}}</span>
+        <span class="icons3 badge-icon"></span>
+      </div>
+      <div class="industry-category-name">
+        {{editDatas['hospital'].category}}
+      </div>
+      <div class="industry-location">
+        <span class="icons3 location-icon"></span>
+        <span class="txt">{{editDatas['hospital'].location}}</span>
+      </div>
+      <div class="industry-work-time">
+        <span class="icons3 time-icon"></span>
+        <span class="txt">{{editDatas['hospital'].working}}</span>
+      </div>
+      <div class="industry-description">
+        <span class="txt">{{editDatas['hospital'].description}}</span>
+      </div>
+    </div>
+    <!-- end .employer-profile-overview -->
+    
+    <div class="employment-history-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 employment-icon"></span>
+        <span class="title-txt">Employment History</span>
+      </div>
+      <div class="employment-history-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['employmentHistory']">
+            <div class="tech-list-content">
+              <span class="icons3 list-point-icon"></span>
+              <div class="title-bar">
+                <div class="title-name">{{item.name}}</div>
+                <div class="bottom-txt">{{item.role}}</div>
+              </div>
+              <div class="date">{{item.startYear}}-{{item.endYear}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    <div class="education-history-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 education-icon"></span>
+        <span class="title-txt">Education History</span>
+      </div>
+      <div class="education-history-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['educationHistory']">
+            <div class="tech-list-content">
+              <span class="icons3 list-point-icon"></span>
+              <div class="title-bar">
+                <div class="title-name">{{item.name}}</div>
+                <div class="bottom-txt">{{item.role}}</div>
+              </div>
+              <div class="date">{{item.startYear}}-{{item.endYear}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    
+    <div class="external-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 review-icon"></span>
+        <span class="title-txt">ENDORSEMENTS</span>
+      </div>
+      <div class="external-section-content">
+        <a href="javascript:;" class="photo-item" *ngFor="let item of editDatas['endrose'] | slice:0:7">
+          <img [src]="item.imageUrl" alt="">
+        </a>
+        <a href="javascript:;" class="photo-item count-remains">+ {{editDatas['endrose'].length - 7}}</a>
+      </div>
+    </div>
+    <!-- end .ENDORSEMENTS-section -->
+    
+    <div class="recent-review-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 review-icon"></span>
+        <span class="title-txt">RECENT REVIEWS</span>
+      </div>
+      <div class="recentreview-section-content">
+        <div class="endoresment-box" *ngFor="let item of editDatas['recent']">
+          <div class="endoresment-box-user">
+            <img [src]="item.imageUrl" alt="">
+            <span class="online-icon"></span>
+            <div class="user-detail">
+              <a href="javascript:;" class="user-name">{{item.name}}</a>
+              <span class="user-work">{{item.role}}</span>
+            </div>
+          </div>
+          <div class="endoresment-msg">
+            <span class="icons3 arrow-msg"></span>
+            <p>{{item.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end .recent-review-section -->
+    
+    <div class="practice-managenent-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 tech-icon"></span>
+        <span class="title-txt">Practice Managenent Software I Know</span>
+      </div>
+      <div class="practice-managenent-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['practice-managenent']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    <div class="my-dental-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 tech-icon"></span>
+        <span class="title-txt">My Dental Technology Skills</span>
+      </div>
+      <div class="my-dental-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['my-dental']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    <div class="other-software-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 tech-icon"></span>
+        <span class="title-txt">Other Software Skills I Know And Use</span>
+      </div>
+      <div class="other-software-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['other-software']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    <div class="general-dental-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 info-icon"></span>
+        <span class="title-txt">General Dental Skills I Know And Use</span>
+      </div>
+      <div class="general-dental-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['general-dental']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    <div class="administrative-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 info-icon"></span>
+        <span class="title-txt">Administrative Skills I Have And Excel</span>
+      </div>
+      <div class="administrative-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['administrative']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- end .technology-section -->
+    
+    <div class="dental-philosophies-section profile-detail-sections">
+      <div class="profile-section-header">
+        <span class="icons3 info-icon"></span>
+        <span class="title-txt">Dental Philosophies I Have Studied</span>
+      </div>
+      <div class="dental-philosophies-content">
+        <div class="tech-list-main">
+          <ng-container *ngFor="let item of editDatas['dental-philosophies']">
+            <div class="tech-list-content" *ngIf="item.checked">
+              <span class="icons3 list-point-icon"></span>
+              <div class="tech-name">{{item.label}}</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <a href="javascript:;" class="icons3 share-icon" (click)="openModal(shareModal, 'static', 'share-model');"></a>
+    </div>
+    <!-- end .position-section -->
+  </div>
+  <!-- end .profile-information-main section -->
+
+  <!-- Modal -->
+  <ng-template #shareModal let-c="close">
+    <div class="modal-boxs share-model">
+      <div class="modal-inner">
+        <div class="modal-info">
+          <div class="share-one-wrapper">
+            <div class="share-user">
+              <span class="app-txt">Click to share app</span>
+              <div class="share-user-list">
+                <ul>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="user-view">RP</span>
+                      <span class="user-name">Rob Paul</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="user-view">PG</span>
+                      <span class="user-name">Peter Gould</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="share-app-list">
+                <ul>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="msg-icon icons2"></span>
+                      <span class="share-name">iMessage</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="mail-icon icons2"></span>
+                      <span class="share-name">Mail</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="twitter-icon icons2"></span>
+                      <span class="share-name">Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <span class="fb-icon icons2"></span>
+                      <span class="share-name">Facebook</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-btn">
+          <a href="javascript:;" class="cancel-btn" (click)="c('Close click'); closeModal();">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <!-- end .share modal -->
+
+</div>
+<!-- end .Employer Profile -->

@@ -100,7 +100,7 @@ export class CreateBusinessAccountComponent implements OnInit, OnDestroy {
 
   // go to Profile page
   goToProfile() {
-    this.router.navigate(['/profiles']);
+    this.router.navigate(['/employer-profiles']);
   }
 
   // focus on input

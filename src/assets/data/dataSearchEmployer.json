@@ -1,0 +1,1031 @@
+{
+  "frGallery": [
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Lyanna Stark",
+      "role": "Dental Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends2.jpg",
+      "name": "Sophie Pereira",
+      "role": "Hygienist, TX"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends2.jpg",
+      "name": "Sophie Pereira",
+      "role": "Hygienist, TX"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends3.jpg",
+      "name": "Harry Aldrin",
+      "role": "Clinician, NJ"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends4.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends5.jpg",
+      "name": "Harry Aldrin",
+      "role": "Clinician, NJ"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends6.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Lyanna Stark",
+      "role": "Dental Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends2.jpg",
+      "name": "Sophie Pereira",
+      "role": "Hygienist, TX"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends2.jpg",
+      "name": "Sophie Pereira",
+      "role": "Hygienist, TX"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends3.jpg",
+      "name": "Harry Aldrin",
+      "role": "Clinician, NJ"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends4.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends5.jpg",
+      "name": "Harry Aldrin",
+      "role": "Clinician, NJ"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends6.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    }
+  ],
+  "potentialGallery": [
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Lyanna Stark",
+      "role": "Dental Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends4.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends5.jpg",
+      "name": "Harry Aldrin",
+      "role": "Clinician, NJ"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends6.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends2.jpg",
+      "name": "Sophie Pereira",
+      "role": "Hygienist, TX"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends2.jpg",
+      "name": "Sophie Pereira",
+      "role": "Hygienist, TX"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends3.jpg",
+      "name": "Harry Aldrin",
+      "role": "Clinician, NJ"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Lyanna Stark",
+      "role": "Dental Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends2.jpg",
+      "name": "Sophie Pereira",
+      "role": "Hygienist, TX"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Lyanna Stark",
+      "role": "Dental Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends2.jpg",
+      "name": "Sophie Pereira",
+      "role": "Hygienist, TX"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends3.jpg",
+      "name": "Harry Aldrin",
+      "role": "Clinician, NJ"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends4.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends5.jpg",
+      "name": "Harry Aldrin",
+      "role": "Clinician, NJ"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends6.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    },
+    {
+      "imageUrl": "/assets/i/friends-users/search-friends1.jpg",
+      "name": "Evelyn Carter",
+      "role": "Hygienist, CA"
+    }
+  ],
+  "generalInfo": {
+    "language": [
+      {
+        "label": "American Sign Language",
+        "checked": false
+      },
+      {
+        "label": "Arabic",
+        "checked": false
+      },
+      {
+        "label": "English",
+        "checked": false
+      },
+      {
+        "label": "Chinese (Cantonese)",
+        "checked": false
+      },
+      {
+        "label": "Chinese (Mandarin)",
+        "checked": false
+      },
+      {
+        "label": "French",
+        "checked": false
+      },
+      {
+        "label": "French (Creole)",
+        "checked": false
+      },
+      {
+        "label": "German",
+        "checked": false
+      },
+      {
+        "label": "Italian",
+        "checked": false
+      },
+      {
+        "label": "Russian",
+        "checked": false
+      },
+      {
+        "label": "Spanish",
+        "checked": false
+      },
+      {
+        "label": "Tagalog",
+        "checked": false
+      },
+      {
+        "label": "Vietnamese",
+        "checked": false
+      }
+    ],
+    "workAvailbaility": [
+      {
+        "label": "Part Time",
+        "checked": false
+      },
+      {
+        "label": "Full Time",
+        "checked": false
+      },
+      {
+        "label": "Temporary",
+        "checked": false
+      },
+      {
+        "label": "Fill in",
+        "checked": false
+      }
+    ],
+    "days": [
+      {
+        "label": "Monday",
+        "checked": false
+      },
+      {
+        "label": "Tuesday",
+        "checked": false
+      },
+      {
+        "label": "Wednesday",
+        "checked": false
+      },
+      {
+        "label": "Thursday",
+        "checked": false
+      },
+      {
+        "label": "Friday",
+        "checked": false
+      },
+      {
+        "label": "Saturday",
+        "checked": false
+      },
+      {
+        "label": "Sunday",
+        "checked": false
+      }
+    ]
+  },
+  "techSoft": {
+    "practice": [
+      {
+        "label": "Ace Dental",
+        "checked": false
+      },
+      {
+        "label": "ADSTRA",
+        "checked": false
+      },
+      {
+        "label": "Alex Dental",
+        "checked": false
+      },
+      {
+        "label": "Carestream Dental",
+        "checked": false
+      },
+      {
+        "label": "Curve Dental",
+        "checked": false
+      },
+      {
+        "label": "Datacon",
+        "checked": false
+      },
+      {
+        "label": "Dental Plus+",
+        "checked": false
+      },
+      {
+        "label": "Denton",
+        "checked": false
+      },
+      {
+        "label": "Dentimax",
+        "checked": false
+      },
+      {
+        "label": "Dentrix",
+        "checked": false
+      },
+      {
+        "label": "Dentrix Ascend",
+        "checked": false
+      },
+      {
+        "label": "Dentsoft",
+        "checked": false
+      },
+      {
+        "label": "Dovetail",
+        "checked": false
+      },
+      {
+        "label": "EasyDental",
+        "checked": false
+      },
+      {
+        "label": "iDentalSoft",
+        "checked": false
+      },
+      {
+        "label": "MacPractice",
+        "checked": false
+      },
+      {
+        "label": "MaxiDent",
+        "checked": false
+      },
+      {
+        "label": "MOGO",
+        "checked": false
+      },
+      {
+        "label": "OpenDental",
+        "checked": false
+      },
+      {
+        "label": "PracticeWeb",
+        "checked": false
+      },
+      {
+        "label": "Tab32",
+        "checked": false
+      },
+      {
+        "label": "Umber DentalCare",
+        "checked": false
+      }
+    ],
+    "skills": [
+      {
+        "label": "Aptery Imaging",
+        "checked": false
+      },
+      {
+        "label": "Blue Sky Plan",
+        "checked": false
+      },
+      {
+        "label": "CAD/CAM",
+        "checked": false
+      },
+      {
+        "label": "Cerec",
+        "checked": false
+      },
+      {
+        "label": "CAESY",
+        "checked": false
+      },
+      {
+        "label": "Dental Vision",
+        "checked": false
+      },
+      {
+        "label": "Dolphin Imaging Plus",
+        "checked": false
+      },
+      {
+        "label": "Edge Imaging",
+        "checked": false
+      },
+      {
+        "label": "E4D",
+        "checked": false
+      },
+      {
+        "label": "Gendex",
+        "checked": false
+      },
+      {
+        "label": "ImageXL",
+        "checked": false
+      },
+      {
+        "label": "Invivo",
+        "checked": false
+      },
+      {
+        "label": "Kodak",
+        "checked": false
+      },
+      {
+        "label": "MediaSuite Digital Imaging",
+        "checked": false
+      },
+      {
+        "label": "Microsoft Office",
+        "checked": false
+      },
+      {
+        "label": "Open Dental",
+        "checked": false
+      },
+      {
+        "label": "Orthotrac",
+        "checked": false
+      },
+      {
+        "label": "Planmeca Romexis",
+        "checked": false
+      },
+      {
+        "label": "Practice Works",
+        "checked": false
+      },
+      {
+        "label": "Prof Suni",
+        "checked": false
+      },
+      {
+        "label": "QSI Dental",
+        "checked": false
+      },
+      {
+        "label": "Total Dental",
+        "checked": false
+      },
+      {
+        "label": "Vixwin",
+        "checked": false
+      },
+      {
+        "label": "Windent Software",
+        "checked": false
+      }
+    ],
+    "other": [
+      {
+        "label": "CAESY",
+        "checked": false
+      },
+      {
+        "label": "CAD/CAM Restorations",
+        "checked": false
+      },
+      {
+        "label": "CBCT (Cone Beam)",
+        "checked": false
+      },
+      {
+        "label": "Digital Radiography/X-Rays (Sensor)",
+        "checked": false
+      },
+      {
+        "label": "Intraoral Camera",
+        "checked": false
+      },
+      {
+        "label": "Manual Radiography/X-Rays (Film)",
+        "checked": false
+      },
+      {
+        "label": "ScanX (Phosphor Plates)",
+        "checked": false
+      }
+    ]
+  },
+  "pt": {
+    "lists": [
+      {
+        "label": "AACD",
+        "checked": false
+      },
+      {
+        "label": "AADSM",
+        "checked": false
+      },
+      {
+        "label": "ACE",
+        "checked": false
+      },
+      {
+        "label": "AIE",
+        "checked": false
+      },
+      {
+        "label": "AOS",
+        "checked": false
+      },
+      {
+        "label": "Cerec Doctors",
+        "checked": false
+      },
+      {
+        "label": "Dawson Academy",
+        "checked": false
+      },
+      {
+        "label": "Fixed Prosthodontics",
+        "checked": false
+      },
+      {
+        "label": "ICOI",
+        "checked": false
+      },
+      {
+        "label": "Implants",
+        "checked": false
+      },
+      {
+        "label": "invisalign",
+        "checked": false
+      },
+      {
+        "label": "Kois",
+        "checked": false
+      },
+      {
+        "label": "Misch",
+        "checked": false
+      },
+      {
+        "label": "Lasers",
+        "checked": false
+      },
+      {
+        "label": "LVI",
+        "checked": false
+      },
+      {
+        "label": "Orthodontics",
+        "checked": false
+      },
+      {
+        "label": "Pankey",
+        "checked": false
+      },
+      {
+        "label": "Spear",
+        "checked": false
+      },
+      {
+        "label": "Six Month Smiles",
+        "checked": false
+      }
+    ]
+  },
+  "og": {
+    "admSkill": [
+      {
+        "label": "AnsweringPhones",
+        "checked": false
+      },
+      {
+        "label": "Billing",
+        "checked": false
+      },
+      {
+        "label": "Care Credit(Add)",
+        "checked": false
+      },
+      {
+        "label": "Collections/Accounts Receivable",
+        "checked": false
+      },
+      {
+        "label": "Communication Skills",
+        "checked": false
+      },
+      {
+        "label": "Customer Service",
+        "checked": false
+      },
+      {
+        "label": "Dental Charting",
+        "checked": false
+      },
+      {
+        "label": "Digital Marketing",
+        "labelSub": "(Facebook,Instagram etc.)",
+        "checked": false
+      },
+      {
+        "label": "File Maintenance",
+        "checked": false
+      },{
+        "label": "Insurance Billing",
+        "checked": false
+      },
+      {
+        "label": "Insurance Verification",
+        "checked": false
+      },
+      {
+        "label": "Marketing Online",
+        "checked": false
+      },
+      {
+        "label": "Office Management",
+        "checked": false
+      },
+      {
+        "label": "Ordering Supplies",
+        "checked": false
+      },
+      {
+        "label": "Patient Education",
+        "checked": false
+      },
+      {
+        "label": "Patient Recall",
+        "checked": false
+      },
+      {
+        "label": "Patient Reactivation",
+        "checked": false
+      },
+      {
+        "label": "Patient Records",
+        "checked": false
+      },
+      {
+        "label": "Payroll",
+        "checked": false
+      },
+      {
+        "label": "Reception",
+        "checked": false
+      },
+      {
+        "label": "Sales",
+        "checked": false
+      },
+      {
+        "label": "Scheduling",
+        "checked": false
+      },
+      {
+        "label": "Treatment Planning",
+        "checked": false
+      },
+      {
+        "label": "Typing",
+        "checked": false
+      }
+    ],
+    "gs": [
+      {
+        "label": "Alveoloplasty",
+        "checked": false
+      },
+      {
+        "label": "Amalgam Restorations",
+        "checked": false
+      },
+      {
+        "label": "Arestin Therapy",
+        "checked": false
+      },
+      {
+        "label": "Blingual",
+        "checked": false
+      },
+      {
+        "label": "Bleaching",
+        "checked": false
+      },
+      {
+        "label": "Bone Grafting",
+        "checked": false
+      },
+      {
+        "label": "Dental Charting",
+        "checked": false
+      },
+      {
+        "label": "Bridges",
+        "checked": false
+      },
+      {
+        "label": "Calculus Removal",
+        "checked": false
+      },
+      {
+        "label": "Composite Restorations",
+        "checked": false
+      },
+      {
+        "label": "Cosmetic Denstistry",
+        "checked": false
+      },
+      {
+        "label": "CPR Certified",
+        "checked": false
+      },
+      {
+        "label": "Crowns",
+        "checked": false
+      },
+      {
+        "label": "Dental Charting",
+        "checked": false
+      },
+      {
+        "label": "Dentrix",
+        "checked": false
+      },
+      {
+        "label": "Dentures",
+        "checked": false
+      },
+      {
+        "label": "Endodontics",
+        "checked": false
+      },
+      {
+        "label": "Extractions",
+        "checked": false
+      },
+      {
+        "label": "File Maintenance",
+        "checked": false
+      },
+      {
+        "label": "Four Handed DDentistry",
+        "checked": false
+      },
+      {
+        "label": "General Dentistry",
+        "checked": false
+      },
+      {
+        "label": "Implant Restoration",
+        "checked": false
+      },
+      {
+        "label": "IV Sedation",
+        "checked": false
+      },
+      {
+        "label": "Local Anesthesia",
+        "checked": false
+      },
+      {
+        "label": "Operative Dentistry",
+        "checked": false
+      },
+      {
+        "label": "Oral Cancer Screening",
+        "checked": false
+      },
+      {
+        "label": "Oral Hygiene Instruction",
+        "checked": false
+      },
+      {
+        "label": "Oral Pathology Screening",
+        "checked": false
+      },
+      {
+        "label": "Oral Surgery",
+        "checked": false
+      },
+      {
+        "label": "Osseodensification",
+        "labelSub": "(Versah Densah Burs)",
+        "checked": false
+      },
+      {
+        "label": "Pediatric Dentistry",
+        "checked": false
+      },
+      {
+        "label": "Pediatric Dental Assisting",
+        "checked": false
+      },
+      {
+        "label": "Periodontal Treatment",
+        "checked": false
+      },
+      {
+        "label": "Phlebotomy",
+        "checked": false
+      },
+      {
+        "label": "Pit and Fissure sealants",
+        "checked": false
+      },
+      {
+        "label": "PRF - Strick Bone",
+        "checked": false
+      },
+      {
+        "label": "Prophylaxis",
+        "checked": false
+      },
+      {
+        "label": "Restorative Dentistry",
+        "checked": false
+      },
+      {
+        "label": "Restorating Implants",
+        "checked": false
+      },
+      {
+        "label": "Root Canal Therapy",
+        "checked": false
+      },
+      {
+        "label": "Rotary Endodontics",
+        "checked": false
+      },
+      {
+        "label": "Scarling and Root Planning",
+        "checked": false
+      },
+      {
+        "label": "Sleep Apnea",
+        "checked": false
+      },
+      {
+        "label": "Smart Dentin Grinder",
+        "checked": false
+      },
+      {
+        "label": "Sterile Procedures",
+        "checked": false
+      },
+      {
+        "label": "Sterilization",
+        "checked": false
+      },
+      {
+        "label": "Surgical Extractions",
+        "checked": false
+      },
+      {
+        "label": "TMJ Disorders",
+        "checked": false
+      },
+      {
+        "label": "Treatment Planning",
+        "checked": false
+      },
+      {
+        "label": "Vital Signs Monitoring",
+        "checked": false
+      },
+      {
+        "label": "Zoom Whitening",
+        "checked": false
+      }
+    ]
+  },
+  "savedFilters": [
+    {
+      "name": "Ond"
+    },
+    {
+      "name": "Two"
+    },
+    {
+      "name": "Swedish speaking front desk"
+    },
+    {
+      "name": "Namer"
+    },
+    {
+      "name": "Test Filter 1"
+    },
+    {
+      "name": "New 1"
+    }
+  ],
+  "dropdownsFr": {
+    "yearsDropdown": {
+      "selected": "4 Years",
+      "options": [
+        "1 Year", "2 Years", "3 Years", "4 Years", "5 Years", "6 Years", "7 Years",
+        "8 Years", "9 Years", "10 Years +"
+      ]
+    },
+    "roleDropdown": {
+      "selected": "Periodontist",
+      "options": [
+        "Periodontist", "Hygienist", "Orthodontist"
+      ]
+    },
+    "roleLookingForDropdown": {
+      "selected": "Hygienist",
+      "options": [
+        "Periodontist", "Hygienist", "Orthodontist"
+      ]
+    },
+    "locationDropdown": {
+      "selected": "Dallas, TX",
+      "locations": [
+        {
+          "place": "Dallas, TX",
+          "zip": "001"
+        },
+        {
+          "place": "Dental Hygienist, CA",
+          "zip": "002"
+        },
+        {
+          "place": "Clinician, NJ",
+          "zip": "003"
+        },
+        {
+          "place": "Angelas, City",
+          "zip": "604"
+        },
+        {
+          "place": "NewYork, CA",
+          "zip": "750"
+        },
+        {
+          "place": "Chennai",
+          "zip": "626"
+        }
+      ]
+    },
+    "milesDropdown": {
+      "selected": "25 miles",
+      "options": [
+        "5 miles", "10 miles", "25 miles", "50 miles", "100 miles", "200 miles"
+      ]
+    },
+    "monthDropdown": {
+      "selected": "last month",
+      "options": [
+        "1 day", "1 week", "1 month", "1 year"
+      ]
+    }
+  },
+  "dropdownsPotential": {
+    "yearsDropdown": {
+      "selected": "4 Years",
+      "options": [
+        "1 Year", "2 Years", "3 Years", "4 Years", "5 Years", "6 Years", "7 Years",
+        "8 Years", "9 Years", "10 Years", "10 Years +"
+      ]
+    },
+    "roleDropdown": {
+      "selected": "Periodontist",
+      "options": [
+        "Periodontist", "Hygienist", "Orthodontist"
+      ]
+    },
+    "roleLookingForDropdown": {
+      "selected": "Hygienist",
+      "options": [
+        "Periodontist", "Hygienist", "Orthodontist"
+      ]
+    },
+    "locationDropdown": {
+      "selected": "Dallas, TX",
+      "locations": [
+        {
+          "place": "Dallas, TX",
+          "zip": "001"
+        },
+        {
+          "place": "Dental Hygienist, CA",
+          "zip": "002"
+        },
+        {
+          "place": "Clinician, NJ",
+          "zip": "003"
+        },
+        {
+          "place": "Angelas, City",
+          "zip": "604"
+        },
+        {
+          "place": "NewYork, CA",
+          "zip": "750"
+        },
+        {
+          "place": "Chennai",
+          "zip": "626"
+        }
+      ]
+    },
+    "milesDropdown": {
+      "selected": "25 miles",
+      "options": [
+        "5 miles", "10 miles", "25 miles", "50 miles", "100 miles", "200 miles"
+      ]
+    },
+    "monthDropdown": {
+      "selected": "last month",
+      "options": [
+        "1 day", "1 week", "1 month", "1 year"
+      ]
+    }
+  }
+}

@@ -14,6 +14,9 @@ import { DataListService } from '../../shared/data-list/data-list.service';
 export class LandingComponent implements OnInit {
   errorMessage: string;
   dataList: any[] = [];
+  showMobileLandingPage = false;
+  isAndroid = false;
+  isiOS = false;
 
   scrolled = false;
 
@@ -30,6 +33,13 @@ export class LandingComponent implements OnInit {
    */
   ngOnInit() {
     this.getDataList('../../assets/data/dataLanding.json');
+
+    const u = navigator.userAgent;
+    this.isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; // android device
+    this.isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); // ios device
+    if (this.isAndroid || this.isiOS) {
+      this.showMobileLandingPage = true;
+    }
   }
 
   initData() {
