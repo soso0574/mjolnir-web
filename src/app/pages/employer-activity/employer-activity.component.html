@@ -1,0 +1,12 @@
+<div class="contents" (click)="showRightPanel.isShown = false">
+  <div class="bg-purple-gradient"></div>
+  <div class="content-inner">
+    <app-sd-employer-header-profile
+      data-imgUrl="../assets/i/build-img.jpg"></app-sd-employer-header-profile>
+    <app-sd-notification-offline [showRightPanel]="showRightPanel" [onlinePanel]="false"></app-sd-notification-offline>
+    
+    <app-content-activity data-userRole="employer" [jsonFile]="jsonFile"></app-content-activity>
+  </div>
+  <!--end .bg-purple-gradient-->
+</div>
+<!-- end .contents -->

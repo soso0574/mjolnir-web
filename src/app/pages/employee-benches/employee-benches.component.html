@@ -1,0 +1,13 @@
+<div class="contents" (click)="showRightPanel.isShown = false">
+  <div class="bg-green-gradient"></div>
+  <div class="content-inner">
+    <app-sd-employee-header-profile
+      data-imgUrl="../assets/i/bench-users4.jpg"></app-sd-employee-header-profile>
+      
+    <app-sd-notification-offline [showRightPanel]="showRightPanel"></app-sd-notification-offline>
+      
+    <app-content-benches data-userRole="employee" [jsonFile]="jsonFile"></app-content-benches>
+  </div>
+  <!--end .bg-green-gradient-->
+</div>
+<!-- end .contents -->

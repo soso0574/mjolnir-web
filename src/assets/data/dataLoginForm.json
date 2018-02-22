@@ -1,6 +1,12 @@
 [
   {
-    "emailText": "sss@sss.sss",
-    "passwordText": "sss"
+    "emailText": "aaa@aaa.aaa",
+    "passwordText": "aaa",
+    "userRole": "employer"
+  },
+  {
+    "emailText": "bbb@bbb.bbb",
+    "passwordText": "bbb",
+    "userRole": "employee"
   }
 ]

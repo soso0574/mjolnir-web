@@ -1,0 +1,12 @@
+.bg-purple-gradient {
+  background: -webkit-linear-gradient(left top, #9d77b7, #737fbd);
+  background: -o-linear-gradient(bottom right, #9d77b7, #737fbd);
+  background: -moz-linear-gradient(bottom right, #9d77b7, #737fbd);
+  background: linear-gradient(to bottom right, #9d77b7, #737fbd);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}

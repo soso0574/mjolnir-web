@@ -1,0 +1,144 @@
+<ng-container *ngIf="benches">
+  <div class="main-content">
+    <div class="benches-main-content">
+      <ng-container *ngIf="!activeBench">
+        <div class="bench-view-box">
+          <div class="new-match-benches">
+            <div class="heading-lable-count">
+              <label>New Matches</label>
+              <span class="count-txt">{{benches['newMatches'].length}}</span>
+            </div>
+            <div class="new-mathces-contents" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+              <div class="new-mathces-contents-main">
+                <div class="user-cards-widget new-match-lists" *ngFor="let match of benches['newMatches']">
+                  <img [src]="match.imageUrl" alt="">
+                  <div class="user-cards-inner">
+                    <div class="user-role-badge">
+                      <span class="role-txt">{{match.role}}</span>
+                      <span class="icons3 badge-icon"></span>
+                    </div>
+                    <div class="user-role-details">
+                      <a href="javascript:;" class="username-txt">{{match.name}}</a>
+                      <span class="user-exp-year"><i>{{match.experience}}</i> yrs <span>EXP</span></span>
+                    </div>
+                    <div class="user-contact-btns">
+                      <a href="javascript:;" class="call-icon icons3"></a>
+                      <a href="javascript:;" class="msg-icon icons3" (click)="openModal(messageModal);"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end .new-match-benches-->
+          <div class="benches-list-main">
+            <div class="heading-lable-count">
+              <label>Benches</label>
+              <span class="count-txt">{{benches['benchList'].length}}</span>
+            </div>
+            <div class="bench-lists-row" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+              <ng-container *ngFor="let bench of benches['benchList']">
+                <a href="javascript:;" class="bench-items-row"
+                 (click)="benchSelect(bench)">
+                  <label class="title-bench">{{bench.name}}</label>
+                  <div class="matches-benchers-list">
+                    <span class="matches-txt"><span class="match-number-txt">{{bench.lists.length}}</span>MATCHES</span>
+                    <div class="photo-list-benchers">
+                      <img [src]="bench.lists[0].imageUrl" alt="">
+                      <img [src]="bench.lists[1].imageUrl" alt="">
+                      <img [src]="bench.lists[2].imageUrl" alt="">
+                      <span class="more-photos-box">+{{bench.lists.length - 3}}</span>
+                    </div>
+                  </div>
+                </a>
+              </ng-container>
+            </div>
+          </div>
+          <!--end .benches-->
+          <div class="benches-actions-btns">
+            <a href="javascript:;" class="sos-btn-bench" (click)="openModal(sosModal);">SOS</a>
+            <a href="javascript:;" class="add-bench-btn" (click)="openModal(plusModal);">
+              <span class="icons3"></span>
+            </a>
+          </div>
+          <!--end .benches actions-->
+        </div>
+      </ng-container>
+      <ng-container *ngIf="activeBench">
+        <div class="bench-edit-box">
+          <app-bench-edit [userRole]="userRole" [data]="activeBench" (onBack)="onBack($event)"></app-bench-edit>
+        </div>
+      </ng-container>
+    </div>
+    <!--end .benches-main-content-->
+  </div>
+</ng-container>
+<!--end .main-content-->
+
+<ng-template  #sosModal let-c="close" let-d="dismiss">
+  <div class="modal-boxs sos-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">Are you in need of a fill in ASAP ?</h4>
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" ngbDropdownToggle>
+            {{benches['positionDropdown'].selected}}
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button class="dropdown-item"
+              *ngFor="let option of benches['positionDropdown'].options"
+              (click)="benches['positionDropdown'].selected = option"
+              [ngClass]="{'selected': benches['positionDropdown'].selected === option}"
+            >
+              {{option}}</button>
+          </div>
+        </div>
+        <p class="suggest-txt">
+          Press send if you want to send an SOS to every Fill in within a 45 mile radius to help you in your time of need
+        </p>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Back</a>
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .SOS modal -->
+
+<ng-template  #messageModal let-c="close" let-d="dismiss">
+  <div class="modal-boxs message-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">New Message</h4>
+        <div class="message-box">
+          <textarea placeholder="Type message here... "></textarea>
+        </div>
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Cancel</a>
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click')">Send</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .New Message modal -->
+
+<ng-template  #plusModal let-c="close" let-d="dismiss">
+  <div class="modal-boxs plus-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">Add a Bench ?</h4>
+        <div class="txt-box">
+          <input type="text" placeholder="Enter Bench Name" [(ngModel)]="benchName" >
+        </div>
+        <!-- <p>Press </p> -->
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click'); benchName=''">Cancel</a>
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click'); addBench();">Add</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end .Plus modal -->

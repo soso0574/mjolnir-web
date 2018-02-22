@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 /**
@@ -14,6 +14,8 @@ export class RegisterFramePageComponent implements OnInit, OnDestroy {
   createProfile = '';
   contents = '';
   carousel_interval = 5000;
+  createBusinessProfile: string;
+
   @ViewChild('waringModal') waringModal;
   @ViewChild('importProfileModal') importProfileModal;
   modalRef: NgbModalRef;
@@ -23,6 +25,7 @@ export class RegisterFramePageComponent implements OnInit, OnDestroy {
    */
   constructor(
     router: Router,
+    private route: ActivatedRoute,
     private modalService: NgbModal
   ) {}
 
@@ -30,6 +33,15 @@ export class RegisterFramePageComponent implements OnInit, OnDestroy {
    * OnInit
    */
   ngOnInit() {
+    this.route.params
+      .subscribe(params => {
+        this.createBusinessProfile = params['createBusinessProfile'];
+        if (typeof this.createBusinessProfile !== 'undefined') {
+          this.createProfile = 'business';
+          this.contents = 'business';
+          this.openModal(this.importProfileModal, 'static');
+        }
+    });
   }
 
   /**

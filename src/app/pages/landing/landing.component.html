@@ -1,4 +1,4 @@
-<div class="contents">
+<div class="contents" *ngIf="!showMobileLandingPage">
   <div class="top-banner">
     <div class="video-box">
       <div class="gray-cover"></div>
@@ -100,5 +100,44 @@
       All Copyrights Reserved &copy; 2017 
     </p>
   </footer>
+  
 </div>
 <!-- end .contents -->
+
+<div class="mobile-landing" *ngIf="showMobileLandingPage">
+  <div class="bg-blue"></div>
+  <div class="landing-mains">
+    <div class="logo-area">
+      <div class="logo-boxs bigger-logo">
+        <span class="white txt">One Dental</span>
+        <span class="blue txt">Match</span>
+      </div>
+    </div>
+    <!-- end .logo-area -->
+    <div class="show-img">
+      <img src="../assets/i/iphone-one.png" alt="img">
+    </div>
+    <!-- end .show-img -->
+    <p class="desr">
+      Welcome to the most modern, fun and beautiful digital staffing 
+      platform that’s Connecting the
+      Dental World
+    </p>
+    <a href="javascript:;" class="btn google-btn btn-icon-blue" *ngIf="isAndroid">
+      <span class="little txt">Get it on</span>
+      <span class=" txt">Google Play</span>
+    </a>
+    <a href="javascript:;" class="btn apple-btn btn-icon-blue" *ngIf="isiOS">
+      <span class="little txt">Get the app on</span>
+      <span class=" txt">iTunes Store</span>
+    </a>
+  </div>
+  <!-- end .landing-mains -->
+  <div class="gray-footer">
+    <a href="javascript:;" class="center-txt txt" (click)="showMobileLandingPage = false">VIEW FULL SITE</a>
+    <span class="copyright txt">Copyright &copy; 2017</span>
+  </div>
+ <!--  end .gray-footer -->
+</div>
+<!-- end .mobile-landing -->
+

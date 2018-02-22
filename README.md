@@ -28,15 +28,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 #1. In Login page:
-use follow value to login:
-"email": "sss@sss.sss",
-"password": "sss"
+use follow values to login:
+
+Employer role to access "Employer Dashboard - Profiles" pages:
+"email": "aaa@aaa.aaa",
+"password": "aaa"
+
+Employee role to access "Employee Dashboard - Profiles" pages:
+"email": "bbb@bbb.bbb",
+"password": "bbb"
+
 
 #2. Notifications Online mode:
 in "Dashboard - Profiles" and "Main Menu" pages,
 user can see the first popup of online notification after 1 second the page load,
 click "X" icon on the top right of this popup,the next popup will show.
 The "X" icon is used to navigate to all popups of online notification.
+
 
 #3. Steps to access the "Employee Dashboard - Profiles" and "Employer Dashboard - Profiles" pages
 
@@ -59,3 +67,25 @@ The "X" icon is used to navigate to all popups of online notification.
      Flow Route:
      -----------
       - In Route '/register-frame-page' selecting 'Create an employee profile' and after filling all Steps it will re-direct to 'Employee Dashboard - Profiles https://gyazo.com/b17ead975923c765203de40f56eed2e5
+
+
+#4.New page links for access the Profiles related pages:
+Employer role pages:
+employer-main-menu
+employer-activity
+employer-offices
+employer-settings
+employer-benches
+employer-search
+employer-friends
+employer-profiles
+
+Employee role pages:
+employee-main-menu
+employee-activity
+employee-offices
+employee-settings
+employee-benches
+employee-search
+employee-friends
+employee-profiles

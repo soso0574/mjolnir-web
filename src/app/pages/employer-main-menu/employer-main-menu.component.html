@@ -1,0 +1,13 @@
+<div class="contents" (click)="showRightPanel.isShown = false">
+  <div class="bg-purple-gradient"></div>
+  <div class="content-inner">
+    <app-sd-employer-header-profile
+      data-imgUrl="{{selectedRoleItem.imgUrl}}"></app-sd-employer-header-profile>
+    <app-sd-notification-offline [showRightPanel]="showRightPanel"></app-sd-notification-offline>
+    
+    <app-sd-content-employer-main-menu data-userRole="employer" [selectedRoleItem]="selectedRoleItem" [jsonFile]="jsonFile">
+    </app-sd-content-employer-main-menu>
+  </div>
+  <!--end .bg-purple-gradient-->
+</div>
+<!-- end .contents -->

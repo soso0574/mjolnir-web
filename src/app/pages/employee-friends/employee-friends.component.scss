@@ -1,0 +1,13 @@
+.bg-violet-gradient {
+  background-image: -webkit-gradient(linear, 0 0, 964 1425.125, from(#a79edf), color-stop(0.001, #9186d6), color-stop(0.004, #9184df), color-stop(0.177, #868ed6), color-stop(0.348, #7e98d3), color-stop(0.348, #7d99d2), color-stop(0.48, #76a0d0), color-stop(0.48, #75a1cf), color-stop(0.625, #6da9cd), color-stop(0.625, #6caacc), color-stop(0.797, #62b5c7), color-stop(0.936, #5abdc3));
+  background-image: -webkit-linear-gradient(304.0756741801635deg, #a79edf, #9186d6 0.1%, #9184df 0.4%, #868ed6 17.7%, #7e98d3 34.8%, #7d99d2 34.8%, #76a0d0 48%, #75a1cf 48%, #6da9cd 62.5%, #6caacc 62.5%, #62b5c7 79.7%, #5abdc3 93.6%);
+  background-image: -moz-linear-gradient(304.0756741801635deg, #a79edf, #9186d6 0.1%, #9184df 0.4%, #868ed6 17.7%, #7e98d3 34.8%, #7d99d2 34.8%, #76a0d0 48%, #75a1cf 48%, #6da9cd 62.5%, #6caacc 62.5%, #62b5c7 79.7%, #5abdc3 93.6%);
+  background-image: -o-linear-gradient(304.0756741801635deg, #a79edf, #9186d6 0.1%, #9184df 0.4%, #868ed6 17.7%, #7e98d3 34.8%, #7d99d2 34.8%, #76a0d0 48%, #75a1cf 48%, #6da9cd 62.5%, #6caacc 62.5%, #62b5c7 79.7%, #5abdc3 93.6%);
+  background-image: linear-gradient(145.9243258198365deg, #a79edf, #9186d6 0.1%, #9184df 0.4%, #868ed6 17.7%, #7e98d3 34.8%, #7d99d2 34.8%, #76a0d0 48%, #75a1cf 48%, #6da9cd 62.5%, #6caacc 62.5%, #62b5c7 79.7%, #5abdc3 93.6%);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}

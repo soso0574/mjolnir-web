@@ -1,113 +1,6 @@
 {
   "carListFriends": [
     {
-      "imgUrl": "../assets/i/profile-photo-friends.jpg",
-      "title": "5Dental hygienist",
-      "smallTitle": "Lyanna Stark",
-      "exp": "7 yr.",
-      "direction": "4,8 mi",
-      "location": "San francisco, CA",
-      "number": "47",
-      "photoList": [
-        {
-          "imgUrl": "../assets/i/photo-one.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-two.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-three.jpg"
-        }
-      ],
-      "selected": false
-    },
-    {
-      "imgUrl": "../assets/i/profile-photo-friends.jpg",
-      "title": "4Dental hygienist",
-      "smallTitle": "Lyanna Stark",
-      "exp": "7 yr.",
-      "direction": "4,8 mi",
-      "location": "San francisco, CA",
-      "number": "47",
-      "photoList": [
-        {
-          "imgUrl": "../assets/i/photo-one.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-two.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-three.jpg"
-        }
-      ],
-      "selected": false
-    },
-    {
-      "imgUrl": "../assets/i/profile-photo-friends.jpg",
-      "title": "3Dental hygienist",
-      "smallTitle": "Lyanna Stark",
-      "exp": "7 yr.",
-      "direction": "4,8 mi",
-      "location": "San francisco, CA",
-      "number": "47",
-      "photoList": [
-        {
-          "imgUrl": "../assets/i/photo-one.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-two.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-three.jpg"
-        }
-      ],
-      "selected": false
-    },
-    {
-      "imgUrl": "../assets/i/profile-photo-friends.jpg",
-      "title": "2Dental hygienist",
-      "smallTitle": "Lyanna Stark",
-      "exp": "7 yr.",
-      "direction": "4,8 mi",
-      "location": "San francisco, CA",
-      "number": "47",
-      "photoList": [
-        {
-          "imgUrl": "../assets/i/photo-one.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-two.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-three.jpg"
-        }
-      ],
-      "selected": false
-    },
-    {
-      "imgUrl": "../assets/i/profile-photo-friends.jpg",
-      "title": "Dental hygienist",
-      "smallTitle": "Lyanna Stark",
-      "exp": "7 yr.",
-      "direction": "4,8 mi",
-      "location": "San francisco, CA",
-      "number": "47",
-      "photoList": [
-        {
-          "imgUrl": "../assets/i/photo-one.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-two.jpg"
-        },
-        {
-          "imgUrl": "../assets/i/photo-three.jpg"
-        }
-      ],
-      "selected": true
-    }
-  ],
-  "carListOpportunities": [
-    {
       "imgUrl": "../assets/i/profile-photo-opportunities.jpg",
       "title": "5University Hospital",
       "smallTitle": "Proctodontics, Dentist & Orthodontics",
@@ -201,6 +94,113 @@
       "smallTitle": "Proctodontics, Dentist & Orthodontics",
       "stars": 5,
       "exp": "275",
+      "direction": "4,8 mi",
+      "location": "San francisco, CA",
+      "number": "47",
+      "photoList": [
+        {
+          "imgUrl": "../assets/i/photo-one.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-two.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-three.jpg"
+        }
+      ],
+      "selected": true
+    }
+  ],
+  "carListOpportunities": [
+    {
+      "imgUrl": "../assets/i/profile-photo-friends.jpg",
+      "title": "5Dental hygienist",
+      "smallTitle": "Lyanna Stark",
+      "exp": "7 yr.",
+      "direction": "4,8 mi",
+      "location": "San francisco, CA",
+      "number": "47",
+      "photoList": [
+        {
+          "imgUrl": "../assets/i/photo-one.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-two.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-three.jpg"
+        }
+      ],
+      "selected": false
+    },
+    {
+      "imgUrl": "../assets/i/profile-photo-friends.jpg",
+      "title": "4Dental hygienist",
+      "smallTitle": "Lyanna Stark",
+      "exp": "7 yr.",
+      "direction": "4,8 mi",
+      "location": "San francisco, CA",
+      "number": "47",
+      "photoList": [
+        {
+          "imgUrl": "../assets/i/photo-one.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-two.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-three.jpg"
+        }
+      ],
+      "selected": false
+    },
+    {
+      "imgUrl": "../assets/i/profile-photo-friends.jpg",
+      "title": "3Dental hygienist",
+      "smallTitle": "Lyanna Stark",
+      "exp": "7 yr.",
+      "direction": "4,8 mi",
+      "location": "San francisco, CA",
+      "number": "47",
+      "photoList": [
+        {
+          "imgUrl": "../assets/i/photo-one.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-two.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-three.jpg"
+        }
+      ],
+      "selected": false
+    },
+    {
+      "imgUrl": "../assets/i/profile-photo-friends.jpg",
+      "title": "2Dental hygienist",
+      "smallTitle": "Lyanna Stark",
+      "exp": "7 yr.",
+      "direction": "4,8 mi",
+      "location": "San francisco, CA",
+      "number": "47",
+      "photoList": [
+        {
+          "imgUrl": "../assets/i/photo-one.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-two.jpg"
+        },
+        {
+          "imgUrl": "../assets/i/photo-three.jpg"
+        }
+      ],
+      "selected": false
+    },
+    {
+      "imgUrl": "../assets/i/profile-photo-friends.jpg",
+      "title": "Dental hygienist",
+      "smallTitle": "Lyanna Stark",
+      "exp": "7 yr.",
       "direction": "4,8 mi",
       "location": "San francisco, CA",
       "number": "47",

@@ -1,5 +1,5 @@
 <div class="search-potential-main" (click)="sugguestList = []">
-  <div class="search-potential-text">
+  <div class="search-potential-text" *ngIf="userRole === 'employer'">
     <div class="search-select-main">
       <div ngbDropdown class="d-inline-block">
         <button class="btn btn-outline-primary" ngbDropdownToggle>
@@ -96,6 +96,87 @@
     </div>
   </div>
   <!--end .search-potential-text-->
+  <div class="search-potential-text" *ngIf="userRole === 'employee'">
+    <div class="search-select-main">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['roleDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item"
+            *ngFor="let option of dropdown['roleDropdown'].options"
+            (click)="dropdown['roleDropdown'].selected = option"
+            [ngClass]="{'selected': dropdown['roleDropdown'].selected === option}"
+          >
+            {{option}}</button>
+        </div>
+      </div>
+    </div>
+    practice looking for a
+    <div class="search-select-main">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['roleLookingForDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item"
+            *ngFor="let option of dropdown['roleLookingForDropdown'].options"
+            (click)="dropdown['roleLookingForDropdown'].selected = option"
+            [ngClass]="{'selected': dropdown['roleLookingForDropdown'].selected === option}"
+          >
+            {{option}}</button>
+        </div>
+      </div>
+    </div>
+    within
+    <div class="search-select-main">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['milesDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item"
+            *ngFor="let option of dropdown['milesDropdown'].options"
+            (click)="dropdown['milesDropdown'].selected = option"
+            [ngClass]="{'selected': dropdown['milesDropdown'].selected === option}"
+          >
+            {{option}}</button>
+        </div>
+      </div>
+    </div>
+    of
+    <div class="search-select-main loc-dropdown">
+      <div ngbDropdown class="d-inline-block" #locDrop="ngbDropdown">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dropdown['locationDropdown'].selected}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <input type="text" class="txt-box" placeholder="City or Zipcode"
+            (click)="$event.stopPropagation(); locDrop.open();"
+            (keyup)="selectLocation(locationDrop)"
+            [(ngModel)]="locationDrop"
+          >
+          <ng-container *ngIf="sugguestList.length > 0">
+            <button class="dropdown-item"
+              *ngFor="let item of sugguestList"
+              (click)="dropdown['locationDropdown'].selected = item.place"
+              [ngClass]="{'selected': dropdown['locationDropdown'].selected === item.place}"
+            >
+              {{item.place}}</button>
+          </ng-container>
+          <ng-container *ngIf="sugguestList.length < 1">
+            <button class="dropdown-item"
+              *ngFor="let item of dropdown['locationDropdown'].locations"
+              (click)="dropdown['locationDropdown'].selected = item.place"
+              [ngClass]="{'selected': dropdown['locationDropdown'].selected === item.place}"
+            >
+              {{item.place}}</button>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end .search-potential-text-->
   <div class="search-info-list">
     <div class="search-actions-btn">
       <div class="search-information-main">
@@ -130,9 +211,28 @@
           <span class="title-txt">Dental Office/General Skills</span>
         </a>
       </div>
-      <a href="javascript:;" class="save-filter-btn">SAVE FILTER</a>
+      <a href="javascript:;" class="save-filter-btn" (click)="clickSaveFilter()">SAVE FILTER</a>
       <a href="javascript:;" class="search-btn">SEARCH</a>
     </div>
   </div>
 </div>
 <!--end .search-potential-content-->
+
+<ng-template  #saveFilterModal let-c="close" let-d="dismiss">
+  <div class="modal-boxs save-filter-modal">
+    <div class="modal-inner">
+      <div class="modal-info">
+        <h4 class="titles">Save Filter</h4>
+        <div class="txt-box">
+          <input type="text" placeholder="Filter Name" [(ngModel)]="filterName" >
+        </div>
+        <!-- <p>Press </p> -->
+      </div>
+      <div class="footer-btn">
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click'); filterName=''">Cancel</a>
+        <a href="javascript:;" class="btn btn-no" (click)="c('Close click'); filterName=''">Save</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<!-- end saveFilter modal -->

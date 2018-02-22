@@ -71,14 +71,14 @@ export class CreateEmployeeAccountComponent implements OnInit, OnDestroy {
     // SET YEAR OPTIONS
     for (let i = 1900; i <= 2009; i++) {
       this.formData['somePersonalDetails']['year'].optionList.push({
-        "optionName": i
-      })
+        'optionName': i
+      });
     }
     // SET DATE OPTIONS
     for (let i = 1; i <= 31; i++) {
       this.formData['somePersonalDetails']['date'].optionList.push({
-        "optionName": i
-      })
+        'optionName': i
+      });
     }
 
   }

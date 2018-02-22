@@ -110,6 +110,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     if (pass) {
       let matched = false;
+      let userRole = '';
       const emailText = this.emailText;
       const passwordText = this.passwordText;
 
@@ -117,6 +118,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         if (emailText === item.emailText
            && passwordText === item.passwordText) {
            matched = true;
+           userRole = item.userRole;
         }
       });
 
@@ -124,7 +126,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.showEmailEmptyError = false;
         this.showPasswordEmptyError = false;
 
-        this.router.navigate(['/profiles']);
+        this.router.navigate(['/' + userRole +  '-profiles']);
       } else {
         this.modalErrorMessage.push({
           'message': 'Email and Password are not correct'
